@@ -225,6 +225,9 @@
 		AB41BA0C1F7A645F0073728F /* websitecontact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B93C1F7A645F0073728F /* websitecontact@3x.png */; };
 		AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA1E1F7A674C0073728F /* HomeViewController.m */; };
 		AB41BA221F7A674C0073728F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA201F7A674C0073728F /* HomeViewController.xib */; };
+		AB41BA2A1F7A68F20073728F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA251F7A68F20073728F /* RightViewController.m */; };
+		AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA261F7A68F20073728F /* SWRevealViewController.m */; };
+		AB41BA2C1F7A68F20073728F /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA291F7A68F20073728F /* RightViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,6 +475,11 @@
 		AB41BA1E1F7A674C0073728F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Views/Home/HomeViewController.m; sourceTree = "<group>"; };
 		AB41BA1F1F7A674C0073728F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Views/Home/HomeViewController.h; sourceTree = "<group>"; };
 		AB41BA201F7A674C0073728F /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Views/Home/HomeViewController.xib; sourceTree = "<group>"; };
+		AB41BA251F7A68F20073728F /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightViewController.m; path = Views/Menu/RightViewController.m; sourceTree = "<group>"; };
+		AB41BA261F7A68F20073728F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Views/Menu/SWRevealViewController.m; sourceTree = "<group>"; };
+		AB41BA271F7A68F20073728F /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = Views/Menu/RightViewController.h; sourceTree = "<group>"; };
+		AB41BA281F7A68F20073728F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Views/Menu/SWRevealViewController.h; sourceTree = "<group>"; };
+		AB41BA291F7A68F20073728F /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RightViewController.xib; path = Views/Menu/RightViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +530,7 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA231F7A68E20073728F /* Custom Objects */,
 				AB41BA1D1F7A66BB0073728F /* Database */,
 				AB41BA0D1F7A653F0073728F /* Views */,
 				AB41B86C1F7A642E0073728F /* Graphics */,
@@ -908,6 +917,26 @@
 			name = Database;
 			sourceTree = "<group>";
 		};
+		AB41BA231F7A68E20073728F /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA241F7A68E90073728F /* Menu */,
+			);
+			name = "Custom Objects";
+			sourceTree = "<group>";
+		};
+		AB41BA241F7A68E90073728F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA271F7A68F20073728F /* RightViewController.h */,
+				AB41BA251F7A68F20073728F /* RightViewController.m */,
+				AB41BA291F7A68F20073728F /* RightViewController.xib */,
+				AB41BA281F7A68F20073728F /* SWRevealViewController.h */,
+				AB41BA261F7A68F20073728F /* SWRevealViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1047,6 +1076,7 @@
 				AB41B95E1F7A645F0073728F /* booknow.png in Resources */,
 				AB41B9461F7A645F0073728F /* abo18.jpg in Resources */,
 				AB41B93E1F7A645F0073728F /* abo10.jpg in Resources */,
+				AB41BA2C1F7A68F20073728F /* RightViewController.xib in Resources */,
 				AB41B94B1F7A645F0073728F /* abo3.jpg in Resources */,
 				AB41B9C51F7A645F0073728F /* nex4t.jpg in Resources */,
 				AB41B9961F7A645F0073728F /* exp2.jpg in Resources */,
@@ -1253,10 +1283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB41BA2A1F7A68F20073728F /* RightViewController.m in Sources */,
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
 				AB41B83A1F7A5EE50073728F /* main.m in Sources */,
 				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
+				AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
