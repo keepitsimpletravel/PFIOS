@@ -223,6 +223,8 @@
 		AB41BA0A1F7A645F0073728F /* websitecontact.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B93A1F7A645F0073728F /* websitecontact.png */; };
 		AB41BA0B1F7A645F0073728F /* websitecontact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B93B1F7A645F0073728F /* websitecontact@2x.png */; };
 		AB41BA0C1F7A645F0073728F /* websitecontact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B93C1F7A645F0073728F /* websitecontact@3x.png */; };
+		AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA1E1F7A674C0073728F /* HomeViewController.m */; };
+		AB41BA221F7A674C0073728F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA201F7A674C0073728F /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -467,6 +469,9 @@
 		AB41B93A1F7A645F0073728F /* websitecontact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = websitecontact.png; path = graphics/websitecontact.png; sourceTree = "<group>"; };
 		AB41B93B1F7A645F0073728F /* websitecontact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "websitecontact@2x.png"; path = "graphics/websitecontact@2x.png"; sourceTree = "<group>"; };
 		AB41B93C1F7A645F0073728F /* websitecontact@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "websitecontact@3x.png"; path = "graphics/websitecontact@3x.png"; sourceTree = "<group>"; };
+		AB41BA1E1F7A674C0073728F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Views/Home/HomeViewController.m; sourceTree = "<group>"; };
+		AB41BA1F1F7A674C0073728F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Views/Home/HomeViewController.h; sourceTree = "<group>"; };
+		AB41BA201F7A674C0073728F /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Views/Home/HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,6 +522,8 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA1D1F7A66BB0073728F /* Database */,
+				AB41BA0D1F7A653F0073728F /* Views */,
 				AB41B86C1F7A642E0073728F /* Graphics */,
 				AB41B83B1F7A5EE50073728F /* AppDelegate.h */,
 				AB41B83C1F7A5EE50073728F /* AppDelegate.m */,
@@ -772,6 +779,135 @@
 			name = Graphics;
 			sourceTree = "<group>";
 		};
+		AB41BA0D1F7A653F0073728F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA1B1F7A66A10073728F /* Developer */,
+				AB41BA1A1F7A66990073728F /* Network */,
+				AB41BA191F7A66920073728F /* Feedback */,
+				AB41BA181F7A668E0073728F /* Transport */,
+				AB41BA171F7A66880073728F /* Currency Converter */,
+				AB41BA161F7A66820073728F /* Noticeboard */,
+				AB41BA151F7A667F0073728F /* Map */,
+				AB41BA141F7A66770073728F /* Directions */,
+				AB41BA131F7A66720073728F /* Attractions */,
+				AB41BA121F7A666E0073728F /* Drinks */,
+				AB41BA111F7A66690073728F /* Eats */,
+				AB41BA101F7A66630073728F /* Local Guide */,
+				AB41BA0F1F7A665E0073728F /* About */,
+				AB41BA0E1F7A654B0073728F /* Home */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AB41BA0E1F7A654B0073728F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA1F1F7A674C0073728F /* HomeViewController.h */,
+				AB41BA1E1F7A674C0073728F /* HomeViewController.m */,
+				AB41BA201F7A674C0073728F /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		AB41BA0F1F7A665E0073728F /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		AB41BA101F7A66630073728F /* Local Guide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Local Guide";
+			sourceTree = "<group>";
+		};
+		AB41BA111F7A66690073728F /* Eats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Eats;
+			sourceTree = "<group>";
+		};
+		AB41BA121F7A666E0073728F /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Drinks;
+			sourceTree = "<group>";
+		};
+		AB41BA131F7A66720073728F /* Attractions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Attractions;
+			sourceTree = "<group>";
+		};
+		AB41BA141F7A66770073728F /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Directions;
+			sourceTree = "<group>";
+		};
+		AB41BA151F7A667F0073728F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		AB41BA161F7A66820073728F /* Noticeboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Noticeboard;
+			sourceTree = "<group>";
+		};
+		AB41BA171F7A66880073728F /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Currency Converter";
+			sourceTree = "<group>";
+		};
+		AB41BA181F7A668E0073728F /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Transport;
+			sourceTree = "<group>";
+		};
+		AB41BA191F7A66920073728F /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		AB41BA1A1F7A66990073728F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		AB41BA1B1F7A66A10073728F /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Developer;
+			sourceTree = "<group>";
+		};
+		AB41BA1D1F7A66BB0073728F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -972,6 +1108,7 @@
 				AB41B98C1F7A645F0073728F /* exp1.jpg in Resources */,
 				AB41B9A91F7A645F0073728F /* hamburgermenu.png in Resources */,
 				AB41B9881F7A645F0073728F /* emailcontact@3x.png in Resources */,
+				AB41BA221F7A674C0073728F /* HomeViewController.xib in Resources */,
 				AB41B9C81F7A645F0073728F /* nex6.jpg in Resources */,
 				AB41B9F71F7A645F0073728F /* submitfeedback@2x.png in Resources */,
 				AB41B9BB1F7A645F0073728F /* maptoolbar.png in Resources */,
@@ -1119,6 +1256,7 @@
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
 				AB41B83A1F7A5EE50073728F /* main.m in Sources */,
+				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
