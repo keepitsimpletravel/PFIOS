@@ -11,7 +11,7 @@
 @interface HomeViewController : UIViewController <UIScrollViewDelegate>
 {
 //    NSInteger homeImage;
-//    NSInteger lineSize;
+    NSInteger lineSize;
 //    NSInteger verticalSpacing;
 //    NSInteger horizontalSpacing;
 //    NSInteger buttonHeight;
