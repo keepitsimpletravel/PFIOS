@@ -228,6 +228,29 @@
 		AB41BA2A1F7A68F20073728F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA251F7A68F20073728F /* RightViewController.m */; };
 		AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA261F7A68F20073728F /* SWRevealViewController.m */; };
 		AB41BA2C1F7A68F20073728F /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA291F7A68F20073728F /* RightViewController.xib */; };
+		AB41BA4E1F7FB60D0073728F /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA2E1F7FB60D0073728F /* Directions.m */; };
+		AB41BA4F1F7FB60D0073728F /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA301F7FB60D0073728F /* Activity.m */; };
+		AB41BA501F7FB60D0073728F /* TravelTip.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA311F7FB60D0073728F /* TravelTip.m */; };
+		AB41BA511F7FB60D0073728F /* WhereNext.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA331F7FB60D0073728F /* WhereNext.m */; };
+		AB41BA521F7FB60D0073728F /* Transport.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA361F7FB60D0073728F /* Transport.m */; };
+		AB41BA531F7FB60D0073728F /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA371F7FB60D0073728F /* Drink.m */; };
+		AB41BA541F7FB60D0073728F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA391F7FB60D0073728F /* Food.m */; };
+		AB41BA551F7FB60D0073728F /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA3C1F7FB60D0073728F /* Room.m */; };
+		AB41BA561F7FB60D0073728F /* Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA3E1F7FB60D0073728F /* Detail.m */; };
+		AB41BA571F7FB60D0073728F /* ThumbnailLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA401F7FB60D0073728F /* ThumbnailLookup.m */; };
+		AB41BA581F7FB60D0073728F /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA421F7FB60D0073728F /* Staff.m */; };
+		AB41BA591F7FB60D0073728F /* MapEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA431F7FB60D0073728F /* MapEntity.m */; };
+		AB41BA5A1F7FB60D0073728F /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA441F7FB60D0073728F /* Step.m */; };
+		AB41BA5B1F7FB60D0073728F /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA451F7FB60D0073728F /* Network.m */; };
+		AB41BA5C1F7FB60D0073728F /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA471F7FB60D0073728F /* Currency.m */; };
+		AB41BA5D1F7FB60D0073728F /* PhotoLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA4B1F7FB60D0073728F /* PhotoLookup.m */; };
+		AB41BA621F7FB6AE0073728F /* SQLiteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA5E1F7FB6AE0073728F /* SQLiteDatabase.m */; };
+		AB41BA631F7FB6AE0073728F /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA611F7FB6AE0073728F /* DataSource.m */; };
+		AB41BA671F7FB70E0073728F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA651F7FB70E0073728F /* libsqlite3.0.tbd */; };
+		AB41BA681F7FB70E0073728F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA661F7FB70E0073728F /* libsqlite3.tbd */; };
+		AB41BA6A1F7FB72A0073728F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA691F7FB72A0073728F /* libz.tbd */; };
+		AB41BA6D1F7FB7390073728F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */; };
+		AB41BA6E1F7FB7390073728F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6C1F7FB7390073728F /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -480,6 +503,47 @@
 		AB41BA271F7A68F20073728F /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightViewController.h; path = Views/Menu/RightViewController.h; sourceTree = "<group>"; };
 		AB41BA281F7A68F20073728F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Views/Menu/SWRevealViewController.h; sourceTree = "<group>"; };
 		AB41BA291F7A68F20073728F /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RightViewController.xib; path = Views/Menu/RightViewController.xib; sourceTree = "<group>"; };
+		AB41BA2E1F7FB60D0073728F /* Directions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Directions.m; path = Entities/Directions.m; sourceTree = "<group>"; };
+		AB41BA2F1F7FB60D0073728F /* Directions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Directions.h; path = Entities/Directions.h; sourceTree = "<group>"; };
+		AB41BA301F7FB60D0073728F /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Entities/Activity.m; sourceTree = "<group>"; };
+		AB41BA311F7FB60D0073728F /* TravelTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TravelTip.m; path = Entities/TravelTip.m; sourceTree = "<group>"; };
+		AB41BA321F7FB60D0073728F /* TravelTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TravelTip.h; path = Entities/TravelTip.h; sourceTree = "<group>"; };
+		AB41BA331F7FB60D0073728F /* WhereNext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereNext.m; path = Entities/WhereNext.m; sourceTree = "<group>"; };
+		AB41BA341F7FB60D0073728F /* WhereNext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereNext.h; path = Entities/WhereNext.h; sourceTree = "<group>"; };
+		AB41BA351F7FB60D0073728F /* Transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transport.h; path = Entities/Transport.h; sourceTree = "<group>"; };
+		AB41BA361F7FB60D0073728F /* Transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transport.m; path = Entities/Transport.m; sourceTree = "<group>"; };
+		AB41BA371F7FB60D0073728F /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drink.m; path = Entities/Drink.m; sourceTree = "<group>"; };
+		AB41BA381F7FB60D0073728F /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drink.h; path = Entities/Drink.h; sourceTree = "<group>"; };
+		AB41BA391F7FB60D0073728F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = Entities/Food.m; sourceTree = "<group>"; };
+		AB41BA3A1F7FB60D0073728F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = Entities/Food.h; sourceTree = "<group>"; };
+		AB41BA3B1F7FB60D0073728F /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Entities/Activity.h; sourceTree = "<group>"; };
+		AB41BA3C1F7FB60D0073728F /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Room.m; path = Entities/Room.m; sourceTree = "<group>"; };
+		AB41BA3D1F7FB60D0073728F /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = Entities/Room.h; sourceTree = "<group>"; };
+		AB41BA3E1F7FB60D0073728F /* Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detail.m; path = Entities/Detail.m; sourceTree = "<group>"; };
+		AB41BA3F1F7FB60D0073728F /* Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detail.h; path = Entities/Detail.h; sourceTree = "<group>"; };
+		AB41BA401F7FB60D0073728F /* ThumbnailLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbnailLookup.m; path = Entities/ThumbnailLookup.m; sourceTree = "<group>"; };
+		AB41BA411F7FB60D0073728F /* ThumbnailLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailLookup.h; path = Entities/ThumbnailLookup.h; sourceTree = "<group>"; };
+		AB41BA421F7FB60D0073728F /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = Entities/Staff.m; sourceTree = "<group>"; };
+		AB41BA431F7FB60D0073728F /* MapEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapEntity.m; path = Entities/MapEntity.m; sourceTree = "<group>"; };
+		AB41BA441F7FB60D0073728F /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Step.m; path = Entities/Step.m; sourceTree = "<group>"; };
+		AB41BA451F7FB60D0073728F /* Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Network.m; path = Entities/Network.m; sourceTree = "<group>"; };
+		AB41BA461F7FB60D0073728F /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Network.h; path = Entities/Network.h; sourceTree = "<group>"; };
+		AB41BA471F7FB60D0073728F /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Currency.m; path = Entities/Currency.m; sourceTree = "<group>"; };
+		AB41BA481F7FB60D0073728F /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Currency.h; path = Entities/Currency.h; sourceTree = "<group>"; };
+		AB41BA491F7FB60D0073728F /* MapEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapEntity.h; path = Entities/MapEntity.h; sourceTree = "<group>"; };
+		AB41BA4A1F7FB60D0073728F /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = Entities/Staff.h; sourceTree = "<group>"; };
+		AB41BA4B1F7FB60D0073728F /* PhotoLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoLookup.m; path = Entities/PhotoLookup.m; sourceTree = "<group>"; };
+		AB41BA4C1F7FB60D0073728F /* PhotoLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoLookup.h; path = Entities/PhotoLookup.h; sourceTree = "<group>"; };
+		AB41BA4D1F7FB60D0073728F /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Step.h; path = Entities/Step.h; sourceTree = "<group>"; };
+		AB41BA5E1F7FB6AE0073728F /* SQLiteDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLiteDatabase.m; path = Database/SQLiteDatabase.m; sourceTree = "<group>"; };
+		AB41BA5F1F7FB6AE0073728F /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = Database/DataSource.h; sourceTree = "<group>"; };
+		AB41BA601F7FB6AE0073728F /* SQLiteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLiteDatabase.h; path = Database/SQLiteDatabase.h; sourceTree = "<group>"; };
+		AB41BA611F7FB6AE0073728F /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = Database/DataSource.m; sourceTree = "<group>"; };
+		AB41BA651F7FB70E0073728F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AB41BA661F7FB70E0073728F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AB41BA691F7FB72A0073728F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		AB41BA6C1F7FB7390073728F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +551,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB41BA6D1F7FB7390073728F /* libxml2.2.tbd in Frameworks */,
+				AB41BA6E1F7FB7390073728F /* libxml2.tbd in Frameworks */,
+				AB41BA6A1F7FB72A0073728F /* libz.tbd in Frameworks */,
+				AB41BA671F7FB70E0073728F /* libsqlite3.0.tbd in Frameworks */,
+				AB41BA681F7FB70E0073728F /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +583,7 @@
 				AB41B8511F7A5EE50073728F /* ThePickledFrogTests */,
 				AB41B85C1F7A5EE50073728F /* ThePickledFrogUITests */,
 				AB41B8361F7A5EE50073728F /* Products */,
+				AB41BA641F7FB70E0073728F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -530,6 +600,7 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA2D1F7FB6000073728F /* Entities */,
 				AB41BA231F7A68E20073728F /* Custom Objects */,
 				AB41BA1D1F7A66BB0073728F /* Database */,
 				AB41BA0D1F7A653F0073728F /* Views */,
@@ -913,6 +984,10 @@
 		AB41BA1D1F7A66BB0073728F /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA601F7FB6AE0073728F /* SQLiteDatabase.h */,
+				AB41BA5E1F7FB6AE0073728F /* SQLiteDatabase.m */,
+				AB41BA5F1F7FB6AE0073728F /* DataSource.h */,
+				AB41BA611F7FB6AE0073728F /* DataSource.m */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -935,6 +1010,57 @@
 				AB41BA261F7A68F20073728F /* SWRevealViewController.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		AB41BA2D1F7FB6000073728F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA2E1F7FB60D0073728F /* Directions.m */,
+				AB41BA2F1F7FB60D0073728F /* Directions.h */,
+				AB41BA301F7FB60D0073728F /* Activity.m */,
+				AB41BA311F7FB60D0073728F /* TravelTip.m */,
+				AB41BA321F7FB60D0073728F /* TravelTip.h */,
+				AB41BA331F7FB60D0073728F /* WhereNext.m */,
+				AB41BA341F7FB60D0073728F /* WhereNext.h */,
+				AB41BA351F7FB60D0073728F /* Transport.h */,
+				AB41BA361F7FB60D0073728F /* Transport.m */,
+				AB41BA371F7FB60D0073728F /* Drink.m */,
+				AB41BA381F7FB60D0073728F /* Drink.h */,
+				AB41BA391F7FB60D0073728F /* Food.m */,
+				AB41BA3A1F7FB60D0073728F /* Food.h */,
+				AB41BA3B1F7FB60D0073728F /* Activity.h */,
+				AB41BA3C1F7FB60D0073728F /* Room.m */,
+				AB41BA3D1F7FB60D0073728F /* Room.h */,
+				AB41BA3E1F7FB60D0073728F /* Detail.m */,
+				AB41BA3F1F7FB60D0073728F /* Detail.h */,
+				AB41BA401F7FB60D0073728F /* ThumbnailLookup.m */,
+				AB41BA411F7FB60D0073728F /* ThumbnailLookup.h */,
+				AB41BA421F7FB60D0073728F /* Staff.m */,
+				AB41BA431F7FB60D0073728F /* MapEntity.m */,
+				AB41BA441F7FB60D0073728F /* Step.m */,
+				AB41BA451F7FB60D0073728F /* Network.m */,
+				AB41BA461F7FB60D0073728F /* Network.h */,
+				AB41BA471F7FB60D0073728F /* Currency.m */,
+				AB41BA481F7FB60D0073728F /* Currency.h */,
+				AB41BA491F7FB60D0073728F /* MapEntity.h */,
+				AB41BA4A1F7FB60D0073728F /* Staff.h */,
+				AB41BA4B1F7FB60D0073728F /* PhotoLookup.m */,
+				AB41BA4C1F7FB60D0073728F /* PhotoLookup.h */,
+				AB41BA4D1F7FB60D0073728F /* Step.h */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		AB41BA641F7FB70E0073728F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */,
+				AB41BA6C1F7FB7390073728F /* libxml2.tbd */,
+				AB41BA691F7FB72A0073728F /* libz.tbd */,
+				AB41BA651F7FB70E0073728F /* libsqlite3.0.tbd */,
+				AB41BA661F7FB70E0073728F /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1283,11 +1409,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB41BA541F7FB60D0073728F /* Food.m in Sources */,
 				AB41BA2A1F7A68F20073728F /* RightViewController.m in Sources */,
+				AB41BA631F7FB6AE0073728F /* DataSource.m in Sources */,
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
+				AB41BA4F1F7FB60D0073728F /* Activity.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
+				AB41BA621F7FB6AE0073728F /* SQLiteDatabase.m in Sources */,
+				AB41BA5C1F7FB60D0073728F /* Currency.m in Sources */,
+				AB41BA5D1F7FB60D0073728F /* PhotoLookup.m in Sources */,
+				AB41BA561F7FB60D0073728F /* Detail.m in Sources */,
+				AB41BA5B1F7FB60D0073728F /* Network.m in Sources */,
+				AB41BA521F7FB60D0073728F /* Transport.m in Sources */,
 				AB41B83A1F7A5EE50073728F /* main.m in Sources */,
+				AB41BA531F7FB60D0073728F /* Drink.m in Sources */,
+				AB41BA581F7FB60D0073728F /* Staff.m in Sources */,
 				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
+				AB41BA5A1F7FB60D0073728F /* Step.m in Sources */,
+				AB41BA591F7FB60D0073728F /* MapEntity.m in Sources */,
+				AB41BA571F7FB60D0073728F /* ThumbnailLookup.m in Sources */,
+				AB41BA511F7FB60D0073728F /* WhereNext.m in Sources */,
+				AB41BA501F7FB60D0073728F /* TravelTip.m in Sources */,
+				AB41BA4E1F7FB60D0073728F /* Directions.m in Sources */,
+				AB41BA551F7FB60D0073728F /* Room.m in Sources */,
 				AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

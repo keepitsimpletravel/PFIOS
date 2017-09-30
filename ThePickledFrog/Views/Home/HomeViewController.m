@@ -68,25 +68,13 @@
 //        borderX = (width * 0.05);
 //        borderY = (width * 0.05);
     } else if (screenHeight == 667){
-//        homeImage = 265;
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
-//        verticalSpacing = 15;
-//        horizontalSpacing = 15;
-//        buttonHeight = 75;
-//        buttonWidth = 165;
-//        imageSelection = @"@2x";
     } else if (screenHeight == 736){
-//        homeImage = 292.41;
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
-//        horizontalSpacing = 16.56;
-//        buttonWidth = 182.16;
-//        verticalSpacing = 18.50;
-//        buttonHeight = 82.73;
-//        imageSelection = @"@3x";
     }
 //    NSString *titleValue = [configurationValues objectForKey:@"AppTitle"];
     NSString *titleValue = @"THE PICKLED FROG";
@@ -114,15 +102,15 @@
     // Set the Line RGB from the configuration file
 //    NSString *lineR = [configurationValues objectForKey:@"LineRed"];
 //    NSInteger lineRed = [lineR integerValue];
-    NSInteger lineRed = 255;
+    NSInteger lineRed = 0;
     
 //    NSString *lineG = [configurationValues objectForKey:@"LineGreen"];
 //    NSInteger lineGreen = [lineG integerValue];
-    NSInteger lineGreen = 255;
+    NSInteger lineGreen = 0;
     
 //    NSString *lineB = [configurationValues objectForKey:@"LineBlue"];
 //    NSInteger lineBlue = [lineB integerValue];
-    NSInteger lineBlue = 255;
+    NSInteger lineBlue = 0;
     
     // Set Line below status bar
     UIView *statusBarLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
@@ -169,9 +157,14 @@
     nextView.backgroundColor = [UIColor redColor];
     [self.view addSubview:nextView];
     
-    UIImageView *nbView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
-    nbView.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:nbView];
+    NSString *value = @"noticeboard.png";
+    UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+            [noticeboardButton addTarget:self
+                             action:@selector(loadNoticeboard)
+                   forControlEvents:UIControlEventTouchUpInside];
+    noticeboardButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
+    [self.view addSubview:noticeboardButton];
     
     
     
@@ -321,12 +314,12 @@
 ////    [self.view addSubview:nextButton];
 ////    
 ////    yPosition = yPosition + buttonHeight + verticalSpacing;
-//    
-//    // Set Line below status bar
-//    UIView *toolbarLine = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-49-lineSize, screenWidth, lineSize)];
-//    toolbarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-//    [self.view addSubview:toolbarLine];
-//
+    
+    // Set Line below status bar
+    UIView *toolbarLine = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-51, screenWidth, lineSize)];
+    toolbarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+    [self.view addSubview:toolbarLine];
+
     // Toolbar
     NSMutableArray *items = [[NSMutableArray alloc] init];
 
