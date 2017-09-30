@@ -14,7 +14,7 @@
 //#import "UIView+Toast.h"
 //#import "CurrencyConverter.h"
 //#import "PhotoLookup.h"
-//#import "SWRevealViewController.h"
+#import "SWRevealViewController.h"
 //#import "LoadWebViewController.h"
 //#import "LocalGuide.h"
 //#import "TransportListingViewController.h"
@@ -44,139 +44,147 @@
 
 - (void)viewDidLoad
 {
-//    // Screen Dimensions Setup
-//    CGRect screenRect = [[UIScreen mainScreen] bounds];
-//    CGFloat screenWidth = screenRect.size.width;
-//    CGFloat screenHeight = screenRect.size.height;
+    // Screen Dimensions Setup
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
 //    homeImage = 0;
-//    imageWidth = 0;
-//    imageHeight = 0;
+    NSInteger buttonWidth = 0;
+    NSInteger buttonHeight = 0;
 //    buttonBorder = 1;
-//    bottomTabBarHeight = 49;
-//    NSInteger yPosition = 64;
-//    
-//    // Get Config Values
+    NSInteger bottomTabBarHeight = 49;
+    NSInteger yPosition = 64;
+    NSInteger yBorder = 0;
+    NSInteger xBorder = 0;
+
+    // Get Config Values
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
 //    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    if (screenHeight == 568){
-//        homeImage = 225.67;
-//        lineSize = 2;
-//        horizontalSpacing = 26;
-//        buttonWidth = 120.8;
-//        verticalSpacing = 9.75;
-//        buttonHeight = 63.84;
-//        imageSelection = @"@1x";
-//    } else if (screenHeight == 667){
+    
+    if (screenHeight == 568){
+        lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
+//        borderX = (width * 0.05);
+//        borderY = (width * 0.05);
+    } else if (screenHeight == 667){
 //        homeImage = 265;
-//        lineSize = 2;
+        lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
 //        verticalSpacing = 15;
 //        horizontalSpacing = 15;
 //        buttonHeight = 75;
 //        buttonWidth = 165;
 //        imageSelection = @"@2x";
-//    } else if (screenHeight == 736){
+    } else if (screenHeight == 736){
 //        homeImage = 292.41;
-//        lineSize = 2;
+        lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
 //        horizontalSpacing = 16.56;
 //        buttonWidth = 182.16;
 //        verticalSpacing = 18.50;
 //        buttonHeight = 82.73;
 //        imageSelection = @"@3x";
-//    }
+    }
 //    NSString *titleValue = [configurationValues objectForKey:@"AppTitle"];
-//    
+    NSString *titleValue = @"THE PICKLED FROG";
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
 //    
-//    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
-//    CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
-//    CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
-//    
-//    UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
-//    navLabel.backgroundColor = [UIColor clearColor];
-//    navLabel.font = [UIFont fontWithName:headingFont size:18];
-//    navLabel.textAlignment = NSTextAlignmentCenter;
-//    navLabel.text = titleValue;
-//    self.navigationItem.titleView = navLabel;
-//    
-//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-//    backgroundView.opaque = YES;
+    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
+    CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
+
+    UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
+    navLabel.backgroundColor = [UIColor clearColor];
+    navLabel.font = [UIFont fontWithName:@"Helvetica" size:18];
+    navLabel.textAlignment = NSTextAlignmentCenter;
+    navLabel.text = titleValue;
+    self.navigationItem.titleView = navLabel;
+
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+    backgroundView.opaque = YES;
 //    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
 //    backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-//    backgroundView.opaque = NO;
-//    [self.view addSubview:backgroundView];
-//    
-//    // Set the Line RGB from the configuration file
+    backgroundView.opaque = NO;
+    [self.view addSubview:backgroundView];
+
+    // Set the Line RGB from the configuration file
 //    NSString *lineR = [configurationValues objectForKey:@"LineRed"];
 //    NSInteger lineRed = [lineR integerValue];
-//    
+    NSInteger lineRed = 255;
+    
 //    NSString *lineG = [configurationValues objectForKey:@"LineGreen"];
 //    NSInteger lineGreen = [lineG integerValue];
-//    
+    NSInteger lineGreen = 255;
+    
 //    NSString *lineB = [configurationValues objectForKey:@"LineBlue"];
 //    NSInteger lineBlue = [lineB integerValue];
-//
-//    // Set Line below status bar
-//    UIView *statusBarLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-//    statusBarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-//    [self.view addSubview:statusBarLine];
-//
-//    yPosition = yPosition + lineSize;
-//    
-//    // ImageScrollView setup
-//    ImageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
-//    ImageScrollView.scrollEnabled = YES;
-//    ImageScrollView.userInteractionEnabled=YES;
-//    [ImageScrollView setPagingEnabled:YES];
-//    [ImageScrollView setAlwaysBounceVertical:NO];
-//    ImageScrollView.delegate = self;
-//
-//    // Get photos to display and setup for the ImageScrollView
-//    dataSource = [DataSource dataSource];
-//    NSArray *photos = [dataSource getPhotoNames:@"Home" identifier:@"Home"];
-//
-//    currentIndex = 0;
-//
-//    for (int i = 0; i < [photos count]; i++)
-//    {
-//        CGFloat xOrigin = i * ImageScrollView.frame.size.width;
-//        
-//        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, ImageScrollView.frame.size.width, ImageScrollView.frame.size.height)];
-//        imageView.backgroundColor = [UIColor greenColor];
-//
-//        PhotoLookup *pl = photos[i];
-//        NSString *name = pl.photoName;
-//
-//        [imageView setImage:[UIImage imageNamed:name]];
-//        [ImageScrollView addSubview:imageView];
-//    }
-//    [self.view addSubview:ImageScrollView];
-//    [ImageScrollView setContentSize:CGSizeMake(ImageScrollView.frame.size.width * [photos count], ImageScrollView.frame.size.height)];
-//    [ImageScrollView setContentOffset:CGPointMake(screenWidth*currentIndex, 0)];
-//
-//    // Add Pager Control if it is required
-//    if ([photos count] > 1)
-//    {
-//        self.pageControl = [[UIPageControl alloc] init];
-//
-//        NSInteger placement = (screenWidth/2);
-//
-//        self.pageControl.frame = CGRectMake(placement, (homeImage-30)+yPosition, 100, 20);
-//        self.pageControl.numberOfPages = [photos count];
-//        self.pageControl.currentPage = currentIndex;
-//        [self.view addSubview:self.pageControl];
-//    }
-//
-//    yPosition = yPosition + homeImage;
-//    
-//    // Small Black Line between Image and Table View
-//    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 2)];
-//    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-//    [self.view addSubview:imageLine];
-//    
-//    yPosition = yPosition + 2;
-//    
+    NSInteger lineBlue = 255;
+    
+    // Set Line below status bar
+    UIView *statusBarLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
+    statusBarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+    [self.view addSubview:statusBarLine];
+
+    yPosition = yPosition + lineSize;
+    
+    
+    // Blocks Button Area
+    NSInteger buttonStartX = 0;
+    
+    UIImageView *logoView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
+    logoView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:logoView];
+    
+    UIImageView *aboutView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
+    aboutView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:aboutView];
+    
+    yPosition = yPosition + buttonHeight;
+    
+    UIImageView *seeView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
+    seeView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:seeView];
+    
+    UIImageView *partyView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
+    partyView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:partyView];
+    
+    yPosition = yPosition + buttonHeight;
+    
+    UIImageView *transportView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
+    transportView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:transportView];
+    
+    UIImageView *eatView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
+    eatView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:eatView];
+    
+    yPosition = yPosition + buttonHeight;
+    
+    UIImageView *nextView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
+    nextView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:nextView];
+    
+    UIImageView *nbView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
+    nbView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:nbView];
+    
+    
+    
+    
+    
+    
+//    UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [hostelButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+//        [hostelButton addTarget:self
+//                         action:@selector(loadHostel)
+//               forControlEvents:UIControlEventTouchUpInside];
+//    NSString *value = @"hostel.png";
+    
 //    // ADD THE HOSTEL BUTTON
 //    NSInteger buttonStartX = horizontalSpacing;
 //    yPosition = yPosition + verticalSpacing;
@@ -319,134 +327,134 @@
 //    toolbarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
 //    [self.view addSubview:toolbarLine];
 //
-//    // Toolbar
-//    NSMutableArray *items = [[NSMutableArray alloc] init];
-//
-//    
-//    // Booking
-//    NSString *imageValue = @"booking.png";
-////    range = [imageValue rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-//    UIImage *bookingImage = [UIImage imageNamed:imageValue];
-//    UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
-//    [bookingButton setImage:bookingImage forState:UIControlStateNormal];
-//    UIBarButtonItem *bookingItem = [[UIBarButtonItem alloc] initWithCustomView:bookingButton];
-//    [bookingButton addTarget:self
-//                            action:@selector(loadBooking)
-//                    forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [items addObject:bookingItem];
-//    
-//    // Currency Converter
-//    imageValue = @"currency.png";
-////    range = [imageValue rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-//    
-//    UIImage *currencyImage = [UIImage imageNamed:imageValue];
-//    UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    
-//    currencyButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
-//    [currencyButton setImage:currencyImage forState:UIControlStateNormal];
-//    UIBarButtonItem *currencyItem = [[UIBarButtonItem alloc] initWithCustomView:currencyButton];
-//    [currencyButton addTarget:self
-//                        action:@selector(loadCurrency)
-//                forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [items addObject:currencyItem];
-//    
-//    // Tool Tip
-//    imageValue = @"info.png";
-////    range = [imageValue rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-//
-//    UIImage *infoImage = [UIImage imageNamed:imageValue];
-//    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//
-//    infoButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
-//    [infoButton setImage:infoImage forState:UIControlStateNormal];
-//    UIBarButtonItem *infoItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-//    [infoButton addTarget:self
-//                       action:@selector(loadInfo)
-//             forControlEvents:UIControlEventTouchUpInside];
-//
-//    [items addObject:infoItem];
-//    
-//    // Map
-//    imageValue = @"toolbarMap.png";
-////    range = [imageValue rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-//    
-//    UIImage *mapImage = [UIImage imageNamed:imageValue];
-//    UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
-//    [mapButton setImage:mapImage forState:UIControlStateNormal];
-//    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithCustomView:mapButton];
-//    [mapButton addTarget:self
-//                        action:@selector(loadMap)
-//            forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [items addObject:mapItem];
-//    
-//    // Home
-//    imageValue = @"toolbarHome.png";
-////    range = [imageValue rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-//    UIImage *imageHome = [UIImage imageNamed:imageValue];
-//    UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
-//    [homeButton setImage:imageHome forState:UIControlStateNormal];
-//    UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithCustomView:homeButton];
-//    [homeButton addTarget:self
-//                      action:@selector(loadHome)
-//            forControlEvents:UIControlEventTouchUpInside];
-//    homeButton.enabled = NO;
-//    homeButton.alpha = 0.4;
-//
-//    [items addObject:homeItem];
-//
-//    UIToolbar *toolbar = [[UIToolbar alloc] init];
-//    toolbar.frame = CGRectMake(0, screenHeight-49, screenWidth, 49);
-//    [toolbar setItems:items animated:NO];
-//    toolbar.barTintColor = Rgb2UIColor(236, 240, 241);
-//    [self.view addSubview:toolbar];
-//    
-//    //SWReveal Slider
-//    SWRevealViewController *revealController = [self revealViewController];
-//
-//    // Add an image to your project & set that image here.
-//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
-//            style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
-//    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
-//    
-//    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
-//}
-//
+    // Toolbar
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+
+    
+    // Booking
+    NSString *imageValue = @"bookingtoolbar.png";
+//    range = [imageValue rangeOfString:@"."];
+//    if (range.location != NSNotFound)
+//    {
+//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
+//    }
+    UIImage *bookingImage = [UIImage imageNamed:imageValue];
+    UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
+    [bookingButton setImage:bookingImage forState:UIControlStateNormal];
+    UIBarButtonItem *bookingItem = [[UIBarButtonItem alloc] initWithCustomView:bookingButton];
+    [bookingButton addTarget:self
+                            action:@selector(loadBooking)
+                    forControlEvents:UIControlEventTouchUpInside];
+    
+    [items addObject:bookingItem];
+    
+    // Currency Converter
+    imageValue = @"currencytoolbar.png";
+//    range = [imageValue rangeOfString:@"."];
+//    if (range.location != NSNotFound)
+//    {
+//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
+//    }
+    
+    UIImage *currencyImage = [UIImage imageNamed:imageValue];
+    UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    currencyButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
+    [currencyButton setImage:currencyImage forState:UIControlStateNormal];
+    UIBarButtonItem *currencyItem = [[UIBarButtonItem alloc] initWithCustomView:currencyButton];
+    [currencyButton addTarget:self
+                        action:@selector(loadCurrency)
+                forControlEvents:UIControlEventTouchUpInside];
+    
+    [items addObject:currencyItem];
+    
+    // Tool Tip
+    imageValue = @"traveltipstoolbar.png";
+//    range = [imageValue rangeOfString:@"."];
+//    if (range.location != NSNotFound)
+//    {
+//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
+//    }
+
+    UIImage *infoImage = [UIImage imageNamed:imageValue];
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+
+    infoButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
+    [infoButton setImage:infoImage forState:UIControlStateNormal];
+    UIBarButtonItem *infoItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    [infoButton addTarget:self
+                       action:@selector(loadInfo)
+             forControlEvents:UIControlEventTouchUpInside];
+
+    [items addObject:infoItem];
+    
+    // Map
+    imageValue = @"maptoolbar.png";
+//    range = [imageValue rangeOfString:@"."];
+//    if (range.location != NSNotFound)
+//    {
+//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
+//    }
+    
+    UIImage *mapImage = [UIImage imageNamed:imageValue];
+    UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
+    [mapButton setImage:mapImage forState:UIControlStateNormal];
+    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithCustomView:mapButton];
+    [mapButton addTarget:self
+                        action:@selector(loadMap)
+            forControlEvents:UIControlEventTouchUpInside];
+    
+    [items addObject:mapItem];
+    
+    // Home
+    imageValue = @"hometoolbar.png";
+//    range = [imageValue rangeOfString:@"."];
+//    if (range.location != NSNotFound)
+//    {
+//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
+//    }
+    UIImage *imageHome = [UIImage imageNamed:imageValue];
+    UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
+    [homeButton setImage:imageHome forState:UIControlStateNormal];
+    UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithCustomView:homeButton];
+    [homeButton addTarget:self
+                      action:@selector(loadHome)
+            forControlEvents:UIControlEventTouchUpInside];
+    homeButton.enabled = NO;
+    homeButton.alpha = 0.4;
+
+    [items addObject:homeItem];
+
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    toolbar.frame = CGRectMake(0, screenHeight-49, screenWidth, 49);
+    [toolbar setItems:items animated:NO];
+    toolbar.barTintColor = Rgb2UIColor(236, 240, 241);
+    [self.view addSubview:toolbar];
+    
+    //SWReveal Slider
+    SWRevealViewController *revealController = [self revealViewController];
+
+    // Add an image to your project & set that image here.
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+            style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
+    
+    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
+}
+
 //// View Will Apear
 //- (void) viewWillAppear:(BOOL)animated
 //{
 ////    [[self navigationController] setNavigationBarHidden:YES animated:YES];
-}
+//}
 
 //#pragma mark - Navigation Methods
 //
