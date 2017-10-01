@@ -251,6 +251,7 @@
 		AB41BA6A1F7FB72A0073728F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA691F7FB72A0073728F /* libz.tbd */; };
 		AB41BA6D1F7FB7390073728F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */; };
 		AB41BA6E1F7FB7390073728F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6C1F7FB7390073728F /* libxml2.tbd */; };
+		AB41BA701F80E8DD0073728F /* PickledFrogDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -544,6 +545,7 @@
 		AB41BA691F7FB72A0073728F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		AB41BA6C1F7FB7390073728F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase.db; path = Database/PickledFrogDatabase.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -984,6 +986,7 @@
 		AB41BA1D1F7A66BB0073728F /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */,
 				AB41BA601F7FB6AE0073728F /* SQLiteDatabase.h */,
 				AB41BA5E1F7FB6AE0073728F /* SQLiteDatabase.m */,
 				AB41BA5F1F7FB6AE0073728F /* DataSource.h */,
@@ -1365,6 +1368,7 @@
 				AB41B9D81F7A645F0073728F /* par5t.jpg in Resources */,
 				AB41B9671F7A645F0073728F /* currencytoolbar.png in Resources */,
 				AB41B9F91F7A645F0073728F /* tra1.jpg in Resources */,
+				AB41BA701F80E8DD0073728F /* PickledFrogDatabase.db in Resources */,
 				AB41B9D11F7A645F0073728F /* par2.jpg in Resources */,
 				AB41BA0B1F7A645F0073728F /* websitecontact@2x.png in Resources */,
 				AB41B9C61F7A645F0073728F /* nex5.jpg in Resources */,
