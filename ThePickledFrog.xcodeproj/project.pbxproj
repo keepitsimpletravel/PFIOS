@@ -252,6 +252,7 @@
 		AB41BA6D1F7FB7390073728F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */; };
 		AB41BA6E1F7FB7390073728F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6C1F7FB7390073728F /* libxml2.tbd */; };
 		AB41BA701F80E8DD0073728F /* PickledFrogDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */; };
+		AB41BA721F80E9770073728F /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA711F80E9770073728F /* Configuration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -546,6 +547,7 @@
 		AB41BA6B1F7FB7390073728F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		AB41BA6C1F7FB7390073728F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase.db; path = Database/PickledFrogDatabase.db; sourceTree = "<group>"; };
+		AB41BA711F80E9770073728F /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -602,6 +604,7 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA711F80E9770073728F /* Configuration.plist */,
 				AB41BA2D1F7FB6000073728F /* Entities */,
 				AB41BA231F7A68E20073728F /* Custom Objects */,
 				AB41BA1D1F7A66BB0073728F /* Database */,
@@ -1191,6 +1194,7 @@
 				AB41B96F1F7A645F0073728F /* directionsmap@3x.png in Resources */,
 				AB41B9F31F7A645F0073728F /* showmaphostel.png in Resources */,
 				AB41B9901F7A645F0073728F /* exp11t.jpg in Resources */,
+				AB41BA721F80E9770073728F /* Configuration.plist in Resources */,
 				AB41B9701F7A645F0073728F /* drinkingmap.png in Resources */,
 				AB41B9DF1F7A645F0073728F /* par9.jpg in Resources */,
 				AB41B99B1F7A645F0073728F /* exp4t.jpg in Resources */,
