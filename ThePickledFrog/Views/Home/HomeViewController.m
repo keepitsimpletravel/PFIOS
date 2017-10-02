@@ -54,30 +54,46 @@
 //    buttonBorder = 1;
     NSInteger bottomTabBarHeight = 49;
     NSInteger yPosition = 64;
-    NSInteger yBorder = 0;
-    NSInteger xBorder = 0;
+    NSInteger borderX = 0;
+    NSInteger borderY = 0;
+    NSInteger borderMiddleX = 0;
+    NSInteger borderMiddleY = 0;
 
     // Get Config Values
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     if (screenHeight == 568){
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
-//        borderX = (width * 0.05);
-//        borderY = (width * 0.05);
+//        borderX = ((screenWidth/2) * 0.05);
+//        borderY = ((screenHeight/4) * 0.05);
+        borderX = (buttonWidth * 0.05);
+        borderY = (buttonHeight * 0.05);
+        borderMiddleX = (buttonWidth * 0.03);
+        borderMiddleY = (buttonWidth * 0.03);
     } else if (screenHeight == 667){
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
+        borderX = (buttonWidth * 0.05);
+        borderY = (buttonHeight * 0.05);
+        borderMiddleX = (buttonWidth * 0.03);
+        borderMiddleY = (buttonWidth * 0.03);
     } else if (screenHeight == 736){
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
+//        borderX = ((screenWidth/2) * 0.05);
+//        borderY = ((screenHeight/4) * 0.05);
+        borderX = (buttonWidth * 0.05);
+        borderY = (buttonHeight * 0.05);
+        borderMiddleX = (buttonWidth * 0.03);
+        borderMiddleY = (buttonWidth * 0.03);
     }
-//    NSString *titleValue = [configurationValues objectForKey:@"AppTitle"];
-    NSString *titleValue = @"THE PICKLED FROG";
+    NSString *titleValue = [configurationValues objectForKey:@"AppTitle"];
+//    NSString *titleValue = @"THE PICKLED FROG";
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
 //    
@@ -100,17 +116,17 @@
     [self.view addSubview:backgroundView];
 
     // Set the Line RGB from the configuration file
-//    NSString *lineR = [configurationValues objectForKey:@"LineRed"];
-//    NSInteger lineRed = [lineR integerValue];
-    NSInteger lineRed = 0;
+    NSString *lineR = [configurationValues objectForKey:@"LineRed"];
+    NSInteger lineRed = [lineR integerValue];
+//    NSInteger lineRed = 0;
     
-//    NSString *lineG = [configurationValues objectForKey:@"LineGreen"];
-//    NSInteger lineGreen = [lineG integerValue];
-    NSInteger lineGreen = 0;
+    NSString *lineG = [configurationValues objectForKey:@"LineGreen"];
+    NSInteger lineGreen = [lineG integerValue];
+//    NSInteger lineGreen = 0;
     
-//    NSString *lineB = [configurationValues objectForKey:@"LineBlue"];
-//    NSInteger lineBlue = [lineB integerValue];
-    NSInteger lineBlue = 0;
+    NSString *lineB = [configurationValues objectForKey:@"LineBlue"];
+    NSInteger lineBlue = [lineB integerValue];
+//    NSInteger lineBlue = 0;
     
     // Set Line below status bar
     UIView *statusBarLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
@@ -122,42 +138,87 @@
     
     // Blocks Button Area
     NSInteger buttonStartX = 0;
-    
-    UIImageView *logoView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
-    logoView.backgroundColor = [UIColor greenColor];
+
+    NSString *value = @"hostellogo.png";
+    UIImage *image = [[UIImage alloc] init];
+    image = [UIImage imageNamed:value];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
+    logoView.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
     [self.view addSubview:logoView];
     
-    UIImageView *aboutView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
-    aboutView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:aboutView];
+    value = @"abo1.jpg";
+    UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [hostelButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+            [hostelButton addTarget:self
+                             action:@selector(loadHostel)
+                   forControlEvents:UIControlEventTouchUpInside];
+    hostelButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
+    hostelButton.layer.borderWidth = 3.0f;
+    hostelButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:hostelButton];
     
     yPosition = yPosition + buttonHeight;
     
-    UIImageView *seeView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
-    seeView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:seeView];
+    value = @"exp8.jpg";
+    UIButton *seeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [seeButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [seeButton addTarget:self
+                     action:@selector(loadAttractions)
+           forControlEvents:UIControlEventTouchUpInside];
+    seeButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
+    seeButton.layer.borderWidth = 3.0f;
+    seeButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:seeButton];
     
-    UIImageView *partyView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
-    partyView.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:partyView];
+    value = @"par5.jpg";
+    UIButton *partyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [partyButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [partyButton addTarget:self
+                     action:@selector(loadDrinks)
+           forControlEvents:UIControlEventTouchUpInside];
+    partyButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
+    partyButton.layer.borderWidth = 3.0f;
+    partyButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:partyButton];
+    
+    yPosition = yPosition + buttonHeight;
+
+    value = @"tra3.jpg";
+    UIButton *transportButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [transportButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [transportButton addTarget:self
+                  action:@selector(loadTransport)
+        forControlEvents:UIControlEventTouchUpInside];
+    transportButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
+    transportButton.layer.borderWidth = 3.0f;
+    transportButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:transportButton];
+    
+    value = @"eat2.jpg";
+    UIButton *eatButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [eatButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [eatButton addTarget:self
+                    action:@selector(loadEats)
+          forControlEvents:UIControlEventTouchUpInside];
+    eatButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
+    eatButton.layer.borderWidth = 3.0f;
+    eatButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:eatButton];
     
     yPosition = yPosition + buttonHeight;
     
-    UIImageView *transportView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
-    transportView.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:transportView];
+    value = @"nex3.jpg";
+    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [nextButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [nextButton addTarget:self
+                        action:@selector(loadNext)
+              forControlEvents:UIControlEventTouchUpInside];
+    nextButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
+    nextButton.layer.borderWidth = 3.0f;
+    nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    [self.view addSubview:nextButton];
     
-    UIImageView *eatView = [[UIView alloc] initWithFrame:CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight)];
-    eatView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:eatView];
-    
-    yPosition = yPosition + buttonHeight;
-    
-    UIImageView *nextView = [[UIView alloc] initWithFrame:CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight)];
-    nextView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:nextView];
-    
-    NSString *value = @"noticeboard.png";
+    value = @"noticeboard.png";
     UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
             [noticeboardButton addTarget:self
@@ -165,155 +226,6 @@
                    forControlEvents:UIControlEventTouchUpInside];
     noticeboardButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
     [self.view addSubview:noticeboardButton];
-    
-    
-    
-    
-    
-    
-//    UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [hostelButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//        [hostelButton addTarget:self
-//                         action:@selector(loadHostel)
-//               forControlEvents:UIControlEventTouchUpInside];
-//    NSString *value = @"hostel.png";
-    
-//    // ADD THE HOSTEL BUTTON
-//    NSInteger buttonStartX = horizontalSpacing;
-//    yPosition = yPosition + verticalSpacing;
-//    
-//    NSString *value = @"hostel.png";
-//
-//    UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [hostelButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//    [hostelButton addTarget:self
-//                     action:@selector(loadHostel)
-//           forControlEvents:UIControlEventTouchUpInside];
-//    
-//    hostelButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-//    [self.view addSubview:hostelButton];
-//
-//    buttonStartX = buttonStartX + buttonWidth + horizontalSpacing;
-//    
-//    // Local Guide
-//    value = @"localGuide.png";
-//    
-//    UIButton *guideButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [guideButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//    [guideButton addTarget:self
-//                     action:@selector(loadGuide)
-//           forControlEvents:UIControlEventTouchUpInside];
-//    
-//    guideButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-//    [self.view addSubview:guideButton];
-//    
-//    // Transport
-//    buttonStartX = horizontalSpacing;
-//    yPosition = yPosition + buttonHeight + verticalSpacing;
-//    
-//    value = @"transport.png";
-//    
-//    UIButton *transportButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [transportButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//    [transportButton addTarget:self
-//                    action:@selector(loadTransport)
-//          forControlEvents:UIControlEventTouchUpInside];
-//    
-//    transportButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-//    [self.view addSubview:transportButton];
-//    
-//    // Where Next
-//    buttonStartX = buttonStartX + buttonWidth + horizontalSpacing;
-//    
-//    value = @"whereNext.png";
-//    
-//    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [nextButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//        [nextButton addTarget:self
-//                            action:@selector(loadNext)
-//                  forControlEvents:UIControlEventTouchUpInside];
-//    
-//    nextButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-//    [self.view addSubview:nextButton];
-//
-//    // Noticeboard
-//    buttonStartX = horizontalSpacing;
-//    yPosition = yPosition + buttonHeight + verticalSpacing;
-//    
-//    value = @"noticeboardlong.png";
-//    
-//    UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-//    [noticeboardButton addTarget:self
-//                            action:@selector(loadNoticeboard)
-//                  forControlEvents:UIControlEventTouchUpInside];
-//    
-//    noticeboardButton.frame = CGRectMake(buttonStartX, yPosition, (buttonWidth*2)+horizontalSpacing, buttonHeight);
-////    noticeboardButton.frame = CGRectMake(buttonStartX+(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
-//    [self.view addSubview:noticeboardButton];
-//    
-////    // Noticeboard
-////    buttonStartX = buttonStartX + buttonWidth + horizontalSpacing;
-////    
-////    value = @"noticeboard.png";
-////    range = [value rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [value componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-////    
-////    UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
-////    [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-////    [noticeboardButton addTarget:self
-////                        action:@selector(loadNoticeboard)
-////              forControlEvents:UIControlEventTouchUpInside];
-////    
-////    noticeboardButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-////    [self.view addSubview:noticeboardButton];
-//    
-////    // Chat
-////    buttonStartX = horizontalSpacing;
-////    yPosition = yPosition + buttonHeight + verticalSpacing;
-////    
-////    value = @"chat.png";
-////    range = [value rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [value componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-////    
-////    UIButton *chatButton = [UIButton buttonWithType:UIButtonTypeCustom];
-////    [chatButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-////    [chatButton addTarget:self
-////                        action:@selector(loadChat)
-////              forControlEvents:UIControlEventTouchUpInside];
-////    
-////    chatButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-////    [self.view addSubview:chatButton];
-//
-////    // Where Next
-////    buttonStartX = buttonStartX + buttonWidth + horizontalSpacing;
-////    
-////    value = @"whereNext.png";
-////    range = [value rangeOfString:@"."];
-////    if (range.location != NSNotFound)
-////    {
-////        NSArray *myArray = [value componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-////        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-////    }
-////    
-////    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-////    [nextButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-////    [nextButton addTarget:self
-////                   action:@selector(loadNext)
-////         forControlEvents:UIControlEventTouchUpInside];
-////    
-////    nextButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-////    [self.view addSubview:nextButton];
-////    
-////    yPosition = yPosition + buttonHeight + verticalSpacing;
     
     // Set Line below status bar
     UIView *toolbarLine = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-51, screenWidth, lineSize)];
@@ -326,12 +238,7 @@
     
     // Booking
     NSString *imageValue = @"bookingtoolbar.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+
     UIImage *bookingImage = [UIImage imageNamed:imageValue];
     UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -345,12 +252,6 @@
     
     // Currency Converter
     imageValue = @"currencytoolbar.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
     
     UIImage *currencyImage = [UIImage imageNamed:imageValue];
     UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -366,12 +267,6 @@
     
     // Tool Tip
     imageValue = @"traveltipstoolbar.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
 
     UIImage *infoImage = [UIImage imageNamed:imageValue];
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -387,13 +282,6 @@
     
     // Map
     imageValue = @"maptoolbar.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
     UIImage *mapImage = [UIImage imageNamed:imageValue];
     UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
     mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -407,12 +295,6 @@
     
     // Home
     imageValue = @"hometoolbar.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
     UIImage *imageHome = [UIImage imageNamed:imageValue];
     UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -451,9 +333,9 @@
 
 //#pragma mark - Navigation Methods
 //
-//// Booking Action
-//- (IBAction)loadBooking
-//{
+// Booking Action
+- (IBAction)loadBooking
+{
 //    // Get Config Values
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
 //    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -468,11 +350,11 @@
 //    [loadWebVC setTitleValue:appTitle];
 //    
 //    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
+}
 //
-//// Chat Action
-//- (IBAction)loadChat
-//{
+// Chat Action
+- (IBAction)loadChat
+{
 //    // Check to see what the users connection is
 //    Reachability *reachability = [Reachability reachabilityForInternetConnection];
 //    [reachability startNotifier];
@@ -498,57 +380,57 @@
 //        
 //        [alert show];
 //    }
-//}
+}
 //
-//- (IBAction)loadNoticeboard
-//{
+- (IBAction)loadNoticeboard
+{
 //    Noticeboard2 *chat = [[Noticeboard2 alloc] initWithNibName:@"Noticeboard2" bundle:nil];
 //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chat];
 //    
 //    [self.navigationController pushViewController:chat animated:YES];
-//}
+}
 //
-//// Hostel Action
-//- (IBAction)loadHostel
-//{
+// Hostel Action
+- (IBAction)loadHostel
+{
 //    HostelDetails2ViewController *hostelVC = [[HostelDetails2ViewController alloc] initWithNibName:@"HostelDetails2ViewController" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //
 //    [self.navigationController pushViewController:hostelVC animated:YES];
-//}
-//
-//// Local Guide Action
-//- (IBAction)loadGuide
-//{
+}
+
+// Local Guide Action
+- (IBAction)loadGuide
+{
 //    LocalGuide *guideVC = [[LocalGuide alloc] initWithNibName:@"LocalGuide" bundle:nil];
 //    
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    
 //    [self.navigationController pushViewController:guideVC animated:YES];
-//}
+}
 //
-//// Eats Action
-//- (IBAction)loadEats
-//{
-////    EatListingViewController *eats = [[EatListingViewController alloc] initWithNibName:@"EatListingViewController" bundle:nil];
+// Eats Action
+- (IBAction)loadEats
+{
+//    EatListingViewController *eats = [[EatListingViewController alloc] initWithNibName:@"EatListingViewController" bundle:nil];
 ////    [eats setTitle:@"Eats"];
 ////    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 ////    
 ////    [self.navigationController pushViewController:eats animated:YES];
-//}
-//
-//- (IBAction)loadNext
-//{
+}
+
+- (IBAction)loadNext
+{
 //    WhereNextListingViewController *nextVC = [[WhereNextListingViewController alloc] initWithNibName:@"WhereNextListingViewController" bundle:nil];
 //
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //
 //    [self.navigationController pushViewController:nextVC animated:YES];
-//}
-//
-//// Map Action
-//- (IBAction)loadMap
-//{
+}
+
+// Map Action
+- (IBAction)loadMap
+{
 //    dataSource = [DataSource dataSource];
 //    Detail *details = [dataSource getHostelDetails];
 //    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
@@ -559,50 +441,50 @@
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    
 //    [self.navigationController pushViewController:map animated:YES];
-//}
-//
-//// Transport Action
-//- (IBAction)loadTransport
-//{
+}
+
+// Transport Action
+- (IBAction)loadTransport
+{
 //    TransportListingViewController *tranListing = [[TransportListingViewController alloc] initWithNibName:@"TransportListingViewController" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style: UIBarButtonItemStylePlain target:nil action:nil];
 //
 //    [self.navigationController pushViewController:tranListing animated:YES];
-//}
-//
-//// Currency Action
-//- (IBAction)loadCurrency
-//{
+}
+
+// Currency Action
+- (IBAction)loadCurrency
+{
 //    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    [self.navigationController pushViewController:cc animated:YES];
-//}
-//
-//// Home Action
-//- (IBAction)loadHome
-//{
-//    // No action required on this screen as the button
-//}
-//
-//// Travel Tips Action
-//- (IBAction)loadInfo
-//{
+}
+
+// Home Action
+- (IBAction)loadHome
+{
+    // No action required on this screen as the button
+}
+
+// Travel Tips Action
+- (IBAction)loadInfo
+{
 //    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    [self.navigationController pushViewController:tt animated:YES];
-//}
-//
-//# pragma Scroll View
-//
-//// Scroll View End Scroll - Set Page
-//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
+}
+
+# pragma Scroll View
+
+// Scroll View End Scroll - Set Page
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
 //    if (scrollView == ImageScrollView){
 //        CGFloat width = scrollView.frame.size.width;
 //        NSInteger page = (scrollView.contentOffset.x + (0.5f * width)) / width;
 //        
 //        self.pageControl.currentPage = page;
 //    }
-//}
+}
 
 @end

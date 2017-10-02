@@ -253,6 +253,8 @@
 		AB41BA6E1F7FB7390073728F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB41BA6C1F7FB7390073728F /* libxml2.tbd */; };
 		AB41BA701F80E8DD0073728F /* PickledFrogDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */; };
 		AB41BA721F80E9770073728F /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA711F80E9770073728F /* Configuration.plist */; };
+		AB41BA761F81D2FB0073728F /* HostelDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */; };
+		AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -548,6 +550,9 @@
 		AB41BA6C1F7FB7390073728F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		AB41BA6F1F80E8DD0073728F /* PickledFrogDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase.db; path = Database/PickledFrogDatabase.db; sourceTree = "<group>"; };
 		AB41BA711F80E9770073728F /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostelDetailsViewController.m; path = "Views/Hostel Details/HostelDetailsViewController.m"; sourceTree = "<group>"; };
+		AB41BA741F81D2FB0073728F /* HostelDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostelDetailsViewController.h; path = "Views/Hostel Details/HostelDetailsViewController.h"; sourceTree = "<group>"; };
+		AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HostelDetailsViewController.xib; path = "Views/Hostel Details/HostelDetailsViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -898,6 +903,9 @@
 		AB41BA0F1F7A665E0073728F /* About */ = {
 			isa = PBXGroup;
 			children = (
+				AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */,
+				AB41BA741F81D2FB0073728F /* HostelDetailsViewController.h */,
+				AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -1278,6 +1286,7 @@
 				AB41B9E51F7A645F0073728F /* postnotice@2x.png in Resources */,
 				AB41B96D1F7A645F0073728F /* directionsmap.png in Resources */,
 				AB41B9FC1F7A645F0073728F /* tra2t.jpg in Resources */,
+				AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */,
 				AB41BA011F7A645F0073728F /* tra5.jpg in Resources */,
 				AB41B96B1F7A645F0073728F /* directionshostel@2x.png in Resources */,
 				AB41B9AB1F7A645F0073728F /* hamburgermenu@3x.png in Resources */,
@@ -1426,6 +1435,7 @@
 				AB41BA621F7FB6AE0073728F /* SQLiteDatabase.m in Sources */,
 				AB41BA5C1F7FB60D0073728F /* Currency.m in Sources */,
 				AB41BA5D1F7FB60D0073728F /* PhotoLookup.m in Sources */,
+				AB41BA761F81D2FB0073728F /* HostelDetailsViewController.m in Sources */,
 				AB41BA561F7FB60D0073728F /* Detail.m in Sources */,
 				AB41BA5B1F7FB60D0073728F /* Network.m in Sources */,
 				AB41BA521F7FB60D0073728F /* Transport.m in Sources */,
