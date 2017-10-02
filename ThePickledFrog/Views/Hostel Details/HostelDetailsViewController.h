@@ -12,14 +12,14 @@
 
 @interface HostelDetailsViewController : UIViewController <UIScrollViewDelegate,MFMailComposeViewControllerDelegate>
 {
-//    NSInteger lineSize;
-//    NSInteger homeImage;
+    NSInteger lineSize;
+    NSInteger homeImage;
 //    UIScrollView *ContentScrollView;
-//    id<DataSource> dataSource;
+    id<DataSource> dataSource;
 //    NSDecimalNumber *longitude;
 //    NSDecimalNumber *latitude;
 //    UIScrollView *ImageScrollView;
-//    Detail *detail;
+    Detail *detail;
 //    NSString *imageSelection;
 //    NSInteger bedImageWidth;
 //    NSInteger bedImageHeight;

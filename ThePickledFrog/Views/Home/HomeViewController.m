@@ -8,7 +8,7 @@
 #import "HomeViewController.h"
 //#import "SQLiteDatabase.h"
 //#import "DataSource.h"
-//#import "HostelDetails2ViewController.h"
+#import "HostelDetailsViewController.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
 //#import "UIView+Toast.h"
@@ -471,14 +471,14 @@
     
     [self.navigationController pushViewController:chat animated:YES];
 }
-//
+
 // Hostel Action
 - (IBAction)loadHostel
 {
-//    HostelDetails2ViewController *hostelVC = [[HostelDetails2ViewController alloc] initWithNibName:@"HostelDetails2ViewController" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//
-//    [self.navigationController pushViewController:hostelVC animated:YES];
+    HostelDetailsViewController *hostelVC = [[HostelDetailsViewController alloc] initWithNibName:@"HostelDetailsViewController" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    [self.navigationController pushViewController:hostelVC animated:YES];
 }
 
 // Local Guide Action

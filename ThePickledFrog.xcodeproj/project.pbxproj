@@ -1151,8 +1151,8 @@
 		AB41BA0F1F7A665E0073728F /* About */ = {
 			isa = PBXGroup;
 			children = (
-				AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */,
 				AB41BA741F81D2FB0073728F /* HostelDetailsViewController.h */,
+				AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */,
 				AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */,
 			);
 			name = About;
@@ -1295,8 +1295,8 @@
 				AB41BA3B1F7FB60D0073728F /* Activity.h */,
 				AB41BA3C1F7FB60D0073728F /* Room.m */,
 				AB41BA3D1F7FB60D0073728F /* Room.h */,
-				AB41BA3E1F7FB60D0073728F /* Detail.m */,
 				AB41BA3F1F7FB60D0073728F /* Detail.h */,
+				AB41BA3E1F7FB60D0073728F /* Detail.m */,
 				AB41BA401F7FB60D0073728F /* ThumbnailLookup.m */,
 				AB41BA411F7FB60D0073728F /* ThumbnailLookup.h */,
 				AB41BA421F7FB60D0073728F /* Staff.m */,

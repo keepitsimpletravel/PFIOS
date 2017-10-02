@@ -35,9 +35,9 @@
 	<key>HostelDetailsTitle</key>
 	<string>ABOUT US</string>
 	<key>HeadingFont</key>
-	<string>Roboto-Regular</string>
+	<string>OpenSans-CondensedBold</string>
 	<key>BodyFont</key>
-	<string>CourierNewPSMT</string>
+	<string>OpenSans-Light</string>
 	<key>BookingURL</key>
 	<string>http://www.axisrooms.com/beV2/displaySearchResultV3.html?room_number=0&amp;searcherId=30601908&amp;applicableDealId=0&amp;searchNumber=1&amp;allHotels=true</string>
 	<key>TextSize</key>

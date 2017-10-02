@@ -18,14 +18,13 @@
 @property(nonatomic, copy) NSString *email;
 @property(nonatomic, copy) NSString *website;
 @property(nonatomic, copy) NSString *description;
-@property(nonatomic, copy) NSString *description2;
+@property(nonatomic, copy) NSString *bookingLink;
 @property(nonatomic, retain) NSDecimalNumber *longitude;
 @property(nonatomic, retain) NSDecimalNumber *latitude;
 @property(nonatomic, copy) NSString *instagramURL;
-@property(nonatomic, copy) NSString *twitterURL;
 @property(nonatomic, copy) NSString *facebookURL;
 @property(nonatomic, copy) NSString *tripAdvisorURL;
 
--(id)initWithData:(NSString *)n ddesc:(NSString *)desc ddesc2:(NSString *)desc2 dadd:(NSString *)add dph:(NSString *)ph dem:(NSString *)em web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la ig:(NSString *)insta twit:(NSString *)twURL fb:(NSString *)faceURL ta:(NSString *)tripURL;
+-(id)initWithData:(NSString *)n ddesc:(NSString *)desc dph:(NSString *)ph dadd:(NSString *)add dem:(NSString *)em web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la book:(NSString *)bURL ta:(NSString *)tripURL ig:(NSString *)insta fb:(NSString *)faceURL;
 
 @end

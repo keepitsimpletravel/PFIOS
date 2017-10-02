@@ -9,7 +9,7 @@
 
 @implementation Detail
 
-@synthesize name, description, address, email, phone, longitude, latitude, website, description2, instagramURL, twitterURL, facebookURL, tripAdvisorURL;
+@synthesize name, description, address, email, phone, longitude, latitude, website, bookingLink, instagramURL, facebookURL, tripAdvisorURL;
 
 - (id)init
 {
@@ -20,11 +20,11 @@
     return self;
 }
 
--(id)initWithData:(NSString *)n ddesc:(NSString *)desc ddesc2:(NSString *)desc2 dadd:(NSString *)add dph:(NSString *)ph dem:(NSString *)em web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la ig:(NSString *)insta twit:(NSString *)twURL fb:(NSString *)faceURL ta:(NSString *)tripURL
+-(id)initWithData:(NSString *)n ddesc:(NSString *)desc dph:(NSString *)ph dadd:(NSString *)add dem:(NSString *)em web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la book:(NSString *)bURL ta:(NSString *)tripURL ig:(NSString *)insta fb:(NSString *)faceURL
 {
     self.name = n;
     self.description = desc;
-    self.description2 = desc2;
+    self.bookingLink = bURL;
     self.address = add;
     self.email = em;
     self.phone = ph;
@@ -32,7 +32,6 @@
     self.longitude = lo;
     self.latitude = la;
     self.instagramURL = insta;
-    self.twitterURL = twURL;
     self.facebookURL = faceURL;
     self.tripAdvisorURL = tripURL;
     

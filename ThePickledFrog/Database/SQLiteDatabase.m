@@ -781,38 +781,38 @@
             {
                 NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 
-                NSString *phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 
-                NSString *add = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                NSString *phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 
-                NSString *email = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                NSString *add = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
                 
-                NSString *website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
+                NSString *email = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
                 
-                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
+                NSString *website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
                 
-                const unsigned char *description2 = sqlite3_column_text(compiledStatement, 6);
-                NSString *desc2 = @"";
-                if (description2 ){
-                    desc2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
+                NSNumber *lonValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 6)];
+                
+                NSNumber *latValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 7)];
+                
+                const unsigned char *book = sqlite3_column_text(compiledStatement, 8);
+                NSString *bookingURL = @"";
+                if (book ){
+                    bookingURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
                 }
                 
-                NSNumber *lonValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 7)];
-                
-                NSNumber *latValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 8)];
+                // Trip
+                const unsigned char *trip = sqlite3_column_text(compiledStatement, 9);
+                NSString *tripURL = @"";
+                if (trip){
+                    tripURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
+                }
                 
                 // Insta
-                const unsigned char *insta = sqlite3_column_text(compiledStatement, 9);
+                const unsigned char *insta = sqlite3_column_text(compiledStatement, 10);
                 NSString *instagramURL = @"";
                 if (insta ){
-                    instagramURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
-                }
-                
-                // Twitter
-                const unsigned char *twit = sqlite3_column_text(compiledStatement, 10);
-                NSString *twitterURL = @"";
-                if (twit){
-                    twitterURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
+                    instagramURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
                 }
                 
                 // Face
@@ -822,18 +822,11 @@
                     facebookURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
                 }
                 
-                // Trip
-                const unsigned char *trip = sqlite3_column_text(compiledStatement, 12);
-                NSString *tripURL = @"";
-                if (trip){
-                    tripURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
-                }
-
                 NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[lonValue decimalValue]];
 
                 NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latValue decimalValue]];
                 
-                details = [[Detail alloc] initWithData:name ddesc:desc ddesc2:desc2 dadd:add dph:phone dem:email web:website lon:longitude lat:latitude ig:instagramURL twit:twitterURL fb:facebookURL ta:tripURL];
+                details = [[Detail alloc] initWithData:name ddesc:desc dph:phone dadd:add dem:email web:website lon:longitude lat:latitude book:bookingURL ta:tripURL ig:instagramURL fb:facebookURL];
             }
         }
     }
