@@ -20,7 +20,7 @@
 //#import "TransportListingViewController.h"
 //#import "MapViewController.h"
 //#import "WhereNextListingViewController.h"
-//#import "Noticeboard2.h"
+#import "Noticeboard2.h"
 //#import "TravelTipsViewController.h"
 
 @interface HomeViewController ()
@@ -463,10 +463,10 @@
 //
 - (IBAction)loadNoticeboard
 {
-//    Noticeboard2 *chat = [[Noticeboard2 alloc] initWithNibName:@"Noticeboard2" bundle:nil];
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chat];
-//    
-//    [self.navigationController pushViewController:chat animated:YES];
+    Noticeboard2 *chat = [[Noticeboard2 alloc] initWithNibName:@"Noticeboard2" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chat];
+    
+    [self.navigationController pushViewController:chat animated:YES];
 }
 //
 // Hostel Action

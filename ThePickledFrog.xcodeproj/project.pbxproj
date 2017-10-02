@@ -284,28 +284,28 @@
 		AB7AA5811F81EE27001DFF05 /* checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA4F61F81EE27001DFF05 /* checked@2x.png */; };
 		AB7AA5821F81EE27001DFF05 /* circle_you.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA4F71F81EE27001DFF05 /* circle_you.png */; };
 		AB7AA5831F81EE27001DFF05 /* circle_you@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA4F81F81EE27001DFF05 /* circle_you@2x.png */; };
-		AB7AA5841F81EE27001DFF05 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4FC1F81EE27001DFF05 /* EGOCache.m */; };
-		AB7AA5851F81EE27001DFF05 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4FF1F81EE27001DFF05 /* EGOImageButton.m */; };
-		AB7AA5861F81EE27001DFF05 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5021F81EE27001DFF05 /* EGOImageLoadConnection.m */; };
-		AB7AA5871F81EE27001DFF05 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5041F81EE27001DFF05 /* EGOImageLoader.m */; };
-		AB7AA5881F81EE27001DFF05 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5071F81EE27001DFF05 /* EGOImageView.m */; };
+		AB7AA5841F81EE27001DFF05 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4FC1F81EE27001DFF05 /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5851F81EE27001DFF05 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4FF1F81EE27001DFF05 /* EGOImageButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5861F81EE27001DFF05 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5021F81EE27001DFF05 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5871F81EE27001DFF05 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5041F81EE27001DFF05 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5881F81EE27001DFF05 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5071F81EE27001DFF05 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AB7AA5891F81EE27001DFF05 /* header-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5081F81EE27001DFF05 /* header-bg.png */; };
 		AB7AA58A1F81EE27001DFF05 /* header-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5091F81EE27001DFF05 /* header-bg@2x.png */; };
 		AB7AA58B1F81EE27001DFF05 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA50A1F81EE27001DFF05 /* image.png */; };
-		AB7AA58C1F81EE27001DFF05 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA50E1F81EE27001DFF05 /* ASIAuthenticationDialog.m */; };
-		AB7AA58D1F81EE27001DFF05 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5111F81EE27001DFF05 /* ASIDataCompressor.m */; };
-		AB7AA58E1F81EE27001DFF05 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5131F81EE27001DFF05 /* ASIDataDecompressor.m */; };
-		AB7AA58F1F81EE27001DFF05 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5151F81EE27001DFF05 /* ASIDownloadCache.m */; };
-		AB7AA5901F81EE27001DFF05 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5171F81EE27001DFF05 /* ASIFormDataRequest.m */; };
-		AB7AA5911F81EE27001DFF05 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5191F81EE27001DFF05 /* ASIHTTPRequest.m */; };
-		AB7AA5921F81EE27001DFF05 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA51D1F81EE27001DFF05 /* ASIInputStream.m */; };
-		AB7AA5931F81EE27001DFF05 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA51F1F81EE27001DFF05 /* ASINetworkQueue.m */; };
-		AB7AA5941F81EE27001DFF05 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5221F81EE27001DFF05 /* ASIWebPageRequest.m */; };
-		AB7AA5951F81EE27001DFF05 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5261F81EE27001DFF05 /* Reachability.m */; };
-		AB7AA5961F81EE27001DFF05 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5291F81EE27001DFF05 /* Base64.m */; };
-		AB7AA5971F81EE27001DFF05 /* HttpQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA52B1F81EE27001DFF05 /* HttpQueue.m */; };
+		AB7AA58C1F81EE27001DFF05 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA50E1F81EE27001DFF05 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA58D1F81EE27001DFF05 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5111F81EE27001DFF05 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA58E1F81EE27001DFF05 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5131F81EE27001DFF05 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA58F1F81EE27001DFF05 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5151F81EE27001DFF05 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5901F81EE27001DFF05 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5171F81EE27001DFF05 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5911F81EE27001DFF05 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5191F81EE27001DFF05 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5921F81EE27001DFF05 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA51D1F81EE27001DFF05 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5931F81EE27001DFF05 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA51F1F81EE27001DFF05 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5941F81EE27001DFF05 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5221F81EE27001DFF05 /* ASIWebPageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5951F81EE27001DFF05 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5261F81EE27001DFF05 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5961F81EE27001DFF05 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5291F81EE27001DFF05 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB7AA5971F81EE27001DFF05 /* HttpQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA52B1F81EE27001DFF05 /* HttpQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AB7AA5981F81EE27001DFF05 /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA52E1F81EE27001DFF05 /* JSONParsing.m */; };
-		AB7AA5991F81EE27001DFF05 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5311F81EE27001DFF05 /* MBProgressHUD.m */; };
+		AB7AA5991F81EE27001DFF05 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5311F81EE27001DFF05 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AB7AA59A1F81EE27001DFF05 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5341F81EE27001DFF05 /* Singleton.m */; };
 		AB7AA59B1F81EE27001DFF05 /* StaticClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5361F81EE27001DFF05 /* StaticClass.m */; };
 		AB7AA59C1F81EE27001DFF05 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5391F81EE27001DFF05 /* UIView+Toast.m */; };
@@ -347,6 +347,9 @@
 		AB7AA5C01F81EE27001DFF05 /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA56B1F81EE27001DFF05 /* user@2x.png */; };
 		AB7AA5C11F81EE27001DFF05 /* ZoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA56E1F81EE27001DFF05 /* ZoomViewController.m */; };
 		AB7AA5C21F81EE27001DFF05 /* ZoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA56F1F81EE27001DFF05 /* ZoomViewController.xib */; };
+		AB7AA5C61F81F009001DFF05 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C31F81F009001DFF05 /* login.png */; };
+		AB7AA5C71F81F009001DFF05 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C41F81F009001DFF05 /* login@2x.png */; };
+		AB7AA5C81F81F009001DFF05 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C51F81F009001DFF05 /* login@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -784,6 +787,9 @@
 		AB7AA56D1F81EE27001DFF05 /* ZoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomViewController.h; sourceTree = "<group>"; };
 		AB7AA56E1F81EE27001DFF05 /* ZoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomViewController.m; sourceTree = "<group>"; };
 		AB7AA56F1F81EE27001DFF05 /* ZoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomViewController.xib; sourceTree = "<group>"; };
+		AB7AA5C31F81F009001DFF05 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		AB7AA5C41F81F009001DFF05 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		AB7AA5C51F81F009001DFF05 /* login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1313,6 +1319,9 @@
 		AB7AA4C51F81EE1B001DFF05 /* Noticeboard Files */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA5C31F81F009001DFF05 /* login.png */,
+				AB7AA5C41F81F009001DFF05 /* login@2x.png */,
+				AB7AA5C51F81F009001DFF05 /* login@3x.png */,
 				AB7AA4C61F81EE1B001DFF05 /* Noticeboard2.h */,
 				AB7AA4C71F81EE1B001DFF05 /* Noticeboard2.m */,
 				AB7AA4C81F81EE1B001DFF05 /* Noticeboard2.xib */,
@@ -1834,6 +1843,7 @@
 				AB41B9611F7A645F0073728F /* callushostel.png in Resources */,
 				AB41B9BF1F7A645F0073728F /* nex1t.jpg in Resources */,
 				AB7AA5B11F81EE27001DFF05 /* send.png in Resources */,
+				AB7AA5C71F81F009001DFF05 /* login@2x.png in Resources */,
 				AB41B94D1F7A645F0073728F /* abo5.jpg in Resources */,
 				AB41B9AC1F7A645F0073728F /* hometoolbar.png in Resources */,
 				AB41B97F1F7A645F0073728F /* eat7.jpg in Resources */,
@@ -1881,6 +1891,7 @@
 				AB41B9E41F7A645F0073728F /* postnotice.png in Resources */,
 				AB41B94C1F7A645F0073728F /* abo4.jpg in Resources */,
 				AB7AA5B21F81EE27001DFF05 /* send1.png in Resources */,
+				AB7AA5C61F81F009001DFF05 /* login.png in Resources */,
 				AB41B9B41F7A645F0073728F /* hostelmap@3x.png in Resources */,
 				AB41B9FD1F7A645F0073728F /* tra3.jpg in Resources */,
 				AB41B9951F7A645F0073728F /* exp1t.jpg in Resources */,
@@ -1895,6 +1906,7 @@
 				AB41B93F1F7A645F0073728F /* abo11.jpg in Resources */,
 				AB41B9631F7A645F0073728F /* callushostel@3x.png in Resources */,
 				AB41B9A01F7A645F0073728F /* exp7.jpg in Resources */,
+				AB7AA5C81F81F009001DFF05 /* login@3x.png in Resources */,
 				AB41B97A1F7A645F0073728F /* eat4t.jpg in Resources */,
 				AB41B9AD1F7A645F0073728F /* hometoolbar@2x.png in Resources */,
 				AB41B9791F7A645F0073728F /* eat4.jpg in Resources */,
@@ -2250,6 +2262,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GHYC2233J3;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ThePickledFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keepitsimpletravel.ThePickledFrog;
@@ -2262,6 +2275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GHYC2233J3;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ThePickledFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keepitsimpletravel.ThePickledFrog;

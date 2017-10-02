@@ -154,7 +154,7 @@ NSInteger photoV=0, rowIn;
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
     // Booking
-    NSString *imageValue = @"booking.png";
+    NSString *imageValue = @"bookingtoolbar.png";
     UIImage *bookingImage = [UIImage imageNamed:imageValue];
     UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -167,7 +167,7 @@ NSInteger photoV=0, rowIn;
     [items addObject:bookingItem];
     
     // Currency Converter
-    imageValue = @"currency.png";
+    imageValue = @"currencytoolbar.png";
     UIImage *currencyImage = [UIImage imageNamed:imageValue];
     UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -181,7 +181,7 @@ NSInteger photoV=0, rowIn;
     [items addObject:currencyItem];
     
     // Tool Tip
-    imageValue = @"info.png";
+    imageValue = @"traveltipstoolbar.png";
     
     UIImage *infoImage = [UIImage imageNamed:imageValue];
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -196,7 +196,7 @@ NSInteger photoV=0, rowIn;
     [items addObject:infoItem];
     
     // Map
-    imageValue = @"toolbarMap.png";
+    imageValue = @"maptoolbar.png";
     
     UIImage *mapImage = [UIImage imageNamed:imageValue];
     UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -210,7 +210,7 @@ NSInteger photoV=0, rowIn;
     [items addObject:mapItem];
     
     // Home
-    imageValue = @"toolbarHome.png";
+    imageValue = @"hometoolbar.png";
 
     UIImage *imageHome = [UIImage imageNamed:imageValue];
     UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
