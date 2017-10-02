@@ -350,6 +350,11 @@
 		AB7AA5C61F81F009001DFF05 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C31F81F009001DFF05 /* login.png */; };
 		AB7AA5C71F81F009001DFF05 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C41F81F009001DFF05 /* login@2x.png */; };
 		AB7AA5C81F81F009001DFF05 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C51F81F009001DFF05 /* login@3x.png */; };
+		AB7AA5CB1F822742001DFF05 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */; };
+		AB7AA5CE1F823113001DFF05 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */; };
+		AB7AA5CF1F823113001DFF05 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */; };
+		AB7AA5D11F8231A6001DFF05 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */; };
+		AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -790,6 +795,11 @@
 		AB7AA5C31F81F009001DFF05 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		AB7AA5C41F81F009001DFF05 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
 		AB7AA5C51F81F009001DFF05 /* login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@3x.png"; sourceTree = "<group>"; };
+		AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondBold.ttf"; path = "Fonts/OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
+		AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondensedBold.ttf"; path = "Fonts/OpenSans-CondensedBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -846,6 +856,7 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA5C91F822735001DFF05 /* Fonts */,
 				AB41BA711F80E9770073728F /* Configuration.plist */,
 				AB41BA2D1F7FB6000073728F /* Entities */,
 				AB41BA231F7A68E20073728F /* Custom Objects */,
@@ -1642,6 +1653,18 @@
 			path = ZoomView;
 			sourceTree = "<group>";
 		};
+		AB7AA5C91F822735001DFF05 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */,
+				AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */,
+				AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */,
+				AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */,
+				AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1779,6 +1802,7 @@
 				AB41B9D91F7A645F0073728F /* par6.jpg in Resources */,
 				AB41B97E1F7A645F0073728F /* eat6t.jpg in Resources */,
 				AB41B9941F7A645F0073728F /* exp13t.jpg in Resources */,
+				AB7AA5CB1F822742001DFF05 /* OpenSans-CondBold.ttf in Resources */,
 				AB41B9DC1F7A645F0073728F /* par7t.jpg in Resources */,
 				AB41B99A1F7A645F0073728F /* exp4.jpg in Resources */,
 				AB41B9861F7A645F0073728F /* emailcontact.png in Resources */,
@@ -1866,6 +1890,7 @@
 				AB41B98C1F7A645F0073728F /* exp1.jpg in Resources */,
 				AB41B9A91F7A645F0073728F /* hamburgermenu.png in Resources */,
 				AB41B9881F7A645F0073728F /* emailcontact@3x.png in Resources */,
+				AB7AA5CF1F823113001DFF05 /* OpenSans-Regular.ttf in Resources */,
 				AB41BA221F7A674C0073728F /* HomeViewController.xib in Resources */,
 				AB41B9C81F7A645F0073728F /* nex6.jpg in Resources */,
 				AB41B9F71F7A645F0073728F /* submitfeedback@2x.png in Resources */,
@@ -2000,6 +2025,7 @@
 				AB41B9F91F7A645F0073728F /* tra1.jpg in Resources */,
 				AB41BA701F80E8DD0073728F /* PickledFrogDatabase.db in Resources */,
 				AB41B9D11F7A645F0073728F /* par2.jpg in Resources */,
+				AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */,
 				AB41BA0B1F7A645F0073728F /* websitecontact@2x.png in Resources */,
 				AB41B9C61F7A645F0073728F /* nex5.jpg in Resources */,
 				AB41B9411F7A645F0073728F /* abo13.jpg in Resources */,
@@ -2007,7 +2033,9 @@
 				AB41B8431F7A5EE50073728F /* Main.storyboard in Resources */,
 				AB41B9601F7A645F0073728F /* booknow@3x.png in Resources */,
 				AB41B9781F7A645F0073728F /* eat3t.jpg in Resources */,
+				AB7AA5D11F8231A6001DFF05 /* OpenSans-Bold.ttf in Resources */,
 				AB41B9B71F7A645F0073728F /* likeus@3x.png in Resources */,
+				AB7AA5CE1F823113001DFF05 /* OpenSans-Light.ttf in Resources */,
 				AB41B9D71F7A645F0073728F /* par5.jpg in Resources */,
 				AB41B9F61F7A645F0073728F /* submitfeedback.png in Resources */,
 				AB41BA081F7A645F0073728F /* traveltipstoolbar@2x.png in Resources */,

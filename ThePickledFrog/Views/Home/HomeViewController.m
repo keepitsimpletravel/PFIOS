@@ -90,13 +90,13 @@
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
 //    
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
 
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:@"Helvetica" size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -149,19 +149,22 @@
     // Adding the Hostel overlay
     NSInteger centreX = buttonWidth/2;
     NSInteger centreY = buttonHeight/2;
-    NSInteger overlayWidth = buttonWidth*0.9;
+    NSInteger overlayWidth = buttonWidth;
     NSInteger overlayHeight = buttonHeight*0.3;
     
     UILabel *hostelLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
     hostelLabel.text = @"HOSTEL";
     hostelLabel.textColor = [UIColor whiteColor];
-    [hostelLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [hostelLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [hostelLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+//    bgLabel.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);// colorWithAlphaComponent:0.5f];
+//    bgLabel.background
+    bgLabel.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+
     
     [hostelButton addSubview:bgLabel];
     [hostelButton addSubview:hostelLabel];
@@ -183,12 +186,12 @@
     
     seeLabel.text = @"SEE";
     seeLabel.textColor = [UIColor whiteColor];
-    [seeLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [seeLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [seeLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel2 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel2.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    bgLabel2.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     
     [seeButton addSubview:bgLabel2];
     [seeButton addSubview:seeLabel];
@@ -208,12 +211,12 @@
     
     partyLabel.text = @"PARTY";
     partyLabel.textColor = [UIColor whiteColor];
-    [partyLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [partyLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [partyLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel3 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel3.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    bgLabel3.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     
     [partyButton addSubview:bgLabel3];
     [partyButton addSubview:partyLabel];
@@ -235,12 +238,12 @@
     
     transportLabel.text = @"TRANSPORT";
     transportLabel.textColor = [UIColor whiteColor];
-    [transportLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [transportLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [transportLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel4 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel4.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    bgLabel4.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     
     [transportButton addSubview:bgLabel4];
     [transportButton addSubview:transportLabel];
@@ -260,12 +263,12 @@
     
     eatLabel.text = @"EAT";
     eatLabel.textColor = [UIColor whiteColor];
-    [eatLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [eatLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [eatLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel5 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel5.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    bgLabel5.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     
     [eatButton addSubview:bgLabel5];
     [eatButton addSubview:eatLabel];
@@ -287,12 +290,12 @@
     
     nextLabel.text = @"NEXT STOP";
     nextLabel.textColor = [UIColor whiteColor];
-    [nextLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    [nextLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [nextLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel6 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel6.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    bgLabel6.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     
     [nextButton addSubview:bgLabel6];
     [nextButton addSubview:nextLabel];

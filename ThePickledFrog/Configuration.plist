@@ -5,11 +5,11 @@
 	<key>DatabaseName</key>
 	<string>PickledFrogDatabase.db</string>
 	<key>TextRed</key>
-	<string>0</string>
+	<string>153</string>
 	<key>TextGreen</key>
-	<string>0</string>
+	<string>102</string>
 	<key>TextBlue</key>
-	<string>0</string>
+	<string>51</string>
 	<key>StatusBarFont</key>
 	<string>Roboto-Regular</string>
 	<key>LineRed</key>
