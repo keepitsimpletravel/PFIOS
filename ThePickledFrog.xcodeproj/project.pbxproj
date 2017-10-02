@@ -355,6 +355,8 @@
 		AB7AA5CF1F823113001DFF05 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */; };
 		AB7AA5D11F8231A6001DFF05 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */; };
 		AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */; };
+		AB7AA5D81F824D78001DFF05 /* LoadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */; };
+		AB7AA5D91F824D78001DFF05 /* LoadWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -800,6 +802,9 @@
 		AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondensedBold.ttf"; path = "Fonts/OpenSans-CondensedBold.ttf"; sourceTree = "<group>"; };
+		AB7AA5D51F824D78001DFF05 /* LoadWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadWebViewController.h; sourceTree = "<group>"; };
+		AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadWebViewController.m; sourceTree = "<group>"; };
+		AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1120,6 +1125,7 @@
 		AB41BA0D1F7A653F0073728F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA5D41F824D78001DFF05 /* WebView */,
 				AB41BA1B1F7A66A10073728F /* Developer */,
 				AB41BA1A1F7A66990073728F /* Network */,
 				AB41BA191F7A66920073728F /* Feedback */,
@@ -1665,6 +1671,17 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		AB7AA5D41F824D78001DFF05 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5D51F824D78001DFF05 /* LoadWebViewController.h */,
+				AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */,
+				AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */,
+			);
+			name = WebView;
+			path = Views/WebView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1779,6 +1796,7 @@
 				AB41B9651F7A645F0073728F /* contactus@2x.png in Resources */,
 				AB7AA5A81F81EE27001DFF05 /* SettingsViewController.xib in Resources */,
 				AB41B9691F7A645F0073728F /* currencytoolbar@3x.png in Resources */,
+				AB7AA5D91F824D78001DFF05 /* LoadWebViewController.xib in Resources */,
 				AB41B9971F7A645F0073728F /* exp2t.jpg in Resources */,
 				AB7AA4D71F81EE1B001DFF05 /* NoticeboardCustomCell.xib in Resources */,
 				AB41B98A1F7A645F0073728F /* emailushostel@2x.png in Resources */,
@@ -2131,6 +2149,7 @@
 				AB41BA511F7FB60D0073728F /* WhereNext.m in Sources */,
 				AB41BA501F7FB60D0073728F /* TravelTip.m in Sources */,
 				AB7AA5A01F81EE27001DFF05 /* BrowseMemberCustomCell.m in Sources */,
+				AB7AA5D81F824D78001DFF05 /* LoadWebViewController.m in Sources */,
 				AB7AA5AA1F81EE27001DFF05 /* BHExpandingTextViewInternal.m in Sources */,
 				AB41BA4E1F7FB60D0073728F /* Directions.m in Sources */,
 				AB7AA5851F81EE27001DFF05 /* EGOImageButton.m in Sources */,

@@ -7,7 +7,7 @@
 
 #import "HostelDetailsViewController.h"
 //#import "Detail.h"
-//#import "PhotoLookup.h"
+#import "PhotoLookup.h"
 //#import "RoomViewController.h"
 //#import "DirectionViewController.h"
 //#import "CurrencyConverter.h"
@@ -21,7 +21,7 @@
 //#import "Square4HomeViewController.h"
 
 @interface HostelDetailsViewController ()
-//@property (nonatomic, retain) UIPageControl * pageControl;
+@property (nonatomic, retain) UIPageControl * pageControl;
 
 @end
 
@@ -177,198 +177,193 @@
 
     yPosition = yPosition + lineSize;
 
-//    longitude = detail.longitude;
-//    latitude = detail.latitude;
-//
-//    // Get each detail item and pull out of the Detail object
-//    NSString *name = detail.name;
-//    NSString *phone = detail.phone;
-//    NSString *email = detail.email;
-//    NSString *address = detail.address;
-//    NSString *webpage = detail.website;
-//    NSString *desc = detail.description;
-//    NSString *desc2 = detail.description2;
-//
-//    // Create Scroll View
-//    ContentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth,screenHeight-49-64-2-2-2)];
-//    ContentScrollView.delegate = self;
-//    ContentScrollView.scrollEnabled = YES;
-//    ContentScrollView.userInteractionEnabled=YES;
-//    
-//    // Add Image Scroll View
-//    ImageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, screenWidth, homeImage)];
-//    ImageScrollView.scrollEnabled = YES;
-//    ImageScrollView.userInteractionEnabled=YES;
-//    [ImageScrollView setPagingEnabled:YES];
-//    [ImageScrollView setAlwaysBounceVertical:NO];
-//    ImageScrollView.delegate = self;
-//    
-//    // Get Photos
-//    NSArray *photos = [dataSource getPhotoNames:@"Details" identifier:@"Details"];
-//    int displayValue = 0;
-//    
-//    for (int i = 0; i < [photos count]; i++)
-//    {
-//        CGFloat xOrigin = i * ImageScrollView.frame.size.width;
-//    
-//        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, ImageScrollView.frame.size.width, ImageScrollView.frame.size.height)];
-//    
-//        PhotoLookup *pl = photos[i];
-//        NSString *name = pl.photoName;
-//        [imageView setImage:[UIImage imageNamed:name]];
-//        [ImageScrollView addSubview:imageView];
-//    }
-//    [ContentScrollView addSubview:ImageScrollView];
-//    
-//    [ImageScrollView setContentSize:CGSizeMake(ImageScrollView.frame.size.width * [photos count], ImageScrollView.frame.size.height)];
-//    [ImageScrollView setContentOffset:CGPointMake(screenWidth*displayValue, 0)];
-//    
-//    // Set up Page Control
-//    if ([photos count] > 1)
-//    {
-//        self.pageControl = [[UIPageControl alloc] init];
-//        NSInteger placement = (screenWidth/2-50);
-//        self.pageControl.frame = CGRectMake(placement, homeImage-30, 100, 20);
-//        self.pageControl.numberOfPages = [photos count];
-//        self.pageControl.currentPage = displayValue;
-//        [ContentScrollView addSubview:self.pageControl];
-//    }
-//    
-//    yPosition = yPosition + homeImage - 64-2;
-//    
-//    // Small Black Line between Image and Table View
-//    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-//    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-//    [ContentScrollView addSubview:imageLine];
-//    
-//    yPosition = yPosition + lineSize;
-//    
-//    NSInteger startSpot = 0;
-//    
-//    UIView *buttonToolbarView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, aboutToolbarButtonHeight)];
-//    
-//    UIButton *bookAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenWidth/5, aboutToolbarButtonHeight)];
-//    UIImage *bookBarImage = [UIImage imageNamed:@"bookabed.png"];
-//    [bookAboutBarButton setImage:bookBarImage forState:UIControlStateNormal];
-//    [bookAboutBarButton addTarget:self
-//                 action:@selector(loadBooking)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [buttonToolbarView addSubview:bookAboutBarButton];
-//    
-//    startSpot = startSpot + (screenWidth/5);
-//    
-//    UIButton *callAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
-//    UIImage *callBarImage = [UIImage imageNamed:@"callus.png"];
-//    [callAboutBarButton setImage:callBarImage forState:UIControlStateNormal];
-//    [callAboutBarButton addTarget:self
-//                 action:@selector(callPhone)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [buttonToolbarView addSubview:callAboutBarButton];
-//    
-//    startSpot = startSpot + (screenWidth/5);
-//    
-//    UIButton *dirAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
-//    UIImage *dirBarImage = [UIImage imageNamed:@"directions.png"];
-//    [dirAboutBarButton setImage:dirBarImage forState:UIControlStateNormal];
-//    [dirAboutBarButton addTarget:self
-//                 action:@selector(loadDirections)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [buttonToolbarView addSubview:dirAboutBarButton];
-//    
-//    startSpot = startSpot + (screenWidth/5);
-//    
-//    UIButton *emailAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
-//    UIImage *emailBarImage = [UIImage imageNamed:@"emailus.png"];
-//    [emailAboutBarButton setImage:emailBarImage forState:UIControlStateNormal];
-//    [emailAboutBarButton addTarget:self
-//                 action:@selector(openEmail)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [buttonToolbarView addSubview:emailAboutBarButton];
-//    
-//    startSpot = startSpot + (screenWidth/5);
-//    
-//    UIButton *mapAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
-//    UIImage *mapBarImage = [UIImage imageNamed:@"showmap.png"];
-//    [mapAboutBarButton setImage:mapBarImage forState:UIControlStateNormal];
-//    [mapAboutBarButton addTarget:self
-//                 action:@selector(loadMap)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [buttonToolbarView addSubview:mapAboutBarButton];
-//    
-//    [ContentScrollView addSubview:buttonToolbarView];
-//
-//    yPosition = yPosition + buttonToolbarView.frame.size.height;
-//    
-//    // Small Black Line between Image and Table View
-//    UIView *menuLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-//    menuLine.backgroundColor = Rgb2UIColor(0, lineGreen, lineBlue);
-//    [ContentScrollView addSubview:menuLine];
-//    
-//    yPosition = yPosition + lineSize + 15;
-//    
-//    // Set the Text RGB from the configuration file
-//    NSString *textR = [configurationValues objectForKey:@"TextRed"];
-//    NSInteger textRed = [textR integerValue];
-//    
-//    NSString *textG = [configurationValues objectForKey:@"TextGreen"];
-//    NSInteger textGreen = [textG integerValue];
-//    
-//    NSString *textB = [configurationValues objectForKey:@"TextBlue"];
-//    NSInteger textBlue = [textB integerValue];
-//    
-//    name = [name uppercaseString];
-//    NSMutableParagraphStyle *paragraphStylesHeading = [[NSMutableParagraphStyle alloc] init];
-//    paragraphStylesHeading.alignment = NSTextAlignmentCenter;      //justified text
-//    paragraphStylesHeading.firstLineHeadIndent = 1.0;                //must have a value to make it work
-//    
-//    NSDictionary *attributesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
-//    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:name attributes: attributesHeading];
-//    
-//    // Name Label
-//    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, yPosition, screenWidth-60, 30)];
-//    nameLabel.attributedText = attributedString;
-//    nameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    nameLabel.numberOfLines = 1;
-//    nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
-//    nameLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
-//    
-//    [ContentScrollView addSubview:nameLabel];
-//    
-//    yPosition = yPosition + nameLabel.frame.size.height + 15;
-//
-//    // CREATE DESCRIPTION LABEL
-//    NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
-//    paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
-//    paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
-//    NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
-//    
-//    NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithString:desc attributes: attributes];
-//    
-//    UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-//    descLabel.numberOfLines = 0;
-//    descLabel.lineBreakMode = UILineBreakModeWordWrap;
-//    [descLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-//    descLabel.attributedText = attributedDescription;
-//    descLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    [descLabel sizeToFit];
-//    [ContentScrollView addSubview:descLabel];
-//
-//    yPosition = yPosition + 15 + descLabel.frame.size.height;
-//    
-//    // ADD Second Description Column
-//    NSAttributedString *attributedDescription2 = [[NSAttributedString alloc] initWithString:detail.description2 attributes: attributes];
-//    UILabel *descLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-//    descLabel2.numberOfLines = 0;
-//    descLabel2.lineBreakMode = UILineBreakModeWordWrap;
-//    [descLabel2 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-//    descLabel2.attributedText = attributedDescription2;
-//    descLabel2.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    [descLabel2 sizeToFit];
-//    [ContentScrollView addSubview:descLabel2];
-//
-//    yPosition = yPosition + descLabel2.frame.size.height + 15;
-//    yPosition = yPosition + lineSize + 10;
-//    
+    longitude = detail.longitude;
+    latitude = detail.latitude;
+
+    // Get each detail item and pull out of the Detail object
+    NSString *name = detail.name;
+    NSString *phone = detail.phone;
+    NSString *email = detail.email;
+    NSString *address = detail.address;
+    NSString *webpage = detail.website;
+    NSString *desc = detail.description;
+
+    // Create Scroll View
+    ContentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth,screenHeight-49-64-2-2-2)];
+    ContentScrollView.delegate = self;
+    ContentScrollView.scrollEnabled = YES;
+    ContentScrollView.userInteractionEnabled=YES;
+
+    // Add Image Scroll View
+    ImageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, screenWidth, homeImage)];
+    ImageScrollView.scrollEnabled = YES;
+    ImageScrollView.userInteractionEnabled=YES;
+    [ImageScrollView setPagingEnabled:YES];
+    [ImageScrollView setAlwaysBounceVertical:NO];
+    ImageScrollView.delegate = self;
+
+    // Get Photos
+    NSArray *photos = [dataSource getPhotoNames:@"Details" identifier:@"Details"];
+    int displayValue = 0;
+
+    for (int i = 0; i < [photos count]; i++)
+    {
+        CGFloat xOrigin = i * ImageScrollView.frame.size.width;
+
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, ImageScrollView.frame.size.width, ImageScrollView.frame.size.height)];
+
+        PhotoLookup *pl = photos[i];
+        NSString *name = pl.photoName;
+        name = [name stringByAppendingString:@".jpg"];
+        [imageView setImage:[UIImage imageNamed:name]];
+        [ImageScrollView addSubview:imageView];
+    }
+    [ContentScrollView addSubview:ImageScrollView];
+
+    [ImageScrollView setContentSize:CGSizeMake(ImageScrollView.frame.size.width * [photos count], ImageScrollView.frame.size.height)];
+    [ImageScrollView setContentOffset:CGPointMake(screenWidth*displayValue, 0)];
+
+    // Set up Page Control
+    if ([photos count] > 1)
+    {
+        self.pageControl = [[UIPageControl alloc] init];
+        NSInteger placement = (screenWidth/2-50);
+        self.pageControl.frame = CGRectMake(placement, homeImage-30, 100, 20);
+        self.pageControl.numberOfPages = [photos count];
+        self.pageControl.currentPage = displayValue;
+        [ContentScrollView addSubview:self.pageControl];
+    }
+    
+    yPosition = yPosition + homeImage - 64-2;
+    
+    // Small Black Line between Image and Table View
+    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
+    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+    [ContentScrollView addSubview:imageLine];
+
+    yPosition = yPosition + lineSize;
+
+    NSInteger startSpot = 0;
+
+    UIView *buttonToolbarView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, aboutToolbarButtonHeight)];
+
+    UIButton *bookAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenWidth/5, aboutToolbarButtonHeight)];
+    UIImage *bookBarImage = [UIImage imageNamed:@"bookabedhostel.png"];
+    [bookAboutBarButton setImage:bookBarImage forState:UIControlStateNormal];
+    [bookAboutBarButton addTarget:self
+                 action:@selector(loadBooking)
+       forControlEvents:UIControlEventTouchUpInside];
+    [buttonToolbarView addSubview:bookAboutBarButton];
+    
+    startSpot = startSpot + (screenWidth/5);
+
+    UIButton *callAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
+    UIImage *callBarImage = [UIImage imageNamed:@"callushostel.png"];
+    [callAboutBarButton setImage:callBarImage forState:UIControlStateNormal];
+    [callAboutBarButton addTarget:self
+                 action:@selector(callPhone)
+       forControlEvents:UIControlEventTouchUpInside];
+    [buttonToolbarView addSubview:callAboutBarButton];
+    
+    startSpot = startSpot + (screenWidth/5);
+    
+    UIButton *dirAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
+    UIImage *dirBarImage = [UIImage imageNamed:@"directionshostel.png"];
+    [dirAboutBarButton setImage:dirBarImage forState:UIControlStateNormal];
+    [dirAboutBarButton addTarget:self
+                 action:@selector(loadDirections)
+       forControlEvents:UIControlEventTouchUpInside];
+    [buttonToolbarView addSubview:dirAboutBarButton];
+    
+    startSpot = startSpot + (screenWidth/5);
+    
+    UIButton *emailAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
+    UIImage *emailBarImage = [UIImage imageNamed:@"emailushostel.png"];
+    [emailAboutBarButton setImage:emailBarImage forState:UIControlStateNormal];
+    [emailAboutBarButton addTarget:self
+                 action:@selector(openEmail)
+       forControlEvents:UIControlEventTouchUpInside];
+    [buttonToolbarView addSubview:emailAboutBarButton];
+    
+    startSpot = startSpot + (screenWidth/5);
+    
+    UIButton *mapAboutBarButton = [[UIButton alloc] initWithFrame:CGRectMake(startSpot, 0, (screenWidth/5), aboutToolbarButtonHeight)];
+    UIImage *mapBarImage = [UIImage imageNamed:@"showmaphostel.png"];
+    [mapAboutBarButton setImage:mapBarImage forState:UIControlStateNormal];
+    [mapAboutBarButton addTarget:self
+                 action:@selector(loadMap)
+       forControlEvents:UIControlEventTouchUpInside];
+    [buttonToolbarView addSubview:mapAboutBarButton];
+    
+    [ContentScrollView addSubview:buttonToolbarView];
+
+    yPosition = yPosition + buttonToolbarView.frame.size.height;
+
+    // Small Black Line between Image and Table View
+    UIView *menuLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
+    menuLine.backgroundColor = Rgb2UIColor(0, lineGreen, lineBlue);
+    [ContentScrollView addSubview:menuLine];
+    
+    yPosition = yPosition + lineSize + 15;
+
+    // Set the Text RGB from the configuration file
+    NSString *textR = [configurationValues objectForKey:@"TextRed"];
+    NSInteger textRed = [textR integerValue];
+    
+    NSString *textG = [configurationValues objectForKey:@"TextGreen"];
+    NSInteger textGreen = [textG integerValue];
+
+    NSString *textB = [configurationValues objectForKey:@"TextBlue"];
+    NSInteger textBlue = [textB integerValue];
+
+    name = [name uppercaseString];
+    NSMutableParagraphStyle *paragraphStylesHeading = [[NSMutableParagraphStyle alloc] init];
+    paragraphStylesHeading.alignment = NSTextAlignmentCenter;      //justified text
+    paragraphStylesHeading.firstLineHeadIndent = 1.0;                //must have a value to make it work
+
+    NSDictionary *attributesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:name attributes: attributesHeading];
+
+    // Name Label
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, yPosition, screenWidth-60, 30)];
+    nameLabel.attributedText = attributedString;
+    nameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+    nameLabel.numberOfLines = 1;
+    nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    nameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
+
+    [ContentScrollView addSubview:nameLabel];
+
+    yPosition = yPosition + nameLabel.frame.size.height + 15;
+
+    // CREATE DESCRIPTION LABEL
+    NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+    paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+    NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+    
+    NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithString:desc attributes: attributes];
+    
+    UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
+    descLabel.numberOfLines = 0;
+    descLabel.lineBreakMode = UILineBreakModeWordWrap;
+    [descLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
+    descLabel.attributedText = attributedDescription;
+    descLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+    [descLabel sizeToFit];
+    [ContentScrollView addSubview:descLabel];
+
+    yPosition = yPosition + 15 + descLabel.frame.size.height;
+    yPosition = yPosition + lineSize + 10;
+
+    
+    
+    
+    
+    
+    
+    
+    
 //    // Get Bed Data
 //    NSArray *beds = [dataSource getAllRooms];
 //    
@@ -525,64 +520,51 @@
 //    
 //    yPosition = yPosition + contactButton.frame.size.height + 25;
 //    
-//    // Icon Displays
-//    NSInteger smStart = 0;
-//    
-//    if (![detail.facebookURL isEqualToString:@""]) {
-//        UIButton *fbButton = [[UIButton alloc] initWithFrame:CGRectMake(smSpacer, yPosition, smWidth, smHeight)];
-//        UIImage *fbImage = [UIImage imageNamed:@"likeusfacebook.png"];
-//        [fbButton setImage:fbImage forState:UIControlStateNormal];
-//        
-//        [fbButton addTarget:self
-//                        action:@selector(openFacebook)
-//                        forControlEvents:UIControlEventTouchUpInside];
-//        [ContentScrollView addSubview:fbButton];
-//        
-//        smStart = smSpacer + smWidth + smSpacer;
-//    }
-//    
-//    if (![detail.tripAdvisorURL isEqualToString:@""]) {
-//        UIButton *taButton = [[UIButton alloc] initWithFrame:CGRectMake(smStart, yPosition, smWidth, smHeight)];
-//        UIImage *taImage = [UIImage imageNamed:@"rateustripadvisor.png"];
-//        [taButton setImage:taImage forState:UIControlStateNormal];
-//        [taButton addTarget:self
-//                     action:@selector(loadTALink)
-//           forControlEvents:UIControlEventTouchUpInside];
-//        [ContentScrollView addSubview:taButton];
-//        
-//        smStart = smStart + smWidth + smSpacer;
-//    }
-//    
-//    if (![detail.instagramURL isEqualToString:@""]) {
-//        UIButton *instaButton = [[UIButton alloc] initWithFrame:CGRectMake(smStart, yPosition, smWidth, smHeight)];
-//        UIImage *instaImage = [UIImage imageNamed:@"followusinstagram.png"];
-//        [instaButton setImage:instaImage forState:UIControlStateNormal];
-//        [instaButton addTarget:self
-//                     action:@selector(openInstagram)
-//           forControlEvents:UIControlEventTouchUpInside];
-//        [ContentScrollView addSubview:instaButton];
-//        
-//        smStart = smStart + smWidth + smSpacer;
-//    }
-//    
-//    if (![detail.twitterURL isEqualToString:@""]) {
-//        UIButton *twitButton = [[UIButton alloc] initWithFrame:CGRectMake(smStart, yPosition, smWidth, smHeight)];
-//        UIImage *twitImage = [UIImage imageNamed:@"rateustripadvisor.png"];
-//        [twitButton setImage:twitImage forState:UIControlStateNormal];
-//        [twitButton addTarget:self
-//                     action:@selector(openTwitter)
-//           forControlEvents:UIControlEventTouchUpInside];
-//        [ContentScrollView addSubview:twitButton];
-//        
-//        smStart = smStart + smWidth + smSpacer;
-//    }
-//    
-//    yPosition = yPosition + smHeight + 15;
-//    
-//    // Set Content Size for Scroll View
-//    ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
-//    [self.view addSubview:ContentScrollView];
-//
+    // Icon Displays
+    NSInteger smStart = 0;
+
+    if (![detail.facebookURL isEqualToString:@""]) {
+        UIButton *fbButton = [[UIButton alloc] initWithFrame:CGRectMake(smSpacer, yPosition, smWidth, smHeight)];
+        UIImage *fbImage = [UIImage imageNamed:@"likeus.png"];
+        [fbButton setImage:fbImage forState:UIControlStateNormal];
+
+        [fbButton addTarget:self
+                        action:@selector(openFacebook)
+                        forControlEvents:UIControlEventTouchUpInside];
+        [ContentScrollView addSubview:fbButton];
+        
+        smStart = smSpacer + smWidth + smSpacer;
+    }
+    
+    if (![detail.tripAdvisorURL isEqualToString:@""]) {
+        UIButton *taButton = [[UIButton alloc] initWithFrame:CGRectMake(smStart, yPosition, smWidth, smHeight)];
+        UIImage *taImage = [UIImage imageNamed:@"rateus.png"];
+        [taButton setImage:taImage forState:UIControlStateNormal];
+        [taButton addTarget:self
+                     action:@selector(loadTALink)
+           forControlEvents:UIControlEventTouchUpInside];
+        [ContentScrollView addSubview:taButton];
+        
+        smStart = smStart + smWidth + smSpacer;
+    }
+    
+    if (![detail.instagramURL isEqualToString:@""]) {
+        UIButton *instaButton = [[UIButton alloc] initWithFrame:CGRectMake(smStart, yPosition, smWidth, smHeight)];
+        UIImage *instaImage = [UIImage imageNamed:@"followus.png"];
+        [instaButton setImage:instaImage forState:UIControlStateNormal];
+        [instaButton addTarget:self
+                     action:@selector(openInstagram)
+           forControlEvents:UIControlEventTouchUpInside];
+        [ContentScrollView addSubview:instaButton];
+        
+        smStart = smStart + smWidth + smSpacer;
+    }
+    yPosition = yPosition + smHeight + 15;
+    
+    // Set Content Size for Scroll View
+    ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
+    [self.view addSubview:ContentScrollView];
+
     // Set Line below status bar
     UIView *toolbarLine = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight-51, screenWidth, lineSize)];
     toolbarLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);

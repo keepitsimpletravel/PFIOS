@@ -14,11 +14,11 @@
 {
     NSInteger lineSize;
     NSInteger homeImage;
-//    UIScrollView *ContentScrollView;
+    UIScrollView *ContentScrollView;
     id<DataSource> dataSource;
-//    NSDecimalNumber *longitude;
-//    NSDecimalNumber *latitude;
-//    UIScrollView *ImageScrollView;
+    NSDecimalNumber *longitude;
+    NSDecimalNumber *latitude;
+    UIScrollView *ImageScrollView;
     Detail *detail;
 //    NSString *imageSelection;
 //    NSInteger bedImageWidth;
