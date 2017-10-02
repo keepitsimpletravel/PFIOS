@@ -20,9 +20,12 @@
     NSDecimalNumber *latitude;
     UIScrollView *ImageScrollView;
     Detail *detail;
+    UITableView *roomsListing;
+    UIView *facilitiesView;
+    UIView *contactView;
 //    NSString *imageSelection;
-//    NSInteger bedImageWidth;
-//    NSInteger bedImageHeight;
+    NSInteger bedImageWidth;
+    NSInteger bedImageHeight;
 //    NSInteger bedSpace;
 ////    NSInteger instaSpace;
 ////    NSInteger instaHeight;

@@ -26,6 +26,10 @@
 @end
 
 @implementation HostelDetailsViewController
+{
+    NSArray *roomsTypes;
+    NSArray *facilitiesTypes;
+}
 
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
@@ -84,8 +88,8 @@
         lineSize = 2;
         homeImage = 225.67;
 
-//        bedImageHeight = 100.536;
-//        bedImageWidth = 251.34;
+        bedImageHeight = 100.536;
+        bedImageWidth = 251.34;
 //        bedSpacer = 40;
 //        
 //        imageSelection = @"@1x";
@@ -102,8 +106,8 @@
         lineSize = 2;
         homeImage = 265;
 
-//        bedImageHeight = 118;
-//        bedImageWidth = 295;
+        bedImageHeight = 118;
+        bedImageWidth = 295;
 //        bedSpacer = 40;
         
 
@@ -122,8 +126,8 @@
         lineSize = 2;
         homeImage = 292.41;
 
-//        bedImageHeight = 130.243;
-//        bedImageWidth = 325.607;
+        bedImageHeight = 130.243;
+        bedImageWidth = 325.607;
 //        bedSpacer = 40;
 //        
 //        imageSelection = @"@3x";
@@ -356,170 +360,111 @@
     yPosition = yPosition + 15 + descLabel.frame.size.height;
     yPosition = yPosition + lineSize + 10;
 
+    // Tabbed Section
+    UIView *tabbedSection = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 30)];
+    NSArray *itemArray = [NSArray arrayWithObjects: @"Rooms", @"Facilities", @"Contact", nil];
+    
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+    segmentedControl.frame = CGRectMake(10, 0, screenWidth-20, 30);
+    segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
+    [segmentedControl addTarget:self action:@selector(segmentSelection:) forControlEvents: UIControlEventValueChanged];
+    segmentedControl.selectedSegmentIndex = 0;
+    segmentedControl.tintColor = [UIColor blackColor];
+    [tabbedSection addSubview:segmentedControl];
+    [ContentScrollView addSubview:tabbedSection];
+
+    yPosition = yPosition + tabbedSection.frame.size.height + 2;
+
+    dataSource = [DataSource dataSource];
+
+    // Rooms
+    roomsListing = [[UITableView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 150)];
+    roomsListing.delegate = self;
+    roomsListing.dataSource = self;
+    roomsListing.hidden = NO;
+    [ContentScrollView addSubview:roomsListing];
+    
+    // Need to set the rest of the table view
+    // Get Room objects
+     roomsTypes = [dataSource getAllRooms];
+    
+    // Initialize thumbnails - need to get the thumbnails added
+    //    eatsThumbnails = [dataSource getThumbnailNames:@"Food"];
+    
+    
+    // Facilities
+    // Need to add a view for the Facilities here
+    facilitiesView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 150)];
+    
+    NSDictionary *attributesFacilitiesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
+        NSAttributedString *attributedStringFacilities = [[NSAttributedString alloc] initWithString:@"FACILITIES" attributes: attributesFacilitiesHeading];
+    
+    // Facilities Label
+    UILabel *facilityHeading = [[UILabel alloc] initWithFrame:CGRectMake(30, 10, screenWidth-60, 30)];
+    facilityHeading.attributedText = attributedStringFacilities;
+    facilityHeading.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+    facilityHeading.numberOfLines = 1;
+    facilityHeading.lineBreakMode = NSLineBreakByCharWrapping;
+    facilityHeading.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:14];
+    
+    [facilitiesView addSubview:facilityHeading];
+    
+    NSInteger pos = 20 + facilityHeading.frame.size.height;
+    
+    NSArray *faciltiesArray = [dataSource getFacilities];
+    
+    NSInteger facilityColumn = 1;
+    NSInteger startX = 0;
+    for (int i = 0; i < [faciltiesArray count]; i++){
+        // Need to calculate the position for starting
+        if (facilityColumn == 2){
+            startX = 40 + bedImageWidth + 15;
+        } else {
+            startX = 40;
+        }
+        // First time through the yPosition is correct
+        NSString *facility = faciltiesArray[i];
+        UIView *labelView = [[UILabel alloc] initWithFrame:CGRectMake(startX, pos, bedImageWidth, 9999)];
+        
+        NSDictionary *attributesHeadingFac = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
+        NSAttributedString *attributedStringFac = [[NSAttributedString alloc] initWithString:facility attributes: attributesHeadingFac];
+    
+        UILabel *facilityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, bedImageWidth, 30)];
+        facilityLabel.numberOfLines = 0;
+        facilityLabel.lineBreakMode = UILineBreakModeWordWrap;
+        [facilityLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:14]];
+        facilityLabel.attributedText = attributedStringFac;
+        facilityLabel.textAlignment = NSTextAlignmentCenter;
+        facilityLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+        [labelView addSubview:facilityLabel];
+        [facilitiesView addSubview:labelView];
+    
+        // Update bedRow, bedColumn
+        if (facilityColumn == 1){
+            facilityColumn++;
+        } else {
+            facilityColumn = 1;
+            // Now need to set the yPosition
+            pos = pos + facilityLabel.frame.size.height;
+        }
+    
+        // Check if this is the last item in the list
+        if (i == [faciltiesArray count]-1){
+            // check to see if the yPosition needs to be updated
+            if (facilityColumn == 2){
+                pos = pos + facilityLabel.frame.size.height;
+            }
+        }
+    }
+    
+    // Contact
     
     
     
-    
-    
-    
-    
-    
-//    // Get Bed Data
-//    NSArray *beds = [dataSource getAllRooms];
-//    
-//    // Need a way to update this...
-////    NSArray* thumbnails = [dataSource getThumbnailNames:@"Beds"];
-//    
-//    NSArray *thumbnails = [[NSArray alloc] initWithObjects:@"2doubleroom.png", @"2femaledorm.png", @"2mixeddorm.png", @"2tripleroom.png", @"2twinroom.png", nil];
-//    
-//    NSDictionary *attributesRoomHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
-//    NSAttributedString *attributedStringRoom = [[NSAttributedString alloc] initWithString:@"ROOMS" attributes: attributesRoomHeading];
-//    
-//    // Room Label
-//    UILabel *roomHeading = [[UILabel alloc] initWithFrame:CGRectMake(30, yPosition, screenWidth-60, 30)];
-//    roomHeading.attributedText = attributedStringRoom;
-//    roomHeading.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    roomHeading.numberOfLines = 1;
-//    roomHeading.lineBreakMode = NSLineBreakByCharWrapping;
-//    roomHeading.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
-//    
-//    [ContentScrollView addSubview:roomHeading];
-//    
-//    yPosition = yPosition + roomHeading.frame.size.height + 10;
-//    
-//    NSInteger bedColumn = 1;
-//    NSInteger startX = 40;
-//    
-//    for (int i = 0; i < [beds count]; i++){
-//        // Need to calculate the position for starting
-////        if (bedColumn == 2){
-////            startX = 40 + bedImageWidth + 15;
-////        } else {
-////            startX = 40;
-////        }
-//        // First time through the yPosition is correct
-//        
-////        ThumbnailLookup *thumbnailLookup = [thumbnails objectAtIndex:i];
-//
-//        NSArray *thumbnails = [[NSArray alloc] initWithObjects:@"doubleroom.png", @"femaledorm.png", @"mixeddorm.png", @"tripleroom.png", @"twinroom.png", nil];
-//        
-////        UIImage *bedImage = [UIImage imageNamed:thumbnailLookup.photoName];
-//        UIImage *bedImage = [UIImage imageNamed:thumbnails[i]];
-//        UIButton *roomButton = [[UIButton alloc] initWithFrame:CGRectMake(startX, yPosition, bedImageWidth, bedImageHeight)];
-//
-//        [roomButton setImage:bedImage forState:UIControlStateNormal];
-//        roomButton.tag = i;
-//
-//        [roomButton addTarget: self
-//                    action: @selector(selectedBed:)
-//            forControlEvents: UIControlEventTouchUpInside];
-//        [ContentScrollView addSubview:roomButton];
-//        
-////        // Update bedRow, bedColumn
-////        if (bedColumn == 1){
-////            bedColumn++;
-////        } else {
-////            bedColumn = 1;
-//            // Now need to set the yPosition
-//            yPosition = yPosition + roomButton.frame.size.height + 5;
-////        }
-//        
-////        // Check if this is the last item in the list
-////        if (i == [beds count]-1){
-////            // check to see if the yPosition needs to be updated
-////            if (bedColumn == 2){
-////                yPosition = yPosition + roomButton.frame.size.height + 15;
-////            }
-////        }
-//    }
-//    
-////    // Small Black Line between Facilities and Rooms
-////    UIView *facLin = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 2)];
-////    facLin.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-////    [ContentScrollView addSubview:facLin];
-//    
-//    yPosition = yPosition + lineSize + 10;
-//    
-//    // Facilities
-//    NSDictionary *attributesFacilitiesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
-//    NSAttributedString *attributedStringFacilities = [[NSAttributedString alloc] initWithString:@"FACILITIES" attributes: attributesFacilitiesHeading];
-//    
-//    // Facilities Label
-//    UILabel *facilityHeading = [[UILabel alloc] initWithFrame:CGRectMake(30, yPosition, screenWidth-60, 30)];
-//    facilityHeading.attributedText = attributedStringFacilities;
-//    facilityHeading.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    facilityHeading.numberOfLines = 1;
-//    facilityHeading.lineBreakMode = NSLineBreakByCharWrapping;
-//    facilityHeading.font = [UIFont fontWithName:@"Roboto-Bold" size:14];
-//    
-//    [ContentScrollView addSubview:facilityHeading];
-//    
-//    yPosition = yPosition + facilityHeading.frame.size.height;
-//    
-//    NSArray *faciltiesArray = [dataSource getFacilities];
-//    
-//    NSInteger facilityColumn = 1;
-//    for (int i = 0; i < [faciltiesArray count]; i++){
-//        // Need to calculate the position for starting
-//        if (facilityColumn == 2){
-//            startX = 40 + bedImageWidth + 15;
-//        } else {
-//            startX = 40;
-//        }
-//        // First time through the yPosition is correct
-//        NSString *facility = faciltiesArray[i];
-//        
-//        UIView *labelView = [[UILabel alloc] initWithFrame:CGRectMake(startX, yPosition, bedImageWidth, 9999)];
-//
-//        
-//        NSDictionary *attributesHeadingFac = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
-//        NSAttributedString *attributedStringFac = [[NSAttributedString alloc] initWithString:facility attributes: attributesHeadingFac];
-//        
-//        UILabel *facilityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, bedImageWidth, 30)];
-//        facilityLabel.numberOfLines = 0;
-//        facilityLabel.lineBreakMode = UILineBreakModeWordWrap;
-//        [facilityLabel setFont:[UIFont fontWithName:bodyFont size:14]];
-//        facilityLabel.attributedText = attributedStringFac;
-//        facilityLabel.textAlignment = NSTextAlignmentCenter;
-//        facilityLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//        [labelView addSubview:facilityLabel];
-//        [ContentScrollView addSubview:labelView];
-//        
-//        // Update bedRow, bedColumn
-//        if (facilityColumn == 1){
-//            facilityColumn++;
-//        } else {
-//            facilityColumn = 1;
-//            // Now need to set the yPosition
-//            yPosition = yPosition + facilityLabel.frame.size.height;
-//        }
-//        
-//        // Check if this is the last item in the list
-//        if (i == [faciltiesArray count]-1){
-//            // check to see if the yPosition needs to be updated
-//            if (facilityColumn == 2){
-//                yPosition = yPosition + facilityLabel.frame.size.height;
-//            }
-//        }
-//    }
-//
-//    yPosition = yPosition + 10;
-//    // Staff Heading
-//    
-//    // Staff
-//    
-//    yPosition = yPosition + lineSize + 15;
-//    
-//    UIButton *contactButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, contactButtonHeight)];
-//    UIImage *contactButtonImage = [UIImage imageNamed:@"contactusbutton.png"];
-//    [contactButton setImage:contactButtonImage forState:UIControlStateNormal];
-//    [contactButton addTarget:self
-//                 action:@selector(loadContact)
-//       forControlEvents:UIControlEventTouchUpInside];
-//    [ContentScrollView addSubview:contactButton];
-//    
-//    yPosition = yPosition + contactButton.frame.size.height + 25;
-//    
+    // Set Content Size for Scroll View
+    ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
+    [self.view addSubview:ContentScrollView];
+
     // Icon Displays
     NSInteger smStart = 0;
 
