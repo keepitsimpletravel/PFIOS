@@ -10,32 +10,32 @@
 #import <StoreKit/StoreKit.h>
 #import <MessageUI/MessageUI.h>
 
-@interface LongHostelDetails2ViewController : UIViewController <UIScrollViewDelegate,MFMailComposeViewControllerDelegate>
+@interface HostelDetailsViewController : UIViewController <UIScrollViewDelegate,MFMailComposeViewControllerDelegate>
 {
-    NSInteger lineSize;
-    NSInteger homeImage;
-    UIScrollView *ContentScrollView;
-    id<DataSource> dataSource;
-    NSDecimalNumber *longitude;
-    NSDecimalNumber *latitude;
-    UIScrollView *ImageScrollView;
-    Detail *detail;
-    NSString *imageSelection;
-    NSInteger bedImageWidth;
-    NSInteger bedImageHeight;
-    NSInteger bedSpace;
-//    NSInteger instaSpace;
-//    NSInteger instaHeight;
-//    NSInteger instaWidth;
-//    NSInteger tripAdvisorHeight;
-//    NSInteger tripAdvisorWidth;
-//    NSInteger staffHeadingHeight;
-//    NSInteger staffHeadingWidth;
-    MFMailComposeViewController *mailComposer;
-    NSInteger fromMenu;
+//    NSInteger lineSize;
+//    NSInteger homeImage;
+//    UIScrollView *ContentScrollView;
+//    id<DataSource> dataSource;
+//    NSDecimalNumber *longitude;
+//    NSDecimalNumber *latitude;
+//    UIScrollView *ImageScrollView;
+//    Detail *detail;
+//    NSString *imageSelection;
+//    NSInteger bedImageWidth;
+//    NSInteger bedImageHeight;
+//    NSInteger bedSpace;
+////    NSInteger instaSpace;
+////    NSInteger instaHeight;
+////    NSInteger instaWidth;
+////    NSInteger tripAdvisorHeight;
+////    NSInteger tripAdvisorWidth;
+////    NSInteger staffHeadingHeight;
+////    NSInteger staffHeadingWidth;
+//    MFMailComposeViewController *mailComposer;
+//    NSInteger fromMenu;
 }
-- (IBAction)staffButton;
-- (IBAction)loadMap;
-- (void) setFromMenu:(NSInteger)value;
+//- (IBAction)staffButton;
+//- (IBAction)loadMap;
+//- (void) setFromMenu:(NSInteger)value;
 
 @end

@@ -48,10 +48,8 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
-//    homeImage = 0;
     NSInteger buttonWidth = 0;
     NSInteger buttonHeight = 0;
-//    buttonBorder = 1;
     NSInteger bottomTabBarHeight = 49;
     NSInteger yPosition = 64;
     NSInteger borderX = 0;
@@ -67,8 +65,6 @@
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
-//        borderX = ((screenWidth/2) * 0.05);
-//        borderY = ((screenHeight/4) * 0.05);
         borderX = (buttonWidth * 0.05);
         borderY = (buttonHeight * 0.05);
         borderMiddleX = (buttonWidth * 0.03);
@@ -85,15 +81,12 @@
         lineSize = 2;
         buttonWidth = screenWidth/2;
         buttonHeight = ((screenHeight-117)/4);
-//        borderX = ((screenWidth/2) * 0.05);
-//        borderY = ((screenHeight/4) * 0.05);
         borderX = (buttonWidth * 0.05);
         borderY = (buttonHeight * 0.05);
         borderMiddleX = (buttonWidth * 0.03);
         borderMiddleY = (buttonWidth * 0.03);
     }
     NSString *titleValue = [configurationValues objectForKey:@"AppTitle"];
-//    NSString *titleValue = @"THE PICKLED FROG";
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
 //    
@@ -118,15 +111,12 @@
     // Set the Line RGB from the configuration file
     NSString *lineR = [configurationValues objectForKey:@"LineRed"];
     NSInteger lineRed = [lineR integerValue];
-//    NSInteger lineRed = 0;
     
     NSString *lineG = [configurationValues objectForKey:@"LineGreen"];
     NSInteger lineGreen = [lineG integerValue];
-//    NSInteger lineGreen = 0;
     
     NSString *lineB = [configurationValues objectForKey:@"LineBlue"];
     NSInteger lineBlue = [lineB integerValue];
-//    NSInteger lineBlue = 0;
     
     // Set Line below status bar
     UIView *statusBarLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
@@ -135,8 +125,7 @@
 
     yPosition = yPosition + lineSize;
     
-    
-    // Blocks Button Area
+    // Button Area
     NSInteger buttonStartX = 0;
 
     NSString *value = @"hostellogo.png";
@@ -157,6 +146,26 @@
     hostelButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:hostelButton];
     
+    // Adding the Hostel overlay
+    NSInteger centreX = buttonWidth/2;
+    NSInteger centreY = buttonHeight/2;
+    NSInteger overlayWidth = buttonWidth*0.9;
+    NSInteger overlayHeight = buttonHeight*0.3;
+    
+    UILabel *hostelLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    hostelLabel.text = @"HOSTEL";
+    hostelLabel.textColor = [UIColor whiteColor];
+    [hostelLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [hostelLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [hostelButton addSubview:bgLabel];
+    [hostelButton addSubview:hostelLabel];
+    
     yPosition = yPosition + buttonHeight;
     
     value = @"exp8.jpg";
@@ -170,6 +179,20 @@
     seeButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:seeButton];
     
+    UILabel *seeLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    seeLabel.text = @"SEE";
+    seeLabel.textColor = [UIColor whiteColor];
+    [seeLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [seeLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel2 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel2.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [seeButton addSubview:bgLabel2];
+    [seeButton addSubview:seeLabel];
+    
     value = @"par5.jpg";
     UIButton *partyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [partyButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
@@ -180,6 +203,20 @@
     partyButton.layer.borderWidth = 3.0f;
     partyButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:partyButton];
+    
+    UILabel *partyLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    partyLabel.text = @"PARTY";
+    partyLabel.textColor = [UIColor whiteColor];
+    [partyLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [partyLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel3 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel3.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [partyButton addSubview:bgLabel3];
+    [partyButton addSubview:partyLabel];
     
     yPosition = yPosition + buttonHeight;
 
@@ -194,6 +231,20 @@
     transportButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:transportButton];
     
+    UILabel *transportLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    transportLabel.text = @"TRANSPORT";
+    transportLabel.textColor = [UIColor whiteColor];
+    [transportLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [transportLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel4 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel4.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [transportButton addSubview:bgLabel4];
+    [transportButton addSubview:transportLabel];
+    
     value = @"eat2.jpg";
     UIButton *eatButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [eatButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
@@ -204,6 +255,20 @@
     eatButton.layer.borderWidth = 3.0f;
     eatButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:eatButton];
+    
+    UILabel *eatLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    eatLabel.text = @"EAT";
+    eatLabel.textColor = [UIColor whiteColor];
+    [eatLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [eatLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel5 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel5.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [eatButton addSubview:bgLabel5];
+    [eatButton addSubview:eatLabel];
     
     yPosition = yPosition + buttonHeight;
     
@@ -217,6 +282,20 @@
     nextButton.layer.borderWidth = 3.0f;
     nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:nextButton];
+    
+    UILabel *nextLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    
+    nextLabel.text = @"NEXT STOP";
+    nextLabel.textColor = [UIColor whiteColor];
+    [nextLabel setFont:[UIFont fontWithName:@"Helvetica-BOLD" size:18]];
+    
+    [nextLabel setTextAlignment:UITextAlignmentCenter];
+    
+    UILabel *bgLabel6 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
+    bgLabel6.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5f];
+    
+    [nextButton addSubview:bgLabel6];
+    [nextButton addSubview:nextLabel];
     
     value = @"noticeboard.png";
     UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -318,7 +397,7 @@
     SWRevealViewController *revealController = [self revealViewController];
 
     // Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburgermenu.png"]
             style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
     
