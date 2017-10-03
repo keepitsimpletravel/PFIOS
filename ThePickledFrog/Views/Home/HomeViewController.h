@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "DataSource.h"
+#import "DataSource.h"
 
 @interface HomeViewController : UIViewController <UIScrollViewDelegate>
 {
@@ -17,7 +17,7 @@
 //    NSInteger buttonHeight;
 //    NSInteger buttonWidth;
 //    
-//    id<DataSource> dataSource;
+    id<DataSource> dataSource;
 //    
 //    NSInteger imageWidth;
 //    NSInteger imageHeight;

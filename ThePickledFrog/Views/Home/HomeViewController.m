@@ -7,21 +7,21 @@
 //
 #import "HomeViewController.h"
 //#import "SQLiteDatabase.h"
-//#import "DataSource.h"
+#import "DataSource.h"
 #import "HostelDetailsViewController.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
 //#import "UIView+Toast.h"
-//#import "CurrencyConverter.h"
+#import "CurrencyConverter.h"
 //#import "PhotoLookup.h"
 #import "SWRevealViewController.h"
-//#import "LoadWebViewController.h"
+#import "LoadWebViewController.h"
 //#import "LocalGuide.h"
 //#import "TransportListingViewController.h"
-//#import "MapViewController.h"
+#import "MapViewController.h"
 //#import "WhereNextListingViewController.h"
 #import "Noticeboard2.h"
-//#import "TravelTipsViewController.h"
+#import "TravelTipsViewController.h"
 
 @interface HomeViewController ()
 //@property (nonatomic, retain) UIPageControl * pageControl;
@@ -418,20 +418,23 @@
 // Booking Action
 - (IBAction)loadBooking
 {
-//    // Get Config Values
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    NSString *webURL = [configurationValues objectForKey:@"BookingURL"];
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:webURL];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
+    // Get Config Values
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    dataSource = [DataSource dataSource];
+    Detail *details = [dataSource getHostelDetails];
+    
+    NSString *webURL = details.bookingLink;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:webURL];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
 }
 //
 // Chat Action
@@ -513,16 +516,16 @@
 // Map Action
 - (IBAction)loadMap
 {
-//    dataSource = [DataSource dataSource];
-//    Detail *details = [dataSource getHostelDetails];
-//    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
-//    [map setLatitude:details.latitude];
-//    [map setLongitude:details.longitude];
-//    [map setDetails:details];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    [self.navigationController pushViewController:map animated:YES];
+    dataSource = [DataSource dataSource];
+    Detail *details = [dataSource getHostelDetails];
+    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    [map setLatitude:details.latitude];
+    [map setLongitude:details.longitude];
+    [map setDetails:details];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:map animated:YES];
 }
 
 // Transport Action
@@ -537,9 +540,9 @@
 // Currency Action
 - (IBAction)loadCurrency
 {
-//    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:cc animated:YES];
+    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:cc animated:YES];
 }
 
 // Home Action
@@ -551,22 +554,9 @@
 // Travel Tips Action
 - (IBAction)loadInfo
 {
-//    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:tt animated:YES];
-}
-
-# pragma Scroll View
-
-// Scroll View End Scroll - Set Page
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-//    if (scrollView == ImageScrollView){
-//        CGFloat width = scrollView.frame.size.width;
-//        NSInteger page = (scrollView.contentOffset.x + (0.5f * width)) / width;
-//        
-//        self.pageControl.currentPage = page;
-//    }
+    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:tt animated:YES];
 }
 
 @end
