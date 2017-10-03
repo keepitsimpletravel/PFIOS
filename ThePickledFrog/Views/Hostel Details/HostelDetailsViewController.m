@@ -18,7 +18,7 @@
 //#import "ThumbnailLookup.h"
 //#import "MapViewController.h"
 //#import "ContactViewController.h"
-//#import "Square4HomeViewController.h"
+#import "HomeViewController.h"
 #import "ListingTableCell.h"
 #import "ThumbnailLookup.h"
 #import "Room.h"
@@ -799,258 +799,211 @@
 //    return (interfaceOrientation == UIInterfaceOrientationPortrait) ;
 //}
 //
-//# pragma Actions
-//
-//-(IBAction)callPhone {
-//    // TODO PHONE NUMBER OF HOSTEL
-//    NSString *phoneNumber = [@"tel:" stringByAppendingString:detail.phone];
-////    NSString *phoneNumber = @"tel:(+61)404747178";
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
-//}
-//
-//// Map Action
-//- (IBAction)loadMap
-//{
-//    dataSource = [DataSource dataSource];
-//    Detail *details = [dataSource getHostelDetails];
+# pragma Actions
+
+-(IBAction)callPhone {
+    // TODO PHONE NUMBER OF HOSTEL
+    NSString *phoneNumber = [@"tel:" stringByAppendingString:detail.phone];
+//    NSString *phoneNumber = @"tel:(+61)404747178";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+// Map Action
+- (IBAction)loadMap
+{
+    dataSource = [DataSource dataSource];
+    Detail *details = [dataSource getHostelDetails];
 //    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
 //    [map setLatitude:details.latitude];
 //    [map setLongitude:details.longitude];
 //    [map setDetails:details];
 //    
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
+    
 //    [self.navigationController pushViewController:map animated:YES];
-//}
-//
-//// Home Action
-//- (IBAction)backToHome
-//{
-////    [self.navigationController popToRootViewControllerAnimated:NO];
-//    Square4HomeViewController *home = [[Square4HomeViewController alloc] initWithNibName:@"Square4HomeViewController" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:home animated:YES];
-//}
-//
-//// Trip Advisor Action
-//- (IBAction)loadTALink
-//{
-//    NSString *urlToDisplay = detail.tripAdvisorURL;
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:urlToDisplay];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
-//// Bed Selection Action
-//- (IBAction) selectedBed: (id)sender
-//{
-//    NSInteger selection = ((UIButton*)sender).tag;
-//    NSArray *rooms = [dataSource getAllRooms];
-//    Room *roomSelection = rooms[selection];
-//
-//    RoomViewController *roomListing = [[RoomViewController alloc] initWithNibName:@"RoomViewController" bundle:nil];
-//
-//    [roomListing setTitle:@"ROOMS"];
-//    [roomListing setTitleValue:@"ROOMS"];
-//    [roomListing setRoom:roomSelection];
-//    [roomListing setCurrentIndex:selection];
-//
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//
-//    [self.navigationController pushViewController:roomListing animated:YES];
-//}
-//
-//// Instagram Action
-//- (IBAction) openInstagram
-//{
-//    NSString *urlToDisplay = detail.instagramURL;
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:urlToDisplay];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
-//// Twitter Action
-//- (IBAction) openTwitter
-//{
-//    NSString *urlToDisplay = detail.twitterURL;
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:urlToDisplay];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
-//// Facebook Action
-//- (IBAction) openFacebook
-//{
-//    NSString *urlToDisplay = detail.facebookURL;
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:urlToDisplay];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
+}
+
+// Home Action
+- (IBAction)backToHome
+{
+//    [self.navigationController popToRootViewControllerAnimated:NO];
+    HomeViewController *home = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:home animated:YES];
+}
+
+// Trip Advisor Action
+- (IBAction)loadTALink
+{
+    NSString *urlToDisplay = detail.tripAdvisorURL;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:urlToDisplay];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // Set from Configuration PList
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
+// Instagram Action
+- (IBAction) openInstagram
+{
+    NSString *urlToDisplay = detail.instagramURL;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:urlToDisplay];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // Set from Configuration PList
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
+// Facebook Action
+- (IBAction) openFacebook
+{
+    NSString *urlToDisplay = detail.facebookURL;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:urlToDisplay];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // Set from Configuration PList
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
 //// Directions Action
-//- (IBAction) loadDirections
-//{
+- (IBAction) loadDirections
+{
 //    DirectionViewController *dl = [[DirectionViewController alloc] initWithNibName:@"DirectionViewController" bundle:nil];
 //    [self.navigationController pushViewController:dl animated:YES];
-//}
-//
-//// Currency Action
-//- (IBAction)loadCurrency
-//{
+}
+
+// Currency Action
+- (IBAction)loadCurrency
+{
 //    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    [self.navigationController pushViewController:cc animated:YES];
-//}
-//
+}
+
 //// Booking Action
-//- (IBAction)loadBooking
-//{
-//    // Get Config Values
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    NSString *webURL = [configurationValues objectForKey:@"BookingURL"];
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:webURL];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
-//- (IBAction)loadContact
-//{
-//    ContactViewController *contactVC = [[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil];
-//    [contactVC setDetail:detail];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:contactVC animated:YES];
-//}
-//
-//- (IBAction)openWeb
-//{
-//    NSString *urlToDisplay = detail.website;
+- (IBAction)loadBooking
+{
+    // Get Config Values
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *webURL = detail.bookingLink;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:webURL];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
+- (IBAction)openWeb
+{
+    NSString *urlToDisplay = detail.website;
 //    urlToDisplay = @"https://apac.littlehotelier.com/properties/makatijunctiondirect";
-//    
-//    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//    [loadWebVC setURL:urlToDisplay];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//    [loadWebVC setTitleValue:appTitle];
-//    
-//    [self.navigationController pushViewController:loadWebVC animated:YES];
-//}
-//
-//- (IBAction)openEmail
-//{
-//    if ([MFMailComposeViewController canSendMail])
-//    {
-//        // Email Subject
-//        NSString *emailTitle = @"";
-//        // Email Content
-//        NSString *content = @"";
-//        NSString *messageBody = content;
-//        // To address
-//        NSArray *toRecipents = [NSArray arrayWithObject:detail.email];
-//        
-//        // Setting up the email to be sent
-//        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-//        mc.mailComposeDelegate = self;
-//        [mc setSubject:emailTitle];
-//        [mc setMessageBody:messageBody isHTML:NO];
-//        [mc setToRecipients:toRecipents];
-//        
-//        // Present mail view controller on screen
-//        [self presentViewController:mc animated:YES completion:NULL];
-//    }
-//    else
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-//                                                        message:@"Your device doesn't support the composer sheet"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles: nil];
-//        [alert show];
-//    }
-//}
-//
-//// Action of the Mail being Sent
-//- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-//{
-//    switch (result)
-//    {
-//        case MFMailComposeResultCancelled:
-//            NSLog(@"Email cancelled");
-//            break;
-//        case MFMailComposeResultSaved:
-//            NSLog(@"Email saved");
-//            break;
-//        case MFMailComposeResultSent:
-//            NSLog(@"Email sent");
-//            break;
-//        case MFMailComposeResultFailed:
-//            NSLog(@"Email sent failure: %@", [error localizedDescription]);
-//            break;
-//        default:
-//            break;
-//    }
-//    
-//    // Close the Mail Interface
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-//}
-//
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:urlToDisplay];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // Set from Configuration PList
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
+- (IBAction)openEmail
+{
+    if ([MFMailComposeViewController canSendMail])
+    {
+        // Email Subject
+        NSString *emailTitle = @"";
+        // Email Content
+        NSString *content = @"";
+        NSString *messageBody = content;
+        // To address
+        NSArray *toRecipents = [NSArray arrayWithObject:detail.email];
+        
+        // Setting up the email to be sent
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+        [mc setToRecipients:toRecipents];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mc animated:YES completion:NULL];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support the composer sheet"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }
+}
+
+// Action of the Mail being Sent
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Email cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Email saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Email sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Email sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 # pragma Scroll View
 
 // Scroll View - End Scroll and Set Page
@@ -1064,18 +1017,18 @@
     }
 }
 
-//// Travel Tips Action
-//- (IBAction)loadInfo
-//{
+// Travel Tips Action
+- (IBAction)loadInfo
+{
 //    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    [self.navigationController pushViewController:tt animated:YES];
-//}
-//
-//- (void) setFromMenu:(NSInteger)value
-//{
-//    fromMenu = value;
-//}
+}
+
+- (void) setFromMenu:(NSInteger)value
+{
+    fromMenu = value;
+}
 
 - (void)setViewNumber:(NSInteger)value
 {
@@ -1094,8 +1047,6 @@
     NSMutableArray *tableData = [[NSMutableArray alloc] init];
     NSMutableArray *tableSublabelData = [[NSMutableArray alloc] init];
     
-//    if (tableView == eatsListingTable){
-//         Set the Food objects
         for (int i = 0; i < [roomsTypes count]; i++){
             Room *room = [roomsTypes objectAtIndex:i];
             [tableData addObject:room.roomType];
@@ -1122,8 +1073,6 @@
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         
         return cell;
-//    }
-//    return nil;
 }
 
 // Table View Did Select

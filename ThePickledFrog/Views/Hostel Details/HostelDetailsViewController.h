@@ -27,13 +27,11 @@
     NSInteger bedImageHeight;
     NSInteger viewNumber;
     NSInteger selectedRow;
-//    NSInteger bedSpace;
-//    MFMailComposeViewController *mailComposer;
-//    NSInteger fromMenu;
+    MFMailComposeViewController *mailComposer;
+    NSInteger fromMenu;
 }
-//- (IBAction)staffButton;
-//- (IBAction)loadMap;
-//- (void) setFromMenu:(NSInteger)value;
+- (IBAction)loadMap;
+- (void) setFromMenu:(NSInteger)value;
 - (void)setViewNumber:(NSInteger)value;
 
 @end
