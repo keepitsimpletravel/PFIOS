@@ -23,9 +23,9 @@
     UITableView *roomsListing;
     UIView *facilitiesView;
     UIView *contactView;
-//    NSString *imageSelection;
     NSInteger bedImageWidth;
     NSInteger bedImageHeight;
+    NSInteger viewNumber;
 //    NSInteger bedSpace;
 ////    NSInteger instaSpace;
 ////    NSInteger instaHeight;
@@ -40,5 +40,6 @@
 //- (IBAction)staffButton;
 //- (IBAction)loadMap;
 //- (void) setFromMenu:(NSInteger)value;
+- (void)setViewNumber:(NSInteger)value;
 
 @end

@@ -19,6 +19,9 @@
 //#import "MapViewController.h"
 //#import "ContactViewController.h"
 //#import "Square4HomeViewController.h"
+#import "ListingTableCell.h"
+#import "ThumbnailLookup.h"
+#import "Room.h"
 
 @interface HostelDetailsViewController ()
 @property (nonatomic, retain) UIPageControl * pageControl;
@@ -89,7 +92,8 @@
         homeImage = 225.67;
 
         bedImageHeight = 100.536;
-        bedImageWidth = 251.34;
+//        bedImageWidth = 251.34;
+        bedImageWidth = (screenWidth-80)/2;
 //        bedSpacer = 40;
 //        
 //        imageSelection = @"@1x";
@@ -107,7 +111,8 @@
         homeImage = 265;
 
         bedImageHeight = 118;
-        bedImageWidth = 295;
+//        bedImageWidth = 295;
+        bedImageWidth = (screenWidth-80)/2;
 //        bedSpacer = 40;
         
 
@@ -127,7 +132,8 @@
         homeImage = 292.41;
 
         bedImageHeight = 130.243;
-        bedImageWidth = 325.607;
+//        bedImageWidth = 325.607;
+        bedImageWidth = (screenWidth-80)/2;
 //        bedSpacer = 40;
 //        
 //        imageSelection = @"@3x";
@@ -378,7 +384,7 @@
     dataSource = [DataSource dataSource];
 
     // Rooms
-    roomsListing = [[UITableView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 150)];
+    roomsListing = [[UITableView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth-10, 300)];
     roomsListing.delegate = self;
     roomsListing.dataSource = self;
     roomsListing.hidden = NO;
@@ -391,10 +397,9 @@
     // Initialize thumbnails - need to get the thumbnails added
     //    eatsThumbnails = [dataSource getThumbnailNames:@"Food"];
     
-    
     // Facilities
     // Need to add a view for the Facilities here
-    facilitiesView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 150)];
+    facilitiesView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 300)];
     
     NSDictionary *attributesFacilitiesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
         NSAttributedString *attributedStringFacilities = [[NSAttributedString alloc] initWithString:@"FACILITIES" attributes: attributesFacilitiesHeading];
@@ -456,10 +461,210 @@
             }
         }
     }
+    facilitiesView.hidden = YES;
+    [ContentScrollView addSubview:facilitiesView];
     
     // Contact
+    contactView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 300)];
+    CGRect frame2 = contactView.frame;
+//    contactView.frame = CGRectMake(0, yPosition, screenWidth, contactPosition);
+    // Set up the Contact View
     
+    // Name Label
+//    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:detail.name attributes: attributesHeading];
+//    
+//    UILabel *contactNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 30)];
+//    contactNameLabel.attributedText = attributedString;
+//    contactNameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//    contactNameLabel.numberOfLines = 1;
+//    contactNameLabel.lineBreakMode = NSLineBreakByCharWrapping;
+//    contactNameLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+//    
+//    [contactView addSubview:contactNameLabel];
+//    
+//    contactPosition = contactPosition + contactNameLabel.frame.size.height + 15;
+//    
+//    // Address
+//    NSInteger noValues = 0;
+//    
+//    if ([detail.address length] > 0) {
+//        UIImageView *addressIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
+//        
+//        UIImage *iconImage = [UIImage imageNamed:@"address.png"];
+//        addressIcon.image = iconImage;
+//        
+//        [contactView addSubview:addressIcon];
+//        
+//        NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+//        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+//        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+//        
+//        NSAttributedString *attributedAddress = [[NSAttributedString alloc] initWithString:detail.address attributes: attributes];
+//        
+//        NSInteger xStart = 20 + addressIcon.frame.size.width + 20;
+//        NSInteger xEnd = screenWidth - xStart - 40;
+//        
+//        UILabel *addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+//        addressLabel.numberOfLines = 0;
+//        addressLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [addressLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//        addressLabel.attributedText = attributedAddress;
+//        addressLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [addressLabel sizeToFit];
+//        
+//        [contactView addSubview:addressLabel];
+//        noValues = 1;
+//        
+//        if(contactNameLabel.frame.size.height > addressIcon.frame.size.height){
+//            contactPosition = contactPosition + addressLabel.frame.size.height + 35;
+//        } else {
+//            contactPosition = contactPosition + addressIcon.frame.size.height + 35;
+//        }
+//    }
+//    
+//    // Phone
+//    if ([detail.phone length] > 0){
+//        UIImageView *phoneIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
+//        
+//        UIImage *iconImage = [UIImage imageNamed:@"phone.png"];
+//        phoneIcon.image = iconImage;
+//        
+//        [contactView addSubview:phoneIcon];
+//        
+//        paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+//        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+//        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+//        
+//        NSString *test = [NSString stringWithFormat:@"%@ ", detail.phone];
+//        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:test attributes: attributes];
+//        
+//        NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
+//        NSInteger xEnd = screenWidth - xStart - 40;
+//        
+//        UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+//        phoneLabel.numberOfLines = 0;
+//        phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [phoneLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//        phoneLabel.attributedText = attributedPhone;
+//        phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [phoneLabel sizeToFit];
+//        
+//        [contactView addSubview:phoneLabel];
+//        noValues = 1;
+//        
+//        if(phoneLabel.frame.size.height > phoneIcon.frame.size.height){
+//            contactPosition = contactPosition + phoneLabel.frame.size.height + 25;
+//        } else {
+//            contactPosition = contactPosition + phoneIcon.frame.size.height + 25;
+//        }
+//    }
+//    
+//    // Website
+//    if ([detail.website length] > 0){
+//        UIImageView *webIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
+//        
+//        UIImage *iconImage = [UIImage imageNamed:@"website.png"];
+//        webIcon.image = iconImage;
+//        
+//        [contactView addSubview:webIcon];
+//        
+//        paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+//        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+//        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+//        
+//        NSString *test = [NSString stringWithFormat:@"%@   ", detail.website];
+//        NSAttributedString *attributedWebsite = [[NSAttributedString alloc] initWithString:test attributes: attributes];
+//        
+//        NSInteger xStart = 20 + webIcon.frame.size.width + 20;
+//        NSInteger xEnd = screenWidth - xStart - 40;
+//        
+//        UILabel *webLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+//        webLabel.numberOfLines = 0;
+//        webLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [webLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//        webLabel.attributedText = attributedWebsite;
+//        webLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [webLabel sizeToFit];
+//        
+//        [contactView addSubview:webLabel];
+//        noValues = 1;
+//        
+//        if(webLabel.frame.size.height > webIcon.frame.size.height){
+//            contactPosition = contactPosition + webLabel.frame.size.height + 25;
+//        } else {
+//            contactPosition = contactPosition + webIcon.frame.size.height + 25;
+//        }
+//    }
+//    
+//    // Email
+//    if ([detail.email length] > 0){
+//        UIImageView *emailIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
+//        
+//        UIImage *iconImage = [UIImage imageNamed:@"email.png"];
+//        emailIcon.image = iconImage;
+//        
+//        [contactView addSubview:emailIcon];
+//        
+//        paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+//        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+//        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+//        
+//        NSString *test = [NSString stringWithFormat:@"%@ ", detail.email];
+//        NSAttributedString *attributedEmail = [[NSAttributedString alloc] initWithString:test attributes: attributes];
+//        
+//        NSInteger xStart = 20 + emailIcon.frame.size.width + 20;
+//        NSInteger xEnd = screenWidth - xStart - 40;
+//        
+//        UILabel *emailLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+//        emailLabel.numberOfLines = 0;
+//        emailLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [emailLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//        emailLabel.attributedText = attributedEmail;
+//        emailLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [emailLabel sizeToFit];
+//        
+//        [contactView addSubview:emailLabel];
+//        noValues = 1;
+//        
+//        if(emailLabel.frame.size.height > emailIcon.frame.size.height){
+//            contactPosition = contactPosition + emailLabel.frame.size.height + 25;
+//        } else {
+//            contactPosition = contactPosition + emailIcon.frame.size.height + 25;
+//        }
+//        
+//        //        contactPosition = contactPosition + emailLabel.frame.size.height + 5;
+//    }
+//    
+//    if (noValues == 0){
+//        paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+//        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+//        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+//        
+//        NSAttributedString *attributedNo = [[NSAttributedString alloc] initWithString:@"No contact details are currently available" attributes: attributes];
+//        
+//        
+//        UILabel *noLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 9999)];
+//        noLabel.numberOfLines = 0;
+//        noLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [noLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//        noLabel.attributedText = attributedNo;
+//        noLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [noLabel sizeToFit];
+//        
+//        [contactView addSubview:noLabel];
+//        noValues = 1;
+//        
+//        contactPosition = contactPosition + noLabel.frame.size.height + 5;
+//    }
+//    
+//    [MainScrollView addSubview:contactView];
     
+    yPosition = yPosition + roomsListing.frame.size.height + 20;
     
     // Set Content Size for Scroll View
     ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
@@ -890,5 +1095,84 @@
 //{
 //    fromMenu = value;
 //}
+
+- (void)setViewNumber:(NSInteger)value
+{
+    viewNumber = value;
+}
+
+// Table View - Number of Rows
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [roomsTypes count];
+}
+
+// Set up the Table View Cells, rows
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSMutableArray *tableData = [[NSMutableArray alloc] init];
+    NSMutableArray *tableSublabelData = [[NSMutableArray alloc] init];
+    
+//    if (tableView == eatsListingTable){
+//         Set the Food objects
+        for (int i = 0; i < [roomsTypes count]; i++){
+            Room *room = [roomsTypes objectAtIndex:i];
+            [tableData addObject:room.roomType];
+            [tableSublabelData addObject:room.price];
+        }
+    
+        static NSString *simpleTableIdentifier = @"ListingTableCell";
+        
+        ListingTableCell *cell = (ListingTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ListingTableCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
+        cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
+        
+//        ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:indexPath.row];
+//        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+    
+        //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        
+        return cell;
+//    }
+//    return nil;
+}
+
+// Table View Did Select
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//        selectedRow = indexPath.row;
+//        Food *selection = [eatTypes objectAtIndex:selectedRow];
+//        [self foodClicked:selection];
+}
+
+// Table View Row Height
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    return 80;
+}
+
+- (IBAction)segmentSelection:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        roomsListing.hidden = NO;
+        facilitiesView.hidden = YES;
+        contactView.hidden = YES;
+    } else if (sender.selectedSegmentIndex == 1){
+        roomsListing.hidden = YES;
+        facilitiesView.hidden = NO;
+        contactView.hidden = YES;
+    } else if (sender.selectedSegmentIndex == 2){
+        roomsListing.hidden = YES;
+        facilitiesView.hidden = YES;
+        contactView.hidden = NO;
+    }
+}
 
 @end

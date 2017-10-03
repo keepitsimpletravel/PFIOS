@@ -357,6 +357,8 @@
 		AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */; };
 		AB7AA5D81F824D78001DFF05 /* LoadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */; };
 		AB7AA5D91F824D78001DFF05 /* LoadWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */; };
+		AB7AA5DD1F838C0D001DFF05 /* ListingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5DA1F838C0D001DFF05 /* ListingTableCell.xib */; };
+		AB7AA5DE1F838C0D001DFF05 /* ListingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -805,6 +807,9 @@
 		AB7AA5D51F824D78001DFF05 /* LoadWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadWebViewController.h; sourceTree = "<group>"; };
 		AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadWebViewController.m; sourceTree = "<group>"; };
 		AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadWebViewController.xib; sourceTree = "<group>"; };
+		AB7AA5DA1F838C0D001DFF05 /* ListingTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListingTableCell.xib; path = "Custom Objects/ListingTableCell.xib"; sourceTree = "<group>"; };
+		AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTableCell.m; path = "Custom Objects/ListingTableCell.m"; sourceTree = "<group>"; };
+		AB7AA5DC1F838C0D001DFF05 /* ListingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTableCell.h; path = "Custom Objects/ListingTableCell.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1265,6 +1270,9 @@
 		AB41BA231F7A68E20073728F /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA5DA1F838C0D001DFF05 /* ListingTableCell.xib */,
+				AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */,
+				AB7AA5DC1F838C0D001DFF05 /* ListingTableCell.h */,
 				AB41BA241F7A68E90073728F /* Menu */,
 			);
 			name = "Custom Objects";
@@ -1990,6 +1998,7 @@
 				AB41B98E1F7A645F0073728F /* exp10t.jpg in Resources */,
 				AB41B9B31F7A645F0073728F /* hostelmap@2x.png in Resources */,
 				AB41B9B81F7A645F0073728F /* location.png in Resources */,
+				AB7AA5DD1F838C0D001DFF05 /* ListingTableCell.xib in Resources */,
 				AB7AA5A51F81EE27001DFF05 /* SendViewController.xib in Resources */,
 				AB7AA57D1F81EE27001DFF05 /* UserChatCustomCell.xib in Resources */,
 				AB41B9E81F7A645F0073728F /* profilechat@2x.png in Resources */,
@@ -2138,6 +2147,7 @@
 				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
 				AB7AA5991F81EE27001DFF05 /* MBProgressHUD.m in Sources */,
 				AB7AA4D41F81EE1B001DFF05 /* Noticeboard2.m in Sources */,
+				AB7AA5DE1F838C0D001DFF05 /* ListingTableCell.m in Sources */,
 				AB7AA5781F81EE27001DFF05 /* PhotoChatCustomCell.m in Sources */,
 				AB41BA5A1F7FB60D0073728F /* Step.m in Sources */,
 				AB7AA58F1F81EE27001DFF05 /* ASIDownloadCache.m in Sources */,
