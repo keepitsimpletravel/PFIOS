@@ -26,14 +26,8 @@
     NSInteger bedImageWidth;
     NSInteger bedImageHeight;
     NSInteger viewNumber;
+    NSInteger selectedRow;
 //    NSInteger bedSpace;
-////    NSInteger instaSpace;
-////    NSInteger instaHeight;
-////    NSInteger instaWidth;
-////    NSInteger tripAdvisorHeight;
-////    NSInteger tripAdvisorWidth;
-////    NSInteger staffHeadingHeight;
-////    NSInteger staffHeadingWidth;
 //    MFMailComposeViewController *mailComposer;
 //    NSInteger fromMenu;
 }

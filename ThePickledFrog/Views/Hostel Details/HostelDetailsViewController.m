@@ -14,7 +14,7 @@
 //#import "TravelTipsViewController.h"
 #import "SWRevealViewController.h"
 //#import <QuartzCore/QuartzCore.h>
-//#import "LoadWebViewController.h"
+#import "LoadWebViewController.h"
 //#import "ThumbnailLookup.h"
 //#import "MapViewController.h"
 //#import "ContactViewController.h"
@@ -408,19 +408,6 @@
     // Facilities
     // Need to add a view for the Facilities here
     facilitiesView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 250)];
-    
-//    NSDictionary *attributesFacilitiesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
-//        NSAttributedString *attributedStringFacilities = [[NSAttributedString alloc] initWithString:@"FACILITIES" attributes: attributesFacilitiesHeading];
-//    
-//    // Facilities Label
-//    UILabel *facilityHeading = [[UILabel alloc] initWithFrame:CGRectMake(30, 10, screenWidth-60, 30)];
-//    facilityHeading.attributedText = attributedStringFacilities;
-//    facilityHeading.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//    facilityHeading.numberOfLines = 1;
-//    facilityHeading.lineBreakMode = NSLineBreakByCharWrapping;
-//    facilityHeading.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:14];
-//    
-//    [facilitiesView addSubview:facilityHeading];
     
     NSInteger pos = 20;// + facilityHeading.frame.size.height;
     
@@ -1064,19 +1051,19 @@
 //    [self dismissViewControllerAnimated:YES completion:NULL];
 //}
 //
-//# pragma Scroll View
-//
-//// Scroll View - End Scroll and Set Page
-//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//    if (scrollView == ImageScrollView){
-//        CGFloat width = scrollView.frame.size.width;
-//        NSInteger page = (scrollView.contentOffset.x + (0.5f * width)) / width;
-//        
-//        self.pageControl.currentPage = page;
-//    }
-//}
-//
+# pragma Scroll View
+
+// Scroll View - End Scroll and Set Page
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView == ImageScrollView){
+        CGFloat width = scrollView.frame.size.width;
+        NSInteger page = (scrollView.contentOffset.x + (0.5f * width)) / width;
+        
+        self.pageControl.currentPage = page;
+    }
+}
+
 //// Travel Tips Action
 //- (IBAction)loadInfo
 //{
@@ -1142,9 +1129,9 @@
 // Table View Did Select
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//        selectedRow = indexPath.row;
-//        Food *selection = [eatTypes objectAtIndex:selectedRow];
-//        [self foodClicked:selection];
+        selectedRow = indexPath.row;
+        Room *selection = [roomsTypes objectAtIndex:selectedRow];
+        [self roomAction:selection];
 }
 
 // Table View Row Height
@@ -1167,6 +1154,25 @@
         facilitiesView.hidden = YES;
         contactView.hidden = NO;
     }
+}
+
+// Room Action
+- (IBAction) roomAction:(Room*)room
+{
+    // Get Config Values
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *webURL = detail.bookingLink;
+    
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:webURL];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+    [loadWebVC setTitleValue:appTitle];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
 }
 
 @end
