@@ -12,7 +12,7 @@
 #import "Currency.h"
 #import "MapViewController.h"
 #import "UMAlertView.h"
-#import "SquareHomeViewController.h"
+#import "HomeViewController.h"
 
 @interface CurrencyConverter ()
 <UMAlertViewDelegate>
@@ -539,7 +539,7 @@
 - (IBAction)backToHome
 {
 //    [self.navigationController popToRootViewControllerAnimated:NO];
-    SquareHomeViewController *home = [[SquareHomeViewController alloc] initWithNibName:@"SquareHomeViewController" bundle:nil];
+    HomeViewController *home = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:home animated:YES];
 }

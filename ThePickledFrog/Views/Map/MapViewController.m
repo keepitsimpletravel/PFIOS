@@ -9,7 +9,7 @@
 #import "MapViewController.h"
 #import "MapEntity.h"
 #import "MapAnnotation.h"
-#import "HostelDetails2ViewController.h"
+#import "HostelDetailsViewController.h"
 #import "EatsViewController.h"
 #import "DrinksViewController.h"
 #import "AttractionViewController.h"
@@ -794,7 +794,7 @@
     
     if (type == 0){
         // details
-        HostelDetails2ViewController *hdListing = [[HostelDetails2ViewController alloc] initWithNibName:@"HostelDetails2ViewController" bundle:nil];
+        HostelDetailsViewController *hdListing = [[HostelDetailsViewController alloc] initWithNibName:@"HostelDetailsViewController" bundle:nil];
         [hdListing setTitle:@"Hostel Details"];
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
         self.navigationController.toolbarHidden=YES;

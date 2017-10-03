@@ -351,8 +351,6 @@
 		AB7AA5C81F81F009001DFF05 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5C51F81F009001DFF05 /* login@3x.png */; };
 		AB7AA5CB1F822742001DFF05 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */; };
 		AB7AA5CE1F823113001DFF05 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */; };
-		AB7AA5CF1F823113001DFF05 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */; };
-		AB7AA5D11F8231A6001DFF05 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */; };
 		AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */; };
 		AB7AA5D81F824D78001DFF05 /* LoadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */; };
 		AB7AA5D91F824D78001DFF05 /* LoadWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5D71F824D78001DFF05 /* LoadWebViewController.xib */; };
@@ -369,6 +367,12 @@
 		AB7AA5FD1F83A6E9001DFF05 /* DirectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5F11F83A6E9001DFF05 /* DirectionViewController.xib */; };
 		AB7AA5FE1F83A6E9001DFF05 /* TravelTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5F41F83A6E9001DFF05 /* TravelTipsViewController.m */; };
 		AB7AA5FF1F83A6E9001DFF05 /* TravelTipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5F51F83A6E9001DFF05 /* TravelTipsViewController.xib */; };
+		AB7AA6081F83A791001DFF05 /* DrinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6021F83A791001DFF05 /* DrinksViewController.m */; };
+		AB7AA6091F83A791001DFF05 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6031F83A791001DFF05 /* DrinksViewController.xib */; };
+		AB7AA60A1F83A791001DFF05 /* EatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6061F83A791001DFF05 /* EatsViewController.m */; };
+		AB7AA60B1F83A791001DFF05 /* EatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6071F83A791001DFF05 /* EatsViewController.xib */; };
+		AB7AA6101F83A7A0001DFF05 /* AttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */; };
+		AB7AA6111F83A7A0001DFF05 /* AttractionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -810,8 +814,6 @@
 		AB7AA5C51F81F009001DFF05 /* login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@3x.png"; sourceTree = "<group>"; };
 		AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondBold.ttf"; path = "Fonts/OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
 		AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-CondensedBold.ttf"; path = "Fonts/OpenSans-CondensedBold.ttf"; sourceTree = "<group>"; };
 		AB7AA5D51F824D78001DFF05 /* LoadWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadWebViewController.h; sourceTree = "<group>"; };
 		AB7AA5D61F824D78001DFF05 /* LoadWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadWebViewController.m; sourceTree = "<group>"; };
@@ -836,6 +838,15 @@
 		AB7AA5F31F83A6E9001DFF05 /* TravelTipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelTipsViewController.h; sourceTree = "<group>"; };
 		AB7AA5F41F83A6E9001DFF05 /* TravelTipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelTipsViewController.m; sourceTree = "<group>"; };
 		AB7AA5F51F83A6E9001DFF05 /* TravelTipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelTipsViewController.xib; sourceTree = "<group>"; };
+		AB7AA6011F83A791001DFF05 /* DrinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksViewController.h; sourceTree = "<group>"; };
+		AB7AA6021F83A791001DFF05 /* DrinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksViewController.m; sourceTree = "<group>"; };
+		AB7AA6031F83A791001DFF05 /* DrinksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
+		AB7AA6051F83A791001DFF05 /* EatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatsViewController.h; sourceTree = "<group>"; };
+		AB7AA6061F83A791001DFF05 /* EatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatsViewController.m; sourceTree = "<group>"; };
+		AB7AA6071F83A791001DFF05 /* EatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatsViewController.xib; sourceTree = "<group>"; };
+		AB7AA60D1F83A7A0001DFF05 /* AttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionViewController.h; sourceTree = "<group>"; };
+		AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionViewController.m; sourceTree = "<group>"; };
+		AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttractionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1156,6 +1167,9 @@
 		AB41BA0D1F7A653F0073728F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA60C1F83A7A0001DFF05 /* Attractions */,
+				AB7AA6001F83A791001DFF05 /* Drinks */,
+				AB7AA6041F83A791001DFF05 /* Eats */,
 				AB7AA5E11F83A6E9001DFF05 /* Map */,
 				AB7AA5E71F83A6E9001DFF05 /* Currency Converter */,
 				AB7AA5EE1F83A6E9001DFF05 /* Directions */,
@@ -1701,9 +1715,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7AA5D21F823541001DFF05 /* OpenSans-CondensedBold.ttf */,
-				AB7AA5D01F8231A6001DFF05 /* OpenSans-Bold.ttf */,
 				AB7AA5CC1F823113001DFF05 /* OpenSans-Light.ttf */,
-				AB7AA5CD1F823113001DFF05 /* OpenSans-Regular.ttf */,
 				AB7AA5CA1F822742001DFF05 /* OpenSans-CondBold.ttf */,
 			);
 			name = Fonts;
@@ -1774,6 +1786,39 @@
 			);
 			name = "Travel Tips";
 			path = "Views/Travel Tips";
+			sourceTree = "<group>";
+		};
+		AB7AA6001F83A791001DFF05 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA6011F83A791001DFF05 /* DrinksViewController.h */,
+				AB7AA6021F83A791001DFF05 /* DrinksViewController.m */,
+				AB7AA6031F83A791001DFF05 /* DrinksViewController.xib */,
+			);
+			name = Drinks;
+			path = Views/Drinks;
+			sourceTree = "<group>";
+		};
+		AB7AA6041F83A791001DFF05 /* Eats */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA6051F83A791001DFF05 /* EatsViewController.h */,
+				AB7AA6061F83A791001DFF05 /* EatsViewController.m */,
+				AB7AA6071F83A791001DFF05 /* EatsViewController.xib */,
+			);
+			name = Eats;
+			path = Views/Eats;
+			sourceTree = "<group>";
+		};
+		AB7AA60C1F83A7A0001DFF05 /* Attractions */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA60D1F83A7A0001DFF05 /* AttractionViewController.h */,
+				AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */,
+				AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */,
+			);
+			name = Attractions;
+			path = Views/Attractions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1912,7 +1957,9 @@
 				AB41B9581F7A645F0073728F /* bookabedhostel.png in Resources */,
 				AB41B95D1F7A645F0073728F /* bookingtoolbar@3x.png in Resources */,
 				AB41B9D91F7A645F0073728F /* par6.jpg in Resources */,
+				AB7AA6091F83A791001DFF05 /* DrinksViewController.xib in Resources */,
 				AB41B97E1F7A645F0073728F /* eat6t.jpg in Resources */,
+				AB7AA6111F83A7A0001DFF05 /* AttractionViewController.xib in Resources */,
 				AB41B9941F7A645F0073728F /* exp13t.jpg in Resources */,
 				AB7AA5CB1F822742001DFF05 /* OpenSans-CondBold.ttf in Resources */,
 				AB41B9DC1F7A645F0073728F /* par7t.jpg in Resources */,
@@ -2003,7 +2050,6 @@
 				AB41B98C1F7A645F0073728F /* exp1.jpg in Resources */,
 				AB41B9A91F7A645F0073728F /* hamburgermenu.png in Resources */,
 				AB41B9881F7A645F0073728F /* emailcontact@3x.png in Resources */,
-				AB7AA5CF1F823113001DFF05 /* OpenSans-Regular.ttf in Resources */,
 				AB41BA221F7A674C0073728F /* HomeViewController.xib in Resources */,
 				AB41B9C81F7A645F0073728F /* nex6.jpg in Resources */,
 				AB41B9F71F7A645F0073728F /* submitfeedback@2x.png in Resources */,
@@ -2096,6 +2142,7 @@
 				AB41B9AE1F7A645F0073728F /* hometoolbar@3x.png in Resources */,
 				AB41B9431F7A645F0073728F /* abo15.jpg in Resources */,
 				AB7AA5BA1F81EE27001DFF05 /* toolbarbg.png in Resources */,
+				AB7AA60B1F83A791001DFF05 /* EatsViewController.xib in Resources */,
 				AB41B9C71F7A645F0073728F /* nex5t.jpg in Resources */,
 				AB7AA5AE1F81EE27001DFF05 /* btnCamera@2x.png in Resources */,
 				AB41B9C21F7A645F0073728F /* nex3.jpg in Resources */,
@@ -2150,7 +2197,6 @@
 				AB41B8431F7A5EE50073728F /* Main.storyboard in Resources */,
 				AB41B9601F7A645F0073728F /* booknow@3x.png in Resources */,
 				AB41B9781F7A645F0073728F /* eat3t.jpg in Resources */,
-				AB7AA5D11F8231A6001DFF05 /* OpenSans-Bold.ttf in Resources */,
 				AB41B9B71F7A645F0073728F /* likeus@3x.png in Resources */,
 				AB7AA5CE1F823113001DFF05 /* OpenSans-Light.ttf in Resources */,
 				AB41B9D71F7A645F0073728F /* par5.jpg in Resources */,
@@ -2215,6 +2261,7 @@
 				AB41BA561F7FB60D0073728F /* Detail.m in Sources */,
 				AB41BA5B1F7FB60D0073728F /* Network.m in Sources */,
 				AB7AA5761F81EE27001DFF05 /* ChatViewController.m in Sources */,
+				AB7AA60A1F83A791001DFF05 /* EatsViewController.m in Sources */,
 				AB41BA521F7FB60D0073728F /* Transport.m in Sources */,
 				AB41B83A1F7A5EE50073728F /* main.m in Sources */,
 				AB7AA5A91F81EE27001DFF05 /* BHExpandingTextView.m in Sources */,
@@ -2238,6 +2285,7 @@
 				AB7AA5941F81EE27001DFF05 /* ASIWebPageRequest.m in Sources */,
 				AB7AA5841F81EE27001DFF05 /* EGOCache.m in Sources */,
 				AB7AA5FC1F83A6E9001DFF05 /* DirectionViewController.m in Sources */,
+				AB7AA6081F83A791001DFF05 /* DrinksViewController.m in Sources */,
 				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
 				AB7AA5991F81EE27001DFF05 /* MBProgressHUD.m in Sources */,
 				AB7AA4D41F81EE1B001DFF05 /* Noticeboard2.m in Sources */,
@@ -2261,6 +2309,7 @@
 				AB41BA551F7FB60D0073728F /* Room.m in Sources */,
 				AB7AA58E1F81EE27001DFF05 /* ASIDataDecompressor.m in Sources */,
 				AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */,
+				AB7AA6101F83A7A0001DFF05 /* AttractionViewController.m in Sources */,
 				AB7AA5981F81EE27001DFF05 /* JSONParsing.m in Sources */,
 				AB7AA5FE1F83A6E9001DFF05 /* TravelTipsViewController.m in Sources */,
 				AB7AA58D1F81EE27001DFF05 /* ASIDataCompressor.m in Sources */,

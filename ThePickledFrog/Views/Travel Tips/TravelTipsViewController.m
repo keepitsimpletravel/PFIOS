@@ -13,7 +13,7 @@
 #import "SWRevealViewController.h"
 #import "LoadWebViewController.h"
 #import "Directions.h"
-#import "SquareHomeViewController.h"
+#import "HomeViewController.h"
 
 @interface TravelTipsViewController ()
 @property (nonatomic, retain) UIPageControl * pageControl;
@@ -361,7 +361,7 @@
 - (IBAction)backToHome
 {
 //    [self.navigationController popToRootViewControllerAnimated:NO];
-    SquareHomeViewController *home = [[SquareHomeViewController alloc] initWithNibName:@"SquareHomeViewController" bundle:nil];
+    HomeViewController *home = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:home animated:YES];
 }
