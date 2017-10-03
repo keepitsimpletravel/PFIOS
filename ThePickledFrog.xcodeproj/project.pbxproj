@@ -359,6 +359,16 @@
 		AB7AA5DD1F838C0D001DFF05 /* ListingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5DA1F838C0D001DFF05 /* ListingTableCell.xib */; };
 		AB7AA5DE1F838C0D001DFF05 /* ListingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */; };
 		AB7AA5E01F83A064001DFF05 /* PickledFrogDatabase01.db in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5DF1F83A064001DFF05 /* PickledFrogDatabase01.db */; };
+		AB7AA5F61F83A6E9001DFF05 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5E31F83A6E9001DFF05 /* MapAnnotation.m */; };
+		AB7AA5F71F83A6E9001DFF05 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5E51F83A6E9001DFF05 /* MapViewController.m */; };
+		AB7AA5F81F83A6E9001DFF05 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5E61F83A6E9001DFF05 /* MapViewController.xib */; };
+		AB7AA5F91F83A6E9001DFF05 /* CurrencyConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5E91F83A6E9001DFF05 /* CurrencyConverter.m */; };
+		AB7AA5FA1F83A6E9001DFF05 /* CurrencyConverter.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5EA1F83A6E9001DFF05 /* CurrencyConverter.xib */; };
+		AB7AA5FB1F83A6E9001DFF05 /* UMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5ED1F83A6E9001DFF05 /* UMAlertView.m */; };
+		AB7AA5FC1F83A6E9001DFF05 /* DirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5F01F83A6E9001DFF05 /* DirectionViewController.m */; };
+		AB7AA5FD1F83A6E9001DFF05 /* DirectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5F11F83A6E9001DFF05 /* DirectionViewController.xib */; };
+		AB7AA5FE1F83A6E9001DFF05 /* TravelTipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA5F41F83A6E9001DFF05 /* TravelTipsViewController.m */; };
+		AB7AA5FF1F83A6E9001DFF05 /* TravelTipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA5F51F83A6E9001DFF05 /* TravelTipsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -810,6 +820,22 @@
 		AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTableCell.m; path = "Custom Objects/ListingTableCell.m"; sourceTree = "<group>"; };
 		AB7AA5DC1F838C0D001DFF05 /* ListingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTableCell.h; path = "Custom Objects/ListingTableCell.h"; sourceTree = "<group>"; };
 		AB7AA5DF1F83A064001DFF05 /* PickledFrogDatabase01.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase01.db; path = Database/PickledFrogDatabase01.db; sourceTree = "<group>"; };
+		AB7AA5E21F83A6E9001DFF05 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		AB7AA5E31F83A6E9001DFF05 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		AB7AA5E41F83A6E9001DFF05 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AB7AA5E51F83A6E9001DFF05 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AB7AA5E61F83A6E9001DFF05 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		AB7AA5E81F83A6E9001DFF05 /* CurrencyConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyConverter.h; sourceTree = "<group>"; };
+		AB7AA5E91F83A6E9001DFF05 /* CurrencyConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyConverter.m; sourceTree = "<group>"; };
+		AB7AA5EA1F83A6E9001DFF05 /* CurrencyConverter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyConverter.xib; sourceTree = "<group>"; };
+		AB7AA5EC1F83A6E9001DFF05 /* UMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAlertView.h; sourceTree = "<group>"; };
+		AB7AA5ED1F83A6E9001DFF05 /* UMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMAlertView.m; sourceTree = "<group>"; };
+		AB7AA5EF1F83A6E9001DFF05 /* DirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionViewController.h; sourceTree = "<group>"; };
+		AB7AA5F01F83A6E9001DFF05 /* DirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionViewController.m; sourceTree = "<group>"; };
+		AB7AA5F11F83A6E9001DFF05 /* DirectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionViewController.xib; sourceTree = "<group>"; };
+		AB7AA5F31F83A6E9001DFF05 /* TravelTipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelTipsViewController.h; sourceTree = "<group>"; };
+		AB7AA5F41F83A6E9001DFF05 /* TravelTipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelTipsViewController.m; sourceTree = "<group>"; };
+		AB7AA5F51F83A6E9001DFF05 /* TravelTipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelTipsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1130,6 +1156,10 @@
 		AB41BA0D1F7A653F0073728F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA5E11F83A6E9001DFF05 /* Map */,
+				AB7AA5E71F83A6E9001DFF05 /* Currency Converter */,
+				AB7AA5EE1F83A6E9001DFF05 /* Directions */,
+				AB7AA5F21F83A6E9001DFF05 /* Travel Tips */,
 				AB7AA5D41F824D78001DFF05 /* WebView */,
 				AB41BA1B1F7A66A10073728F /* Developer */,
 				AB41BA1A1F7A66990073728F /* Network */,
@@ -1690,6 +1720,62 @@
 			path = Views/WebView;
 			sourceTree = "<group>";
 		};
+		AB7AA5E11F83A6E9001DFF05 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5E21F83A6E9001DFF05 /* MapAnnotation.h */,
+				AB7AA5E31F83A6E9001DFF05 /* MapAnnotation.m */,
+				AB7AA5E41F83A6E9001DFF05 /* MapViewController.h */,
+				AB7AA5E51F83A6E9001DFF05 /* MapViewController.m */,
+				AB7AA5E61F83A6E9001DFF05 /* MapViewController.xib */,
+			);
+			name = Map;
+			path = Views/Map;
+			sourceTree = "<group>";
+		};
+		AB7AA5E71F83A6E9001DFF05 /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5E81F83A6E9001DFF05 /* CurrencyConverter.h */,
+				AB7AA5E91F83A6E9001DFF05 /* CurrencyConverter.m */,
+				AB7AA5EA1F83A6E9001DFF05 /* CurrencyConverter.xib */,
+				AB7AA5EB1F83A6E9001DFF05 /* UMAlertView */,
+			);
+			name = "Currency Converter";
+			path = "Views/Currency Converter";
+			sourceTree = "<group>";
+		};
+		AB7AA5EB1F83A6E9001DFF05 /* UMAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5EC1F83A6E9001DFF05 /* UMAlertView.h */,
+				AB7AA5ED1F83A6E9001DFF05 /* UMAlertView.m */,
+			);
+			path = UMAlertView;
+			sourceTree = "<group>";
+		};
+		AB7AA5EE1F83A6E9001DFF05 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5EF1F83A6E9001DFF05 /* DirectionViewController.h */,
+				AB7AA5F01F83A6E9001DFF05 /* DirectionViewController.m */,
+				AB7AA5F11F83A6E9001DFF05 /* DirectionViewController.xib */,
+			);
+			name = Directions;
+			path = Views/Directions;
+			sourceTree = "<group>";
+		};
+		AB7AA5F21F83A6E9001DFF05 /* Travel Tips */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA5F31F83A6E9001DFF05 /* TravelTipsViewController.h */,
+				AB7AA5F41F83A6E9001DFF05 /* TravelTipsViewController.m */,
+				AB7AA5F51F83A6E9001DFF05 /* TravelTipsViewController.xib */,
+			);
+			name = "Travel Tips";
+			path = "Views/Travel Tips";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1832,6 +1918,7 @@
 				AB41B9DC1F7A645F0073728F /* par7t.jpg in Resources */,
 				AB41B99A1F7A645F0073728F /* exp4.jpg in Resources */,
 				AB41B9861F7A645F0073728F /* emailcontact.png in Resources */,
+				AB7AA5FF1F83A6E9001DFF05 /* TravelTipsViewController.xib in Resources */,
 				AB7AA5AD1F81EE27001DFF05 /* btnCamera.png in Resources */,
 				AB7AA57F1F81EE27001DFF05 /* UserCustomCell.xib in Resources */,
 				AB41B95E1F7A645F0073728F /* booknow.png in Resources */,
@@ -1974,6 +2061,7 @@
 				AB41B9F21F7A645F0073728F /* showmap@3x.png in Resources */,
 				AB41B9401F7A645F0073728F /* abo12.jpg in Resources */,
 				AB41B96E1F7A645F0073728F /* directionsmap@2x.png in Resources */,
+				AB7AA5F81F83A6E9001DFF05 /* MapViewController.xib in Resources */,
 				AB41B9C11F7A645F0073728F /* nex2t.jpg in Resources */,
 				AB7AA5AF1F81EE27001DFF05 /* buttonbg.png in Resources */,
 				AB41B9F51F7A645F0073728F /* showmaphostel@3x.png in Resources */,
@@ -2011,6 +2099,8 @@
 				AB41B9C71F7A645F0073728F /* nex5t.jpg in Resources */,
 				AB7AA5AE1F81EE27001DFF05 /* btnCamera@2x.png in Resources */,
 				AB41B9C21F7A645F0073728F /* nex3.jpg in Resources */,
+				AB7AA5FA1F83A6E9001DFF05 /* CurrencyConverter.xib in Resources */,
+				AB7AA5FD1F83A6E9001DFF05 /* DirectionViewController.xib in Resources */,
 				AB41B9471F7A645F0073728F /* abo19.jpg in Resources */,
 				AB41B9621F7A645F0073728F /* callushostel@2x.png in Resources */,
 				AB41B9AF1F7A645F0073728F /* hostellogo.png in Resources */,
@@ -2101,9 +2191,11 @@
 				AB7AA5961F81EE27001DFF05 /* Base64.m in Sources */,
 				AB41BA541F7FB60D0073728F /* Food.m in Sources */,
 				AB7AA5901F81EE27001DFF05 /* ASIFormDataRequest.m in Sources */,
+				AB7AA5F71F83A6E9001DFF05 /* MapViewController.m in Sources */,
 				AB41BA2A1F7A68F20073728F /* RightViewController.m in Sources */,
 				AB7AA59B1F81EE27001DFF05 /* StaticClass.m in Sources */,
 				AB41BA631F7FB6AE0073728F /* DataSource.m in Sources */,
+				AB7AA5FB1F83A6E9001DFF05 /* UMAlertView.m in Sources */,
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
 				AB41BA4F1F7FB60D0073728F /* Activity.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
@@ -2113,6 +2205,7 @@
 				AB7AA5931F81EE27001DFF05 /* ASINetworkQueue.m in Sources */,
 				AB7AA5881F81EE27001DFF05 /* EGOImageView.m in Sources */,
 				AB41BA5C1F7FB60D0073728F /* Currency.m in Sources */,
+				AB7AA5F61F83A6E9001DFF05 /* MapAnnotation.m in Sources */,
 				AB7AA5C11F81EE27001DFF05 /* ZoomViewController.m in Sources */,
 				AB41BA5D1F7FB60D0073728F /* PhotoLookup.m in Sources */,
 				AB7AA5911F81EE27001DFF05 /* ASIHTTPRequest.m in Sources */,
@@ -2144,6 +2237,7 @@
 				AB7AA5871F81EE27001DFF05 /* EGOImageLoader.m in Sources */,
 				AB7AA5941F81EE27001DFF05 /* ASIWebPageRequest.m in Sources */,
 				AB7AA5841F81EE27001DFF05 /* EGOCache.m in Sources */,
+				AB7AA5FC1F83A6E9001DFF05 /* DirectionViewController.m in Sources */,
 				AB41BA211F7A674C0073728F /* HomeViewController.m in Sources */,
 				AB7AA5991F81EE27001DFF05 /* MBProgressHUD.m in Sources */,
 				AB7AA4D41F81EE1B001DFF05 /* Noticeboard2.m in Sources */,
@@ -2151,6 +2245,7 @@
 				AB7AA5781F81EE27001DFF05 /* PhotoChatCustomCell.m in Sources */,
 				AB41BA5A1F7FB60D0073728F /* Step.m in Sources */,
 				AB7AA58F1F81EE27001DFF05 /* ASIDownloadCache.m in Sources */,
+				AB7AA5F91F83A6E9001DFF05 /* CurrencyConverter.m in Sources */,
 				AB7AA5A71F81EE27001DFF05 /* SettingsViewController.m in Sources */,
 				AB41BA591F7FB60D0073728F /* MapEntity.m in Sources */,
 				AB7AA57C1F81EE27001DFF05 /* UserChatCustomCell.m in Sources */,
@@ -2167,6 +2262,7 @@
 				AB7AA58E1F81EE27001DFF05 /* ASIDataDecompressor.m in Sources */,
 				AB41BA2B1F7A68F20073728F /* SWRevealViewController.m in Sources */,
 				AB7AA5981F81EE27001DFF05 /* JSONParsing.m in Sources */,
+				AB7AA5FE1F83A6E9001DFF05 /* TravelTipsViewController.m in Sources */,
 				AB7AA58D1F81EE27001DFF05 /* ASIDataCompressor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
