@@ -53,32 +53,32 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
-    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
-    NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
+//    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+//    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
+//    NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
     } else if (screenWidth == 414){
         homeImage = 146.799;
-        imageSelection = @"@2x";
+//        imageSelection = @"@2x";
         lineSize = 2;
     }
     NSString *titleValue = @"TRAVEL TIPS";
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
     
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -114,13 +114,6 @@
     
     // Add selector size to force correct photo usage - may not be required
     NSString *value = @"";
-//    NSRange range = [name rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [name componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//        name = value;
-//    }
     
     [imageView setImage:[UIImage imageNamed:name]];
     
@@ -165,7 +158,7 @@
         nameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         nameLabel.numberOfLines = 1;
         nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
-        nameLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+        nameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:16];
         
         [ContentScrollView addSubview:nameLabel];
         
@@ -182,7 +175,7 @@
         UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
         descLabel.numberOfLines = 0;
         descLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [descLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:16]];
         descLabel.attributedText = attributedDescription;
         descLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [descLabel sizeToFit];
@@ -204,13 +197,7 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
     // Booking
-    NSString *imageValue = @"booking.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    NSString *imageValue = @"bookingtoolbar.png";
     UIImage *bookingImage = [UIImage imageNamed:imageValue];
     UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -223,14 +210,7 @@
     [items addObject:bookingItem];
     
     // Currency Converter
-    imageValue = @"currency.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"currencytoolbar.png";
     UIImage *currencyImage = [UIImage imageNamed:imageValue];
     UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -244,14 +224,7 @@
     [items addObject:currencyItem];
     
     // Tool Tip
-    imageValue = @"info.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"traveltipstoolbar.png";
     UIImage *infoImage = [UIImage imageNamed:imageValue];
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -267,14 +240,7 @@
     [items addObject:infoItem];
     
     // Map
-    imageValue = @"toolbarMap.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"maptoolbar.png";
     UIImage *mapButtonImage = [UIImage imageNamed:imageValue];
     UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
     mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -288,13 +254,7 @@
     [items addObject:mapItem];
     
     // Home
-    imageValue = @"toolbarHome.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    imageValue = @"hometoolbar.png";
     UIImage *imageHome = [UIImage imageNamed:imageValue];
     UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -316,7 +276,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     
     //     Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburgermenu.png"]
                                                                               style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }

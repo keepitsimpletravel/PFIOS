@@ -373,6 +373,21 @@
 		AB7AA60B1F83A791001DFF05 /* EatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6071F83A791001DFF05 /* EatsViewController.xib */; };
 		AB7AA6101F83A7A0001DFF05 /* AttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */; };
 		AB7AA6111F83A7A0001DFF05 /* AttractionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */; };
+		AB7AA6211F84E7C8001DFF05 /* roo1t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6121F84E7C8001DFF05 /* roo1t.jpg */; };
+		AB7AA6221F84E7C8001DFF05 /* roo4t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6131F84E7C8001DFF05 /* roo4t.jpg */; };
+		AB7AA6231F84E7C8001DFF05 /* roo3t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6141F84E7C8001DFF05 /* roo3t.jpg */; };
+		AB7AA6241F84E7C8001DFF05 /* roo2t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6151F84E7C8001DFF05 /* roo2t.jpg */; };
+		AB7AA6251F84E7C8001DFF05 /* currencyconvert.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6161F84E7C8001DFF05 /* currencyconvert.png */; };
+		AB7AA6261F84E7C8001DFF05 /* currencyconvert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6171F84E7C8001DFF05 /* currencyconvert@2x.png */; };
+		AB7AA6271F84E7C8001DFF05 /* currencyconvert@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6181F84E7C8001DFF05 /* currencyconvert@3x.png */; };
+		AB7AA6281F84E7C8001DFF05 /* roo11t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6191F84E7C8001DFF05 /* roo11t.jpg */; };
+		AB7AA6291F84E7C8001DFF05 /* roo12t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61A1F84E7C8001DFF05 /* roo12t.jpg */; };
+		AB7AA62A1F84E7C8001DFF05 /* roo9t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61B1F84E7C8001DFF05 /* roo9t.jpg */; };
+		AB7AA62B1F84E7C8001DFF05 /* roo10t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61C1F84E7C8001DFF05 /* roo10t.jpg */; };
+		AB7AA62C1F84E7C8001DFF05 /* roo8t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61D1F84E7C8001DFF05 /* roo8t.jpg */; };
+		AB7AA62D1F84E7C8001DFF05 /* roo7t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61E1F84E7C8001DFF05 /* roo7t.jpg */; };
+		AB7AA62E1F84E7C8001DFF05 /* roo6t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61F1F84E7C8001DFF05 /* roo6t.jpg */; };
+		AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -847,6 +862,21 @@
 		AB7AA60D1F83A7A0001DFF05 /* AttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionViewController.h; sourceTree = "<group>"; };
 		AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionViewController.m; sourceTree = "<group>"; };
 		AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttractionViewController.xib; sourceTree = "<group>"; };
+		AB7AA6121F84E7C8001DFF05 /* roo1t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo1t.jpg; path = graphics/roo1t.jpg; sourceTree = "<group>"; };
+		AB7AA6131F84E7C8001DFF05 /* roo4t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo4t.jpg; path = graphics/roo4t.jpg; sourceTree = "<group>"; };
+		AB7AA6141F84E7C8001DFF05 /* roo3t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo3t.jpg; path = graphics/roo3t.jpg; sourceTree = "<group>"; };
+		AB7AA6151F84E7C8001DFF05 /* roo2t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo2t.jpg; path = graphics/roo2t.jpg; sourceTree = "<group>"; };
+		AB7AA6161F84E7C8001DFF05 /* currencyconvert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currencyconvert.png; path = graphics/currencyconvert.png; sourceTree = "<group>"; };
+		AB7AA6171F84E7C8001DFF05 /* currencyconvert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "currencyconvert@2x.png"; path = "graphics/currencyconvert@2x.png"; sourceTree = "<group>"; };
+		AB7AA6181F84E7C8001DFF05 /* currencyconvert@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "currencyconvert@3x.png"; path = "graphics/currencyconvert@3x.png"; sourceTree = "<group>"; };
+		AB7AA6191F84E7C8001DFF05 /* roo11t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo11t.jpg; path = graphics/roo11t.jpg; sourceTree = "<group>"; };
+		AB7AA61A1F84E7C8001DFF05 /* roo12t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo12t.jpg; path = graphics/roo12t.jpg; sourceTree = "<group>"; };
+		AB7AA61B1F84E7C8001DFF05 /* roo9t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo9t.jpg; path = graphics/roo9t.jpg; sourceTree = "<group>"; };
+		AB7AA61C1F84E7C8001DFF05 /* roo10t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo10t.jpg; path = graphics/roo10t.jpg; sourceTree = "<group>"; };
+		AB7AA61D1F84E7C8001DFF05 /* roo8t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo8t.jpg; path = graphics/roo8t.jpg; sourceTree = "<group>"; };
+		AB7AA61E1F84E7C8001DFF05 /* roo7t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo7t.jpg; path = graphics/roo7t.jpg; sourceTree = "<group>"; };
+		AB7AA61F1F84E7C8001DFF05 /* roo6t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo6t.jpg; path = graphics/roo6t.jpg; sourceTree = "<group>"; };
+		AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo5t.jpg; path = graphics/roo5t.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -952,6 +982,21 @@
 		AB41B86C1F7A642E0073728F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6121F84E7C8001DFF05 /* roo1t.jpg */,
+				AB7AA6131F84E7C8001DFF05 /* roo4t.jpg */,
+				AB7AA6141F84E7C8001DFF05 /* roo3t.jpg */,
+				AB7AA6151F84E7C8001DFF05 /* roo2t.jpg */,
+				AB7AA6161F84E7C8001DFF05 /* currencyconvert.png */,
+				AB7AA6171F84E7C8001DFF05 /* currencyconvert@2x.png */,
+				AB7AA6181F84E7C8001DFF05 /* currencyconvert@3x.png */,
+				AB7AA6191F84E7C8001DFF05 /* roo11t.jpg */,
+				AB7AA61A1F84E7C8001DFF05 /* roo12t.jpg */,
+				AB7AA61B1F84E7C8001DFF05 /* roo9t.jpg */,
+				AB7AA61C1F84E7C8001DFF05 /* roo10t.jpg */,
+				AB7AA61D1F84E7C8001DFF05 /* roo8t.jpg */,
+				AB7AA61E1F84E7C8001DFF05 /* roo7t.jpg */,
+				AB7AA61F1F84E7C8001DFF05 /* roo6t.jpg */,
+				AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */,
 				AB41B86D1F7A645E0073728F /* abo1.jpg */,
 				AB41B86E1F7A645E0073728F /* abo10.jpg */,
 				AB41B86F1F7A645E0073728F /* abo11.jpg */,
@@ -1907,6 +1952,7 @@
 				AB41B9DF1F7A645F0073728F /* par9.jpg in Resources */,
 				AB41B99B1F7A645F0073728F /* exp4t.jpg in Resources */,
 				AB41B9581F7A645F0073728F /* bookabedhostel.png in Resources */,
+				AB7AA62A1F84E7C8001DFF05 /* roo9t.jpg in Resources */,
 				AB41B95D1F7A645F0073728F /* bookingtoolbar@3x.png in Resources */,
 				AB41B9D91F7A645F0073728F /* par6.jpg in Resources */,
 				AB7AA6091F83A791001DFF05 /* DrinksViewController.xib in Resources */,
@@ -1943,6 +1989,7 @@
 				AB41B95B1F7A645F0073728F /* bookingtoolbar.png in Resources */,
 				AB41B9891F7A645F0073728F /* emailushostel.png in Resources */,
 				AB41B99E1F7A645F0073728F /* exp6.jpg in Resources */,
+				AB7AA6231F84E7C8001DFF05 /* roo3t.jpg in Resources */,
 				AB41BA001F7A645F0073728F /* tra4t.jpg in Resources */,
 				AB41B96A1F7A645F0073728F /* directionshostel.png in Resources */,
 				AB41B9ED1F7A645F0073728F /* Redflagchat.png in Resources */,
@@ -1958,10 +2005,12 @@
 				AB7AA5771F81EE27001DFF05 /* ChatViewController.xib in Resources */,
 				AB41B9CB1F7A645F0073728F /* nex7t.jpg in Resources */,
 				AB41B9661F7A645F0073728F /* contactus@3x.png in Resources */,
+				AB7AA6271F84E7C8001DFF05 /* currencyconvert@3x.png in Resources */,
 				AB7AA59F1F81EE27001DFF05 /* search@2x.png in Resources */,
 				AB41B9A51F7A645F0073728F /* exp9t.jpg in Resources */,
 				AB41B96C1F7A645F0073728F /* directionshostel@3x.png in Resources */,
 				AB41B9541F7A645F0073728F /* addresscontact@3x.png in Resources */,
+				AB7AA6261F84E7C8001DFF05 /* currencyconvert@2x.png in Resources */,
 				AB7AA5B01F81EE27001DFF05 /* buttonbg@2x.png in Resources */,
 				AB41B98F1F7A645F0073728F /* exp11.jpg in Resources */,
 				AB41B94F1F7A645F0073728F /* abo7.jpg in Resources */,
@@ -2010,6 +2059,7 @@
 				AB41B9E51F7A645F0073728F /* postnotice@2x.png in Resources */,
 				AB41B96D1F7A645F0073728F /* directionsmap.png in Resources */,
 				AB7AA5751F81EE27001DFF05 /* ChatCustomCell.xib in Resources */,
+				AB7AA62E1F84E7C8001DFF05 /* roo6t.jpg in Resources */,
 				AB41B9FC1F7A645F0073728F /* tra2t.jpg in Resources */,
 				AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */,
 				AB41BA011F7A645F0073728F /* tra5.jpg in Resources */,
@@ -2021,8 +2071,10 @@
 				AB41B9EF1F7A645F0073728F /* Redflagchat@3x.png in Resources */,
 				AB41B9751F7A645F0073728F /* eat2.jpg in Resources */,
 				AB41B9D61F7A645F0073728F /* par4t.jpg in Resources */,
+				AB7AA62B1F84E7C8001DFF05 /* roo10t.jpg in Resources */,
 				AB7AA5B71F81EE27001DFF05 /* textbg@2x.png in Resources */,
 				AB41B9521F7A645F0073728F /* addresscontact.png in Resources */,
+				AB7AA6211F84E7C8001DFF05 /* roo1t.jpg in Resources */,
 				AB7AA5BC1F81EE27001DFF05 /* toolbarbg@2x.png in Resources */,
 				AB41B9E41F7A645F0073728F /* postnotice.png in Resources */,
 				AB41B94C1F7A645F0073728F /* abo4.jpg in Resources */,
@@ -2031,12 +2083,15 @@
 				AB41B9B41F7A645F0073728F /* hostelmap@3x.png in Resources */,
 				AB41B9FD1F7A645F0073728F /* tra3.jpg in Resources */,
 				AB41B9951F7A645F0073728F /* exp1t.jpg in Resources */,
+				AB7AA6291F84E7C8001DFF05 /* roo12t.jpg in Resources */,
 				AB41B9B91F7A645F0073728F /* location@2x.png in Resources */,
 				AB41B9FE1F7A645F0073728F /* tra3t.jpg in Resources */,
 				AB41B9DD1F7A645F0073728F /* par8.jpg in Resources */,
 				AB7AA5A31F81EE27001DFF05 /* BrowseProfileViewController.xib in Resources */,
 				AB41B9B01F7A645F0073728F /* hostellogo@2x.png in Resources */,
 				AB41B9C01F7A645F0073728F /* nex2.jpg in Resources */,
+				AB7AA6281F84E7C8001DFF05 /* roo11t.jpg in Resources */,
+				AB7AA6221F84E7C8001DFF05 /* roo4t.jpg in Resources */,
 				AB41B9761F7A645F0073728F /* eat2t.jpg in Resources */,
 				AB41B9E91F7A645F0073728F /* profilechat@3x.png in Resources */,
 				AB41B93F1F7A645F0073728F /* abo11.jpg in Resources */,
@@ -2053,6 +2108,7 @@
 				AB41B9EB1F7A645F0073728F /* rateus@2x.png in Resources */,
 				AB41BA031F7A645F0073728F /* tra6.jpg in Resources */,
 				AB41B9E71F7A645F0073728F /* profilechat.png in Resources */,
+				AB7AA6251F84E7C8001DFF05 /* currencyconvert.png in Resources */,
 				AB41B9CF1F7A645F0073728F /* par1.jpg in Resources */,
 				AB7AA5801F81EE27001DFF05 /* checked.png in Resources */,
 				AB41B94E1F7A645F0073728F /* abo6.jpg in Resources */,
@@ -2071,6 +2127,7 @@
 				AB41B99D1F7A645F0073728F /* exp5t.jpg in Resources */,
 				AB7AA5A11F81EE27001DFF05 /* BrowseMemberCustomCell.xib in Resources */,
 				AB41B9DE1F7A645F0073728F /* par8t.jpg in Resources */,
+				AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */,
 				AB41B98B1F7A645F0073728F /* emailushostel@3x.png in Resources */,
 				AB41B9441F7A645F0073728F /* abo16.jpg in Resources */,
 				AB7AA4DC1F81EE1B001DFF05 /* zoomPopupClose@2x.png in Resources */,
@@ -2121,6 +2178,7 @@
 				AB41B9D01F7A645F0073728F /* par1t.jpg in Resources */,
 				AB41B9561F7A645F0073728F /* attractionmap@2x.png in Resources */,
 				AB41B9A41F7A645F0073728F /* exp9.jpg in Resources */,
+				AB7AA62D1F84E7C8001DFF05 /* roo7t.jpg in Resources */,
 				AB7AA5C21F81EE27001DFF05 /* ZoomViewController.xib in Resources */,
 				AB41B99C1F7A645F0073728F /* exp5.jpg in Resources */,
 				AB41B9491F7A645F0073728F /* abo20.jpg in Resources */,
@@ -2137,6 +2195,7 @@
 				AB7AA5821F81EE27001DFF05 /* circle_you.png in Resources */,
 				AB7AA5BB1F81EE27001DFF05 /* toolbarbg1.png in Resources */,
 				AB41B9D81F7A645F0073728F /* par5t.jpg in Resources */,
+				AB7AA6241F84E7C8001DFF05 /* roo2t.jpg in Resources */,
 				AB41B9671F7A645F0073728F /* currencytoolbar.png in Resources */,
 				AB7AA5B61F81EE27001DFF05 /* textbg1.png in Resources */,
 				AB41B9F91F7A645F0073728F /* tra1.jpg in Resources */,
@@ -2159,6 +2218,7 @@
 				AB41B94A1F7A645F0073728F /* abo21.jpg in Resources */,
 				AB41B9D21F7A645F0073728F /* par2t.jpg in Resources */,
 				AB41B9A31F7A645F0073728F /* exp8t.jpg in Resources */,
+				AB7AA62C1F84E7C8001DFF05 /* roo8t.jpg in Resources */,
 				AB41B9721F7A645F0073728F /* drinkingmap@3x.png in Resources */,
 				AB41B97C1F7A645F0073728F /* eat5t.jpg in Resources */,
 				AB41BA071F7A645F0073728F /* traveltipstoolbar.png in Resources */,
