@@ -1179,14 +1179,8 @@
 				AB41BA1A1F7A66990073728F /* Network */,
 				AB41BA191F7A66920073728F /* Feedback */,
 				AB41BA181F7A668E0073728F /* Transport */,
-				AB41BA171F7A66880073728F /* Currency Converter */,
 				AB41BA161F7A66820073728F /* Noticeboard */,
-				AB41BA151F7A667F0073728F /* Map */,
 				AB41BA141F7A66770073728F /* Directions */,
-				AB41BA131F7A66720073728F /* Attractions */,
-				AB41BA121F7A666E0073728F /* Drinks */,
-				AB41BA111F7A66690073728F /* Eats */,
-				AB41BA101F7A66630073728F /* Local Guide */,
 				AB41BA0F1F7A665E0073728F /* About */,
 				AB41BA0E1F7A654B0073728F /* Home */,
 			);
@@ -1213,46 +1207,11 @@
 			name = About;
 			sourceTree = "<group>";
 		};
-		AB41BA101F7A66630073728F /* Local Guide */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Local Guide";
-			sourceTree = "<group>";
-		};
-		AB41BA111F7A66690073728F /* Eats */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Eats;
-			sourceTree = "<group>";
-		};
-		AB41BA121F7A666E0073728F /* Drinks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Drinks;
-			sourceTree = "<group>";
-		};
-		AB41BA131F7A66720073728F /* Attractions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Attractions;
-			sourceTree = "<group>";
-		};
 		AB41BA141F7A66770073728F /* Directions */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Directions;
-			sourceTree = "<group>";
-		};
-		AB41BA151F7A667F0073728F /* Map */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Map;
 			sourceTree = "<group>";
 		};
 		AB41BA161F7A66820073728F /* Noticeboard */ = {
@@ -1262,13 +1221,6 @@
 				AB7AA4C51F81EE1B001DFF05 /* Noticeboard Files */,
 			);
 			name = Noticeboard;
-			sourceTree = "<group>";
-		};
-		AB41BA171F7A66880073728F /* Currency Converter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Currency Converter";
 			sourceTree = "<group>";
 		};
 		AB41BA181F7A668E0073728F /* Transport */ = {

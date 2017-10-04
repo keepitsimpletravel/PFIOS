@@ -90,16 +90,16 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+    //NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
     
     NSString *titleValue = @"MAP";
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
     
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -147,7 +147,7 @@
 //    [items addObject:fixedSpace];
 
     // Eats
-    NSString *imageValue = @"mapEats.png";
+    NSString *imageValue = @"eatingmap.png";
     
     UIImage *eatImage = [UIImage imageNamed:imageValue];
     UIButton *eatButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -163,7 +163,7 @@
     [items addObject:fixedSpace];
 
     // Drinks
-    imageValue = @"mapDrink.png";
+    imageValue = @"drinkingmap.png";
     
     UIImage *drinkImage = [UIImage imageNamed:imageValue];
     UIButton *drinkButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -179,7 +179,7 @@
     [items addObject:fixedSpace];
 
     // Attractions
-    imageValue = @"mapAttractions.png";
+    imageValue = @"attractionmap.png";
 
     UIImage *attractionImage = [UIImage imageNamed:imageValue];
     UIButton *attractionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -260,7 +260,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     
     //     Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburgermenu.png"]
                                                                               style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }

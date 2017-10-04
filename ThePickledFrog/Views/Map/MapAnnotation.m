@@ -31,13 +31,13 @@
     
     if (_type == 0){
 //        annotationView.image = [UIImage imageNamed:@"detailsPin.png"];
-        annotationView.image = [UIImage imageNamed:@"mapHostelIcon.png"];
+        annotationView.image = [UIImage imageNamed:@"hostelmap.png"];
     } else if (_type == 2){
-        annotationView.image = [UIImage imageNamed:@"mapEats.png"];
+        annotationView.image = [UIImage imageNamed:@"eatingmap.png"];
     } else if (_type == 3){
-        annotationView.image = [UIImage imageNamed:@"mapDrink.png"];
+        annotationView.image = [UIImage imageNamed:@"drinkingmap.png"];
     } else if (_type == 4){
-        annotationView.image = [UIImage imageNamed:@"mapAttractions.png"];
+        annotationView.image = [UIImage imageNamed:@"attractionmap.png"];
     }
 
     if (_type != 5){
