@@ -180,13 +180,32 @@
         
         [ContentScrollView addSubview:stationNameLabel];
         
-        yPosition = yPosition + stationNameLabel.frame.size.height + 15;
+        yPosition = yPosition + stationNameLabel.frame.size.height + 10;
         
-        // CREATE DESCRIPTION LABEL
+        // CREATE MODE LABEL
         NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
         paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
         paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
         NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
+
+//        NSAttributedString *attributedMode = [[NSAttributedString alloc] initWithString:direction.mode attributes: attributes];
+//
+//        UILabel *modeLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
+//        modeLabel.numberOfLines = 0;
+//        modeLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [modeLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:18]];
+//        modeLabel.attributedText = attributedMode;
+//        modeLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [modeLabel sizeToFit];
+//        [ContentScrollView addSubview:modeLabel];
+//        
+//        yPosition = yPosition + 15 + modeLabel.frame.size.height;
+        
+        // CREATE DESCRIPTION LABEL
+         paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyles.alignment = NSTextAlignmentJustified;      //justified text
+        paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
+        attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
         NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithString:direction.description attributes: attributes];
         
@@ -199,52 +218,7 @@
         [descLabel sizeToFit];
         [ContentScrollView addSubview:descLabel];
         
-        yPosition = yPosition + 8 + descLabel.frame.size.height;
-        
-        // ADD Second Description Column
-        NSAttributedString *attributedDescription2 = [[NSAttributedString alloc] initWithString:direction.description2 attributes: attributes];
-        UILabel *descLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-        descLabel2.numberOfLines = 0;
-        descLabel2.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel2 setFont:[UIFont fontWithName:@"OpenSans" size:18]];
-        descLabel2.attributedText = attributedDescription2;
-        descLabel2.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [descLabel2 sizeToFit];
-        [ContentScrollView addSubview:descLabel2];
-        
-        yPosition = yPosition + descLabel2.frame.size.height + 8;
-        
-        if (!(direction.description3 == nil) || ![direction.description3 isEqualToString:@""]){
-            // ADD third Description Column
-            NSAttributedString *attributedDescription3 = [[NSAttributedString alloc] initWithString:direction.description3 attributes: attributes];
-            UILabel *descLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-            descLabel3.numberOfLines = 0;
-            descLabel3.lineBreakMode = UILineBreakModeWordWrap;
-            [descLabel3 setFont:[UIFont fontWithName:@"OpenSans-Light" size:18]];
-            descLabel3.attributedText = attributedDescription3;
-            descLabel3.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-            [descLabel3 sizeToFit];
-            [ContentScrollView addSubview:descLabel3];
-            
-            yPosition = yPosition + descLabel3.frame.size.height + 8;
-        }
-        
-        if (!(direction.description4 == nil) || ![direction.description4 isEqualToString:@""]){
-            // ADD third Description Column
-            NSAttributedString *attributedDescription4 = [[NSAttributedString alloc] initWithString:direction.description4 attributes: attributes];
-            UILabel *descLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-            descLabel4.numberOfLines = 0;
-            descLabel4.lineBreakMode = UILineBreakModeWordWrap;
-            [descLabel4 setFont:[UIFont fontWithName:@"OpenSans-Light" size:18]];
-            descLabel4.attributedText = attributedDescription4;
-            descLabel4.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-            [descLabel4 sizeToFit];
-            [ContentScrollView addSubview:descLabel4];
-            
-            yPosition = yPosition + descLabel4.frame.size.height;
-        }
-        
-        yPosition = yPosition + 15;
+        yPosition = yPosition + 15 + descLabel.frame.size.height;
     }
     
     // Set Content Size for Scroll View

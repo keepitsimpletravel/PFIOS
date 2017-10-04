@@ -1334,8 +1334,8 @@
 		AB41BA2D1F7FB6000073728F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				AB41BA2E1F7FB60D0073728F /* Directions.m */,
 				AB41BA2F1F7FB60D0073728F /* Directions.h */,
+				AB41BA2E1F7FB60D0073728F /* Directions.m */,
 				AB41BA301F7FB60D0073728F /* Activity.m */,
 				AB41BA311F7FB60D0073728F /* TravelTip.m */,
 				AB41BA321F7FB60D0073728F /* TravelTip.h */,

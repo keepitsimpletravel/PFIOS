@@ -83,105 +83,15 @@
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
                 NSString *stationName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-                NSString *description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *mode = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 
-                const unsigned char *desc2 = sqlite3_column_text(compiledStatement, 2);
-                NSString *description2 = @"";
-                if (desc2 ){
-                    description2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                const unsigned char *desc = sqlite3_column_text(compiledStatement, 2);
+                NSString *description = @"";
+                if (desc){
+                    description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 }
                 
-                const unsigned char *desc3 = sqlite3_column_text(compiledStatement, 3);
-                NSString *description3 = @"";
-                if (desc3){
-                    description3 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
-                }
-                
-                const unsigned char *desc4 = sqlite3_column_text(compiledStatement, 4);
-                NSString *description4 = @"";
-                if (desc4){
-                    description4 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
-                }
-                
-                const unsigned char *desc5 = sqlite3_column_text(compiledStatement, 5);
-                NSString *description5 = @"";
-                if (desc5){
-                    description5 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
-                }
-                
-                const unsigned char *desc6 = sqlite3_column_text(compiledStatement, 6);
-                NSString *description6 = @"";
-                if (desc6){
-                    description6 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
-                }
-                
-                const unsigned char *desc7 = sqlite3_column_text(compiledStatement, 7);
-                NSString *description7 = @"";
-                if (desc7){
-                    description7 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
-                }
-                
-                const unsigned char *desc8 = sqlite3_column_text(compiledStatement, 8);
-                NSString *description8 = @"";
-                if (desc8){
-                    description8 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
-                }
-                
-                const unsigned char *desc9 = sqlite3_column_text(compiledStatement, 9);
-                NSString *description9 = @"";
-                if (desc9){
-                    description9 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
-                }
-                
-                const unsigned char *desc10 = sqlite3_column_text(compiledStatement, 10);
-                NSString *description10 = @"";
-                if (desc10){
-                    description10 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
-                }
-                
-                const unsigned char *desc11 = sqlite3_column_text(compiledStatement, 11);
-                NSString *description11 = @"";
-                if (desc11){
-                    description11 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
-                }
-                
-                const unsigned char *desc12 = sqlite3_column_text(compiledStatement, 12);
-                NSString *description12 = @"";
-                if (desc12){
-                    description12 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
-                }
-                
-                const unsigned char *desc13 = sqlite3_column_text(compiledStatement, 13);
-                NSString *description13 = @"";
-                if (desc13){
-                    description13 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 13)];
-                }
-                
-                const unsigned char *desc14 = sqlite3_column_text(compiledStatement, 14);
-                NSString *description14 = @"";
-                if (desc14){
-                    description14 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 14)];
-                }
-                
-                const unsigned char *desc15 = sqlite3_column_text(compiledStatement, 15);
-                NSString *description15 = @"";
-                if (desc15){
-                    description15 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 15)];
-                }
-                
-                const unsigned char *desc16 = sqlite3_column_text(compiledStatement, 16);
-                NSString *description16 = @"";
-                if (desc16){
-                    description16 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 16)];
-                }
-                
-                const unsigned char *desc17 = sqlite3_column_text(compiledStatement, 17);
-                NSString *description17 = @"";
-                if (desc17){
-                    description17 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 17)];
-                }
-                
-                Directions *direction = [[Directions alloc] initWithData:stationName description:description description2:description2 description3:description3 description4:description4 description5:description5 description6:description6 description7:description7 description8:description8 description9:description9 description10:description10 description11:description11 description12:description12 description13:description13 description14:description14 description15:description15 description16:description16 description17:description17];
+                Directions *direction = [[Directions alloc] initWithData:stationName mode:mode description:description];
                 
                 [directions addObject:direction];
             }

@@ -9,7 +9,7 @@
 //#import "Detail.h"
 #import "PhotoLookup.h"
 //#import "RoomViewController.h"
-//#import "DirectionViewController.h"
+#import "DirectionViewController.h"
 //#import "CurrencyConverter.h"
 //#import "TravelTipsViewController.h"
 #import "SWRevealViewController.h"
@@ -895,8 +895,8 @@
 //// Directions Action
 - (IBAction) loadDirections
 {
-//    DirectionViewController *dl = [[DirectionViewController alloc] initWithNibName:@"DirectionViewController" bundle:nil];
-//    [self.navigationController pushViewController:dl animated:YES];
+    DirectionViewController *dl = [[DirectionViewController alloc] initWithNibName:@"DirectionViewController" bundle:nil];
+    [self.navigationController pushViewController:dl animated:YES];
 }
 
 // Currency Action
