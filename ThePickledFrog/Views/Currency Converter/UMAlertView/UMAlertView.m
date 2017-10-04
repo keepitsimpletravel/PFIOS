@@ -110,7 +110,7 @@ static NSInteger pickerRow = 0;
     }
     
     if(preset == 1){
-        [self.dataPicker selectRow:67 inComponent:0 animated:NO];
+        [self.dataPicker selectRow:1 inComponent:0 animated:NO];
     }
     
     [keyWindow addSubview:self.umAlertView];

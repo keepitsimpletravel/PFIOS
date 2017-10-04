@@ -56,28 +56,28 @@
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     // Set the font settings
-    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
-    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
+//    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+//    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-    backgroundView.opaque = YES;
-    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
-    backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-    backgroundView.opaque = NO;
-    [self.view addSubview:backgroundView];
+//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+//    backgroundView.opaque = YES;
+//    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
+//    backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
+//    backgroundView.opaque = NO;
+//    [self.view addSubview:backgroundView];
     
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
     } else if (screenWidth == 414){
         homeImage = 146.799;
-        imageSelection = @"@2x";
+//        imageSelection = @"@2x";
         lineSize = 2;
     }
     
@@ -88,7 +88,7 @@
     
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:headingFont size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -123,15 +123,6 @@
     
     NSString *name = @"header.jpg";
     
-    //    // Add selector size to force correct photo usage - may not be required
-    //    NSString *value = @"";
-    //    NSRange range = [name rangeOfString:@"."];
-    //    if (range.location != NSNotFound)
-    //    {
-    //        NSArray *myArray = [name componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-    //        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-    //        name = value;
-    //    }
     [imageView setImage:[UIImage imageNamed:name]];
     [ContentScrollView addSubview:imageView];
     
@@ -141,8 +132,6 @@
     UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
     imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
     [ContentScrollView addSubview:imageLine];
-    
-//    yPosition = yPosition + lineSize + 15;
     
     // Set the Text RGB from the configuration file
     NSString *textR = [configurationValues objectForKey:@"TextRed"];
@@ -185,7 +174,7 @@
     [firstCurrencyButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [firstCurrencyButton setBackgroundColor:[UIColor whiteColor]];
     [firstCurrencyButton setTitle:@"Select Currency" forState:UIControlStateNormal];
-    firstCurrencyButton.titleLabel.font = [UIFont fontWithName:headingFont size:14];
+    firstCurrencyButton.titleLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:14];
     [[firstCurrencyButton layer] setBorderWidth:2.0f];
     [[firstCurrencyButton layer] setBorderColor:[UIColor blackColor].CGColor];
     firstCurrencyButton.titleLabel.font = [UIFont systemFontOfSize:17];
@@ -278,8 +267,8 @@
     
     //    [firstCurrencyButton.titleLabel setText:@"Select Currency"];
     [secondCurrencyButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [secondCurrencyButton setTitle:@"Thai Baht" forState:UIControlStateNormal];
-    secondCurrencyButton.titleLabel.font = [UIFont fontWithName:headingFont size:14];
+    [secondCurrencyButton setTitle:@"Australian Dollar" forState:UIControlStateNormal];
+    secondCurrencyButton.titleLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:14];
     [[secondCurrencyButton layer] setBorderWidth:2.0f];
     secondCurrencyButton.titleLabel.font = [UIFont systemFontOfSize:17];
     [[secondCurrencyButton layer] setBorderColor:[UIColor blackColor].CGColor];
@@ -300,13 +289,7 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
     // Booking
-    NSString *imageValue = @"booking.png";
-//    NSRange range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    NSString *imageValue = @"bookingtoolbar.png";
     UIImage *bookingImage = [UIImage imageNamed:imageValue];
     UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -319,14 +302,7 @@
     [items addObject:bookingItem];
     
     // Currency Converter
-    imageValue = @"currency.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"currencytoolbar.png";
     UIImage *currencyImage = [UIImage imageNamed:imageValue];
     UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -343,14 +319,7 @@
     [items addObject:currencyItem];
     
     // Tool Tip
-    imageValue = @"info.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"traveltipstoolbar.png";
     UIImage *infoImage = [UIImage imageNamed:imageValue];
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -364,14 +333,7 @@
     [items addObject:infoItem];
     
     // Map
-    imageValue = @"toolbarMap.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"maptoolbar.png";
     UIImage *mapButtonImage = [UIImage imageNamed:imageValue];
     UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
     mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -385,13 +347,7 @@
     [items addObject:mapItem];
     
     // Home
-    imageValue = @"toolbarHome.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    imageValue = @"hometoolbar.png";
     UIImage *imageHome = [UIImage imageNamed:imageValue];
     UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -413,7 +369,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     
     //     Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburgermenu.png"]
                                                                               style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }
