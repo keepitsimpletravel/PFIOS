@@ -68,7 +68,7 @@
     // need to determine screenWidth to compare which device is which
     if(screenHeight == 568){
         homeImage = 225.67;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
         smWidth = 75.913;//84.348;
         smHeight = 45.241;//50.268;
         lineSize = 2;
@@ -78,7 +78,7 @@
         mapButtonWidth = 240;
     } else if (screenHeight == 667){
         homeImage = 265;
-        imageSelection = @"@1x";
+//        imageSelection = @"@1x";
         lineSize = 2;
         smWidth = 89.1;
         smHeight = 53.1;
@@ -88,7 +88,7 @@
         mapButtonWidth = 294;
     } else if (screenHeight == 736){
         homeImage = 292.41;
-        imageSelection = @"@2x";
+//        imageSelection = @"@2x";
         lineSize = 2;
         smWidth = 93.591;//103.991;
         smHeight = 58.608;//65.121;
@@ -103,18 +103,18 @@
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     NSString *titleValue = @"EATS";
-    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
-    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
+//    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+//    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
     
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
     
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -276,7 +276,7 @@
     UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
     descLabel.numberOfLines = 0;
     descLabel.lineBreakMode = UILineBreakModeWordWrap;
-    [descLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+    [descLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
     descLabel.attributedText = attributedDescription;
     descLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
     [descLabel sizeToFit];
@@ -291,7 +291,7 @@
         UILabel *descLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
         descLabel2.numberOfLines = 0;
         descLabel2.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel2 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [descLabel2 setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         descLabel2.attributedText = attributedDescription;
         descLabel2.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [descLabel2 sizeToFit];
@@ -307,7 +307,7 @@
         UILabel *descLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
         descLabel3.numberOfLines = 0;
         descLabel3.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel3 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [descLabel3 setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         descLabel3.attributedText = attributedDescription;
         descLabel3.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [descLabel3 sizeToFit];
@@ -324,7 +324,7 @@
         headingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         headingLabel.numberOfLines = 1;
         headingLabel.lineBreakMode = NSLineBreakByCharWrapping;
-        headingLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+        headingLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
             
         [aboutView addSubview:headingLabel];
             
@@ -335,7 +335,7 @@
         UILabel *gettingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
         gettingLabel.numberOfLines = 0;
         gettingLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [gettingLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [gettingLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         gettingLabel.attributedText = attributedDescription;
         gettingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [gettingLabel sizeToFit];
@@ -352,7 +352,7 @@
         headingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         headingLabel.numberOfLines = 1;
         headingLabel.lineBreakMode = NSLineBreakByCharWrapping;
-        headingLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+        headingLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
             
         [aboutView addSubview:headingLabel];
             
@@ -365,7 +365,7 @@
         UILabel *closestLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
         closestLabel.numberOfLines = 0;
         closestLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [closestLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [closestLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         closestLabel.attributedText = attributedDescription;
         closestLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [closestLabel sizeToFit];
@@ -378,7 +378,7 @@
     
     // Show Map Button
     UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, mapButtonHeight)];
-    UIImage *showmapButtonImage = [UIImage imageNamed:@"showmapbutton.png"];
+    UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
     [showmapButton setImage:showmapButtonImage forState:UIControlStateNormal];
     [showmapButton addTarget:self
                       action:@selector(loadEatMap)
@@ -389,7 +389,7 @@
 
     // Social Media buttons
     UIButton *fbButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, smWidth, smHeight)];
-    UIImage *fbImage = [UIImage imageNamed:@"facebookinfoicon.png"];
+    UIImage *fbImage = [UIImage imageNamed:@"likeus.png"];
     if ([food.facebookURL length] > 0){
         
     } else {
@@ -406,7 +406,7 @@
     NSInteger xPosition = 40 + smWidth + 15;
        
     UIButton *taButton = [[UIButton alloc] initWithFrame:CGRectMake(xPosition, aboutPosition, smWidth, smHeight)];
-    UIImage *taImage = [UIImage imageNamed:@"tripadvisorinfoicon.png"];
+    UIImage *taImage = [UIImage imageNamed:@"rateus.png"];
     
     if ([food.taLink length] > 0){
         
@@ -424,7 +424,7 @@
     xPosition = xPosition + smWidth + 15;
         
     UIButton *instaButton = [[UIButton alloc] initWithFrame:CGRectMake(xPosition, aboutPosition, smWidth, smHeight)];
-    UIImage *instaImage = [UIImage imageNamed:@"instagraminfoicon.png"];
+    UIImage *instaImage = [UIImage imageNamed:@"followus.png"];
     
     if ([food.instaURL length] > 0){
         
@@ -462,7 +462,7 @@
     contactNameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
     contactNameLabel.numberOfLines = 1;
     contactNameLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    contactNameLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+    contactNameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
     
     [contactView addSubview:contactNameLabel];
     
@@ -474,7 +474,7 @@
     if ([food.address length] > 0) {
         UIImageView *addressIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
         
-        UIImage *iconImage = [UIImage imageNamed:@"address.png"];
+        UIImage *iconImage = [UIImage imageNamed:@"addresscontact.png"];
         addressIcon.image = iconImage;
         
         [contactView addSubview:addressIcon];
@@ -492,7 +492,7 @@
         UILabel *addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         addressLabel.numberOfLines = 0;
         addressLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [addressLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [addressLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         addressLabel.attributedText = attributedAddress;
         addressLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [addressLabel sizeToFit];
@@ -511,7 +511,7 @@
     if ([food.phone length] > 0){
         UIImageView *phoneIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
         
-        UIImage *iconImage = [UIImage imageNamed:@"phone.png"];
+        UIImage *iconImage = [UIImage imageNamed:@"phonecontact.png"];
         phoneIcon.image = iconImage;
         
         [contactView addSubview:phoneIcon];
@@ -529,7 +529,7 @@
         UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         phoneLabel.numberOfLines = 0;
         phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [phoneLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [phoneLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         phoneLabel.attributedText = attributedPhone;
         phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [phoneLabel sizeToFit];
@@ -548,7 +548,7 @@
     if ([food.website length] > 0){
         UIImageView *webIcon = [[UIImageView alloc] initWithFrame:CGRectMake(20, contactPosition, iconWidth, iconHeight)];
         
-        UIImage *iconImage = [UIImage imageNamed:@"website.png"];
+        UIImage *iconImage = [UIImage imageNamed:@"websitecontact.png"];
         webIcon.image = iconImage;
         
         [contactView addSubview:webIcon];
@@ -566,7 +566,7 @@
         UILabel *webLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         webLabel.numberOfLines = 0;
         webLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [webLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [webLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         webLabel.attributedText = attributedWebsite;
         webLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [webLabel sizeToFit];
@@ -593,7 +593,7 @@
         UILabel *noLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 9999)];
         noLabel.numberOfLines = 0;
         noLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [noLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [noLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         noLabel.attributedText = attributedNo;
         noLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [noLabel sizeToFit];
@@ -608,7 +608,7 @@
     
     // Show Map Button
     UIButton *showmapButtonC = [[UIButton alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, mapButtonHeight)];
-    UIImage *showmapButtonImageC = [UIImage imageNamed:@"showmapbutton.png"];
+    UIImage *showmapButtonImageC = [UIImage imageNamed:@"showmap.png"];
     [showmapButtonC setImage:showmapButtonImage forState:UIControlStateNormal];
     [showmapButtonC addTarget:self
                       action:@selector(loadEatMap)
@@ -631,13 +631,7 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
     // Booking
-    NSString *imageValue = @"booking.png";
-//    NSRange range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    NSString *imageValue = @"bookingtoolbar.png";
     UIImage *bookingImage = [UIImage imageNamed:imageValue];
     UIButton *bookingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bookingButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -650,14 +644,7 @@
     [items addObject:bookingItem];
     
     // Currency Converter
-    imageValue = @"currency.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"currencytoolbar.png";
     UIImage *currencyImage = [UIImage imageNamed:imageValue];
     UIButton *currencyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -671,14 +658,7 @@
     [items addObject:currencyItem];
     
     // Tool Tip
-    imageValue = @"info.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"traveltipstoolbar.png";
     UIImage *infoImage = [UIImage imageNamed:imageValue];
     UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -692,14 +672,7 @@
     [items addObject:infoItem];
     
     // Map
-    imageValue = @"toolbarMap.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
-    
+    imageValue = @"maptoolbar.png";
     UIImage *mapButtonImage = [UIImage imageNamed:imageValue];
     UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
     mapButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -713,13 +686,7 @@
     [items addObject:mapItem];
     
     // Home
-    imageValue = @"toolbarHome.png";
-//    range = [imageValue rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [imageValue componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        imageValue = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//    }
+    imageValue = @"hometoolbar.png";
     UIImage *imageHome = [UIImage imageNamed:imageValue];
     UIButton *homeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     homeButton.bounds = CGRectMake(0, 0, screenWidth / 6, 49);
@@ -741,7 +708,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     
     //     Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"]
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburgermenu.png"]
                                                                               style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }
