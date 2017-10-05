@@ -9,6 +9,7 @@
 //#import "SQLiteDatabase.h"
 #import "DataSource.h"
 #import "HostelDetailsViewController.h"
+#import "EatsListing.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
 //#import "UIView+Toast.h"
@@ -515,11 +516,10 @@
 // Eats Action
 - (IBAction)loadEats
 {
-//    EatListingViewController *eats = [[EatListingViewController alloc] initWithNibName:@"EatListingViewController" bundle:nil];
-////    [eats setTitle:@"Eats"];
-////    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-////    
-////    [self.navigationController pushViewController:eats animated:YES];
+    EatsListing *eats = [[EatsListing alloc] initWithNibName:@"EatsListing" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    [self.navigationController pushViewController:eats animated:YES];
 }
 
 - (IBAction)loadNext

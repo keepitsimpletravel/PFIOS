@@ -388,6 +388,8 @@
 		AB7AA62D1F84E7C8001DFF05 /* roo7t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61E1F84E7C8001DFF05 /* roo7t.jpg */; };
 		AB7AA62E1F84E7C8001DFF05 /* roo6t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA61F1F84E7C8001DFF05 /* roo6t.jpg */; };
 		AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */; };
+		AB7AA6751F8635CB001DFF05 /* EatsListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6741F8635CB001DFF05 /* EatsListing.xib */; };
+		AB7AA6791F863D1A001DFF05 /* EatsListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6781F863D1A001DFF05 /* EatsListing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -877,6 +879,9 @@
 		AB7AA61E1F84E7C8001DFF05 /* roo7t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo7t.jpg; path = graphics/roo7t.jpg; sourceTree = "<group>"; };
 		AB7AA61F1F84E7C8001DFF05 /* roo6t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo6t.jpg; path = graphics/roo6t.jpg; sourceTree = "<group>"; };
 		AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = roo5t.jpg; path = graphics/roo5t.jpg; sourceTree = "<group>"; };
+		AB7AA6701F8635B3001DFF05 /* EatsListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatsListing.h; sourceTree = "<group>"; };
+		AB7AA6741F8635CB001DFF05 /* EatsListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatsListing.xib; sourceTree = "<group>"; };
+		AB7AA6781F863D1A001DFF05 /* EatsListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatsListing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1799,9 +1804,12 @@
 		AB7AA6041F83A791001DFF05 /* Eats */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6701F8635B3001DFF05 /* EatsListing.h */,
+				AB7AA6741F8635CB001DFF05 /* EatsListing.xib */,
 				AB7AA6051F83A791001DFF05 /* EatsViewController.h */,
 				AB7AA6061F83A791001DFF05 /* EatsViewController.m */,
 				AB7AA6071F83A791001DFF05 /* EatsViewController.xib */,
+				AB7AA6781F863D1A001DFF05 /* EatsListing.m */,
 			);
 			name = Eats;
 			path = Views/Eats;
@@ -2062,6 +2070,7 @@
 				AB7AA62E1F84E7C8001DFF05 /* roo6t.jpg in Resources */,
 				AB41B9FC1F7A645F0073728F /* tra2t.jpg in Resources */,
 				AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */,
+				AB7AA6751F8635CB001DFF05 /* EatsListing.xib in Resources */,
 				AB41BA011F7A645F0073728F /* tra5.jpg in Resources */,
 				AB41B96B1F7A645F0073728F /* directionshostel@2x.png in Resources */,
 				AB41B9AB1F7A645F0073728F /* hamburgermenu@3x.png in Resources */,
@@ -2293,6 +2302,7 @@
 				AB7AA5971F81EE27001DFF05 /* HttpQueue.m in Sources */,
 				AB7AA4DB1F81EE1B001DFF05 /* zoomPopup.m in Sources */,
 				AB7AA5A41F81EE27001DFF05 /* SendViewController.m in Sources */,
+				AB7AA6791F863D1A001DFF05 /* EatsListing.m in Sources */,
 				AB7AA5871F81EE27001DFF05 /* EGOImageLoader.m in Sources */,
 				AB7AA5941F81EE27001DFF05 /* ASIWebPageRequest.m in Sources */,
 				AB7AA5841F81EE27001DFF05 /* EGOCache.m in Sources */,

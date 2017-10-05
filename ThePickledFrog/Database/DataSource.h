@@ -34,6 +34,9 @@
 - (NSArray *)getWhereNext;
 - (NSArray *)getStepsForObject:(NSString *)name;
 
+- (NSArray *)getFoodTypes;
+- (NSArray *)getAllFoodsForType:(NSString *)type;
+
 // need to add the individual get item methods
 - (Food *)getFoodByName:(NSString *)name;
 - (Drink *)getDrinkByName:(NSString *)name;
