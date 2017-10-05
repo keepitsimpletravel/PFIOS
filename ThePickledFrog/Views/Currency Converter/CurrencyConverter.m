@@ -223,7 +223,7 @@
     [[converterView layer] setBorderColor:[UIColor blackColor].CGColor];
     
     // Set the image
-    UIImage *conversionImage = [UIImage imageNamed:@"convertButton.png"];
+    UIImage *conversionImage = [UIImage imageNamed:@"currencyconvert.png"];
     [converterView setImage:conversionImage];
     
     [ContentScrollView addSubview:converterView];

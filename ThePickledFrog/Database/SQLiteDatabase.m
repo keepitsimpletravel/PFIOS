@@ -208,89 +208,60 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 
-                const unsigned char *desc2 = sqlite3_column_text(compiledStatement, 2);
-                NSString *description2 = @"";
-                if (desc2 ){
-                    description2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
-                }
-                
-                const unsigned char *desc3 = sqlite3_column_text(compiledStatement, 3);
-                NSString *description3 = @"";
-                if (desc3){
-                    description3 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
-                }
-                
-                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
                 NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
-                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 5)];
+                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
                 NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
                 
-                const unsigned char *add = sqlite3_column_text(compiledStatement, 6);
+                const unsigned char *add = sqlite3_column_text(compiledStatement, 5);
                 NSString *address = @"";
                 if (add){
-                    address = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
+                    address = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
                 }
                 
-                const unsigned char *ph = sqlite3_column_text(compiledStatement, 7);
+                const unsigned char *ph = sqlite3_column_text(compiledStatement, 6);
                 NSString *phone = @"";
                 if (ph){
-                    phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
+                    phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
                 }
                 
-                const unsigned char *ws = sqlite3_column_text(compiledStatement, 8);
+                const unsigned char *ws = sqlite3_column_text(compiledStatement, 7);
                 NSString *website = @"";
                 if (ws){
-                    website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
+                    website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
                 }
                 
-                NSString *brief = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
+                NSString *brief = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
                 
-                const unsigned char *oh = sqlite3_column_text(compiledStatement, 10);
+                const unsigned char *oh = sqlite3_column_text(compiledStatement, 9);
                 NSString *openingHours = @"";
                 if (oh){
-                    openingHours = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
+                    openingHours = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
                 }
                 
-                const unsigned char *talink = sqlite3_column_text(compiledStatement, 11);
+                const unsigned char *talink = sqlite3_column_text(compiledStatement, 10);
                 NSString *link = @"";
                 if (talink ){
-                    link = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
+                    link = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
                 }
                 
-                const unsigned char *gt = sqlite3_column_text(compiledStatement, 12);
-                NSString *gettingThere = @"";
-                if (gt){
-                    gettingThere = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
-                }
-                
-                const unsigned char *ig = sqlite3_column_text(compiledStatement, 13);
+                const unsigned char *ig = sqlite3_column_text(compiledStatement, 11);
                 NSString *iURL = @"";
                 if (ig){
-                    iURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 13)];
+                    iURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
                 }
                 
-                const unsigned char *cs = sqlite3_column_text(compiledStatement, 14);
-                NSString *closestStop = @"";
-                if (cs){
-                    closestStop = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 14)];
-                }
-                
-                const unsigned char *fb = sqlite3_column_text(compiledStatement, 15);
+                const unsigned char *fb = sqlite3_column_text(compiledStatement, 12);
                 NSString *fURL = @"";
                 if (fb){
-                    fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 15)];
+                    fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                const unsigned char *tw = sqlite3_column_text(compiledStatement, 16);
-                NSString *twURL = @"";
-                if (tw){
-                    twURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 16)];
-                }
-                
-                Food *food = [[Food alloc] initWithData:name ddesc:desc ddesc2:description2 ddesc3:description3 dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link getting:gettingThere insta:iURL closest:closestStop face:fURL twit:twURL];
+                Food *food = [[Food alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
                 [foods addObject:food];
             }
         }
@@ -793,89 +764,60 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
-                
-                const unsigned char *desc2 = sqlite3_column_text(compiledStatement, 2);
-                NSString *description2 = @"";
-                if (desc2 ){
-                    description2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
-                }
-                
-                const unsigned char *desc3 = sqlite3_column_text(compiledStatement, 3);
-                NSString *description3 = @"";
-                if (desc3){
-                    description3 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
-                }
-                
-                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *desc = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+        
+                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
                 NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
-                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 5)];
+                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
                 NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
                 
-                const unsigned char *add = sqlite3_column_text(compiledStatement, 6);
+                const unsigned char *add = sqlite3_column_text(compiledStatement, 5);
                 NSString *address = @"";
                 if (add){
-                    address = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
+                    address = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
                 }
                 
-                const unsigned char *ph = sqlite3_column_text(compiledStatement, 7);
+                const unsigned char *ph = sqlite3_column_text(compiledStatement, 6);
                 NSString *phone = @"";
                 if (ph){
-                    phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
+                    phone = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
                 }
                 
-                const unsigned char *ws = sqlite3_column_text(compiledStatement, 8);
+                const unsigned char *ws = sqlite3_column_text(compiledStatement, 7);
                 NSString *website = @"";
                 if (ws){
-                    website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
+                    website = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
                 }
                 
-                NSString *brief = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
+                NSString *brief = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
                 
-                const unsigned char *oh = sqlite3_column_text(compiledStatement, 10);
+                const unsigned char *oh = sqlite3_column_text(compiledStatement, 9);
                 NSString *openingHours = @"";
                 if (oh){
-                    openingHours = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
+                    openingHours = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
                 }
                 
-                const unsigned char *talink = sqlite3_column_text(compiledStatement, 11);
+                const unsigned char *talink = sqlite3_column_text(compiledStatement, 10);
                 NSString *link = @"";
                 if (talink ){
-                    link = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
+                    link = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 10)];
                 }
                 
-                const unsigned char *gt = sqlite3_column_text(compiledStatement, 12);
-                NSString *gettingThere = @"";
-                if (gt){
-                    gettingThere = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
-                }
-                
-                const unsigned char *ig = sqlite3_column_text(compiledStatement, 13);
+                const unsigned char *ig = sqlite3_column_text(compiledStatement, 11);
                 NSString *iURL = @"";
                 if (ig){
-                    iURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 13)];
+                    iURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 11)];
                 }
                 
-                const unsigned char *cs = sqlite3_column_text(compiledStatement, 14);
-                NSString *closestStop = @"";
-                if (cs){
-                    closestStop = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 14)];
-                }
-                
-                const unsigned char *fb = sqlite3_column_text(compiledStatement, 15);
+                const unsigned char *fb = sqlite3_column_text(compiledStatement, 12);
                 NSString *fURL = @"";
                 if (fb){
-                    fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 15)];
+                    fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                const unsigned char *tw = sqlite3_column_text(compiledStatement, 16);
-                NSString *twURL = @"";
-                if (tw){
-                    twURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 16)];
-                }
-                
-                food = [[Food alloc] initWithData:name ddesc:desc ddesc2:description2 ddesc3:description3 dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link getting:gettingThere insta:iURL closest:closestStop face:fURL twit:twURL];
+                food = [[Food alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
             }
         }
     }

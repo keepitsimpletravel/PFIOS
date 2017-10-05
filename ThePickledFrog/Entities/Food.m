@@ -9,7 +9,7 @@
 
 @implementation Food
 
-@synthesize foodName, description, description2, description3, address, website, longitude, latitude, phone, brief, taLink, openingHours, gettingThere, instaURL, facebookURL, twitterURL, closestStop;
+@synthesize foodName, description, type, address, website, longitude, latitude, phone, brief, taLink, openingHours, instaURL, facebookURL;
 
 - (id)init
 {
@@ -20,12 +20,11 @@
     return self;
 }
 
--(id)initWithData:(NSString *)name ddesc:(NSString *)desc ddesc2:(NSString *)desc2 ddesc3:(NSString *)desc3 dadd:(NSString *)add web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la phoneNumber:(NSString *)ph br:(NSString *)fb open:(NSString *)oh tal:(NSString *)link getting:(NSString*)gt insta:(NSString*)iURL closest:(NSString*)cs face:(NSString*)fURL twit:(NSString*)twURL
+-(id)initWithData:(NSString *)typ nm:(NSString *)name ddesc:(NSString *)desc dadd:(NSString *)add web:(NSString *)ws lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la phoneNumber:(NSString *)ph br:(NSString *)fb open:(NSString *)oh tal:(NSString *)link insta:(NSString*)iURL face:(NSString*)fURL
 {
     self.foodName = name;
     self.description = desc;
-    self.description2 = desc2;
-    self.description3 = desc3;
+    self.type = typ;
     self.address = add;
     self.website = ws;
     self.longitude = lo;
@@ -34,11 +33,8 @@
     self.brief = fb;
     self.openingHours = oh;
     self.taLink = link;
-    self.gettingThere = gt;
     self.instaURL = iURL;
-    self.closestStop = cs;
     self.facebookURL = fURL;
-    self.twitterURL = twURL;
     
     return self;
 }

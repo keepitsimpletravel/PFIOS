@@ -156,6 +156,7 @@
     
     hostelLabel.text = @"HOSTEL";
     hostelLabel.textColor = [UIColor whiteColor];
+//    hostelLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [hostelLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [hostelLabel setTextAlignment:UITextAlignmentCenter];
@@ -163,8 +164,10 @@
     UILabel *bgLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
 //    bgLabel.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);// colorWithAlphaComponent:0.5f];
 //    bgLabel.background
-    bgLabel.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
-
+//    bgLabel.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
+//    bgLabel.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
     
     [hostelButton addSubview:bgLabel];
     [hostelButton addSubview:hostelLabel];
@@ -186,12 +189,15 @@
     
     seeLabel.text = @"SEE";
     seeLabel.textColor = [UIColor whiteColor];
+//    seeLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [seeLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [seeLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel2 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel2.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel2.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel2.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel2.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [seeButton addSubview:bgLabel2];
     [seeButton addSubview:seeLabel];
@@ -211,12 +217,15 @@
     
     partyLabel.text = @"PARTY";
     partyLabel.textColor = [UIColor whiteColor];
+//    partyLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [partyLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [partyLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel3 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel3.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel3.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel3.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel3.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [partyButton addSubview:bgLabel3];
     [partyButton addSubview:partyLabel];
@@ -238,12 +247,15 @@
     
     transportLabel.text = @"TRANSPORT";
     transportLabel.textColor = [UIColor whiteColor];
+//    transportLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [transportLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [transportLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel4 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel4.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel4.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel4.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel4.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [transportButton addSubview:bgLabel4];
     [transportButton addSubview:transportLabel];
@@ -263,12 +275,15 @@
     
     eatLabel.text = @"EAT";
     eatLabel.textColor = [UIColor whiteColor];
+//    eatLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [eatLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [eatLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel5 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel5.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel5.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel5.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel5.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [eatButton addSubview:bgLabel5];
     [eatButton addSubview:eatLabel];
@@ -290,12 +305,15 @@
     
     nextLabel.text = @"NEXT STOP";
     nextLabel.textColor = [UIColor whiteColor];
+//    nextLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [nextLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [nextLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel6 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-    bgLabel6.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
+    bgLabel6.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel6.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
+//    bgLabel6.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [nextButton addSubview:bgLabel6];
     [nextButton addSubview:nextLabel];
