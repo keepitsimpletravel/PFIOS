@@ -62,17 +62,26 @@
     //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
     //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     
+    NSInteger buttonWidth = 0;
+    NSInteger buttonHeight = 0;
+    
     // need to determine screenWidth to compare which device is which
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     } else if (screenWidth == 414){
         homeImage = 146.799;
         lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     }
     
     NSString *titleValue = @"EATS";
@@ -121,19 +130,14 @@
     ContentScrollView.scrollEnabled = YES;
     ContentScrollView.userInteractionEnabled=YES;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
-    NSString *name = @"header.jpg";
-    [imageView setImage:[UIImage imageNamed:name]];
-    [ContentScrollView addSubview:imageView];
+    NSString *value = @"hostellogo.png";
+    UIImage *image = [[UIImage alloc] init];
+    image = [UIImage imageNamed:value];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
+    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
+    [ContentScrollView addSubview:logoView];
     
-    yPosition = yPosition + homeImage;
-    
-    // Small Black Line between Image and Table View
-    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-    [ContentScrollView addSubview:imageLine];
-    
-    yPosition = yPosition + lineSize + 2;
+    yPosition = yPosition + homeImage + 2;
     
     UIView *tabbedSection = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 30)];
     //    NSMutableArray *itemArray = [NSArray arrayWithObjects: @"Eats", @"Drinks", @"Attractions", nil];

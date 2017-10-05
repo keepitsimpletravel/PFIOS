@@ -66,18 +66,24 @@
 //    backgroundView.opaque = NO;
 //    [self.view addSubview:backgroundView];
     
+    NSInteger buttonWidth = 0;
+    NSInteger buttonHeight = 0;
+    
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
-//        imageSelection = @"@1x";
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
-//        imageSelection = @"@1x";
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     } else if (screenWidth == 414){
         homeImage = 146.799;
-//        imageSelection = @"@2x";
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
         lineSize = 2;
     }
     
@@ -118,20 +124,28 @@
     ContentScrollView.scrollEnabled = YES;
     ContentScrollView.userInteractionEnabled=YES;
     
-    // Add Image Scroll View
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
-    
-    NSString *name = @"header.jpg";
-    
-    [imageView setImage:[UIImage imageNamed:name]];
-    [ContentScrollView addSubview:imageView];
+//    // Add Image Scroll View
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
+//    
+//    NSString *name = @"header.jpg";
+//    
+//    [imageView setImage:[UIImage imageNamed:name]];
+//    [ContentScrollView addSubview:imageView];
+//    
+//    yPosition = yPosition + homeImage;
+//    
+//    // Small Black Line between Image and Table View
+//    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
+//    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+//    [ContentScrollView addSubview:imageLine];
+    NSString *value = @"hostellogo.png";
+    UIImage *image = [[UIImage alloc] init];
+    image = [UIImage imageNamed:value];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
+    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
+    [ContentScrollView addSubview:logoView];
     
     yPosition = yPosition + homeImage;
-    
-    // Small Black Line between Image and Table View
-    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-    [ContentScrollView addSubview:imageLine];
     
     // Set the Text RGB from the configuration file
     NSString *textR = [configurationValues objectForKey:@"TextRed"];

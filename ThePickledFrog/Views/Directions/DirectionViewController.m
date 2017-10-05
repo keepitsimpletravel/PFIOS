@@ -57,19 +57,25 @@
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
 //    NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
+    NSInteger buttonWidth = 0;
+    NSInteger buttonHeight = 0;
+    
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
-        imageSelection = @"@1x";
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
-        imageSelection = @"@1x";
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     } else if (screenWidth == 414){
         homeImage = 146.799;
-        imageSelection = @"@2x";
         lineSize = 2;
+        buttonWidth = screenWidth/2;
+        buttonHeight = ((screenHeight-117)/4);
     }
     NSString *titleValue = @"Directions";
     UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
@@ -108,39 +114,14 @@
     ContentScrollView.scrollEnabled = YES;
     ContentScrollView.userInteractionEnabled=YES;
     
-    // Add Image Scroll View
-//    UIImageView *headerImageView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, screenWidth, homeImage)];
-//    [headerImageView setImage:[UIImage imageNamed:@"header.jpg"]];
-//    [ContentScrollView addSubview:headerImageView];
+    NSString *value = @"hostellogo.png";
+    UIImage *image = [[UIImage alloc] init];
+    image = [UIImage imageNamed:value];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
+    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
+    [ContentScrollView addSubview:logoView];
     
-//    NSArray *photos = [dataSource getPhotoNames:@"Home" identifier:@"Home"];
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
-    
-    NSString *name = @"header.jpg";
-    
-    // Add selector size to force correct photo usage - may not be required
-    NSString *value = @"";
-//    NSRange range = [name rangeOfString:@"."];
-//    if (range.location != NSNotFound)
-//    {
-//        NSArray *myArray = [name componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
-//        value = [NSString stringWithFormat:@"%@%@.%@", myArray[0], imageSelection, myArray[1]];
-//        name = value;
-//    }
-    
-    [imageView setImage:[UIImage imageNamed:name]];
-    
-    [ContentScrollView addSubview:imageView];
-    
-    yPosition = yPosition + homeImage;
-    
-    // Small Black Line between Image and Table View
-    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-    [ContentScrollView addSubview:imageLine];
-    
-    yPosition = yPosition + lineSize + 15;
+    yPosition = yPosition + homeImage + 10;
     
     // Set the Text RGB from the configuration file
     NSString *textR = [configurationValues objectForKey:@"TextRed"];
