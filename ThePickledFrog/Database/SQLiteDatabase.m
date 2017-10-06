@@ -794,7 +794,7 @@
 }
 
 // Get All Attractions details for a type
-- (NSArray *)getAllActivitiesForType:(NSString *)type
+- (NSArray *)getAllActivitesForType:(NSString *)type
 {
     sqlite3 *database;
     NSMutableArray *attractions = [[NSMutableArray alloc] init];

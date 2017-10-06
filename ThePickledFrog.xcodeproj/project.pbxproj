@@ -390,6 +390,10 @@
 		AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6201F84E7C8001DFF05 /* roo5t.jpg */; };
 		AB7AA6751F8635CB001DFF05 /* EatsListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6741F8635CB001DFF05 /* EatsListing.xib */; };
 		AB7AA6791F863D1A001DFF05 /* EatsListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6781F863D1A001DFF05 /* EatsListing.m */; };
+		AB7AA6821F879504001DFF05 /* DrinksListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA67F1F879504001DFF05 /* DrinksListing.m */; };
+		AB7AA6831F879504001DFF05 /* DrinksListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6811F879504001DFF05 /* DrinksListing.xib */; };
+		AB7AA6871F879DB1001DFF05 /* AttractionsListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6841F879DB1001DFF05 /* AttractionsListing.m */; };
+		AB7AA6881F879DB1001DFF05 /* AttractionsListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6861F879DB1001DFF05 /* AttractionsListing.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -882,6 +886,12 @@
 		AB7AA6701F8635B3001DFF05 /* EatsListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatsListing.h; sourceTree = "<group>"; };
 		AB7AA6741F8635CB001DFF05 /* EatsListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatsListing.xib; sourceTree = "<group>"; };
 		AB7AA6781F863D1A001DFF05 /* EatsListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatsListing.m; sourceTree = "<group>"; };
+		AB7AA67F1F879504001DFF05 /* DrinksListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksListing.m; sourceTree = "<group>"; };
+		AB7AA6801F879504001DFF05 /* DrinksListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksListing.h; sourceTree = "<group>"; };
+		AB7AA6811F879504001DFF05 /* DrinksListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinksListing.xib; sourceTree = "<group>"; };
+		AB7AA6841F879DB1001DFF05 /* AttractionsListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsListing.m; sourceTree = "<group>"; };
+		AB7AA6851F879DB1001DFF05 /* AttractionsListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionsListing.h; sourceTree = "<group>"; };
+		AB7AA6861F879DB1001DFF05 /* AttractionsListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttractionsListing.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1793,6 +1803,9 @@
 		AB7AA6001F83A791001DFF05 /* Drinks */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6801F879504001DFF05 /* DrinksListing.h */,
+				AB7AA67F1F879504001DFF05 /* DrinksListing.m */,
+				AB7AA6811F879504001DFF05 /* DrinksListing.xib */,
 				AB7AA6011F83A791001DFF05 /* DrinksViewController.h */,
 				AB7AA6021F83A791001DFF05 /* DrinksViewController.m */,
 				AB7AA6031F83A791001DFF05 /* DrinksViewController.xib */,
@@ -1818,6 +1831,9 @@
 		AB7AA60C1F83A7A0001DFF05 /* Attractions */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6851F879DB1001DFF05 /* AttractionsListing.h */,
+				AB7AA6841F879DB1001DFF05 /* AttractionsListing.m */,
+				AB7AA6861F879DB1001DFF05 /* AttractionsListing.xib */,
 				AB7AA60D1F83A7A0001DFF05 /* AttractionViewController.h */,
 				AB7AA60E1F83A7A0001DFF05 /* AttractionViewController.m */,
 				AB7AA60F1F83A7A0001DFF05 /* AttractionViewController.xib */,
@@ -2174,6 +2190,7 @@
 				AB41BA041F7A645F0073728F /* tra6t.jpg in Resources */,
 				AB41B9C91F7A645F0073728F /* nex6@0,1x.jpg in Resources */,
 				AB41B9991F7A645F0073728F /* exp3t.jpg in Resources */,
+				AB7AA6881F879DB1001DFF05 /* AttractionsListing.xib in Resources */,
 				AB41B9771F7A645F0073728F /* eat3.jpg in Resources */,
 				AB41B9591F7A645F0073728F /* bookabedhostel@2x.png in Resources */,
 				AB7AA5701F81EE27001DFF05 /* back-btn_n.png in Resources */,
@@ -2182,6 +2199,7 @@
 				AB41B9851F7A645F0073728F /* eatingmap@3x.png in Resources */,
 				AB41B9BC1F7A645F0073728F /* maptoolbar@2x.png in Resources */,
 				AB7AA5B41F81EE27001DFF05 /* send@2x.png in Resources */,
+				AB7AA6831F879504001DFF05 /* DrinksListing.xib in Resources */,
 				AB41B9921F7A645F0073728F /* exp12t.jpg in Resources */,
 				AB41B97B1F7A645F0073728F /* eat5.jpg in Resources */,
 				AB41B9D01F7A645F0073728F /* par1t.jpg in Resources */,
@@ -2288,6 +2306,7 @@
 				AB7AA5A91F81EE27001DFF05 /* BHExpandingTextView.m in Sources */,
 				AB7AA59C1F81EE27001DFF05 /* UIView+Toast.m in Sources */,
 				AB7AA5921F81EE27001DFF05 /* ASIInputStream.m in Sources */,
+				AB7AA6821F879504001DFF05 /* DrinksListing.m in Sources */,
 				AB7AA5861F81EE27001DFF05 /* EGOImageLoadConnection.m in Sources */,
 				AB7AA59A1F81EE27001DFF05 /* Singleton.m in Sources */,
 				AB7AA59D1F81EE27001DFF05 /* ProfileViewController.m in Sources */,
@@ -2295,6 +2314,7 @@
 				AB7AA5741F81EE27001DFF05 /* ChatCustomCell.m in Sources */,
 				AB7AA4DA1F81EE1B001DFF05 /* UIImage+StackBlur.m in Sources */,
 				AB7AA5AC1F81EE27001DFF05 /* DAKeyboardControl.m in Sources */,
+				AB7AA6871F879DB1001DFF05 /* AttractionsListing.m in Sources */,
 				AB41BA531F7FB60D0073728F /* Drink.m in Sources */,
 				AB7AA57A1F81EE27001DFF05 /* PhotoUserChatCustomCell.m in Sources */,
 				AB41BA581F7FB60D0073728F /* Staff.m in Sources */,

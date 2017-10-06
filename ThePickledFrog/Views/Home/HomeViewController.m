@@ -10,6 +10,8 @@
 #import "DataSource.h"
 #import "HostelDetailsViewController.h"
 #import "EatsListing.h"
+#import "DrinksListing.h"
+#import "AttractionsListing.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
 //#import "UIView+Toast.h"
@@ -163,12 +165,7 @@
     [hostelLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
-//    bgLabel.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);// colorWithAlphaComponent:0.5f];
-//    bgLabel.background
-//    bgLabel.backgroundColor = [UIColor colorWithRed:((lineRed) / 255.0) green:((lineGreen) / 255.0) blue:((lineBlue) / 255.0) alpha:0.5f];
     bgLabel.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
-//    bgLabel.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
     
     [hostelButton addSubview:bgLabel];
     [hostelButton addSubview:hostelLabel];
@@ -190,15 +187,12 @@
     
     seeLabel.text = @"SEE";
     seeLabel.textColor = [UIColor whiteColor];
-//    seeLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [seeLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [seeLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel2 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     bgLabel2.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel2.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel2.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [seeButton addSubview:bgLabel2];
     [seeButton addSubview:seeLabel];
@@ -218,15 +212,12 @@
     
     partyLabel.text = @"PARTY";
     partyLabel.textColor = [UIColor whiteColor];
-//    partyLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [partyLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [partyLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel3 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     bgLabel3.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel3.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel3.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [partyButton addSubview:bgLabel3];
     [partyButton addSubview:partyLabel];
@@ -520,6 +511,24 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 
     [self.navigationController pushViewController:eats animated:YES];
+}
+
+// Drinks Action
+- (IBAction)loadDrinks
+{
+    DrinksListing *drinks = [[DrinksListing alloc] initWithNibName:@"DrinksListing" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:drinks animated:YES];
+}
+
+// Attractions Action
+- (IBAction)loadAttractions
+{
+    AttractionsListing *attractions = [[AttractionsListing alloc] initWithNibName:@"AttractionsListing" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:attractions animated:YES];
 }
 
 - (IBAction)loadNext
