@@ -284,98 +284,6 @@
     
     aboutPosition = aboutPosition + 8 + descLabel.frame.size.height;
     
-    // CREATE DESCRIPTION2 LABEL
-    if ([activity.description2 length] != 0){
-        attributedDescription = [[NSAttributedString alloc] initWithString:activity.description2 attributes: attributes];
-        
-        UILabel *descLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
-        descLabel2.numberOfLines = 0;
-        descLabel2.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel2 setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-        descLabel2.attributedText = attributedDescription;
-        descLabel2.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [descLabel2 sizeToFit];
-        [aboutView addSubview:descLabel2];
-        
-        aboutPosition = aboutPosition + 8 + descLabel2.frame.size.height;
-    }
-    
-    // CREATE DESCRIPTION3 LABEL
-    if ([activity.description3 length] != 0){
-        attributedDescription = [[NSAttributedString alloc] initWithString:activity.description3 attributes: attributes];
-        
-        UILabel *descLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
-        descLabel3.numberOfLines = 0;
-        descLabel3.lineBreakMode = UILineBreakModeWordWrap;
-        [descLabel3 setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-        descLabel3.attributedText = attributedDescription;
-        descLabel3.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [descLabel3 sizeToFit];
-        [aboutView addSubview:descLabel3];
-        
-        aboutPosition = aboutPosition + 15 + descLabel3.frame.size.height;
-    }
-    
-    if ([activity.gettingThere length] != 0){
-        attributedString = [[NSAttributedString alloc] initWithString:@"Getting There" attributes: attributesHeading];
-        
-        UILabel *headingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 30)];
-        headingLabel.attributedText = attributedString;
-        headingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        headingLabel.numberOfLines = 1;
-        headingLabel.lineBreakMode = NSLineBreakByCharWrapping;
-        headingLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:fontSize];
-        
-        [aboutView addSubview:headingLabel];
-        
-        aboutPosition = aboutPosition + 8 + headingLabel.frame.size.height;
-        
-        attributedDescription = [[NSAttributedString alloc] initWithString:activity.gettingThere attributes: attributes];
-        
-        UILabel *gettingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
-        gettingLabel.numberOfLines = 0;
-        gettingLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [gettingLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-        gettingLabel.attributedText = attributedDescription;
-        gettingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [gettingLabel sizeToFit];
-        [aboutView addSubview:gettingLabel];
-        
-        aboutPosition = aboutPosition + 15 + gettingLabel.frame.size.height;
-    }
-    
-    if ([activity.closestStop length] != 0){
-        attributedString = [[NSAttributedString alloc] initWithString:@"Closest Stop" attributes: attributesHeading];
-        
-        UILabel *headingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 30)];
-        headingLabel.attributedText = attributedString;
-        headingLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        headingLabel.numberOfLines = 1;
-        headingLabel.lineBreakMode = NSLineBreakByCharWrapping;
-        headingLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:fontSize];
-        
-        [aboutView addSubview:headingLabel];
-        
-        aboutPosition = aboutPosition + 8 + headingLabel.frame.size.height;
-        
-        NSString *cs = [activity.closestStop stringByAppendingString:@" "];
-        
-        attributedDescription = [[NSAttributedString alloc] initWithString:cs attributes: attributes];
-        
-        UILabel *closestLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, 9999)];
-        closestLabel.numberOfLines = 0;
-        closestLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [closestLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-        closestLabel.attributedText = attributedDescription;
-        closestLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [closestLabel sizeToFit];
-        [aboutView addSubview:closestLabel];
-        
-        aboutPosition = aboutPosition + 15 + closestLabel.frame.size.height;
-    }
-    
-    aboutPosition = aboutPosition + 15;
-    
     // Show Map Button
     UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, mapButtonHeight)];
     UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
@@ -427,7 +335,7 @@
     UIButton *instaButton = [[UIButton alloc] initWithFrame:CGRectMake(xPosition, aboutPosition, smWidth, smHeight)];
     UIImage *instaImage = [UIImage imageNamed:@"followus.png"];
     
-    if ([activity.instagramURL length] > 0){
+    if ([activity.instaURL length] > 0){
         
     } else {
         instaButton.alpha = 0.4;
@@ -854,7 +762,7 @@
 // Instagram Action
 - (IBAction) openInstagram
 {
-    NSString *urlToDisplay = activity.instagramURL;
+    NSString *urlToDisplay = activity.instaURL;
     
     LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
     [loadWebVC setURL:urlToDisplay];

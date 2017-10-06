@@ -36,6 +36,10 @@
 
 - (NSArray *)getFoodTypes;
 - (NSArray *)getAllFoodsForType:(NSString *)type;
+- (NSArray *)getDrinkTypes;
+- (NSArray *)getAllDrinksForType:(NSString *)type;
+- (NSArray *)getActivityTypes;
+- (NSArray *)getAllActivityForType:(NSString *)type;
 
 // need to add the individual get item methods
 - (Food *)getFoodByName:(NSString *)name;
