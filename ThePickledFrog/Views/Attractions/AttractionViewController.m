@@ -150,9 +150,9 @@
     yPosition = yPosition + lineSize;
     
     // Get the Activity
-    allActivites = activityArray;
+//    allActivites = activityArray;
     
-    [self setActivity:activityArray[currentIndex]];
+//    [self setActivity:activityArray[currentIndex]];
     
     // Add scroll view programmatically
     MainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth, screenHeight-64-49-4)];

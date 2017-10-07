@@ -1291,6 +1291,9 @@
                 NSString *areaValue = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 NSString *identifier = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString *photoName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                
+                photoName = [NSString stringWithFormat:@"%@.jpg", photoName];
+                
                 NSNumber *orderValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
                 NSInteger order = [orderValue intValue];
                 
@@ -1310,17 +1313,6 @@
     
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
     {
-//        // NEED TO DETERMINE IF A ' exists
-//        NSString *value = @"";
-//        NSRange range = [idt rangeOfString:@"'"];
-//        if (range.location != NSNotFound)
-//        {
-//            NSArray *myArray = [idt componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"'"]];
-//            value = [NSString stringWithFormat:@"%@''%@", myArray[0], myArray[1]];
-//        } else {
-//            value = idt;
-//        }
-        
         const char *sqlStatement;
         NSString *sqlQuery = [NSString stringWithFormat:@"select * from ThumbnailLookup where area = '%@'order by OrderNumber;", area];
         sqlStatement = [sqlQuery UTF8String];
@@ -1333,6 +1325,8 @@
                 NSString *areaValue = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 NSString *identifier = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString *photoName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                photoName = [NSString stringWithFormat:@"%@.jpg", photoName];
+                
                 NSNumber *orderValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
                 NSInteger order = [orderValue intValue];
                 

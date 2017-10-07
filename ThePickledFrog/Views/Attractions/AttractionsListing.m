@@ -13,8 +13,6 @@
 #import "Food.h"
 #import "ListingTableCell.h"
 //#import "ListingNameOnlyTableCell.h"
-#import "EatsViewController.h"
-#import "DrinksViewController.h"
 #import "AttractionViewController.h"
 #import "ThumbnailLookup.h"
 #import "LoadWebViewController.h"
@@ -375,8 +373,20 @@
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
         // THIS WILL NEED TO CHANGE
-        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[attractionsThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+//        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -402,8 +412,21 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        // THIS WILL NEED TO CHANGE
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[attractionsThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -428,8 +451,21 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        // THIS WILL NEED TO CHANGE
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[attractionsThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -466,19 +502,19 @@
 # pragma Actions
 
 // Food Action
-- (IBAction) attractionClicked: (Drink*) drink
+- (IBAction) attractionClicked: (Activity*) activty
 {
-    DrinksViewController *drinkListing = [[DrinksViewController alloc] initWithNibName:@"DrinksViewController" bundle:nil];
+    AttractionViewController *attListing = [[AttractionViewController alloc] initWithNibName:@"AttractionViewController" bundle:nil];
     
-    [drinkListing setTitle:@"DRINK"];
-    [drinkListing setTitleValue:@"DRINK"];
-    [drinkListing setDrink:drink];
-    [drinkListing setCurrentIndex:selectedRow];
-    [drinkListing setFromMap:0];
+    [attListing setTitle:@"ATTRACTION"];
+    [attListing setTitleValue:@"ATTRACTION"];
+    [attListing setActivity:activty];
+//    [attListing setCurrentIndex:selectedRow];
+    [attListing setFromMap:0];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    [self.navigationController pushViewController:drinkListing animated:YES];
+    [self.navigationController pushViewController:attListing animated:YES];
 }
 
 - (IBAction)segmentSelection:(UISegmentedControl *)sender {
