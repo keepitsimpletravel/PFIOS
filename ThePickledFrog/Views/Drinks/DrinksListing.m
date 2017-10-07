@@ -376,8 +376,20 @@
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
         // THIS WILL NEED TO CHANGE
-        ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[drinksThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -403,8 +415,21 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        // THIS WILL NEED TO CHANGE
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[drinksThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -429,8 +454,21 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        // THIS WILL NEED TO CHANGE
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[drinksThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [drinksThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -474,7 +512,7 @@
     [drinkListing setTitle:@"DRINK"];
     [drinkListing setTitleValue:@"DRINK"];
     [drinkListing setDrink:drink];
-    [drinkListing setCurrentIndex:selectedRow];
+//    [drinkListing setCurrentIndex:selectedRow];
     [drinkListing setFromMap:0];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
