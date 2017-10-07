@@ -148,7 +148,7 @@
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
     [segmentedControl addTarget:self action:@selector(segmentSelection:) forControlEvents: UIControlEventValueChanged];
     segmentedControl.selectedSegmentIndex = 0;
-    segmentedControl.tintColor = [UIColor blackColor];
+    segmentedControl.tintColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [tabbedSection addSubview:segmentedControl];
     [ContentScrollView addSubview:tabbedSection];
     
