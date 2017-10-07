@@ -117,41 +117,97 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-                NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 
-                const unsigned char *desc = sqlite3_column_text(compiledStatement, 2);
+                const unsigned char *desc = sqlite3_column_text(compiledStatement, 3);
                 NSString *description = @"";
                 if (desc){
-                    description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                    description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
                 }
                 
-                const unsigned char *gt = sqlite3_column_text(compiledStatement, 3);
+                const unsigned char *gt = sqlite3_column_text(compiledStatement, 4);
                 NSString *gettingThere = @"";
                 if (gt){
-                    gettingThere = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                    gettingThere = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
                 }
                 
-                const unsigned char *gt2 = sqlite3_column_text(compiledStatement, 4);
-                NSString *gettingThere2 = @"";
-                if (gt2){
-                    gettingThere2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
-                }
-                
-                const unsigned char *gt3 = sqlite3_column_text(compiledStatement, 5);
-                NSString *gettingThere3 = @"";
-                if (gt3){
-                    gettingThere3 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
-                }
-                
-                WhereNext *next = [[WhereNext alloc] initWithData:name blurb:blurb description:description getting:gettingThere getting2:gettingThere2 getting3:gettingThere3];
-                
+                WhereNext *next = [[WhereNext alloc] initWithData:type name:name blurb:blurb description:description getting:gettingThere];
                 [whereNexts addObject:next];
             }
         }
     }
     return whereNexts;
 }
+
+// Get All Next types
+- (NSArray *)getNextTypes
+{
+    sqlite3 *database;
+    NSMutableArray *nexts = [[NSMutableArray alloc] init];
+    
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement;
+        NSString *sqlQuery = @"select distinct (type) from Next";
+        sqlStatement = [sqlQuery UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                
+                [nexts addObject:type];
+            }
+        }
+    }
+    return nexts;
+}
+
+// Get All Next details for a type
+- (NSArray *)getAllNextForType:(NSString *)type
+{
+    sqlite3 *database;
+    NSMutableArray *nexts = [[NSMutableArray alloc] init];
+    
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement;
+        NSString *sqlQuery = [NSString stringWithFormat:@"select * from Next where type = '%@';", type];
+        sqlStatement = [sqlQuery UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                
+                const unsigned char *desc = sqlite3_column_text(compiledStatement, 3);
+                NSString *description = @"";
+                if (desc){
+                    description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                }
+                
+                const unsigned char *gt = sqlite3_column_text(compiledStatement, 4);
+                NSString *gettingThere = @"";
+                if (gt){
+                    gettingThere = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
+                }
+                
+                WhereNext *next = [[WhereNext alloc] initWithData:type name:name blurb:blurb description:description getting:gettingThere];
+                [nexts addObject:next];
+            }
+        }
+    }
+    return nexts;
+}
+
 
 // Get All Staff details
 - (NSArray *)getStaff

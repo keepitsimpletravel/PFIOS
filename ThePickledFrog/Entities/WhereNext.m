@@ -10,7 +10,7 @@
 
 @implementation WhereNext
 
-@synthesize name, blurb, description, gettingThere, gettingThere2, gettingThere3;
+@synthesize name, blurb, description, gettingThere, type;
 
 - (id)init
 {
@@ -21,14 +21,13 @@
     return self;
 }
 
-- (id)initWithData:(NSString *)nm blurb:(NSString*)brief description:(NSString *)desc getting:(NSString *)gt getting2:(NSString*)gt2 getting3:(NSString*)gt3
+- (id)initWithData:(NSString*)typ name:(NSString *)nm blurb:(NSString*)brief description:(NSString *)desc getting:(NSString *)gt
 {
     self.name = nm;
     self.description = desc;
     self.blurb = brief;
     self.gettingThere = gt;
-    self.gettingThere2 = gt2;
-    self.gettingThere3 = gt3;
+    self.type = typ;
     
     return self;
 }

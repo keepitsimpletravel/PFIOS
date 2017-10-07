@@ -42,6 +42,8 @@
 - (NSArray *)getAllActivitesForType:(NSString *)type;
 - (NSArray *)getTransportTypes;
 - (NSArray *)getAllTransportForType:(NSString *)type;
+- (NSArray *)getNextTypes;
+- (NSArray *)getAllNextForType:(NSString *)type;
 // need to add the individual get item methods
 - (Food *)getFoodByName:(NSString *)name;
 - (Drink *)getDrinkByName:(NSString *)name;

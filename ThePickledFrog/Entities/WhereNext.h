@@ -12,13 +12,12 @@
 {
     
 }
+@property(nonatomic, copy) NSString *type;
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *blurb;
 @property(nonatomic, copy) NSString *description;
 @property(nonatomic, copy) NSString *gettingThere;
-@property(nonatomic, copy) NSString *gettingThere2;
-@property(nonatomic, copy) NSString *gettingThere3;
 
-- (id)initWithData:(NSString *)nm blurb:(NSString*)brief description:(NSString *)desc getting:(NSString *)gt getting2:(NSString*)gt2 getting3:(NSString*)gt3;
+- (id)initWithData:(NSString*)typ name:(NSString *)nm blurb:(NSString*)brief description:(NSString *)desc getting:(NSString *)gt;
 
 @end
