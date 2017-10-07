@@ -150,9 +150,9 @@
     yPosition = yPosition + lineSize;
     
     // Get the Food
-    allFoods = foodArray;
+//    allFoods = foodArray;
     
-    [self setFood:foodArray[currentIndex]];
+//    [self setFood:foodArray[currentIndex]];
     
     // Add scroll view programmatically
     MainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth, screenHeight-64-49-4)];

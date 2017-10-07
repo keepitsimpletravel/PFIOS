@@ -373,9 +373,20 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        // THIS WILL NEED TO CHANGE
-        ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[eatsThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -401,8 +412,21 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-        ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:indexPath.row];
-        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        // THIS WILL NEED TO CHANGE
+        NSString *nameValue = [tableData objectAtIndex:indexPath.row];
+        ThumbnailLookup *thumbnailToUse = [[ThumbnailLookup alloc] init];
+        
+        for (int i=0; i<[eatsThumbnails count]; i++){
+            ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:i];
+            if([thumbnailLookup.identifier isEqualToString:nameValue]){
+                // Then this is the one to use
+                thumbnailToUse = thumbnailLookup;
+            }
+        }
+        
+        
+        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -442,7 +466,7 @@
     [eatListing setTitle:@"Eats"];
     [eatListing setTitleValue:@"Eats"];
     [eatListing setFood:food];
-    [eatListing setCurrentIndex:selectedRow];
+//    [eatListing setCurrentIndex:selectedRow];
     [eatListing setFromMap:0];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];

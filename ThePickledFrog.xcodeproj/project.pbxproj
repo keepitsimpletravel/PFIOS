@@ -1818,11 +1818,11 @@
 			isa = PBXGroup;
 			children = (
 				AB7AA6701F8635B3001DFF05 /* EatsListing.h */,
+				AB7AA6781F863D1A001DFF05 /* EatsListing.m */,
 				AB7AA6741F8635CB001DFF05 /* EatsListing.xib */,
 				AB7AA6051F83A791001DFF05 /* EatsViewController.h */,
 				AB7AA6061F83A791001DFF05 /* EatsViewController.m */,
 				AB7AA6071F83A791001DFF05 /* EatsViewController.xib */,
-				AB7AA6781F863D1A001DFF05 /* EatsListing.m */,
 			);
 			name = Eats;
 			path = Views/Eats;
