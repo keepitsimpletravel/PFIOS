@@ -12,18 +12,14 @@
 {
     
 }
+@property(nonatomic, copy) NSString *type;
 @property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSString *blurb;
 @property(nonatomic, copy) NSString *description;
-@property(nonatomic, copy) NSString *description2;
-@property(nonatomic, copy) NSString *description3;
-@property(nonatomic, copy) NSString *description4;
-@property(nonatomic, copy) NSString *description5;
-@property(nonatomic, copy) NSString *description6;
-@property(nonatomic, copy) NSString *description7;
-@property(nonatomic, copy) NSString *description8;
+@property(nonatomic, retain) NSDecimalNumber *longitude;
+@property(nonatomic, retain) NSDecimalNumber *latitude;
 
 
-- (id)initWithData:(NSString *)tname bl:(NSString*)brief d1:(NSString*)desc d2:(NSString *)desc2 d3:(NSString *)desc3 d4:(NSString *)desc4 d5:(NSString *)desc5 d6:(NSString *)desc6 d7:(NSString *)desc7 d8:(NSString *)desc8;
+- (id)initWithData:(NSString *)typ nm:(NSString *)nme bri:(NSString*)blu ddesc:(NSString *)desc lon:(NSDecimalNumber *)lo lat:(NSDecimalNumber *)la;
 
 @end

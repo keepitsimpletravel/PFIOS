@@ -529,7 +529,7 @@
     return drinks;
 }
 
-// Get All Foods details
+// Get All Drink details
 - (NSArray *)getDrinkTypes
 {
     sqlite3 *database;
@@ -602,59 +602,87 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString *description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+
+                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
+                NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
+                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
+
                 
-                const unsigned char *desc2 = sqlite3_column_text(compiledStatement, 3);
-                NSString *description2 = @"";
-                if(desc2){
-                    description2 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
-                }
-                
-                const unsigned char *desc3 = sqlite3_column_text(compiledStatement, 4);
-                NSString *description3 = @"";
-                if(desc3){
-                    description3 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 4)];
-                }
-                
-                const unsigned char *desc4 = sqlite3_column_text(compiledStatement, 5);
-                NSString *description4 = @"";
-                if(desc4){
-                    description4 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 5)];
-                }
-                
-                const unsigned char *desc5 = sqlite3_column_text(compiledStatement, 6);
-                NSString *description5 = @"";
-                if(desc5){
-                    description5 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 6)];
-                }
-                
-                const unsigned char *desc6 = sqlite3_column_text(compiledStatement, 7);
-                NSString *description6 = @"";
-                if(desc6){
-                    description6 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 7)];
-                }
-                
-                const unsigned char *desc7 = sqlite3_column_text(compiledStatement, 8);
-                NSString *description7 = @"";
-                if(desc7){
-                    description7 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 8)];
-                }
-                
-                const unsigned char *desc8 = sqlite3_column_text(compiledStatement, 9);
-                NSString *description8 = @"";
-                if(desc8){
-                    description8 = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 9)];
-                }
-                
-                Transport *transport = [[Transport alloc] initWithData:name bl:blurb d1:description d2:description2 d3:description3 d4:description4 d5:description5 d6:description6 d7:description7 d8:description8];
+                Transport *transport = [[Transport alloc] initWithData:type nm:name bri:blurb ddesc:description lon:longitude lat:latitude];
                 [transports addObject:transport];
             }
         }
     }
     return transports;
 }
+
+// Get All Transport types
+- (NSArray *)getTransportTypes
+{
+    sqlite3 *database;
+    NSMutableArray *transports = [[NSMutableArray alloc] init];
+    
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement;
+        NSString *sqlQuery = @"select distinct (type) from Transport";
+        sqlStatement = [sqlQuery UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                
+                [transports addObject:type];
+            }
+        }
+    }
+    return transports;
+}
+
+// Get All Transport details for a type
+- (NSArray *)getAllTransportForType:(NSString *)type
+{
+    sqlite3 *database;
+    NSMutableArray *transports = [[NSMutableArray alloc] init];
+    
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement;
+        NSString *sqlQuery = [NSString stringWithFormat:@"select * from Transport where type = '%@';", type];
+        sqlStatement = [sqlQuery UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                
+                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 3)];
+                NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
+                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
+                
+                
+                Transport *transport = [[Transport alloc] initWithData:type nm:name bri:blurb ddesc:description lon:longitude lat:latitude];
+                [transports addObject:transport];
+            }
+        }
+    }
+    return transports;
+}
+
 
 // Get All Travel Tip
 - (NSArray *)getTravelTips
