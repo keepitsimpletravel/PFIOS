@@ -401,16 +401,16 @@
     
     // Need to set the rest of the table view
     // Get Room objects
-     roomsTypes = [dataSource getAllRooms];
+    roomsTypes = [dataSource getAllRooms];
     
     // Initialize thumbnails - need to get the thumbnails added
-    //    eatsThumbnails = [dataSource getThumbnailNames:@"Food"];
+    roomsThumbnails = [dataSource getThumbnailNames:@"Room"];
     
     // Facilities
     // Need to add a view for the Facilities here
     facilitiesView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 250)];
     
-    NSInteger pos = 20;// + facilityHeading.frame.size.height;
+    NSInteger pos = 20;
     
     NSArray *faciltiesArray = [dataSource getFacilities];
     
@@ -1066,10 +1066,10 @@
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
-//        ThumbnailLookup *thumbnailLookup = [eatsThumbnails objectAtIndex:indexPath.row];
-//        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
+        ThumbnailLookup *thumbnailLookup = [roomsThumbnails objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailLookup.photoName];
     
-        //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
+//        cell.thumbnailImageView.image = [UIImage imageNamed:[roomsThumbnails objectAtIndex:indexPath.row]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         

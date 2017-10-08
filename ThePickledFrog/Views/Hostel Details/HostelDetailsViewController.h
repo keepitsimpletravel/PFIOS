@@ -29,6 +29,7 @@
     NSInteger selectedRow;
     MFMailComposeViewController *mailComposer;
     NSInteger fromMenu;
+    NSArray *roomsThumbnails;
 }
 - (IBAction)loadMap;
 - (void) setFromMenu:(NSInteger)value;
