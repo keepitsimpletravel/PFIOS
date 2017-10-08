@@ -57,8 +57,8 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
-    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
+//    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+//    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
     if (screenWidth == 320){
@@ -85,13 +85,13 @@
         lineSize = 2;
     }
     NSString *titleValue = @"GET AROUND";
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
     
     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleWidth, 20)];
     navLabel.backgroundColor = [UIColor clearColor];
-    navLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:18];
+    navLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
@@ -203,7 +203,7 @@
     stationNameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
     stationNameLabel.numberOfLines = 1;
     stationNameLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    stationNameLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:fontSize];
+    stationNameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
         
     [ContentScrollView addSubview:stationNameLabel];
         
@@ -213,7 +213,7 @@
     KILabel *descLabel1 = [[KILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
     descLabel1.numberOfLines = 0;
     descLabel1.lineBreakMode = UILineBreakModeWordWrap;
-    [descLabel1 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+    [descLabel1 setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
     
     descLabel1.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
     
@@ -254,6 +254,16 @@
 //        yPosition = yPosition + mapButtonHeight + 25;
 //        
 //    }
+    
+    UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, mapButtonHeight)];
+    UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
+    [showmapButton setImage:showmapButtonImage forState:UIControlStateNormal];
+    [showmapButton addTarget:self
+                       action:@selector(loadTransportMap)
+             forControlEvents:UIControlEventTouchUpInside];
+    [ContentScrollView addSubview:showmapButton];
+    
+    yPosition = yPosition + showmapButton.frame.size.height + 25;
     
     // Set Content Size for Scroll View
     ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
