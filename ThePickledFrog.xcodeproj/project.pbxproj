@@ -394,6 +394,11 @@
 		AB7AA6831F879504001DFF05 /* DrinksListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6811F879504001DFF05 /* DrinksListing.xib */; };
 		AB7AA6871F879DB1001DFF05 /* AttractionsListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6841F879DB1001DFF05 /* AttractionsListing.m */; };
 		AB7AA6881F879DB1001DFF05 /* AttractionsListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6861F879DB1001DFF05 /* AttractionsListing.xib */; };
+		AB7AA6901F89F0BF001DFF05 /* TransportListing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA68D1F89F0BF001DFF05 /* TransportListing.m */; };
+		AB7AA6911F89F0BF001DFF05 /* TransportListing.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA68E1F89F0BF001DFF05 /* TransportListing.xib */; };
+		AB7AA6951F89F54B001DFF05 /* TransportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6921F89F54B001DFF05 /* TransportViewController.m */; };
+		AB7AA6961F89F54B001DFF05 /* TransportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6941F89F54B001DFF05 /* TransportViewController.xib */; };
+		AB7AA69A1F89F58B001DFF05 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6991F89F58B001DFF05 /* KILabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -892,6 +897,14 @@
 		AB7AA6841F879DB1001DFF05 /* AttractionsListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsListing.m; sourceTree = "<group>"; };
 		AB7AA6851F879DB1001DFF05 /* AttractionsListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionsListing.h; sourceTree = "<group>"; };
 		AB7AA6861F879DB1001DFF05 /* AttractionsListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttractionsListing.xib; sourceTree = "<group>"; };
+		AB7AA68D1F89F0BF001DFF05 /* TransportListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransportListing.m; path = Views/Transport/TransportListing.m; sourceTree = "<group>"; };
+		AB7AA68E1F89F0BF001DFF05 /* TransportListing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransportListing.xib; path = Views/Transport/TransportListing.xib; sourceTree = "<group>"; };
+		AB7AA68F1F89F0BF001DFF05 /* TransportListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransportListing.h; path = Views/Transport/TransportListing.h; sourceTree = "<group>"; };
+		AB7AA6921F89F54B001DFF05 /* TransportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransportViewController.m; path = Views/Transport/TransportViewController.m; sourceTree = "<group>"; };
+		AB7AA6931F89F54B001DFF05 /* TransportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransportViewController.h; path = Views/Transport/TransportViewController.h; sourceTree = "<group>"; };
+		AB7AA6941F89F54B001DFF05 /* TransportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransportViewController.xib; path = Views/Transport/TransportViewController.xib; sourceTree = "<group>"; };
+		AB7AA6981F89F58B001DFF05 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
+		AB7AA6991F89F58B001DFF05 /* KILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1286,6 +1299,12 @@
 		AB41BA181F7A668E0073728F /* Transport */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6931F89F54B001DFF05 /* TransportViewController.h */,
+				AB7AA6921F89F54B001DFF05 /* TransportViewController.m */,
+				AB7AA6941F89F54B001DFF05 /* TransportViewController.xib */,
+				AB7AA68F1F89F0BF001DFF05 /* TransportListing.h */,
+				AB7AA68D1F89F0BF001DFF05 /* TransportListing.m */,
+				AB7AA68E1F89F0BF001DFF05 /* TransportListing.xib */,
 			);
 			name = Transport;
 			sourceTree = "<group>";
@@ -1326,6 +1345,7 @@
 		AB41BA231F7A68E20073728F /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6971F89F58B001DFF05 /* KILabel */,
 				AB7AA5DA1F838C0D001DFF05 /* ListingTableCell.xib */,
 				AB7AA5DB1F838C0D001DFF05 /* ListingTableCell.m */,
 				AB7AA5DC1F838C0D001DFF05 /* ListingTableCell.h */,
@@ -1842,6 +1862,16 @@
 			path = Views/Attractions;
 			sourceTree = "<group>";
 		};
+		AB7AA6971F89F58B001DFF05 /* KILabel */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA6981F89F58B001DFF05 /* KILabel.h */,
+				AB7AA6991F89F58B001DFF05 /* KILabel.m */,
+			);
+			name = KILabel;
+			path = "Custom Objects/KILabel";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2173,6 +2203,7 @@
 				AB41B9EE1F7A645F0073728F /* Redflagchat@2x.png in Resources */,
 				AB7AA4D91F81EE1B001DFF05 /* PhotoNoticeboardCustomCell.xib in Resources */,
 				AB41B9C31F7A645F0073728F /* nex3t.jpg in Resources */,
+				AB7AA6911F89F0BF001DFF05 /* TransportListing.xib in Resources */,
 				AB41B9AE1F7A645F0073728F /* hometoolbar@3x.png in Resources */,
 				AB41B9431F7A645F0073728F /* abo15.jpg in Resources */,
 				AB7AA5BA1F81EE27001DFF05 /* toolbarbg.png in Resources */,
@@ -2242,6 +2273,7 @@
 				AB41BA081F7A645F0073728F /* traveltipstoolbar@2x.png in Resources */,
 				AB41B95A1F7A645F0073728F /* bookabedhostel@3x.png in Resources */,
 				AB41B9F11F7A645F0073728F /* showmap@2x.png in Resources */,
+				AB7AA6961F89F54B001DFF05 /* TransportViewController.xib in Resources */,
 				AB41B94A1F7A645F0073728F /* abo21.jpg in Resources */,
 				AB41B9D21F7A645F0073728F /* par2t.jpg in Resources */,
 				AB41B9A31F7A645F0073728F /* exp8t.jpg in Resources */,
@@ -2281,6 +2313,7 @@
 				AB7AA59B1F81EE27001DFF05 /* StaticClass.m in Sources */,
 				AB41BA631F7FB6AE0073728F /* DataSource.m in Sources */,
 				AB7AA5FB1F83A6E9001DFF05 /* UMAlertView.m in Sources */,
+				AB7AA6951F89F54B001DFF05 /* TransportViewController.m in Sources */,
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
 				AB41BA4F1F7FB60D0073728F /* Activity.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
@@ -2299,6 +2332,7 @@
 				AB7AA5951F81EE27001DFF05 /* Reachability.m in Sources */,
 				AB41BA561F7FB60D0073728F /* Detail.m in Sources */,
 				AB41BA5B1F7FB60D0073728F /* Network.m in Sources */,
+				AB7AA6901F89F0BF001DFF05 /* TransportListing.m in Sources */,
 				AB7AA5761F81EE27001DFF05 /* ChatViewController.m in Sources */,
 				AB7AA60A1F83A791001DFF05 /* EatsViewController.m in Sources */,
 				AB41BA521F7FB60D0073728F /* Transport.m in Sources */,
@@ -2319,6 +2353,7 @@
 				AB7AA57A1F81EE27001DFF05 /* PhotoUserChatCustomCell.m in Sources */,
 				AB41BA581F7FB60D0073728F /* Staff.m in Sources */,
 				AB7AA5A21F81EE27001DFF05 /* BrowseProfileViewController.m in Sources */,
+				AB7AA69A1F89F58B001DFF05 /* KILabel.m in Sources */,
 				AB7AA5971F81EE27001DFF05 /* HttpQueue.m in Sources */,
 				AB7AA4DB1F81EE1B001DFF05 /* zoomPopup.m in Sources */,
 				AB7AA5A41F81EE27001DFF05 /* SendViewController.m in Sources */,

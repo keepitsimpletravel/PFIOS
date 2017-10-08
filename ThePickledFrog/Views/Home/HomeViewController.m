@@ -11,6 +11,7 @@
 #import "HostelDetailsViewController.h"
 #import "EatsListing.h"
 #import "DrinksListing.h"
+#import "TransportListing.h"
 #import "AttractionsListing.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
@@ -558,10 +559,10 @@
 // Transport Action
 - (IBAction)loadTransport
 {
-//    TransportListingViewController *tranListing = [[TransportListingViewController alloc] initWithNibName:@"TransportListingViewController" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style: UIBarButtonItemStylePlain target:nil action:nil];
-//
-//    [self.navigationController pushViewController:tranListing animated:YES];
+    TransportListing *trans = [[TransportListing alloc] initWithNibName:@"TransportListing" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:trans animated:YES];
 }
 
 // Currency Action
