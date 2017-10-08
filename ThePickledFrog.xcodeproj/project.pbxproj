@@ -1264,7 +1264,6 @@
 				AB41BA191F7A66920073728F /* Feedback */,
 				AB41BA181F7A668E0073728F /* Transport */,
 				AB41BA161F7A66820073728F /* Noticeboard */,
-				AB41BA141F7A66770073728F /* Directions */,
 				AB41BA0F1F7A665E0073728F /* About */,
 				AB41BA0E1F7A654B0073728F /* Home */,
 			);
@@ -1289,13 +1288,6 @@
 				AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */,
 			);
 			name = About;
-			sourceTree = "<group>";
-		};
-		AB41BA141F7A66770073728F /* Directions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Directions;
 			sourceTree = "<group>";
 		};
 		AB41BA161F7A66820073728F /* Noticeboard */ = {

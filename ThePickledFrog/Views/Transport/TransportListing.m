@@ -311,9 +311,10 @@
     // Get Config Values
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSString *webURL = [configurationValues objectForKey:@"BookingURL"];
+    dataSource = [DataSource dataSource];
+    Detail *details = [dataSource getHostelDetails];
     
-    
+    NSString *webURL = details.bookingLink;
     
     LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
     [loadWebVC setURL:webURL];
