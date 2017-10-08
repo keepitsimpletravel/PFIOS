@@ -12,6 +12,7 @@
 #import "EatsListing.h"
 #import "DrinksListing.h"
 #import "TransportListing.h"
+#import "NextListing.h"
 #import "AttractionsListing.h"
 //#import "ChatViewController.h"
 //#import "Reachability.h"
@@ -534,11 +535,10 @@
 
 - (IBAction)loadNext
 {
-//    WhereNextListingViewController *nextVC = [[WhereNextListingViewController alloc] initWithNibName:@"WhereNextListingViewController" bundle:nil];
-//
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//
-//    [self.navigationController pushViewController:nextVC animated:YES];
+    NextListing *next = [[NextListing alloc] initWithNibName:@"NextListing" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:next animated:YES];
 }
 
 // Map Action

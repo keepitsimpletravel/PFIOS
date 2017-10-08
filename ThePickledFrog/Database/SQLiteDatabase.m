@@ -117,7 +117,12 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                const unsigned char *typ = sqlite3_column_text(compiledStatement, 0);
+                NSString *type = @"";
+                if(typ){
+                    type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                }
+                
                 NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 
