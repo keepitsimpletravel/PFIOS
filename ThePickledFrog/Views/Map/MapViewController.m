@@ -14,6 +14,7 @@
 #import "DrinksViewController.h"
 #import "AttractionViewController.h"
 #import "SWRevealViewController.h"
+#import "TransportViewController.h"
 
 @interface MapViewController ()
 
@@ -58,12 +59,14 @@
     allFoods = [dataSource getAllFoods];
     allDrinks = [dataSource getAllDrinks];
     allAttractions = [dataSource getAllActivities];
+    allTransports = [dataSource getAllTransport];
     
     // Setting of the Flags used to toggle links
 //    hostelFlag = 0;
     drinkFlag = 0;
     foodFlag = 0;
     activityFlag = 0;
+    directionFlag = 0;
 }
 
 // View Did Load Function
@@ -77,13 +80,13 @@
     bottomTabBarHeight = 49;
     
     if(screenWidth <= 320){
-        toolbarSpace = ((screenWidth - 150) / 6);
+        toolbarSpace = ((screenWidth - 150) / 8);
     } else if (screenWidth == 375){
-        toolbarSpace = ((screenWidth - 150) / 6);
+        toolbarSpace = ((screenWidth - 150) / 8);
     } else if (screenWidth == 414){
-        toolbarSpace = ((screenWidth - 150) / 6);
+        toolbarSpace = ((screenWidth - 150) / 8);
     } else if (screenWidth == 768){
-        toolbarSpace = ((screenWidth - 150) / 6);
+        toolbarSpace = ((screenWidth - 150) / 8);
     }
     
     // Get Config Values
@@ -129,22 +132,6 @@
     fixedSpace.width = toolbarSpace;
 
     [items addObject:fixedSpace];
-    // Directions
-//    NSString *imageValue = @"mapDirections.png";
-//
-//    UIImage *directionsImage = [UIImage imageNamed:imageValue];
-//    UIButton *directionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//
-//    // Need to determine the height of the image
-//    directionsButton.bounds = CGRectMake(0, 0, 30, 30);
-//    [directionsButton setImage:directionsImage forState:UIControlStateNormal];
-//    UIBarButtonItem *directionsItem = [[UIBarButtonItem alloc] initWithCustomView:directionsButton];
-//    [directionsButton addTarget:self
-//                      action:@selector(showDirections:)
-//            forControlEvents:UIControlEventTouchUpInside];
-//
-//    [items addObject:directionsItem];
-//    [items addObject:fixedSpace];
 
     // Eats
     NSString *imageValue = @"eatingmap.png";
@@ -194,8 +181,24 @@
     [items addObject:attractionsItem];
     [items addObject:fixedSpace];
     
+    // Transports
+    imageValue = @"directionsmap.png";
+    
+    UIImage *directionsImage = [UIImage imageNamed:imageValue];
+    UIButton *directionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    directionsButton.bounds = CGRectMake(0, 0, 30, 30);
+    [directionsButton setImage:directionsImage forState:UIControlStateNormal];
+    UIBarButtonItem *directionsItem = [[UIBarButtonItem alloc] initWithCustomView:directionsButton];
+    [directionsButton addTarget:self
+                          action:@selector(displayAllDirectionsPins)
+                forControlEvents:UIControlEventTouchUpInside];
+    
+    [items addObject:directionsItem];
+    [items addObject:fixedSpace];
+    
     // Hostel
-    imageValue = @"mapHostelIcon.png";
+    imageValue = @"hostelmap.png";
 
     UIImage *hostelImage = [UIImage imageNamed:imageValue];
     UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -402,6 +405,31 @@
     
     NSString *title = act.activityName;
     NSString *address = act.address;
+    
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = latValue;
+    coordinate.longitude = longValue;
+    
+    MapAnnotation *point = [[MapAnnotation alloc] initWithTitle:title Location:coordinate Type:4];
+    [mapView addAnnotation:point];
+}
+
+// Display Transport Pins
+- (void)displayTransportPosition:(Transport *)tran {
+    for (id<MKAnnotation> annotation in mapView.annotations) {
+        [mapView removeAnnotation:annotation];
+    }
+    
+    NSDecimalNumber *latitude = tran.latitude;
+    NSString *latString = [NSString stringWithFormat:@"%.6lf", [latitude doubleValue]];
+    double latValue = latString.doubleValue;
+    
+    NSDecimalNumber *longitude = tran.longitude;
+    NSString *longString = [NSString stringWithFormat:@"%.6lf", [longitude doubleValue]];
+    double longValue = longString.doubleValue;
+    
+    NSString *title = tran.name;
+//    NSString *address = act.address;
     
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = latValue;
@@ -727,6 +755,49 @@
     }
 }
 
+// Display all Directions Pins
+- (void)displayAllDirectionsPins {
+    if (directionFlag == 1){
+        for (MapAnnotation *annotation in mapView.annotations){
+            if(annotation.type == 5){
+                [mapView removeAnnotation:annotation];
+            }
+        }
+        directionFlag = 0;
+    } else {
+        NSInteger count = [allTransports count];
+        for (int i = 0; i<count; i++) {
+            Transport *tran = allTransports[i];
+            
+            if(tran.latitude){
+                NSDecimalNumber *latitude = tran.latitude;
+                NSString *latString = [NSString stringWithFormat:@"%.6lf", [latitude doubleValue]];
+                double latValue = latString.doubleValue;
+            
+                NSDecimalNumber *longitude = tran.longitude;
+            NSString *longString = [NSString stringWithFormat:@"%.6lf", [longitude doubleValue]];
+            double longValue = longString.doubleValue;
+            
+                NSString *title = tran.name;
+//            NSString *address = tran.add
+            
+            CLLocationCoordinate2D coordinate;
+            coordinate.latitude = latValue;
+            coordinate.longitude = longValue;
+            
+            MapAnnotation *point = [[MapAnnotation alloc] initWithTitle:title Location:coordinate Type:5];
+            [mapView addAnnotation:point];
+            }
+        }
+        
+        CLLocationCoordinate2D zoomLocation = mapView.region.center;
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 5*METERS_PER_MILE, 5*METERS_PER_MILE);
+        [mapView setRegion:viewRegion animated:YES];
+        
+        directionFlag = 1;
+    }
+}
+
 // Display All Pins - Currently not in use
 - (void)displayMapEntityPins:(NSArray *)entities {
     for (id<MKAnnotation> annotation in mapView.annotations) {
@@ -837,8 +908,8 @@
         
         Activity *actValue = [dataSource getActivityByName:selection.title];
         
-        [attractionListing setTitle:@"Attractions"];
-        [attractionListing setTitleValue:@"Attractions"];
+        [attractionListing setTitle:@"ATTRACTION"];
+        [attractionListing setTitleValue:@"ATTRACTION"];
         [attractionListing setActivity:actValue];
         [attractionListing setFromMap:1];
         [attractionListing setActivityFromMap:actValue];
@@ -847,6 +918,22 @@
         self.navigationController.toolbarHidden=YES;
         
         [self.navigationController pushViewController:attractionListing animated:YES];
+    } else if (type == 5){
+        // Transport
+        TransportViewController *tranListing = [[TransportViewController alloc] initWithNibName:@"TransportViewController" bundle:nil];
+        
+        Transport *tranValue = [dataSource getTransportByName:selection.title];
+        
+        [tranListing setTitle:@"TRANSPORT"];
+        [tranListing setTitleValue:@"TRANSPORT"];
+        [tranListing setTransport:tranValue];
+        [tranListing setFromMap:1];
+        [tranListing setTransportFromMap:tranValue];
+        
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.navigationController.toolbarHidden=YES;
+        
+        [self.navigationController pushViewController:tranListing animated:YES];
     }
 }
 

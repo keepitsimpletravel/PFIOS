@@ -57,11 +57,13 @@
     NSArray *allFoods;
     NSArray *allDrinks;
     NSArray *allAttractions;
+    NSArray *allTransports;
     
     NSInteger foodFlag;
     NSInteger drinkFlag;
     NSInteger activityFlag;
     NSInteger hostelFlag;
+    NSInteger directionFlag;
     
     NSInteger toolbarSpace;
 }

@@ -1347,6 +1347,40 @@
     return activity;
 }
 
+// Method to get a specific transport by name
+- (Activity *)getTransportByName:(NSString *)name
+{
+    sqlite3 *database;
+    Transport *transport;
+    
+    if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
+    {
+        const char *sqlStatement;
+        NSString *sqlQuery = [NSString stringWithFormat:@"select * from Transport where name = '%@';", name];
+        sqlStatement = [sqlQuery UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
+                NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+                NSString *name = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+                NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                NSString *description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
+                
+                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
+                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 5)];
+                NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
+                
+                transport = [[Transport alloc] initWithData:type nm:name bri:blurb ddesc:description lon:longitude lat:latitude];
+            }
+        }
+    }
+    return transport;
+}
+
 // Method to get a specific photos for a specific area. Integer indicates which file if there are more than one
 - (NSArray *)getPhotoNames:(NSString *)area identifier:(NSString *)idt
 {

@@ -38,9 +38,11 @@
         annotationView.image = [UIImage imageNamed:@"drinkingmap.png"];
     } else if (_type == 4){
         annotationView.image = [UIImage imageNamed:@"attractionmap.png"];
+    } else if (_type == 5){
+        annotationView.image = [UIImage imageNamed:@"directionsmap.png"];
     }
 
-    if (_type != 5){
+    if (_type != 6){
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     

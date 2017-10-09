@@ -34,9 +34,12 @@
     UIImageView *mapImageView;
     UIScrollView *mapScrollView;
     NSInteger fromMap;
+    
+    Transport *mapTransport;
 }
 @property (assign, nonatomic) NSInteger index;
 
+- (void) setTransportFromMap:(Transport *)value;
 - (void) setTransport:(Transport *)value;
 - (void) setTitleValue:(NSString *)type;
 - (void) setCurrentIndex:(NSInteger)index;

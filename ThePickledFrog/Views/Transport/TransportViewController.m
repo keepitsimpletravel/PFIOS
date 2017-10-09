@@ -512,4 +512,10 @@
     fromMap = value;
 }
 
+// Set the Activity object sent by the map
+- (void) setTransportFromMap:(Food *)value
+{
+    mapTransport = value;
+}
+
 @end

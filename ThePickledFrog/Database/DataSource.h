@@ -49,6 +49,7 @@
 - (Drink *)getDrinkByName:(NSString *)name;
 - (Room *)getRoomByName:(NSString *)name;
 - (Activity *)getActivityByName:(NSString *)name;
+- (Transport *)getTransportByName:(NSString *)name;
 
 - (NSArray *)getPhotoNames:(NSString *)area identifier:(NSString *)idt;
 - (NSArray *)getThumbnailNames:(NSString *)area;
