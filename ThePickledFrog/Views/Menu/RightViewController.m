@@ -67,39 +67,39 @@
 {
     [super viewDidLoad];
     
-//    // Set from Configuration PList
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    
-//    options = [configurationValues objectForKey:@"MenuOptions"];
-//
-//    // Set Screen Dimensions
-//    CGRect screenRect = [[UIScreen mainScreen] bounds];
-//    CGFloat screenWidth = screenRect.size.width;
-//    CGFloat screenHeight = screenRect.size.height;
-//    
-//    // Add Tableview programmatically
-//    NSInteger startPoint = screenWidth/5;//60;
-//    NSInteger endPoint = (screenWidth/5)*3;//200;
-//    
-//    UIView *headingView = [[UIView alloc] initWithFrame:CGRectMake(startPoint, 0, endPoint, 30)];
-//    
-//    UILabel *headingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, endPoint, 30)];
-//    headingLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:16];
-//    headingLabel.textAlignment = NSTextAlignmentCenter;
-//    headingLabel.text = @"MENU";
-//    [headingView addSubview:headingLabel];
-//    
-//    [self.view addSubview:headingView];
-//
-//    tableView = [[UITableView alloc] initWithFrame:CGRectMake(startPoint, 30, endPoint, screenHeight)];
-//
-//    // must set delegate & dataSource, otherwise the the table will be empty and not responsive
-//    tableView.delegate = self;
-//    tableView.dataSource = self;
-//    [self.view addSubview:tableView];
-//    
-//    [self setNeedsStatusBarAppearanceUpdate];
+    // Set from Configuration PList
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+    NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+
+    options = [configurationValues objectForKey:@"MenuOptions"];
+
+    // Set Screen Dimensions
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+
+    // Add Tableview programmatically
+    NSInteger startPoint = screenWidth/5;//60;
+    NSInteger endPoint = (screenWidth/5)*3;//200;
+
+    UIView *headingView = [[UIView alloc] initWithFrame:CGRectMake(startPoint, 0, endPoint, 30)];
+
+    UILabel *headingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, endPoint, 30)];
+    headingLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:16];
+    headingLabel.textAlignment = NSTextAlignmentCenter;
+    headingLabel.text = @"MENU";
+    [headingView addSubview:headingLabel];
+
+    [self.view addSubview:headingView];
+
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(startPoint, 30, endPoint, screenHeight)];
+
+    // must set delegate & dataSource, otherwise the the table will be empty and not responsive
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -155,32 +155,14 @@
 // Did Select Action for Table View
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    // Determine which item was selected here
-//    selection = [indexPath row];
-//
-//    if (selection == 0){
-//        HomeViewController *hostelVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//        
-////        CircleHostelDetails2ViewController *hostelVC = [[CircleHostelDetails2ViewController alloc] initWithNibName:@"CircleHostelDetails2ViewController" bundle:nil];
-////        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-////        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//
-//        
-////        LongHostelDetails2ViewController *hostelVC = [[LongHostelDetails2ViewController alloc] initWithNibName:@"LongHostelDetails2ViewController" bundle:nil];
-////        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-////        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//        
-//        
-////        CircleHomeViewController *hostelVC = [[CircleHomeViewController alloc] initWithNibName:@"CircleHomeViewController" bundle:nil];
-////        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-////        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//        
-//        //Square4HomeViewController *hostelVC = [[Square4HomeViewController alloc] initWithNibName:@"Square4HomeViewController" bundle:nil];
-//        //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-//        //[self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
+    // Determine which item was selected here
+    selection = [indexPath row];
+
+    if (selection == 0){
+        HomeViewController *hostelVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
 //    if (selection == 1){
 //        // About Our Hostel
 //        HostelDetails2ViewController *hostelVC = [[HostelDetails2ViewController alloc] initWithNibName:@"HostelDetails2ViewController" bundle:nil];
