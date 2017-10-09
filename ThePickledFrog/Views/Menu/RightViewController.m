@@ -14,8 +14,10 @@
 //#import "UIView+Toast.h"
 //#import "DataSource.h"
 //#import "Noticeboard2.h"
-//#import "HostelDetails2ViewController.h"
-//#import "LocalGuide.h"
+#import "HostelDetailsViewController.h"
+#import "EatsListing.h"
+#import "DrinksListing.h"
+#import "AttractionsListing.h"
 //#import "LoadWebViewController.h"
 //#import "DeveloperViewController.h"
 //#import "FeedbackViewController.h"
@@ -163,19 +165,31 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-//    if (selection == 1){
-//        // About Our Hostel
-//        HostelDetails2ViewController *hostelVC = [[HostelDetails2ViewController alloc] initWithNibName:@"HostelDetails2ViewController" bundle:nil];
-//        [hostelVC setFromMenu:1];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
-//    else if (selection == 2){
-//        LocalGuide *guideVC = [[LocalGuide alloc] initWithNibName:@"LocalGuide" bundle:nil];
-//        [guideVC setFromMenu:1];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:guideVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
+    else if (selection == 1){
+        // About Our Hostel
+        HostelDetailsViewController *hostelVC = [[HostelDetailsViewController alloc] initWithNibName:@"HostelDetailsViewController" bundle:nil];
+        [hostelVC setFromMenu:1];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hostelVC];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (selection == 2){
+        EatsListing *eats = [[EatsListing alloc] initWithNibName:@"EatsListing" bundle:nil];
+        [eats setFromMenu:1];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:eats];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (selection == 3){
+        DrinksListing *drinks = [[DrinksListing alloc] initWithNibName:@"DrinksListing" bundle:nil];
+        [drinks setFromMenu:1];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:drinks];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (selection == 4){
+        AttractionsListing *acts = [[AttractionsListing alloc] initWithNibName:@"AttractionsListing" bundle:nil];
+        [acts setFromMenu:1];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:acts];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
 //    else if (selection == 3){
 //        // Get Config Values
 //        NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
@@ -238,7 +252,7 @@
 // Set Row Height for Table View
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    return 60;
+    return 55;
 }
 
 # pragma Phone Setup
