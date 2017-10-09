@@ -1235,7 +1235,7 @@
                     fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                drink = [[Food alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
+                drink = [[Drink alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
             }
         }
     }
@@ -1340,7 +1340,7 @@
                     fURL = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)];
                 }
                 
-                activity = [[Food alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
+                activity = [[Activity alloc] initWithData:type nm:name ddesc:desc dadd:address web:website lon:longitude lat:latitude phoneNumber:phone br:brief open:openingHours tal:link insta:iURL face:fURL];
             }
         }
     }
