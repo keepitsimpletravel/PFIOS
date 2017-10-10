@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "DataSource.h"
+#import "DataSource.h"
 
 @interface RightViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     UITableView *tableView;
     NSInteger selection;
-//    id<DataSource> dataSource;
+    id<DataSource> dataSource;
     
     NSArray *options;
     

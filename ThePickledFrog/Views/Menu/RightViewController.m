@@ -13,23 +13,17 @@
 //#import "Reachability.h"
 //#import "UIView+Toast.h"
 //#import "DataSource.h"
-//#import "Noticeboard2.h"
+#import "Noticeboard2.h"
 #import "HostelDetailsViewController.h"
 #import "EatsListing.h"
 #import "DrinksListing.h"
 #import "AttractionsListing.h"
-//#import "LoadWebViewController.h"
+#import "LoadWebViewController.h"
 //#import "DeveloperViewController.h"
 //#import "FeedbackViewController.h"
 //#import "NetworkListingViewController.h"
 //#import "TravelTipsViewController.h"
-//#import "ContactViewController.h"
-//
-//#import "CircleHomeViewController.h"
-//#import "Square4HomeViewController.h"
-//#import "LongHostelDetails2ViewController.h"
-//#import "CircleHostelDetails2ViewController.h"
-
+#import "ContactViewController.h"
 
 @interface RightViewController ()
 
@@ -190,43 +184,47 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:acts];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-//    else if (selection == 3){
-//        // Get Config Values
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
-//        NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
-//        NSString *webURL = [configurationValues objectForKey:@"BookingURL"];
-//        
-//        LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-//        [loadWebVC setURL:webURL];
-//        [loadWebVC setFromMenu:1];
-//        
-//        NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
-//        [loadWebVC setTitleValue:appTitle];
-//        
-//        //        [self.navigationController pushViewController:loadWebVC animated:YES];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loadWebVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
-//    else if (selection == 4){
-//        // NOTICEBOARD
-//        Noticeboard2 *chat = [[Noticeboard2 alloc] initWithNibName:@"Noticeboard2" bundle:nil];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chat];
-//        
-//        [self.navigationController pushViewController:chat animated:YES];
-//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
-//    else if (selection == 5){
-//        // Contact
-//        dataSource = [DataSource dataSource];
-//        Detail *detail = [dataSource getHostelDetails];
-//        ContactViewController *contactVC = [[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil];
-//        [contactVC setDetail:detail];
-//        [contactVC setFromMenu:1];
-//        
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:contactVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
+    else if (selection == 5){
+        // Get Config Values
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
+        NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
+        dataSource = [DataSource dataSource];
+        Detail *details = [dataSource getHostelDetails];
+        
+        NSString *webURL = details.bookingLink;
+        
+        LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+        [loadWebVC setURL:webURL];
+        [loadWebVC setFromMenu:1];
+        
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+        
+        NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+        [loadWebVC setTitleValue:appTitle];
+        
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loadWebVC];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (selection == 6){
+        // NOTICEBOARD
+        Noticeboard2 *chat = [[Noticeboard2 alloc] initWithNibName:@"Noticeboard2" bundle:nil];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chat];
+
+        [self.navigationController pushViewController:chat animated:YES];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
+    else if (selection == 7){
+        // Contact
+        dataSource = [DataSource dataSource];
+        Detail *detail = [dataSource getHostelDetails];
+        ContactViewController *contactVC = [[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil];
+        [contactVC setDetail:detail];
+        [contactVC setFromMenu:1];
+
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:contactVC];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
 //    else if (selection == 7){
 //        // FEEDBACK
 //        FeedbackViewController *feedVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];

@@ -403,6 +403,8 @@
 		AB7AA6B21F8A2810001DFF05 /* WhereNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6AE1F8A2810001DFF05 /* WhereNextViewController.xib */; };
 		AB7AA6B41F8A29E1001DFF05 /* PickledFrogDatabase03.db in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6B31F8A29E1001DFF05 /* PickledFrogDatabase03.db */; };
 		AB7AA6B61F8A3842001DFF05 /* nex6t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6B51F8A3842001DFF05 /* nex6t.jpg */; };
+		AB7AA6BB1F8CC24E001DFF05 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6B91F8CC24E001DFF05 /* ContactViewController.m */; };
+		AB7AA6BC1F8CC24E001DFF05 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -915,6 +917,9 @@
 		AB7AA6AE1F8A2810001DFF05 /* WhereNextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereNextViewController.xib; sourceTree = "<group>"; };
 		AB7AA6B31F8A29E1001DFF05 /* PickledFrogDatabase03.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase03.db; path = Database/PickledFrogDatabase03.db; sourceTree = "<group>"; };
 		AB7AA6B51F8A3842001DFF05 /* nex6t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nex6t.jpg; path = graphics/nex6t.jpg; sourceTree = "<group>"; };
+		AB7AA6B81F8CC24E001DFF05 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		AB7AA6B91F8CC24E001DFF05 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1250,6 +1255,7 @@
 		AB41BA0D1F7A653F0073728F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6B71F8CC24E001DFF05 /* ContactViewController */,
 				AB7AA6A81F8A2810001DFF05 /* Next */,
 				AB7AA60C1F83A7A0001DFF05 /* Attractions */,
 				AB7AA6001F83A791001DFF05 /* Drinks */,
@@ -1889,6 +1895,17 @@
 			path = Views/Next;
 			sourceTree = "<group>";
 		};
+		AB7AA6B71F8CC24E001DFF05 /* ContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB7AA6B81F8CC24E001DFF05 /* ContactViewController.h */,
+				AB7AA6B91F8CC24E001DFF05 /* ContactViewController.m */,
+				AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */,
+			);
+			name = ContactViewController;
+			path = Views/ContactViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2041,6 +2058,7 @@
 				AB41B95E1F7A645F0073728F /* booknow.png in Resources */,
 				AB41B9461F7A645F0073728F /* abo18.jpg in Resources */,
 				AB41B93E1F7A645F0073728F /* abo10.jpg in Resources */,
+				AB7AA6BC1F8CC24E001DFF05 /* ContactViewController.xib in Resources */,
 				AB41BA2C1F7A68F20073728F /* RightViewController.xib in Resources */,
 				AB41B94B1F7A645F0073728F /* abo3.jpg in Resources */,
 				AB41B9C51F7A645F0073728F /* nex4t.jpg in Resources */,
@@ -2377,6 +2395,7 @@
 				AB7AA6AF1F8A2810001DFF05 /* NextListing.m in Sources */,
 				AB7AA5971F81EE27001DFF05 /* HttpQueue.m in Sources */,
 				AB7AA4DB1F81EE1B001DFF05 /* zoomPopup.m in Sources */,
+				AB7AA6BB1F8CC24E001DFF05 /* ContactViewController.m in Sources */,
 				AB7AA5A41F81EE27001DFF05 /* SendViewController.m in Sources */,
 				AB7AA6791F863D1A001DFF05 /* EatsListing.m in Sources */,
 				AB7AA5871F81EE27001DFF05 /* EGOImageLoader.m in Sources */,
