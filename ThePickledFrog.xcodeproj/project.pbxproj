@@ -405,6 +405,8 @@
 		AB7AA6B61F8A3842001DFF05 /* nex6t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6B51F8A3842001DFF05 /* nex6t.jpg */; };
 		AB7AA6BB1F8CC24E001DFF05 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6B91F8CC24E001DFF05 /* ContactViewController.m */; };
 		AB7AA6BC1F8CC24E001DFF05 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */; };
+		AB7AA6BF1F8CC5FB001DFF05 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6BD1F8CC5FB001DFF05 /* FeedbackViewController.m */; };
+		AB7AA6C11F8CC60D001DFF05 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -920,6 +922,9 @@
 		AB7AA6B81F8CC24E001DFF05 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		AB7AA6B91F8CC24E001DFF05 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		AB7AA6BD1F8CC5FB001DFF05 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedbackViewController.m; path = Views/Feedback/FeedbackViewController.m; sourceTree = "<group>"; };
+		AB7AA6BE1F8CC5FB001DFF05 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedbackViewController.h; path = Views/Feedback/FeedbackViewController.h; sourceTree = "<group>"; };
+		AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedbackViewController.xib; path = Views/Feedback/FeedbackViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1321,6 +1326,9 @@
 		AB41BA191F7A66920073728F /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6BE1F8CC5FB001DFF05 /* FeedbackViewController.h */,
+				AB7AA6BD1F8CC5FB001DFF05 /* FeedbackViewController.m */,
+				AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -2110,6 +2118,7 @@
 				AB41B9BD1F7A645F0073728F /* maptoolbar@3x.png in Resources */,
 				AB41B9CD1F7A645F0073728F /* noticeboard@2x.png in Resources */,
 				AB7AA5B31F81EE27001DFF05 /* send1@2x.png in Resources */,
+				AB7AA6C11F8CC60D001DFF05 /* FeedbackViewController.xib in Resources */,
 				AB7AA4D51F81EE1B001DFF05 /* Noticeboard2.xib in Resources */,
 				AB7AA5B91F81EE27001DFF05 /* textbg@3x.png in Resources */,
 				AB41B9E21F7A645F0073728F /* phonecontact@2x.png in Resources */,
@@ -2353,6 +2362,7 @@
 				AB7AA6951F89F54B001DFF05 /* TransportViewController.m in Sources */,
 				AB41B8401F7A5EE50073728F /* ViewController.m in Sources */,
 				AB41BA4F1F7FB60D0073728F /* Activity.m in Sources */,
+				AB7AA6BF1F8CC5FB001DFF05 /* FeedbackViewController.m in Sources */,
 				AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */,
 				AB7AA4D81F81EE1B001DFF05 /* PhotoNoticeboardCustomCell.m in Sources */,
 				AB7AA4D61F81EE1B001DFF05 /* NoticeboardCustomCell.m in Sources */,

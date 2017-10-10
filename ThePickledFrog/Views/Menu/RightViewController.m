@@ -20,7 +20,7 @@
 #import "AttractionsListing.h"
 #import "LoadWebViewController.h"
 //#import "DeveloperViewController.h"
-//#import "FeedbackViewController.h"
+#import "FeedbackViewController.h"
 //#import "NetworkListingViewController.h"
 //#import "TravelTipsViewController.h"
 #import "ContactViewController.h"
@@ -225,13 +225,13 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:contactVC];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-//    else if (selection == 7){
-//        // FEEDBACK
-//        FeedbackViewController *feedVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
-//        [feedVC setFromMenu:1];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedVC];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
+    else if (selection == 9){
+        // FEEDBACK
+        FeedbackViewController *feedVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
+        [feedVC setFromMenu:1];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedVC];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
 //    else if (selection == 8){
 //        DeveloperViewController *developer = [[DeveloperViewController alloc] initWithNibName:@"DeveloperViewController" bundle:nil];
 //        [developer setFromMenu:1];
