@@ -407,6 +407,8 @@
 		AB7AA6BC1F8CC24E001DFF05 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6BA1F8CC24E001DFF05 /* ContactViewController.xib */; };
 		AB7AA6BF1F8CC5FB001DFF05 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6BD1F8CC5FB001DFF05 /* FeedbackViewController.m */; };
 		AB7AA6C11F8CC60D001DFF05 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */; };
+		AB7AA6C51F8CCF6A001DFF05 /* DeveloperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA6C21F8CCF6A001DFF05 /* DeveloperViewController.m */; };
+		AB7AA6C61F8CCF6A001DFF05 /* DeveloperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA6C41F8CCF6A001DFF05 /* DeveloperViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -925,6 +927,9 @@
 		AB7AA6BD1F8CC5FB001DFF05 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedbackViewController.m; path = Views/Feedback/FeedbackViewController.m; sourceTree = "<group>"; };
 		AB7AA6BE1F8CC5FB001DFF05 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedbackViewController.h; path = Views/Feedback/FeedbackViewController.h; sourceTree = "<group>"; };
 		AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedbackViewController.xib; path = Views/Feedback/FeedbackViewController.xib; sourceTree = "<group>"; };
+		AB7AA6C21F8CCF6A001DFF05 /* DeveloperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeveloperViewController.m; path = Views/Developer/DeveloperViewController.m; sourceTree = "<group>"; };
+		AB7AA6C31F8CCF6A001DFF05 /* DeveloperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeveloperViewController.h; path = Views/Developer/DeveloperViewController.h; sourceTree = "<group>"; };
+		AB7AA6C41F8CCF6A001DFF05 /* DeveloperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeveloperViewController.xib; path = Views/Developer/DeveloperViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1343,6 +1348,9 @@
 		AB41BA1B1F7A66A10073728F /* Developer */ = {
 			isa = PBXGroup;
 			children = (
+				AB7AA6C31F8CCF6A001DFF05 /* DeveloperViewController.h */,
+				AB7AA6C21F8CCF6A001DFF05 /* DeveloperViewController.m */,
+				AB7AA6C41F8CCF6A001DFF05 /* DeveloperViewController.xib */,
 			);
 			name = Developer;
 			sourceTree = "<group>";
@@ -2182,6 +2190,7 @@
 				AB7AA5B21F81EE27001DFF05 /* send1.png in Resources */,
 				AB7AA5C61F81F009001DFF05 /* login.png in Resources */,
 				AB41B9B41F7A645F0073728F /* hostelmap@3x.png in Resources */,
+				AB7AA6C61F8CCF6A001DFF05 /* DeveloperViewController.xib in Resources */,
 				AB41B9FD1F7A645F0073728F /* tra3.jpg in Resources */,
 				AB41B9951F7A645F0073728F /* exp1t.jpg in Resources */,
 				AB7AA6291F84E7C8001DFF05 /* roo12t.jpg in Resources */,
@@ -2368,6 +2377,7 @@
 				AB7AA4D61F81EE1B001DFF05 /* NoticeboardCustomCell.m in Sources */,
 				AB41BA621F7FB6AE0073728F /* SQLiteDatabase.m in Sources */,
 				AB7AA5931F81EE27001DFF05 /* ASINetworkQueue.m in Sources */,
+				AB7AA6C51F8CCF6A001DFF05 /* DeveloperViewController.m in Sources */,
 				AB7AA5881F81EE27001DFF05 /* EGOImageView.m in Sources */,
 				AB41BA5C1F7FB60D0073728F /* Currency.m in Sources */,
 				AB7AA5F61F83A6E9001DFF05 /* MapAnnotation.m in Sources */,
@@ -2593,6 +2603,7 @@
 				DEVELOPMENT_TEAM = GHYC2233J3;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ThePickledFrog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keepitsimpletravel.ThePickledFrog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2606,6 +2617,7 @@
 				DEVELOPMENT_TEAM = GHYC2233J3;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = ThePickledFrog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keepitsimpletravel.ThePickledFrog;
 				PRODUCT_NAME = "$(TARGET_NAME)";

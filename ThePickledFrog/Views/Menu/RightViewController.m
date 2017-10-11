@@ -19,7 +19,7 @@
 #import "DrinksListing.h"
 #import "AttractionsListing.h"
 #import "LoadWebViewController.h"
-//#import "DeveloperViewController.h"
+#import "DeveloperViewController.h"
 #import "FeedbackViewController.h"
 //#import "NetworkListingViewController.h"
 //#import "TravelTipsViewController.h"
@@ -232,13 +232,13 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedVC];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-//    else if (selection == 8){
-//        DeveloperViewController *developer = [[DeveloperViewController alloc] initWithNibName:@"DeveloperViewController" bundle:nil];
-//        [developer setFromMenu:1];
-//        // Might be able to get the stack for the front view controller
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developer];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
+    else if (selection == 10){
+        DeveloperViewController *developer = [[DeveloperViewController alloc] initWithNibName:@"DeveloperViewController" bundle:nil];
+        [developer setFromMenu:1];
+        // Might be able to get the stack for the front view controller
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developer];
+        [self.revealViewController pushFrontViewController:navigationController animated:YES];
+    }
 //    else if (selection == 6){
 //        NetworkListingViewController *network = [[NetworkListingViewController alloc] initWithNibName:@"NetworkListingViewController" bundle:nil];
 //        [network setFromMenu:1];
