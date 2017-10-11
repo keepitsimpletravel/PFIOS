@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The Pickled Frog would like to use your camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The Pickled Frog would like to access your photo library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-CondensedBold.ttf</string>

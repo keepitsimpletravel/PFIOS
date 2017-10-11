@@ -110,6 +110,7 @@
     backgroundView.opaque = YES;
 //    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
 //    backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
+//    backgroundView.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     backgroundView.opaque = NO;
     [self.view addSubview:backgroundView];
 
@@ -149,6 +150,10 @@
     hostelButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
     hostelButton.layer.borderWidth = 3.0f;
     hostelButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    hostelButton.layer.cornerRadius = 20; // this value vary as per your desire
+    hostelButton.clipsToBounds = YES;
+    
     [self.view addSubview:hostelButton];
     
     // Adding the Hostel overlay
@@ -161,7 +166,6 @@
     
     hostelLabel.text = @"HOSTEL";
     hostelLabel.textColor = [UIColor whiteColor];
-//    hostelLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [hostelLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [hostelLabel setTextAlignment:UITextAlignmentCenter];
@@ -183,6 +187,10 @@
     seeButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
     seeButton.layer.borderWidth = 3.0f;
     seeButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    seeButton.layer.cornerRadius = 20; // this value vary as per your desire
+    seeButton.clipsToBounds = YES;
+    
     [self.view addSubview:seeButton];
     
     UILabel *seeLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
@@ -208,6 +216,10 @@
     partyButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
     partyButton.layer.borderWidth = 3.0f;
     partyButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    partyButton.layer.cornerRadius = 20; // this value vary as per your desire
+    partyButton.clipsToBounds = YES;
+    
     [self.view addSubview:partyButton];
     
     UILabel *partyLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
@@ -235,21 +247,22 @@
     transportButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
     transportButton.layer.borderWidth = 3.0f;
     transportButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    transportButton.layer.cornerRadius = 20; // this value vary as per your desire
+    transportButton.clipsToBounds = YES;
+    
     [self.view addSubview:transportButton];
     
     UILabel *transportLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
     transportLabel.text = @"TRANSPORT";
     transportLabel.textColor = [UIColor whiteColor];
-//    transportLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [transportLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [transportLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel4 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     bgLabel4.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel4.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel4.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [transportButton addSubview:bgLabel4];
     [transportButton addSubview:transportLabel];
@@ -263,21 +276,22 @@
     eatButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
     eatButton.layer.borderWidth = 3.0f;
     eatButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    eatButton.layer.cornerRadius = 20; // this value vary as per your desire
+    eatButton.clipsToBounds = YES;
+    
     [self.view addSubview:eatButton];
     
     UILabel *eatLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
     eatLabel.text = @"EAT";
     eatLabel.textColor = [UIColor whiteColor];
-//    eatLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [eatLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [eatLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel5 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     bgLabel5.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel5.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel5.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [eatButton addSubview:bgLabel5];
     [eatButton addSubview:eatLabel];
@@ -293,21 +307,22 @@
     nextButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
     nextButton.layer.borderWidth = 3.0f;
     nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    nextButton.layer.cornerRadius = 20; // this value vary as per your desire
+    nextButton.clipsToBounds = YES;
+    
     [self.view addSubview:nextButton];
     
     UILabel *nextLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
     nextLabel.text = @"NEXT STOP";
     nextLabel.textColor = [UIColor whiteColor];
-//    nextLabel.textColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [nextLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
     [nextLabel setTextAlignment:UITextAlignmentCenter];
     
     UILabel *bgLabel6 = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     bgLabel6.backgroundColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel6.backgroundColor = [UIColor colorWithRed:((0) / 255.0) green:((0) / 255.0) blue:((0) / 255.0) alpha:0.5f];
-//    bgLabel6.backgroundColor = [UIColor colorWithRed:((255) / 255.0) green:((255) / 255.0) blue:((255) / 255.0) alpha:0.5f];
     
     [nextButton addSubview:bgLabel6];
     [nextButton addSubview:nextLabel];

@@ -10,13 +10,13 @@
 #import "PhotoLookup.h"
 //#import "RoomViewController.h"
 #import "DirectionViewController.h"
-//#import "CurrencyConverter.h"
-//#import "TravelTipsViewController.h"
+#import "CurrencyConverter.h"
+#import "TravelTipsViewController.h"
 #import "SWRevealViewController.h"
 //#import <QuartzCore/QuartzCore.h>
 #import "LoadWebViewController.h"
 //#import "ThumbnailLookup.h"
-//#import "MapViewController.h"
+#import "MapViewController.h"
 //#import "ContactViewController.h"
 #import "HomeViewController.h"
 #import "ListingTableCell.h"
@@ -814,20 +814,19 @@
 {
     dataSource = [DataSource dataSource];
     Detail *details = [dataSource getHostelDetails];
-//    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
-//    [map setLatitude:details.latitude];
-//    [map setLongitude:details.longitude];
-//    [map setDetails:details];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    [map setLatitude:details.latitude];
+    [map setLongitude:details.longitude];
+    [map setDetails:details];
     
-//    [self.navigationController pushViewController:map animated:YES];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:map animated:YES];
 }
 
 // Home Action
 - (IBAction)backToHome
 {
-//    [self.navigationController popToRootViewControllerAnimated:NO];
     HomeViewController *home = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:home animated:YES];
@@ -903,9 +902,9 @@
 // Currency Action
 - (IBAction)loadCurrency
 {
-//    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:cc animated:YES];
+    CurrencyConverter *cc = [[CurrencyConverter alloc] initWithNibName:@"CurrencyConverter" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:cc animated:YES];
 }
 
 //// Booking Action
@@ -1021,9 +1020,9 @@
 // Travel Tips Action
 - (IBAction)loadInfo
 {
-//    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationController pushViewController:tt animated:YES];
+    TravelTipsViewController *tt = [[TravelTipsViewController alloc] initWithNibName:@"TravelTipsViewController" bundle:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationController pushViewController:tt animated:YES];
 }
 
 - (void) setFromMenu:(NSInteger)value
