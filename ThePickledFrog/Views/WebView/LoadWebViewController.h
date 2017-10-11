@@ -16,7 +16,7 @@
     NSInteger lineSize;
     NSString *fullURL;
     NSString *title;
-//    id<DataSource> dataSource;
+    id<DataSource> dataSource;
     UIActivityIndicatorView *loadingIndicator;
     NSInteger fromMenu;
 }

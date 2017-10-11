@@ -419,12 +419,6 @@
     self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }
 
-//// View Will Apear
-//- (void) viewWillAppear:(BOOL)animated
-//{
-////    [[self navigationController] setNavigationBarHidden:YES animated:YES];
-//}
-
 //#pragma mark - Navigation Methods
 //
 // Booking Action
@@ -496,16 +490,6 @@
     [self.navigationController pushViewController:hostelVC animated:YES];
 }
 
-// Local Guide Action
-- (IBAction)loadGuide
-{
-//    LocalGuide *guideVC = [[LocalGuide alloc] initWithNibName:@"LocalGuide" bundle:nil];
-//    
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    
-//    [self.navigationController pushViewController:guideVC animated:YES];
-}
-//
 // Eats Action
 - (IBAction)loadEats
 {
