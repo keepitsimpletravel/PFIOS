@@ -109,7 +109,7 @@
     yPosition = yPosition + lineSize;
 
     // Create Scroll View
-    ContentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, screenWidth,screenHeight-49)];
+    ContentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth,screenHeight-49-yPosition)];
     ContentScrollView.delegate = self;
     ContentScrollView.scrollEnabled = YES;
     ContentScrollView.userInteractionEnabled=YES;
@@ -118,10 +118,10 @@
     UIImage *image = [[UIImage alloc] init];
     image = [UIImage imageNamed:value];
     UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
-    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
+    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), 0, buttonWidth, buttonHeight);
     [ContentScrollView addSubview:logoView];
     
-    yPosition = yPosition + homeImage + 10;
+    yPosition = homeImage + 10;
     
     // Set the Text RGB from the configuration file
     NSString *textR = [configurationValues objectForKey:@"TextRed"];
