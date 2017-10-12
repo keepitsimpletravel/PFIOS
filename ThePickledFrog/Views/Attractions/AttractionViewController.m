@@ -103,7 +103,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSString *titleValue = @"ATTRACTIONS";
+    NSString *titleValue = @"SEE";
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];

@@ -225,26 +225,20 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:contactVC];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-    else if (selection == 9){
+    else if (selection == 8){
         // FEEDBACK
         FeedbackViewController *feedVC = [[FeedbackViewController alloc] initWithNibName:@"FeedbackViewController" bundle:nil];
         [feedVC setFromMenu:1];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedVC];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-    else if (selection == 10){
+    else if (selection == 9){
         DeveloperViewController *developer = [[DeveloperViewController alloc] initWithNibName:@"DeveloperViewController" bundle:nil];
         [developer setFromMenu:1];
         // Might be able to get the stack for the front view controller
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developer];
         [self.revealViewController pushFrontViewController:navigationController animated:YES];
     }
-//    else if (selection == 6){
-//        NetworkListingViewController *network = [[NetworkListingViewController alloc] initWithNibName:@"NetworkListingViewController" bundle:nil];
-//        [network setFromMenu:1];
-//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:network];
-//        [self.revealViewController pushFrontViewController:navigationController animated:YES];
-//    }
 }
 
 // Set Row Height for Table View

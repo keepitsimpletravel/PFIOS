@@ -85,7 +85,7 @@
         buttonHeight = ((screenHeight-117)/4);
     }
     
-    NSString *titleValue = @"EATS";
+    NSString *titleValue = @"PARTY";
     UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
