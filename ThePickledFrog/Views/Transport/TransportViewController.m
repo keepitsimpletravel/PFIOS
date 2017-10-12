@@ -84,7 +84,7 @@
         imageSelection = @"@2x";
         lineSize = 2;
     }
-    NSString *titleValue = @"GET AROUND";
+    NSString *titleValue = @"TRANSPORT";
     UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
