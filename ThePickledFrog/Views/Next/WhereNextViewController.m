@@ -292,7 +292,7 @@
     yPosition = yPosition + gettingLabel.frame.size.height + 15;
     
     // Set Content Size for Scroll View
-    ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
+    ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition+66);
     [self.view addSubview:ContentScrollView];
     
     // Set Line below status bar
