@@ -507,7 +507,7 @@
         [contactView addSubview:addressLabel];
         noValues = 1;
 
-        if(30 > addressIcon.frame.size.height){
+        if(addressLabel.frame.size.height > addressIcon.frame.size.height){
             contactPosition = contactPosition + addressLabel.frame.size.height + 35;
         } else {
             contactPosition = contactPosition + addressIcon.frame.size.height + 35;
@@ -533,14 +533,6 @@
         
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
-        
-//        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
-//        phoneLabel.numberOfLines = 0;
-//        phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
-//        [phoneLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-//        phoneLabel.attributedText = attributedPhone;
-//        phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-//        [phoneLabel sizeToFit];
         
         KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         phoneLabel.numberOfLines = 0;
