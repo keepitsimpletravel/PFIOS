@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB372B051F90CDD100FE0438 /* stationmap@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AF81F90CDD100FE0438 /* stationmap@1x.png */; };
+		AB372B061F90CDD100FE0438 /* stationmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AF91F90CDD100FE0438 /* stationmap@2x.png */; };
+		AB372B071F90CDD100FE0438 /* stationmap@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AFA1F90CDD100FE0438 /* stationmap@3x.png */; };
+		AB372B081F90CDD100FE0438 /* hostellab@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AFB1F90CDD100FE0438 /* hostellab@1x.png */; };
+		AB372B091F90CDD100FE0438 /* hostellab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AFC1F90CDD100FE0438 /* hostellab@2x.png */; };
+		AB372B0A1F90CDD100FE0438 /* hostellab@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AFD1F90CDD100FE0438 /* hostellab@3x.png */; };
+		AB372B291F90CF9B00FE0438 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B131F90CF9B00FE0438 /* Icon-App-20x20@1x.png */; };
+		AB372B2A1F90CF9B00FE0438 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B141F90CF9B00FE0438 /* Icon-App-20x20@2x.png */; };
+		AB372B2B1F90CF9B00FE0438 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B151F90CF9B00FE0438 /* Icon-App-20x20@3x.png */; };
+		AB372B2C1F90CF9B00FE0438 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B161F90CF9B00FE0438 /* Icon-App-29x29@1x.png */; };
+		AB372B2D1F90CF9B00FE0438 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B171F90CF9B00FE0438 /* Icon-App-29x29@2x.png */; };
+		AB372B2E1F90CF9B00FE0438 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B181F90CF9B00FE0438 /* Icon-App-29x29@3x.png */; };
+		AB372B2F1F90CF9B00FE0438 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B191F90CF9B00FE0438 /* Icon-App-40x40@1x.png */; };
+		AB372B301F90CF9B00FE0438 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1A1F90CF9B00FE0438 /* Icon-App-40x40@2x.png */; };
+		AB372B311F90CF9B00FE0438 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1B1F90CF9B00FE0438 /* Icon-App-40x40@3x.png */; };
+		AB372B321F90CF9B00FE0438 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1C1F90CF9B00FE0438 /* Icon-App-57x57@1x.png */; };
+		AB372B331F90CF9B00FE0438 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1D1F90CF9B00FE0438 /* Icon-App-57x57@2x.png */; };
+		AB372B341F90CF9B00FE0438 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1E1F90CF9B00FE0438 /* Icon-App-60x60@1x.png */; };
+		AB372B351F90CF9B00FE0438 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B1F1F90CF9B00FE0438 /* Icon-App-60x60@2x.png */; };
+		AB372B361F90CF9B00FE0438 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B201F90CF9B00FE0438 /* Icon-App-60x60@3x.png */; };
+		AB372B371F90CF9B00FE0438 /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B211F90CF9B00FE0438 /* Icon-App-72x72@1x.png */; };
+		AB372B381F90CF9B00FE0438 /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B221F90CF9B00FE0438 /* Icon-App-72x72@2x.png */; };
+		AB372B391F90CF9B00FE0438 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B231F90CF9B00FE0438 /* Icon-App-76x76@1x.png */; };
+		AB372B3A1F90CF9B00FE0438 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B241F90CF9B00FE0438 /* Icon-App-76x76@2x.png */; };
+		AB372B3B1F90CF9B00FE0438 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B251F90CF9B00FE0438 /* Icon-App-76x76@3x.png */; };
+		AB372B3C1F90CF9B00FE0438 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B261F90CF9B00FE0438 /* Icon-App-83.5x83.5@2x.png */; };
+		AB372B3D1F90CF9B00FE0438 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B271F90CF9B00FE0438 /* Icon-Small-50x50@1x.png */; };
+		AB372B3E1F90CF9B00FE0438 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B281F90CF9B00FE0438 /* Icon-Small-50x50@2x.png */; };
 		AB41B83A1F7A5EE50073728F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B8391F7A5EE50073728F /* main.m */; };
 		AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B83C1F7A5EE50073728F /* AppDelegate.m */; };
 		AB41B8401F7A5EE50073728F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B83F1F7A5EE50073728F /* ViewController.m */; };
@@ -429,6 +457,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB372AF81F90CDD100FE0438 /* stationmap@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@1x.png"; path = "graphics/stationmap@1x.png"; sourceTree = "<group>"; };
+		AB372AF91F90CDD100FE0438 /* stationmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@2x.png"; path = "graphics/stationmap@2x.png"; sourceTree = "<group>"; };
+		AB372AFA1F90CDD100FE0438 /* stationmap@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@3x.png"; path = "graphics/stationmap@3x.png"; sourceTree = "<group>"; };
+		AB372AFB1F90CDD100FE0438 /* hostellab@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellab@1x.png"; path = "graphics/hostellab@1x.png"; sourceTree = "<group>"; };
+		AB372AFC1F90CDD100FE0438 /* hostellab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellab@2x.png"; path = "graphics/hostellab@2x.png"; sourceTree = "<group>"; };
+		AB372AFD1F90CDD100FE0438 /* hostellab@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellab@3x.png"; path = "graphics/hostellab@3x.png"; sourceTree = "<group>"; };
+		AB372B131F90CF9B00FE0438 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		AB372B141F90CF9B00FE0438 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		AB372B151F90CF9B00FE0438 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-20x20@3x.png"; path = "icons/AppIcon.appiconset/Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		AB372B161F90CF9B00FE0438 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		AB372B171F90CF9B00FE0438 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		AB372B181F90CF9B00FE0438 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@3x.png"; path = "icons/AppIcon.appiconset/Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		AB372B191F90CF9B00FE0438 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		AB372B1A1F90CF9B00FE0438 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		AB372B1B1F90CF9B00FE0438 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-40x40@3x.png"; path = "icons/AppIcon.appiconset/Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		AB372B1C1F90CF9B00FE0438 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-57x57@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		AB372B1D1F90CF9B00FE0438 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-57x57@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
+		AB372B1E1F90CF9B00FE0438 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		AB372B1F1F90CF9B00FE0438 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		AB372B201F90CF9B00FE0438 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@3x.png"; path = "icons/AppIcon.appiconset/Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		AB372B211F90CF9B00FE0438 /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-72x72@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
+		AB372B221F90CF9B00FE0438 /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-72x72@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
+		AB372B231F90CF9B00FE0438 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@1x.png"; path = "icons/AppIcon.appiconset/Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		AB372B241F90CF9B00FE0438 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		AB372B251F90CF9B00FE0438 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-76x76@3x.png"; path = "icons/AppIcon.appiconset/Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		AB372B261F90CF9B00FE0438 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "icons/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		AB372B271F90CF9B00FE0438 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@1x.png"; path = "icons/AppIcon.appiconset/Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
+		AB372B281F90CF9B00FE0438 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "icons/AppIcon.appiconset/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
 		AB41B8351F7A5EE50073728F /* ThePickledFrog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePickledFrog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB41B8391F7A5EE50073728F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB41B83B1F7A5EE50073728F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -962,6 +1018,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB372B121F90CF4100FE0438 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		AB41B82C1F7A5EE50073728F = {
 			isa = PBXGroup;
 			children = (
@@ -986,6 +1049,7 @@
 		AB41B8371F7A5EE50073728F /* ThePickledFrog */ = {
 			isa = PBXGroup;
 			children = (
+				AB372B121F90CF4100FE0438 /* Icons */,
 				AB7AA5C91F822735001DFF05 /* Fonts */,
 				AB41BA711F80E9770073728F /* Configuration.plist */,
 				AB41BA2D1F7FB6000073728F /* Entities */,
@@ -999,6 +1063,28 @@
 				AB41B83F1F7A5EE50073728F /* ViewController.m */,
 				AB41B8411F7A5EE50073728F /* Main.storyboard */,
 				AB41B8441F7A5EE50073728F /* Assets.xcassets */,
+				AB372B131F90CF9B00FE0438 /* Icon-App-20x20@1x.png */,
+				AB372B141F90CF9B00FE0438 /* Icon-App-20x20@2x.png */,
+				AB372B151F90CF9B00FE0438 /* Icon-App-20x20@3x.png */,
+				AB372B161F90CF9B00FE0438 /* Icon-App-29x29@1x.png */,
+				AB372B171F90CF9B00FE0438 /* Icon-App-29x29@2x.png */,
+				AB372B181F90CF9B00FE0438 /* Icon-App-29x29@3x.png */,
+				AB372B191F90CF9B00FE0438 /* Icon-App-40x40@1x.png */,
+				AB372B1A1F90CF9B00FE0438 /* Icon-App-40x40@2x.png */,
+				AB372B1B1F90CF9B00FE0438 /* Icon-App-40x40@3x.png */,
+				AB372B1C1F90CF9B00FE0438 /* Icon-App-57x57@1x.png */,
+				AB372B1D1F90CF9B00FE0438 /* Icon-App-57x57@2x.png */,
+				AB372B1E1F90CF9B00FE0438 /* Icon-App-60x60@1x.png */,
+				AB372B1F1F90CF9B00FE0438 /* Icon-App-60x60@2x.png */,
+				AB372B201F90CF9B00FE0438 /* Icon-App-60x60@3x.png */,
+				AB372B211F90CF9B00FE0438 /* Icon-App-72x72@1x.png */,
+				AB372B221F90CF9B00FE0438 /* Icon-App-72x72@2x.png */,
+				AB372B231F90CF9B00FE0438 /* Icon-App-76x76@1x.png */,
+				AB372B241F90CF9B00FE0438 /* Icon-App-76x76@2x.png */,
+				AB372B251F90CF9B00FE0438 /* Icon-App-76x76@3x.png */,
+				AB372B261F90CF9B00FE0438 /* Icon-App-83.5x83.5@2x.png */,
+				AB372B271F90CF9B00FE0438 /* Icon-Small-50x50@1x.png */,
+				AB372B281F90CF9B00FE0438 /* Icon-Small-50x50@2x.png */,
 				AB41B8461F7A5EE50073728F /* LaunchScreen.storyboard */,
 				AB41B8491F7A5EE50073728F /* Info.plist */,
 				AB41B8381F7A5EE50073728F /* Supporting Files */,
@@ -1035,6 +1121,12 @@
 		AB41B86C1F7A642E0073728F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AB372AF81F90CDD100FE0438 /* stationmap@1x.png */,
+				AB372AF91F90CDD100FE0438 /* stationmap@2x.png */,
+				AB372AFA1F90CDD100FE0438 /* stationmap@3x.png */,
+				AB372AFB1F90CDD100FE0438 /* hostellab@1x.png */,
+				AB372AFC1F90CDD100FE0438 /* hostellab@2x.png */,
+				AB372AFD1F90CDD100FE0438 /* hostellab@3x.png */,
 				AB7AA6B51F8A3842001DFF05 /* nex6t.jpg */,
 				AB7AA6121F84E7C8001DFF05 /* roo1t.jpg */,
 				AB7AA6131F84E7C8001DFF05 /* roo4t.jpg */,
@@ -2032,6 +2124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB41B8481F7A5EE50073728F /* LaunchScreen.storyboard in Resources */,
+				AB372B3D1F90CF9B00FE0438 /* Icon-Small-50x50@1x.png in Resources */,
 				AB41BA051F7A645F0073728F /* tra7.jpg in Resources */,
 				AB41B9651F7A645F0073728F /* contactus@2x.png in Resources */,
 				AB7AA5A81F81EE27001DFF05 /* SettingsViewController.xib in Resources */,
@@ -2047,7 +2140,9 @@
 				AB41BA061F7A645F0073728F /* tra7t.jpg in Resources */,
 				AB41B9481F7A645F0073728F /* abo2.jpg in Resources */,
 				AB41B9CC1F7A645F0073728F /* noticeboard.png in Resources */,
+				AB372B061F90CDD100FE0438 /* stationmap@2x.png in Resources */,
 				AB41B9E61F7A645F0073728F /* postnotice@3x.png in Resources */,
+				AB372B351F90CF9B00FE0438 /* Icon-App-60x60@2x.png in Resources */,
 				AB41B96F1F7A645F0073728F /* directionsmap@3x.png in Resources */,
 				AB41B9F31F7A645F0073728F /* showmaphostel.png in Resources */,
 				AB7AA5891F81EE27001DFF05 /* header-bg.png in Resources */,
@@ -2055,6 +2150,7 @@
 				AB41BA721F80E9770073728F /* Configuration.plist in Resources */,
 				AB41B9701F7A645F0073728F /* drinkingmap.png in Resources */,
 				AB41B9DF1F7A645F0073728F /* par9.jpg in Resources */,
+				AB372B2B1F90CF9B00FE0438 /* Icon-App-20x20@3x.png in Resources */,
 				AB41B99B1F7A645F0073728F /* exp4t.jpg in Resources */,
 				AB41B9581F7A645F0073728F /* bookabedhostel.png in Resources */,
 				AB7AA62A1F84E7C8001DFF05 /* roo9t.jpg in Resources */,
@@ -2064,6 +2160,7 @@
 				AB41B97E1F7A645F0073728F /* eat6t.jpg in Resources */,
 				AB7AA6111F83A7A0001DFF05 /* AttractionViewController.xib in Resources */,
 				AB41B9941F7A645F0073728F /* exp13t.jpg in Resources */,
+				AB372B2C1F90CF9B00FE0438 /* Icon-App-29x29@1x.png in Resources */,
 				AB7AA5CB1F822742001DFF05 /* OpenSans-CondBold.ttf in Resources */,
 				AB41B9DC1F7A645F0073728F /* par7t.jpg in Resources */,
 				AB41B99A1F7A645F0073728F /* exp4.jpg in Resources */,
@@ -2083,18 +2180,22 @@
 				AB41B9D41F7A645F0073728F /* par3t.jpg in Resources */,
 				AB7AA5B81F81EE27001DFF05 /* textbg@2x1.png in Resources */,
 				AB7AA5721F81EE27001DFF05 /* back-btn_n@3x.png in Resources */,
+				AB372B311F90CF9B00FE0438 /* Icon-App-40x40@3x.png in Resources */,
 				AB7AA5BE1F81EE27001DFF05 /* unchecked.png in Resources */,
 				AB41B9F41F7A645F0073728F /* showmaphostel@2x.png in Resources */,
 				AB7AA5711F81EE27001DFF05 /* back-btn_n@2x.png in Resources */,
 				AB41B9FA1F7A645F0073728F /* tra1t.jpg in Resources */,
+				AB372B301F90CF9B00FE0438 /* Icon-App-40x40@2x.png in Resources */,
 				AB41B9501F7A645F0073728F /* abo8.jpg in Resources */,
 				AB41B9EC1F7A645F0073728F /* rateus@3x.png in Resources */,
+				AB372B381F90CF9B00FE0438 /* Icon-App-72x72@2x.png in Resources */,
 				AB41BA091F7A645F0073728F /* traveltipstoolbar@3x.png in Resources */,
 				AB7AA6C81F8F8308001DFF05 /* PickledFrogDatabase04.db in Resources */,
 				AB7AA5731F81EE27001DFF05 /* btnReport@2x.png in Resources */,
 				AB41B9BE1F7A645F0073728F /* nex1.jpg in Resources */,
 				AB41B95B1F7A645F0073728F /* bookingtoolbar.png in Resources */,
 				AB41B9891F7A645F0073728F /* emailushostel.png in Resources */,
+				AB372B291F90CF9B00FE0438 /* Icon-App-20x20@1x.png in Resources */,
 				AB41B99E1F7A645F0073728F /* exp6.jpg in Resources */,
 				AB7AA6231F84E7C8001DFF05 /* roo3t.jpg in Resources */,
 				AB41BA001F7A645F0073728F /* tra4t.jpg in Resources */,
@@ -2103,6 +2204,7 @@
 				AB41B9BA1F7A645F0073728F /* location@3x.png in Resources */,
 				AB41B9FB1F7A645F0073728F /* tra2.jpg in Resources */,
 				AB41B9981F7A645F0073728F /* exp3.jpg in Resources */,
+				AB372B3C1F90CF9B00FE0438 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				AB41BA021F7A645F0073728F /* tra5t.jpg in Resources */,
 				AB41B9451F7A645F0073728F /* abo17.jpg in Resources */,
 				AB41B9A21F7A645F0073728F /* exp8.jpg in Resources */,
@@ -2123,10 +2225,12 @@
 				AB41B94F1F7A645F0073728F /* abo7.jpg in Resources */,
 				AB41B99F1F7A645F0073728F /* exp6t.jpg in Resources */,
 				AB41B9741F7A645F0073728F /* eat1t.jpg in Resources */,
+				AB372B2D1F90CF9B00FE0438 /* Icon-App-29x29@2x.png in Resources */,
 				AB41BA0C1F7A645F0073728F /* websitecontact@3x.png in Resources */,
 				AB41B9BD1F7A645F0073728F /* maptoolbar@3x.png in Resources */,
 				AB41B9CD1F7A645F0073728F /* noticeboard@2x.png in Resources */,
 				AB7AA5B31F81EE27001DFF05 /* send1@2x.png in Resources */,
+				AB372B341F90CF9B00FE0438 /* Icon-App-60x60@1x.png in Resources */,
 				AB7AA6C11F8CC60D001DFF05 /* FeedbackViewController.xib in Resources */,
 				AB7AA4D51F81EE1B001DFF05 /* Noticeboard2.xib in Resources */,
 				AB7AA5B91F81EE27001DFF05 /* textbg@3x.png in Resources */,
@@ -2135,7 +2239,9 @@
 				AB41B9841F7A645F0073728F /* eatingmap@2x.png in Resources */,
 				AB41B9611F7A645F0073728F /* callushostel.png in Resources */,
 				AB41B9BF1F7A645F0073728F /* nex1t.jpg in Resources */,
+				AB372B3E1F90CF9B00FE0438 /* Icon-Small-50x50@2x.png in Resources */,
 				AB7AA5B11F81EE27001DFF05 /* send.png in Resources */,
+				AB372B051F90CDD100FE0438 /* stationmap@1x.png in Resources */,
 				AB7AA5C71F81F009001DFF05 /* login@2x.png in Resources */,
 				AB41B94D1F7A645F0073728F /* abo5.jpg in Resources */,
 				AB41B9AC1F7A645F0073728F /* hometoolbar.png in Resources */,
@@ -2149,13 +2255,16 @@
 				AB41B9641F7A645F0073728F /* contactus.png in Resources */,
 				AB41B9D31F7A645F0073728F /* par3.jpg in Resources */,
 				AB41B9571F7A645F0073728F /* attractionmap@3x.png in Resources */,
+				AB372B331F90CF9B00FE0438 /* Icon-App-57x57@2x.png in Resources */,
 				AB41B97D1F7A645F0073728F /* eat6.jpg in Resources */,
 				AB7AA58B1F81EE27001DFF05 /* image.png in Resources */,
 				AB41B9421F7A645F0073728F /* abo14.jpg in Resources */,
 				AB7AA58A1F81EE27001DFF05 /* header-bg@2x.png in Resources */,
 				AB41B9511F7A645F0073728F /* abo9.jpg in Resources */,
 				AB41B9911F7A645F0073728F /* exp12.jpg in Resources */,
+				AB372B3A1F90CF9B00FE0438 /* Icon-App-76x76@2x.png in Resources */,
 				AB7AA57B1F81EE27001DFF05 /* PhotoUserChatCustomCell.xib in Resources */,
+				AB372B361F90CF9B00FE0438 /* Icon-App-60x60@3x.png in Resources */,
 				AB41B98C1F7A645F0073728F /* exp1.jpg in Resources */,
 				AB41B9A91F7A645F0073728F /* hamburgermenu.png in Resources */,
 				AB41B9881F7A645F0073728F /* emailcontact@3x.png in Resources */,
@@ -2170,6 +2279,7 @@
 				AB7AA62E1F84E7C8001DFF05 /* roo6t.jpg in Resources */,
 				AB41B9FC1F7A645F0073728F /* tra2t.jpg in Resources */,
 				AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */,
+				AB372B0A1F90CDD100FE0438 /* hostellab@3x.png in Resources */,
 				AB7AA6751F8635CB001DFF05 /* EatsListing.xib in Resources */,
 				AB41BA011F7A645F0073728F /* tra5.jpg in Resources */,
 				AB41B96B1F7A645F0073728F /* directionshostel@2x.png in Resources */,
@@ -2177,15 +2287,18 @@
 				AB7AA5A61F81EE27001DFF05 /* settings@2x.png in Resources */,
 				AB41B9871F7A645F0073728F /* emailcontact@2x.png in Resources */,
 				AB41B9AA1F7A645F0073728F /* hamburgermenu@2x.png in Resources */,
+				AB372B2F1F90CF9B00FE0438 /* Icon-App-40x40@1x.png in Resources */,
 				AB41B9EF1F7A645F0073728F /* Redflagchat@3x.png in Resources */,
 				AB41B9751F7A645F0073728F /* eat2.jpg in Resources */,
 				AB41B9D61F7A645F0073728F /* par4t.jpg in Resources */,
+				AB372B091F90CDD100FE0438 /* hostellab@2x.png in Resources */,
 				AB7AA62B1F84E7C8001DFF05 /* roo10t.jpg in Resources */,
 				AB7AA5B71F81EE27001DFF05 /* textbg@2x.png in Resources */,
 				AB41B9521F7A645F0073728F /* addresscontact.png in Resources */,
 				AB7AA6211F84E7C8001DFF05 /* roo1t.jpg in Resources */,
 				AB7AA5BC1F81EE27001DFF05 /* toolbarbg@2x.png in Resources */,
 				AB41B9E41F7A645F0073728F /* postnotice.png in Resources */,
+				AB372B2E1F90CF9B00FE0438 /* Icon-App-29x29@3x.png in Resources */,
 				AB41B94C1F7A645F0073728F /* abo4.jpg in Resources */,
 				AB7AA5B21F81EE27001DFF05 /* send1.png in Resources */,
 				AB7AA5C61F81F009001DFF05 /* login.png in Resources */,
@@ -2213,6 +2326,7 @@
 				AB41B9AD1F7A645F0073728F /* hometoolbar@2x.png in Resources */,
 				AB41B9791F7A645F0073728F /* eat4.jpg in Resources */,
 				AB7AA5BD1F81EE27001DFF05 /* toolbarbg@2x1.png in Resources */,
+				AB372B081F90CDD100FE0438 /* hostellab@1x.png in Resources */,
 				AB41B9A11F7A645F0073728F /* exp7t.jpg in Resources */,
 				AB7AA5BF1F81EE27001DFF05 /* unchecked@2x.png in Resources */,
 				AB41B9B51F7A645F0073728F /* likeus.png in Resources */,
@@ -2227,6 +2341,7 @@
 				AB41B9401F7A645F0073728F /* abo12.jpg in Resources */,
 				AB41B96E1F7A645F0073728F /* directionsmap@2x.png in Resources */,
 				AB7AA5F81F83A6E9001DFF05 /* MapViewController.xib in Resources */,
+				AB372B2A1F90CF9B00FE0438 /* Icon-App-20x20@2x.png in Resources */,
 				AB41B9C11F7A645F0073728F /* nex2t.jpg in Resources */,
 				AB7AA5AF1F81EE27001DFF05 /* buttonbg.png in Resources */,
 				AB41B9F51F7A645F0073728F /* showmaphostel@3x.png in Resources */,
@@ -2238,6 +2353,7 @@
 				AB41B99D1F7A645F0073728F /* exp5t.jpg in Resources */,
 				AB7AA5A11F81EE27001DFF05 /* BrowseMemberCustomCell.xib in Resources */,
 				AB41B9DE1F7A645F0073728F /* par8t.jpg in Resources */,
+				AB372B321F90CF9B00FE0438 /* Icon-App-57x57@1x.png in Resources */,
 				AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */,
 				AB41B98B1F7A645F0073728F /* emailushostel@3x.png in Resources */,
 				AB41B9441F7A645F0073728F /* abo16.jpg in Resources */,
@@ -2267,6 +2383,7 @@
 				AB41B9C71F7A645F0073728F /* nex5t.jpg in Resources */,
 				AB7AA5AE1F81EE27001DFF05 /* btnCamera@2x.png in Resources */,
 				AB41B9C21F7A645F0073728F /* nex3.jpg in Resources */,
+				AB372B3B1F90CF9B00FE0438 /* Icon-App-76x76@3x.png in Resources */,
 				AB7AA5FA1F83A6E9001DFF05 /* CurrencyConverter.xib in Resources */,
 				AB7AA5FD1F83A6E9001DFF05 /* DirectionViewController.xib in Resources */,
 				AB41B9471F7A645F0073728F /* abo19.jpg in Resources */,
@@ -2306,8 +2423,10 @@
 				AB41B9CA1F7A645F0073728F /* nex7.jpg in Resources */,
 				AB41B9531F7A645F0073728F /* addresscontact@2x.png in Resources */,
 				AB7AA5821F81EE27001DFF05 /* circle_you.png in Resources */,
+				AB372B391F90CF9B00FE0438 /* Icon-App-76x76@1x.png in Resources */,
 				AB7AA5BB1F81EE27001DFF05 /* toolbarbg1.png in Resources */,
 				AB41B9D81F7A645F0073728F /* par5t.jpg in Resources */,
+				AB372B071F90CDD100FE0438 /* stationmap@3x.png in Resources */,
 				AB7AA6241F84E7C8001DFF05 /* roo2t.jpg in Resources */,
 				AB41B9671F7A645F0073728F /* currencytoolbar.png in Resources */,
 				AB7AA5B61F81EE27001DFF05 /* textbg1.png in Resources */,
@@ -2316,6 +2435,7 @@
 				AB7AA5D31F823541001DFF05 /* OpenSans-CondensedBold.ttf in Resources */,
 				AB41BA0B1F7A645F0073728F /* websitecontact@2x.png in Resources */,
 				AB41B9C61F7A645F0073728F /* nex5.jpg in Resources */,
+				AB372B371F90CF9B00FE0438 /* Icon-App-72x72@1x.png in Resources */,
 				AB41B9411F7A645F0073728F /* abo13.jpg in Resources */,
 				AB41B9FF1F7A645F0073728F /* tra4.jpg in Resources */,
 				AB41B8431F7A5EE50073728F /* Main.storyboard in Resources */,
