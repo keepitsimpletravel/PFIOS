@@ -176,6 +176,15 @@
     navLabel.textAlignment = NSTextAlignmentCenter;
     navLabel.text = titleValue;
     self.navigationItem.titleView = navLabel;
+    
+    if(fromMenu == 1){
+        // Set Home Button
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(backToHome)];
+        
+        anotherButton.tintColor = [UIColor blueColor];
+        
+        self.navigationItem.leftBarButtonItem = anotherButton;
+    }
 
     NSInteger yPosition = 64;
 

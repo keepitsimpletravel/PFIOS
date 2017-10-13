@@ -523,7 +523,7 @@
         paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
-        NSAttributedString *attributedNo = [[NSAttributedString alloc] initWithString:@"No contact details are currently available" attributes: attributes];
+        NSAttributedString *attributedNo = [[NSAttributedString alloc] initWithString:@"No contact details are currently available " attributes: attributes];
         
         
         UILabel *noLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 9999)];
