@@ -369,6 +369,8 @@
         }
         
         cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
+//        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        cell.textLabel.numberOfLines = 0;
         cell.extraLabel.text = [tableSublabelData objectAtIndex:indexPath.row];
         
         NSString *nameValue = [tableData objectAtIndex:indexPath.row];
