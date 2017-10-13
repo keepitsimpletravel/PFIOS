@@ -14,6 +14,7 @@
 #import "SWRevealViewController.h"
 #import "LoadWebViewController.h"
 #import "HomeViewController.h"
+#import "KILabel.h"
 
 @interface DrinksViewController ()
 @property (nonatomic, retain) UIPageControl * pageControl;
@@ -215,7 +216,8 @@
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
     [segmentedControl addTarget:self action:@selector(tabSelection:) forControlEvents: UIControlEventValueChanged];
     segmentedControl.selectedSegmentIndex = 0;
-    segmentedControl.tintColor = [UIColor blackColor];
+//    segmentedControl.tintColor = [UIColor blackColor];
+    segmentedControl.tintColor = [UIColor colorWithRed:((112) / 255.0) green:((175) / 255.0) blue:((0) / 255.0) alpha:1.0f];
     [tabbedSection addSubview:segmentedControl];
     [MainScrollView addSubview:tabbedSection];
     
@@ -430,18 +432,26 @@
         paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
-        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:drink.phone attributes: attributes];
+//        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:drink.phone attributes: attributes];
+        NSString *test = [NSString stringWithFormat:@"%@ ", drink.phone];
+        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:test attributes: attributes];
         
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         phoneLabel.numberOfLines = 0;
         phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
         [phoneLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         phoneLabel.attributedText = attributedPhone;
         phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [phoneLabel sizeToFit];
+        
+        phoneLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+            NSLog(@"URL tapped %@", string);
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
+        };
         
         [contactView addSubview:phoneLabel];
         noValues = 1;
@@ -467,18 +477,34 @@
         paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
-        NSAttributedString *attributedWebsite = [[NSAttributedString alloc] initWithString:drink.website attributes: attributes];
+//        NSAttributedString *attributedWebsite = [[NSAttributedString alloc] initWithString:drink.website attributes: attributes];
+        NSString *test = [NSString stringWithFormat:@"%@ ", drink.website];
+        NSAttributedString *attributedWebsite = [[NSAttributedString alloc] initWithString:test attributes: attributes];
         
         NSInteger xStart = 20 + webIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        UILabel *webLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+        KILabel *webLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         webLabel.numberOfLines = 0;
         webLabel.lineBreakMode = UILineBreakModeWordWrap;
         [webLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         webLabel.attributedText = attributedWebsite;
         webLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [webLabel sizeToFit];
+        
+        webLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+            NSLog(@"URL tapped %@", string);
+            
+            LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+            [loadWebVC setURL:string];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+            
+            NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+            [loadWebVC setTitleValue:appTitle];
+            
+            [self.navigationController pushViewController:loadWebVC animated:YES];
+        };
         
         [contactView addSubview:webLabel];
         noValues = 1;

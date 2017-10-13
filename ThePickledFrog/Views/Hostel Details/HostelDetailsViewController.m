@@ -525,6 +525,14 @@
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
+//        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+//        phoneLabel.numberOfLines = 0;
+//        phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
+//        [phoneLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
+//        phoneLabel.attributedText = attributedPhone;
+//        phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//        [phoneLabel sizeToFit];
+        
         KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         phoneLabel.numberOfLines = 0;
         phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
@@ -532,6 +540,7 @@
         phoneLabel.attributedText = attributedPhone;
         phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [phoneLabel sizeToFit];
+
         
         phoneLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
             NSLog(@"URL tapped %@", string);
