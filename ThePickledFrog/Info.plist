@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>The Pickled Frog would like to use your camera</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The Pickled Frog would like to use your current location.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The Pickled Frog would like to access your photo library</string>
 	<key>UIAppFonts</key>

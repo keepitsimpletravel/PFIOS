@@ -20,6 +20,7 @@
     Drink *drink;
     Food *eat;
     Activity *activity;
+    Transport *transport;
     NSArray *allServices;
     
     NSInteger displayType;
@@ -74,6 +75,7 @@
 - (void) setDetails:(Detail *)value;
 - (void) setDrink:(Drink *)value;
 - (void) setFood:(Food *)value;
+- (void) setTransport:(Transport *)value;
 - (void) setActivity:(Activity *)value;
 - (void) setServices:(NSArray *)value;
 - (IBAction) goBack;

@@ -729,10 +729,23 @@
                 NSString *blurb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 NSString *description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
                 
-                NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
-                NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
-                NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 5)];
-                NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
+                
+                const int *lon = sqlite3_column_text(compiledStatement, 4);
+                NSDecimalNumber *longitude = nil;
+                if(lon)
+                {
+                    NSNumber *longitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 4)];
+                    longitude = [NSDecimalNumber decimalNumberWithDecimal:[longitudeValue decimalValue]];
+                }
+            
+                const int *lat = sqlite3_column_text(compiledStatement, 5);
+                
+                NSDecimalNumber *latitude = nil;
+                if(lat)
+                {
+                    NSNumber *latitudeValue = [NSNumber numberWithFloat:(float)sqlite3_column_double(compiledStatement, 5)];
+                    latitude = [NSDecimalNumber decimalNumberWithDecimal:[latitudeValue decimalValue]];
+                }
                 
                 Transport *transport = [[Transport alloc] initWithData:type nm:name bri:blurb ddesc:description lon:longitude lat:latitude];
                 [transports addObject:transport];

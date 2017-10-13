@@ -119,7 +119,7 @@
     // Add Image Scroll View
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
     
-    NSString *name = @"kistheader2.png";
+    NSString *name = @"hostellab.png";
     
     [imageView setImage:[UIImage imageNamed:name]];
     [ContentScrollView addSubview:imageView];

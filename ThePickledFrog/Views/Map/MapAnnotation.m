@@ -39,7 +39,7 @@
     } else if (_type == 4){
         annotationView.image = [UIImage imageNamed:@"attractionmap.png"];
     } else if (_type == 5){
-        annotationView.image = [UIImage imageNamed:@"directionsmap.png"];
+        annotationView.image = [UIImage imageNamed:@"stationmap.png"];
     }
 
     if (_type != 6){

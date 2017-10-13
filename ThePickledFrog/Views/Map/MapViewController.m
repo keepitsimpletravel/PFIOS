@@ -182,7 +182,7 @@
     [items addObject:fixedSpace];
     
     // Transports
-    imageValue = @"directionsmap.png";
+    imageValue = @"stationmap.png";
     
     UIImage *directionsImage = [UIImage imageNamed:imageValue];
     UIButton *directionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -248,6 +248,9 @@
         hostelFlag = 0;
     } else if (displayType == 4){
         [self displayActivityPosition:activity];
+        hostelFlag = 0;
+    } else if (displayType == 5){
+        [self displayTransportPosition:transport];
         hostelFlag = 0;
     }
 
@@ -435,7 +438,7 @@
     coordinate.latitude = latValue;
     coordinate.longitude = longValue;
     
-    MapAnnotation *point = [[MapAnnotation alloc] initWithTitle:title Location:coordinate Type:4];
+    MapAnnotation *point = [[MapAnnotation alloc] initWithTitle:title Location:coordinate Type:5];
     [mapView addAnnotation:point];
 }
 
@@ -479,6 +482,13 @@
 {
     activity = value;
     displayType = 4;
+}
+
+// Set Activity
+- (void) setTransport:(Transport *)value
+{
+    transport = value;
+    displayType = 5;
 }
 
 # pragma - Actions
@@ -532,6 +542,14 @@
             NSString *longitudeString = [NSString stringWithFormat:@"%.6lf", [activity.longitude doubleValue]];
             double longitude = [longitudeString doubleValue];
             placemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude) addressDictionary:nil];
+        } else if (displayType == 5){
+            // transport
+            NSString *latitudeString = [NSString stringWithFormat:@"%.6lf", [transport.latitude doubleValue]];
+            double latitude = [latitudeString doubleValue];
+            
+            NSString *longitudeString = [NSString stringWithFormat:@"%.6lf", [transport.longitude doubleValue]];
+            double longitude = [longitudeString doubleValue];
+            placemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude) addressDictionary:nil];
         }
     
         MKDirectionsRequest *directionsRequest = [[MKDirectionsRequest alloc] init];
@@ -576,7 +594,7 @@
         UIButton *directionOff = [UIButton buttonWithType:UIButtonTypeCustom];
         [directionOff setFrame:CGRectMake(directionsStart, 10, 107, 28)];
         [directionOff addTarget:self action:@selector(showDirections:) forControlEvents:UIControlEventTouchUpInside];
-        [directionOff setImage:[UIImage imageNamed:@"directionsMap.png"] forState:UIControlStateNormal];
+        [directionOff setImage:[UIImage imageNamed:@"stationmap.png"] forState:UIControlStateNormal];
         
         routeBarButton = [[UIBarButtonItem alloc] initWithCustomView:directionOff];
         

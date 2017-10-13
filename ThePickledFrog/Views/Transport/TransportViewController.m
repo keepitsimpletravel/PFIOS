@@ -254,16 +254,20 @@
 //        yPosition = yPosition + mapButtonHeight + 25;
 //        
 //    }
+    NSDecimalNumber *test = transport.longitude;
+//    NSLog(@"longitude, %d", test);
     
-    UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, mapButtonHeight)];
-    UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
-    [showmapButton setImage:showmapButtonImage forState:UIControlStateNormal];
-    [showmapButton addTarget:self
+    if(transport.longitude != nil){
+        UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, mapButtonHeight)];
+        UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
+        [showmapButton setImage:showmapButtonImage forState:UIControlStateNormal];
+        [showmapButton addTarget:self
                        action:@selector(loadTransportMap)
              forControlEvents:UIControlEventTouchUpInside];
-    [ContentScrollView addSubview:showmapButton];
+        [ContentScrollView addSubview:showmapButton];
     
-    yPosition = yPosition + showmapButton.frame.size.height + 25;
+        yPosition = yPosition + showmapButton.frame.size.height + 25;
+    }
     
     // Set Content Size for Scroll View
     ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
@@ -463,9 +467,9 @@
     [self.navigationController pushViewController:tt animated:YES];
 }
 
-//// Load Transport Map
-//- (IBAction)loadTransportMap
-//{
+// Load Transport Map
+- (IBAction)loadTransportMap
+{
 //    mapImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
 //    mapImageView.contentMode = UIViewContentModeScaleAspectFit;
 //    [mapImageView setClipsToBounds:YES];
@@ -489,7 +493,14 @@
 //    [mapScrollView addSubview:mapImageView];
 //    [self.view addSubview:mapScrollView];
 //    ContentScrollView.hidden = YES;
-//}
+    
+    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    
+    [map setLatitude:transport.latitude];
+    [map setLongitude:transport.longitude];
+    [map setTransport:transport];
+    [self.navigationController pushViewController:map animated:YES];
+}
 
 - (IBAction)reduceImage
 {
