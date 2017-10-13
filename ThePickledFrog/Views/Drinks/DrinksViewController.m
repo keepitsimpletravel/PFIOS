@@ -411,7 +411,7 @@
         [contactView addSubview:addressLabel];
         noValues = 1;
         
-        if(contactNameLabel.frame.size.height > addressIcon.frame.size.height){
+        if(addressLabel.frame.size.height > addressIcon.frame.size.height){
             contactPosition = contactPosition + addressLabel.frame.size.height + 25;
         } else {
             contactPosition = contactPosition + addressIcon.frame.size.height + 25;

@@ -411,7 +411,12 @@
         [contactView addSubview:addressLabel];
         noValues = 1;
         
-        if(contactNameLabel.frame.size.height > addressIcon.frame.size.height){
+//        contactPosition = addressLabel.frame.size.height;
+//        contactPosition = addressIcon.frame.size.height;
+//        NSLog(@"nameLabel: %d", addressLabel.frame.size.height);
+//        NSLog(@"icon: %d", addressIcon.frame.size.height);
+        
+        if(addressLabel.frame.size.height > addressIcon.frame.size.height){
             contactPosition = contactPosition + addressLabel.frame.size.height + 25;
         } else {
             contactPosition = contactPosition + addressIcon.frame.size.height + 25;
@@ -522,12 +527,7 @@
         paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
-        
-//        NSString
         NSAttributedString *attributedNo = [[NSAttributedString alloc] initWithString:@"No contact details are currently available " attributes: attributes];
-        
-//        NSString *test = @"No contact details are currently available ";
-//        NSAttributedString *attributedNo = [[NSAttributedString alloc] initWithString:test attributes: attributes];
         
         UILabel *noLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 9999)];
         noLabel.numberOfLines = 0;
