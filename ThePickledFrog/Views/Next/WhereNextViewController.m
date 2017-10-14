@@ -60,17 +60,17 @@
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
     if (screenWidth == 320){
-//        homeImage = 113.316;
-        homeImage = 225.67;
+        homeImage = 211.2;
+//        homeImage = 225.67;
         lineSize = 2;
     }
     if (screenWidth == 375){
-//        homeImage = 133;
-        homeImage = 265;
+        homeImage = 247.5;
+//        homeImage = 265;
         lineSize = 2;
     } else if (screenWidth == 414){
-//        homeImage = 146.799;
-        homeImage = 292.41;
+        homeImage = 273.24;
+//        homeImage = 292.41;
         lineSize = 2;
     }
     NSString *titleValue = @"WHERE TO NEXT";

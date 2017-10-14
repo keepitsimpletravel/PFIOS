@@ -1368,7 +1368,6 @@
 				AB7AA5F21F83A6E9001DFF05 /* Travel Tips */,
 				AB7AA5D41F824D78001DFF05 /* WebView */,
 				AB41BA1B1F7A66A10073728F /* Developer */,
-				AB41BA1A1F7A66990073728F /* Network */,
 				AB41BA191F7A66920073728F /* Feedback */,
 				AB41BA181F7A668E0073728F /* Transport */,
 				AB41BA161F7A66820073728F /* Noticeboard */,
@@ -1428,13 +1427,6 @@
 				AB7AA6C01F8CC60D001DFF05 /* FeedbackViewController.xib */,
 			);
 			name = Feedback;
-			sourceTree = "<group>";
-		};
-		AB41BA1A1F7A66990073728F /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Network;
 			sourceTree = "<group>";
 		};
 		AB41BA1B1F7A66A10073728F /* Developer */ = {

@@ -6,18 +6,13 @@
 //
 
 #import "HostelDetailsViewController.h"
-//#import "Detail.h"
 #import "PhotoLookup.h"
-//#import "RoomViewController.h"
 #import "DirectionViewController.h"
 #import "CurrencyConverter.h"
 #import "TravelTipsViewController.h"
 #import "SWRevealViewController.h"
-//#import <QuartzCore/QuartzCore.h>
 #import "LoadWebViewController.h"
-//#import "ThumbnailLookup.h"
 #import "MapViewController.h"
-//#import "ContactViewController.h"
 #import "HomeViewController.h"
 #import "ListingTableCell.h"
 #import "ThumbnailLookup.h"
@@ -62,8 +57,6 @@
     NSInteger smSpacer = 0;
     NSInteger iconWidth = 0;
     NSInteger iconHeight = 0;
-//    NSInteger contactButtonHeight = 0;
-//    NSInteger contactButtonWidth = 0;
     
     // Get Details
     dataSource = [DataSource dataSource];
@@ -88,70 +81,42 @@
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
 
-//    NSInteger bedSpacer;
-
     if (screenHeight == 568){
         lineSize = 2;
-        homeImage = 225.67;
-
+//        homeImage = 225.67;
+        homeImage = 211.2;
         bedImageHeight = 100.536;
-//        bedImageWidth = 251.34;
         bedImageWidth = (screenWidth-80)/2;
-//        bedSpacer = 40;
-//        
-//        imageSelection = @"@1x";
         iconSize = (screenWidth/4) * 0.6;
         aboutToolbarButtonHeight = 51.68;
         smWidth = 91.249;
         smHeight = 60.577;
-//        contactButtonHeight = 39.984;
-//        contactButtonWidth = 240;
-        
-        // Need to determine space for buttons
         smSpacer = (screenWidth - (sections * smWidth)) / (sections + 1);
         iconHeight = 25.56;
         iconWidth = 25.56;
     } else if (screenHeight == 667){
         lineSize = 2;
-        homeImage = 265;
-
+//        homeImage = 265;
+        homeImage = 247.5;
         bedImageHeight = 118;
-//        bedImageWidth = 295;
         bedImageWidth = (screenWidth-80)/2;
-//        bedSpacer = 40;
-        
-
-//        imageSelection = @"@2x";
         iconSize = (screenWidth/4) * 0.6;
         aboutToolbarButtonHeight = 60;
-//        contactButtonHeight = 49;
-//        contactButtonWidth = 294;
-
         smWidth = 107.1;
         smHeight = 71.1;
-
-        // Need to determine space for buttons
         smSpacer = (screenWidth - (sections * smWidth)) / (sections + 1);
         iconHeight = 30;
         iconWidth = 30;
     } else if (screenHeight == 736){
         lineSize = 2;
-        homeImage = 292.41;
-
+//        homeImage = 292.41;
+        homeImage = 273.24;
         bedImageHeight = 130.243;
-//        bedImageWidth = 325.607;
         bedImageWidth = (screenWidth-80)/2;
-//        bedSpacer = 40;
-//        
-//        imageSelection = @"@3x";
         iconSize = (screenWidth/4) * 0.6;
         aboutToolbarButtonHeight = 65.62;
         smWidth = 118.211;
         smHeight = 78.476;
-//        contactButtonHeight = 54.08;
-//        contactButtonWidth = 324.50;
-        
-        // Need to determine space for buttons
         smSpacer = (screenWidth - (sections * smWidth)) / (sections + 1);
         iconHeight = 33.112;
         iconWidth = 33.112;

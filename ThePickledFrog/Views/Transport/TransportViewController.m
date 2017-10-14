@@ -62,26 +62,23 @@
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
     
     if (screenWidth == 320){
-//        homeImage = 113.316;
-        homeImage = 225.67;
+//        homeImage = 225.67;
+        homeImage = 211.2;
         lineSize = 2;
         mapButtonHeight = 39.984;
         mapButtonWidth = 240;
-        imageSelection = @"@1x";
     }
     if (screenWidth == 375){
-//        homeImage = 133;
-        homeImage = 265;
+        homeImage = 247.5;
+//        homeImage = 265;
         mapButtonHeight = 49;
         mapButtonWidth = 294;
         lineSize = 2;
-        imageSelection = @"@1x";
     } else if (screenWidth == 414){
-//        homeImage = 146.799;
-        homeImage = 292.41;
+        homeImage = 273.24;
+//        homeImage = 292.41;
         mapButtonHeight = 54.08;
         mapButtonWidth = 324.50;
-        imageSelection = @"@2x";
         lineSize = 2;
     }
     NSString *titleValue = @"TRANSPORT";

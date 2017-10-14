@@ -68,8 +68,8 @@
     
     // need to determine screenWidth to compare which device is which
     if(screenHeight == 568){
-        homeImage = 225.67;
-//        imageSelection = @"@1x";
+//        homeImage = 225.67;
+        homeImage = 211.2;
         smWidth = 75.913;//84.348;
         smHeight = 45.241;//50.268;
         lineSize = 2;
@@ -78,8 +78,8 @@
         mapButtonHeight = 39.984;
         mapButtonWidth = 240;
     } else if (screenHeight == 667){
-        homeImage = 265;
-//        imageSelection = @"@1x";
+//        homeImage = 265;
+        homeImage = 247.5;
         lineSize = 2;
         smWidth = 89.1;
         smHeight = 53.1;
@@ -88,8 +88,8 @@
         mapButtonHeight = 49;
         mapButtonWidth = 294;
     } else if (screenHeight == 736){
-        homeImage = 292.41;
-//        imageSelection = @"@2x";
+//        homeImage = 292.41;
+        homeImage = 273.24;
         lineSize = 2;
         smWidth = 93.591;//103.991;
         smHeight = 58.608;//65.121;
