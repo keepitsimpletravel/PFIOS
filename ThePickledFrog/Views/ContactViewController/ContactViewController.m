@@ -215,6 +215,11 @@
     
     contactPosition = contactPosition + contactNameLabel.frame.size.height + 15;
     
+    // Contact
+    contactView = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 250)];
+    // Set up the Contact View
+    NSInteger contactPosition = 30; // + contactNameLabel.frame.size.height + 15;
+    
     // Address
     NSInteger noValues = 0;
     
@@ -239,7 +244,7 @@
         UILabel *addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         addressLabel.numberOfLines = 0;
         addressLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [addressLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [addressLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         addressLabel.attributedText = attributedAddress;
         addressLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [addressLabel sizeToFit];
@@ -269,25 +274,18 @@
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
         NSString *test = [NSString stringWithFormat:@"%@ ", detail.phone];
-        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:test attributes: attributes];
-        
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
-        phoneLabel.numberOfLines = 0;
-        phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [phoneLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-        phoneLabel.attributedText = attributedPhone;
-        phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [phoneLabel sizeToFit];
-        
-        phoneLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
-            NSLog(@"URL tapped %@", string);
-            
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
-        };
-        
+        UIButton *phoneLabel = [UIButton buttonWithType:UIButtonTypeCustom];
+        [phoneLabel addTarget:self
+                       action:@selector(callPhone)
+             forControlEvents:UIControlEventTouchUpInside];
+        [phoneLabel setTitle:test forState:UIControlStateNormal];
+        phoneLabel.frame = CGRectMake(xStart, contactPosition, 150, 25);
+        [phoneLabel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        phoneLabel.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        phoneLabel.titleLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:fontSize];
         [contactView addSubview:phoneLabel];
         noValues = 1;
         
@@ -321,7 +319,7 @@
         KILabel *webLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         webLabel.numberOfLines = 0;
         webLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [webLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [webLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         webLabel.attributedText = attributedWebsite;
         webLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [webLabel sizeToFit];
@@ -373,7 +371,7 @@
         KILabel *emailLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         emailLabel.numberOfLines = 0;
         emailLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [emailLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [emailLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         emailLabel.attributedText = attributedEmail;
         emailLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [emailLabel sizeToFit];
@@ -410,7 +408,7 @@
             contactPosition = contactPosition + emailIcon.frame.size.height + 25;
         }
         
-//        contactPosition = contactPosition + emailLabel.frame.size.height + 5;
+        //        contactPosition = contactPosition + emailLabel.frame.size.height + 5;
     }
     
     if (noValues == 0){
@@ -425,7 +423,7 @@
         UILabel *noLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, contactPosition, screenWidth-80, 9999)];
         noLabel.numberOfLines = 0;
         noLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [noLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+        [noLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
         noLabel.attributedText = attributedNo;
         noLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [noLabel sizeToFit];
@@ -435,6 +433,9 @@
         
         contactPosition = contactPosition + noLabel.frame.size.height + 5;
     }
+    
+//    contactView.hidden = YES;
+//    [ContentScrollView addSubview:contactView];
     
     [MainScrollView addSubview:contactView];
     
@@ -664,6 +665,13 @@
     
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(IBAction)callPhone {
+    // TODO PHONE NUMBER OF HOSTEL
+    NSString *phoneNumber = [@"tel:" stringByAppendingString:detail.phone];
+    //    NSString *phoneNumber = @"tel:(+61)404747178";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
 
 @end

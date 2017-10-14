@@ -529,26 +529,18 @@
         attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
         
         NSString *test = [NSString stringWithFormat:@"%@ ", detail.phone];
-        NSAttributedString *attributedPhone = [[NSAttributedString alloc] initWithString:test attributes: attributes];
-        
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
-        phoneLabel.numberOfLines = 0;
-        phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
-        [phoneLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:fontSize]];
-        phoneLabel.attributedText = attributedPhone;
-        phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-        [phoneLabel sizeToFit];
-
-        
-        phoneLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
-            NSLog(@"URL tapped %@", string);
-            
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
-        };
-        
+        UIButton *phoneLabel = [UIButton buttonWithType:UIButtonTypeCustom];
+        [phoneLabel addTarget:self
+                   action:@selector(callPhone)
+         forControlEvents:UIControlEventTouchUpInside];
+        [phoneLabel setTitle:test forState:UIControlStateNormal];
+        phoneLabel.frame = CGRectMake(xStart, contactPosition, 150, 25);
+        [phoneLabel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        phoneLabel.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        phoneLabel.titleLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:fontSize];
         [contactView addSubview:phoneLabel];
         noValues = 1;
         
