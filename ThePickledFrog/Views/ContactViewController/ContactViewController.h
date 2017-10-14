@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "DataSource.h"
 #import "Detail.h"
+#import <MessageUI/MessageUI.h>
 
-@interface ContactViewController : UIViewController<UIScrollViewDelegate>
+@interface ContactViewController : UIViewController<UIScrollViewDelegate, MFMailComposeViewControllerDelegate>
 {
     UIScrollView *ImageScrollView;
     UIScrollView *MainScrollView;

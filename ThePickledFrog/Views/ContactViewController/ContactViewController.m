@@ -14,6 +14,7 @@
 #import "TravelTipsViewController.h"
 #import "SWRevealViewController.h"
 #import "LoadWebViewController.h"
+#import "KILabel.h"
 
 @interface ContactViewController ()
 @property (nonatomic, retain) UIPageControl * pageControl;
@@ -47,49 +48,20 @@
     NSInteger smWidth = 0;
     NSInteger smHeight = 0;
     
-//    NSInteger emailWidth = 0;
-//    NSInteger emailHeight = 0;
-//    NSInteger phoneWidth = 0;
-//    NSInteger phoneHeight = 0;
-    
     // need to determine screenWidth to compare which device is which
     if(screenHeight == 568){
         homeImage = 225.67;
         lineSize = 2;
-//        iconHeight = 25.56;
-//        iconWidth = 23.004;
-//        
-//        emailHeight = 25.56;
-//        emailWidth = 33.228;
-//        
-//        phoneHeight = 25.56;
-//        phoneWidth = 25.56;
         iconHeight = 25.56;
         iconWidth = 25.56;
     } else if (screenHeight == 667){
         homeImage = 265;
         lineSize = 2;
-//        iconWidth = 27;
-//        iconHeight = 30;
-//        
-//        emailHeight = 30;
-//        emailWidth = 39;
-//        
-//        phoneHeight = 30;
-//        phoneWidth = 30;
         iconHeight = 30;
         iconWidth = 30;
     } else if (screenHeight == 736){
         homeImage = 292.41;
         lineSize = 2;
-//        iconHeight = 33.112;
-//        iconWidth = 29.801;
-//        
-//        emailHeight = 33.112;
-//        emailWidth = 43.046;
-//        
-//        phoneHeight = 33.112;
-//        phoneWidth = 33.112;
         iconHeight = 33.112;
         iconWidth = 33.112;
     }
@@ -302,13 +274,19 @@
         NSInteger xStart = 20 + phoneIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        UILabel *phoneLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+        KILabel *phoneLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         phoneLabel.numberOfLines = 0;
         phoneLabel.lineBreakMode = UILineBreakModeWordWrap;
         [phoneLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
         phoneLabel.attributedText = attributedPhone;
         phoneLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [phoneLabel sizeToFit];
+        
+        phoneLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+            NSLog(@"URL tapped %@", string);
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
+        };
         
         [contactView addSubview:phoneLabel];
         noValues = 1;
@@ -340,13 +318,27 @@
         NSInteger xStart = 20 + webIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        UILabel *webLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+        KILabel *webLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         webLabel.numberOfLines = 0;
         webLabel.lineBreakMode = UILineBreakModeWordWrap;
         [webLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
         webLabel.attributedText = attributedWebsite;
         webLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [webLabel sizeToFit];
+        
+        webLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+            NSLog(@"URL tapped %@", string);
+            
+            LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+            [loadWebVC setURL:string];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+            
+            NSString *appTitle = [configurationValues objectForKey:@"AppTitle"];
+            [loadWebVC setTitleValue:appTitle];
+            
+            [self.navigationController pushViewController:loadWebVC animated:YES];
+        };
         
         [contactView addSubview:webLabel];
         noValues = 1;
@@ -378,13 +370,36 @@
         NSInteger xStart = 20 + emailIcon.frame.size.width + 20;
         NSInteger xEnd = screenWidth - xStart - 40;
         
-        UILabel *emailLabel = [[UILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
+        KILabel *emailLabel = [[KILabel alloc] initWithFrame:CGRectMake(xStart, contactPosition, xEnd, 9999)];
         emailLabel.numberOfLines = 0;
         emailLabel.lineBreakMode = UILineBreakModeWordWrap;
         [emailLabel setFont:[UIFont fontWithName:bodyFont size:fontSize]];
         emailLabel.attributedText = attributedEmail;
         emailLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
         [emailLabel sizeToFit];
+        
+        emailLabel.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+            NSLog(@"URL tapped %@", string);
+            // Load the Email
+            // Setting up the email to be sent
+            // Email Subject
+            NSString *emailTitle = @"";
+            // Email Content
+            NSString *content = @"";
+            NSString *messageBody = content;
+            // To address
+            NSArray *toRecipents = [NSArray arrayWithObject:string];
+            
+            // Setting up the email to be sent
+            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+            mc.mailComposeDelegate = self;
+            [mc setSubject:emailTitle];
+            [mc setMessageBody:messageBody isHTML:NO];
+            [mc setToRecipients:toRecipents];
+            
+            // Present mail view controller on screen
+            [self presentViewController:mc animated:YES completion:NULL];
+        };
         
         [contactView addSubview:emailLabel];
         noValues = 1;
@@ -624,6 +639,31 @@
 - (void) setFromMenu:(NSInteger)value
 {
     fromMenu = value;
+}
+
+// Action of the Mail being Sent
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

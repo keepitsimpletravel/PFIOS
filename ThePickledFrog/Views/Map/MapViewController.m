@@ -80,13 +80,13 @@
     bottomTabBarHeight = 49;
     
     if(screenWidth <= 320){
-        toolbarSpace = ((screenWidth - 150) / 10);
+        toolbarSpace = ((screenWidth - 150) / 9);
     } else if (screenWidth == 375){
-        toolbarSpace = ((screenWidth - 150) / 10);
+        toolbarSpace = ((screenWidth - 150) / 9);
     } else if (screenWidth == 414){
-        toolbarSpace = ((screenWidth - 150) / 10);
+        toolbarSpace = ((screenWidth - 150) / 9);
     } else if (screenWidth == 768){
-        toolbarSpace = ((screenWidth - 150) / 10);
+        toolbarSpace = ((screenWidth - 150) / 9);
     }
     
     // Get Config Values
