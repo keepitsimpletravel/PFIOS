@@ -635,7 +635,6 @@ NSInteger photoV=0, rowIn;
 - (void)keyboardWillHide:(NSNotification *)notification
 {
     /* Move the toolbar back to bottom of the screen */
-//    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
     tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-51);
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];

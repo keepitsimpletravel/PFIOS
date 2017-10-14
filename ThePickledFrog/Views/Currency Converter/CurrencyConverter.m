@@ -87,7 +87,7 @@
         lineSize = 2;
     }
     
-    NSString *titleValue = @"CURRENCY CONVERTER";
+    NSString *titleValue = @"CURRENCY";
     UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
