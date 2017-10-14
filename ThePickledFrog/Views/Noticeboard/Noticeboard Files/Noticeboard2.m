@@ -16,10 +16,7 @@
 #import "UIView+Toast.h"
 #import "DAKeyboardControl.h"
 #import "Base64.h"
-//#import "PhotoChatCustomCell.h"
-//#import "PhotoUserChatCustomCell.h"
 #import "Reachability.h"
-//#import "UserCustomCell.h"
 #import "RightViewController.h"
 #import "PhotoNoticeboardCustomCell.h"
 #import "SWRevealViewController.h"
@@ -39,9 +36,6 @@ NSInteger photoV=0, rowIn;
 
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
-//@synthesize jobID,timerObj,userTabelObj,userArray,userSubArray;
-//@synthesize spinner,actBgimg;
-//@synthesize imagePickerController;
 @synthesize senderID, inputToolbar, chatArray, myImageData, chatImageArray, imageDictionary;
 //
 - (void)viewDidLoad
@@ -106,14 +100,12 @@ NSInteger photoV=0, rowIn;
 
     // Add Table View
     // Create each of the tableviews and add to an array
-//    tableViewChat = [[UITableView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, screenHeight-51-yPosition)];
     tableViewChat = [[UITableView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, screenHeight-51-66)];
     
     // must set delegate & dataSource, otherwise the the table will be empty and not responsive
     tableViewChat.delegate = self;
     tableViewChat.dataSource = self;
     tableViewChat.hidden = NO;
-//    tableViewChat.rowHeight = 80.0;
     
     UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight-51-66)];
     backgroundView.opaque = YES;
@@ -141,8 +133,9 @@ NSInteger photoV=0, rowIn;
     
             CGRect tableViewFrame = tableViewChat.frame;
             tableViewFrame.size.height = keyboardFrameInView.origin.y - 100;
-            tableViewChat.frame = CGRectMake(0, 0, screenWidth, screenHeight-40
-                                             );
+        tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-51-66);
+//            tableViewChat.frame = CGRectMake(0, 0, screenWidth, screenHeight-40
+//                                             );
         }];
     
     // Set Line below status bar
@@ -355,7 +348,8 @@ NSInteger photoV=0, rowIn;
             CGFloat screenHeight = screenRect.size.height;
             toolbarLine.frame = CGRectMake(0, screenHeight-42, screenWidth, 2);
 
-            tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+//            tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+            tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-51);
 
         } else {
             NSInteger cancelIndex = [alertView cancelButtonIndex];
@@ -368,29 +362,10 @@ NSInteger photoV=0, rowIn;
     [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
 }
 
-//- (void)UserrequestFinished:(ASIHTTPRequest *)request
-//{
-//    @try {
-//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-//        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:[request responseData] options:0 error:nil];
-//        if ([[dict valueForKey:@"data"] isEqualToString:@"success"]) {
-//            NSDictionary *userData = [dict valueForKey:@"user_data"];
-//            NSString *uID = [NSString stringWithFormat:@"%ld",[[userData valueForKey:@"userID"] integerValue]];
-//            [StaticClass saveToUserDefaults:uID :@"UID"];
-//            [StaticClass saveToUserDefaults:[userData valueForKey:@"isnotify"] :@"isNotify"];
-//            
-//            [self getChatMessages];
-//        }
-//    }
-//    @catch (NSException *exception) {
-//    }
-//}
-
 - (void)UserrequestFail:(ASIHTTPRequest *)request
 {
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
-
 
 //Get ChatMessages
 -(void)getChatMessages
@@ -422,10 +397,6 @@ NSInteger photoV=0, rowIn;
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-//    for (int i = 0;  i<[self.chatArray count]; i++) {
-//        NSDictionary *dict = [self.chatArray objectAtIndex:i];
-//        dict = nil;
-//    }
     for (int i = 0;  i<[tempArray count]; i++) {
         NSDictionary *dict = [tempArray objectAtIndex:i];
         dict = nil;
@@ -439,8 +410,6 @@ NSInteger photoV=0, rowIn;
         
         if ([[dict valueForKey:@"data"] isEqualToString:@"success"]) {
             NSArray *items = [dict valueForKey:@"msg_data"];
-            
-//            NSMutableDictionary * m = [d mutableCopy];
             for (NSMutableDictionary *d in items) {
                 NSMutableDictionary *copy = [d mutableCopy];
 
@@ -452,7 +421,6 @@ NSInteger photoV=0, rowIn;
                     [copy setObject:image forKey:@"image"];
                 }
                 NSLog(@"Added Message");
-//                [self.chatArray addObject:copy];
                 [tempArray addObject:copy];
                 NSString *Test = @"";
             }
@@ -478,28 +446,23 @@ NSInteger photoV=0, rowIn;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-//
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == tableViewChat) {
         return self.chatArray.count;
     }
-//    else{
-//        return userArray.count;
-//    }
     return 0;
 }
-//
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSLog(@"Row: %d", indexPath.row);
+//    NSLog(@"Row: %d", indexPath.row);
     @try {
         if (tableView == tableViewChat) {
             NSDictionary *tempObj = [self.chatArray objectAtIndex:indexPath.row];
             
             if ([[tempObj valueForKey:@"type"] isEqualToString:@"Message"])
             {
-//                if ([[tempObj valueForKey:@"userID"] isEqualToString:user])
-//                {
                     static NSString *temp= @"NoticeboardCustomCell";
                     NoticeboardCustomCell *cellheader = (NoticeboardCustomCell *)[tableViewChat dequeueReusableCellWithIdentifier:temp];
                     if (cellheader == nil) {
@@ -510,20 +473,16 @@ NSInteger photoV=0, rowIn;
                         cellheader.backgroundColor=[UIColor clearColor];
                         [cellheader.btnReport addTarget:self action:@selector(btnReportClick:) forControlEvents:UIControlEventTouchUpInside];
                     }
-//                    cellheader.btnReport.tag = indexPath.row;
                     cellheader.lblBG.layer.cornerRadius = 3.0;
                     cellheader.lblBG.layer.masksToBounds = YES;
 
                     cellheader.lblMessage.text = [tempObj valueForKey:@"message"];
                     cellheader.lblTime.text = [[tempObj valueForKey:@"time"] stringByReplacingOccurrencesOfString:@" ago" withString:@""];
                     return cellheader;
-//                }
             }
             else{
                 if ([[tempObj valueForKey:@"type"] isEqualToString:@"Image"]){
                     static NSString *temp= @"PhotoNoticeboardCustomCell";
-                    
-//                    NSURL *url = [NSURL URLWithString:[tempObj valueForKey:@"image"]];
                 
                     PhotoNoticeboardCustomCell *cellheader = (PhotoNoticeboardCustomCell *)[tableViewChat dequeueReusableCellWithIdentifier:temp];
                     if (cellheader == nil) {
@@ -532,17 +491,7 @@ NSInteger photoV=0, rowIn;
                         cellheader.showsReorderControl = NO;
                         cellheader.selectionStyle = UITableViewCellSelectionStyleNone;
                         cellheader.backgroundColor=[UIColor clearColor];
-//                        [cellheader.btnReport addTarget:self action:@selector(btnReportClick:) forControlEvents:UIControlEventTouchUpInside];
                     }
-//                    cellheader.lblBG.frame = CGRectMake(10, 5, globalcellWidth+10, cellHeight);
-//                    cellheader.lblBG.frame.size.height = cellHeight;
-                    
-//                    CGRect frameRect = cellheader.lblBG.frame;
-//                    frameRect.size.height = cellHeight;
-//                    cellheader.lblBG.frame = frameRect;
-                    
-                    
-//                    cellheader.lblBG.backgroundColor = [UIColor whiteColor];
                 
                     
                     cellheader.lblBG.layer.cornerRadius = 3.0;
@@ -550,33 +499,15 @@ NSInteger photoV=0, rowIn;
                 
                     
                     NSLog(@"Sizes when drawing cell: height: %d, width: %d", cellHeight, globalcellWidth);
-                cellheader.photo.frame = CGRectMake(10, 5, globalcellWidth, cellHeight);
+                    cellheader.photo.frame = CGRectMake(10, 5, globalcellWidth, cellHeight);
                     cellheader.photo.layer.masksToBounds = YES;
-//                cellheader.photo.imageURL = [NSURL URLWithString:[tempObj valueForKey:@"image"]];
                     cellheader.photo.image = [tempObj valueForKey:@"image"];
-                    
-//                    cellheader.lblTime.frame = CGRectMake(15+(globalcellWidth-25), cellHeight, 50, 30);
                     cellheader.lblTime.backgroundColor = [UIColor whiteColor];
-//                    frameRect = cellheader.lblTime.frame;
-//
-//                    CGPoint point = frameRect.origin;
-//                    
-//                    NSInteger x = point.x;
-//                    NSInteger y = point.y;
-//                    y = cellHeight - 20;
-//                    frameRect.origin = CGPointMake(point.x, y);//cellHeight - 30;
-                    
-                    
-//                    frameRect.size.height = cellHeight;
-//                    cellheader.lblTime.frame = frameRect;
                     cellheader.lblTime.layer.masksToBounds = YES;
                     cellheader.lblTime.text = [[tempObj valueForKey:@"time"] stringByReplacingOccurrencesOfString:@" ago" withString:@""];
                 
                     cellheader.clipsToBounds = YES;
-//                    cellheader.contentView.frame = CGRectMake(10, 5, globalcellWidth, cellHeight+30);
-//                    [tableViewChat beginUpdates];
-
-                return cellheader;
+                    return cellheader;
 
                 }
             }
@@ -593,27 +524,9 @@ NSInteger photoV=0, rowIn;
         NSDictionary *tempObj = [self.chatArray objectAtIndex:indexPath.row];
         if ([[tempObj valueForKey:@"type"] isEqualToString:@"Message"])
         {
-            
-//            cellCounter++;
             return 80;
-        }else
-        {
-//            NSDictionary *tempObj = [self.chatArray objectAtIndex:indexPath.row];
-//            
-//            UIImage *image = [tempObj valueForKey:@"image"];
-//            CGFloat height = image.size.height;
-//            CGFloat width = image.size.width;
-//            
-//            CGFloat imageWidth = width;
-//            CGFloat imageHeight = height;
-//            CGFloat ratio = (screenWidth-50) / imageWidth;
-//            
-//            globalcellWidth = screenWidth - 50;
-//            cellHeight = imageHeight * ratio;
-//            
-//            NSLog(@"height: %d in height method", cellHeight+30);
-//            return cellHeight + 30;
-            
+        }
+        else {
             NSDictionary *tempObj = [self.chatArray objectAtIndex:indexPath.row];
             
             UIImage *image = [tempObj valueForKey:@"image"];
@@ -640,7 +553,6 @@ NSInteger photoV=0, rowIn;
             cellHeight = height;
             return cellHeight + 30;
         }
-
     }
     return 40;
 }
@@ -652,10 +564,7 @@ NSInteger photoV=0, rowIn;
         if ([[tempObj valueForKey:@"type"] isEqualToString:@"Image"])
         {
             UIImage *imageDisplay = [tempObj valueForKey:@"image"];
-            
-            
-            // Need to make this dynamic
-            
+
             // Max Height
             NSInteger maxHeight = screenHeight-150;
             NSInteger maxWidth = screenWidth-40;
@@ -678,16 +587,12 @@ NSInteger photoV=0, rowIn;
                 height = height * ratio;
             }
             
-            
             UIScrollView *svImage = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 106, width, height)];
             
             // determine the size of the image
-            
             // set content view to actual size of image
             svImage.contentSize = CGSizeMake(width, height);
-//            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(20, 146, width, height)];
             image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-//            image.userInteractionEnabled = true
             
             image.image = imageDisplay;
             [svImage addSubview:image];
@@ -708,38 +613,11 @@ NSInteger photoV=0, rowIn;
     return image;
 }
 
-//-(IBAction)btnReportClick:(id)sender
-//{
-//    rowIn = [sender tag];
-//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Report" message:@"Are you sure to report this message?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes",@"No", nil];
-//    alert.tag= 5001;
-//    [alert show];
-//}
-//
-//- (void)sendReportedRequestFinished:(ASIHTTPRequest *)request
-//{
-//    @try {
-//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-//        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:[request responseData] options:0 error:nil];
-//        if ([[dict valueForKey:@"data"] isEqualToString:@"success"]) {
-//            [self.view makeToast:[dict valueForKey:@"msg"]];
-//            [self getChatMessages];
-//        }
-//        else{
-//            [self.view makeToast:[dict valueForKey:@"msg"]];
-//        }
-//    }
-//    @catch (NSException *exception) {
-//    }
-//}
-
-//#pragma mark -
-//#pragma mark Notifications
-
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     /* Move the toolbar to above the keyboard */
-    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+//    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-51);
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     CGRect frame = self.inputToolbar.frame;
@@ -757,7 +635,8 @@ NSInteger photoV=0, rowIn;
 - (void)keyboardWillHide:(NSNotification *)notification
 {
     /* Move the toolbar back to bottom of the screen */
-    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+//    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
+    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-51);
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     CGRect frame = self.inputToolbar.frame;
@@ -936,55 +815,12 @@ NSInteger photoV=0, rowIn;
     [self.view makeToast:@"Internet-anslutning inte finns!"];
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
-//
-//-(IBAction)btnBackClick:(id)sender
-//{
-//    SquareHomeViewController *homeViewController = [[SquareHomeViewController alloc] init];
-//    homeViewController.title = @"Makati Junction Hostel";
-//    
-//    RightViewController *rightViewController = rightViewController = [[RightViewController alloc] init];
-//    
-//    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
-//    
-//    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rightViewController frontViewController:frontNavigationController];
-//    revealController.delegate = self;
-//    
-//    revealController.rightViewController = rightViewController;
-//    [self.navigationController pushViewController:revealController animated:YES];
-//}
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)atext
 {
     [textView resignFirstResponder];
     return YES;
 }
-//
-//- (void)requestUserFinished:(ASIHTTPRequest *)request
-//{
-//    [userSubArray removeAllObjects];
-//    [userArray removeAllObjects];
-//    userArray = [[NSMutableArray alloc]init];
-//    userSubArray = [[NSMutableArray alloc]init];
-//    
-//    @try {
-//        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-//        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:[request responseData] options:0 error:nil];
-//        //Frnd
-//        NSArray *items = [dict valueForKey:@"user_data"];
-//        if (![items isEqual: [NSNull null]]) {
-//            for (NSDictionary *d in items) {
-//                if (![[d valueForKey:@"userID"] isEqual: [NSNull null]]) {
-//                    [userArray addObject:d];
-//                    [userSubArray addObject:d];
-//                }
-//            }
-//        }
-//    }
-//    @catch (NSException *exception) {
-//        
-//    }
-//    [self.userTabelObj reloadData];
-//}
 
 - (void)requestUserFail:(ASIHTTPRequest *)request
 {
@@ -994,16 +830,12 @@ NSInteger photoV=0, rowIn;
 -(IBAction)btnLogin:(id)sender
 {
     NSLog(@"Button Press");
-tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-51);
+    tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-51);
     
     if(loginSuccess != 1 || loginSuccess == nil){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Enter Login Password" message:@"" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Login",@"Cancel", nil] ;
         alertView.tag = 11;
-//        alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
         alertView.alertViewStyle = UIAlertViewStyleSecureTextInput;
-        
-//        tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-66-42);
-//        tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-51);
         
         [alertView show];
     } else {
@@ -1020,7 +852,6 @@ tableViewChat.frame = CGRectMake(0, 66, screenWidth, screenHeight-51);
 // Home Action
 - (IBAction)backToHome
 {
-    //    [self.navigationController popToRootViewControllerAnimated:NO];
     HomeViewController *home = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:home animated:YES];
