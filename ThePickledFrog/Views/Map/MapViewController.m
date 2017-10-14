@@ -80,13 +80,13 @@
     bottomTabBarHeight = 49;
     
     if(screenWidth <= 320){
-        toolbarSpace = ((screenWidth - 150) / 8);
+        toolbarSpace = ((screenWidth - 150) / 10);
     } else if (screenWidth == 375){
-        toolbarSpace = ((screenWidth - 150) / 8);
+        toolbarSpace = ((screenWidth - 150) / 10);
     } else if (screenWidth == 414){
-        toolbarSpace = ((screenWidth - 150) / 8);
+        toolbarSpace = ((screenWidth - 150) / 10);
     } else if (screenWidth == 768){
-        toolbarSpace = ((screenWidth - 150) / 8);
+        toolbarSpace = ((screenWidth - 150) / 10);
     }
     
     // Get Config Values
@@ -211,6 +211,7 @@
                 forControlEvents:UIControlEventTouchUpInside];
 
     [items addObject:hostelItem];
+//    [items addObject:fixedSpace];
     
     UIToolbar *toolbar = [[UIToolbar alloc] init];
     toolbar.frame = CGRectMake(0, screenHeight-49, screenWidth, 49);
