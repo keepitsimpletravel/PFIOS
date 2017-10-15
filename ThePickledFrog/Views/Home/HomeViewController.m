@@ -303,8 +303,6 @@
                         action:@selector(loadNext)
               forControlEvents:UIControlEventTouchUpInside];
     nextButton.frame = CGRectMake(buttonStartX+3, yPosition+3, buttonWidth-6, buttonHeight-6);
-//    nextButton.layer.borderWidth = 3.0f;
-//    nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     nextButton.layer.cornerRadius = 20; // this value vary as per your desire
     nextButton.clipsToBounds = YES;
@@ -327,11 +325,15 @@
     
     value = @"noticeboard.png";
     UIButton *noticeboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
-            [noticeboardButton addTarget:self
-                             action:@selector(loadNoticeboard)
-                   forControlEvents:UIControlEventTouchUpInside];
-    noticeboardButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
+    [noticeboardButton setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];
+    [noticeboardButton addTarget:self
+                   action:@selector(loadNoticeboard)
+         forControlEvents:UIControlEventTouchUpInside];
+    noticeboardButton.frame = CGRectMake(buttonWidth+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+    
+    noticeboardButton.layer.cornerRadius = 20; // this value vary as per your desire
+    noticeboardButton.clipsToBounds = YES;
+    
     [self.view addSubview:noticeboardButton];
     
     // Set Line below status bar

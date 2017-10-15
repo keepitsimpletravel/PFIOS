@@ -36,6 +36,9 @@
 		AB372B3D1F90CF9B00FE0438 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B271F90CF9B00FE0438 /* Icon-Small-50x50@1x.png */; };
 		AB372B3E1F90CF9B00FE0438 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372B281F90CF9B00FE0438 /* Icon-Small-50x50@2x.png */; };
 		AB372B421F91F96A00FE0438 /* PickledFrogDatabase06.db in Resources */ = {isa = PBXBuildFile; fileRef = AB372B411F91F96A00FE0438 /* PickledFrogDatabase06.db */; };
+		AB38BE9D1F9332E0002B5370 /* noticeboard@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB38BE9A1F9332E0002B5370 /* noticeboard@1x.png */; };
+		AB38BE9E1F9332E0002B5370 /* noticeboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB38BE9B1F9332E0002B5370 /* noticeboard@2x.png */; };
+		AB38BE9F1F9332E0002B5370 /* noticeboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB38BE9C1F9332E0002B5370 /* noticeboard@3x.png */; };
 		AB41B83A1F7A5EE50073728F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B8391F7A5EE50073728F /* main.m */; };
 		AB41B83D1F7A5EE50073728F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B83C1F7A5EE50073728F /* AppDelegate.m */; };
 		AB41B8401F7A5EE50073728F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41B83F1F7A5EE50073728F /* ViewController.m */; };
@@ -186,9 +189,6 @@
 		AB41B9C81F7A645F0073728F /* nex6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8F81F7A645E0073728F /* nex6.jpg */; };
 		AB41B9CA1F7A645F0073728F /* nex7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FA1F7A645E0073728F /* nex7.jpg */; };
 		AB41B9CB1F7A645F0073728F /* nex7t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FB1F7A645E0073728F /* nex7t.jpg */; };
-		AB41B9CC1F7A645F0073728F /* noticeboard.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FC1F7A645E0073728F /* noticeboard.png */; };
-		AB41B9CD1F7A645F0073728F /* noticeboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FD1F7A645E0073728F /* noticeboard@2x.png */; };
-		AB41B9CE1F7A645F0073728F /* noticeboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FE1F7A645E0073728F /* noticeboard@3x.png */; };
 		AB41B9CF1F7A645F0073728F /* par1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B8FF1F7A645E0073728F /* par1.jpg */; };
 		AB41B9D01F7A645F0073728F /* par1t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B9001F7A645E0073728F /* par1t.jpg */; };
 		AB41B9D11F7A645F0073728F /* par2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB41B9011F7A645E0073728F /* par2.jpg */; };
@@ -486,6 +486,9 @@
 		AB372B271F90CF9B00FE0438 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@1x.png"; path = "icons/AppIcon.appiconset/Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
 		AB372B281F90CF9B00FE0438 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50x50@2x.png"; path = "icons/AppIcon.appiconset/Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
 		AB372B411F91F96A00FE0438 /* PickledFrogDatabase06.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = PickledFrogDatabase06.db; path = Database/PickledFrogDatabase06.db; sourceTree = "<group>"; };
+		AB38BE9A1F9332E0002B5370 /* noticeboard@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noticeboard@1x.png"; sourceTree = "<group>"; };
+		AB38BE9B1F9332E0002B5370 /* noticeboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noticeboard@2x.png"; sourceTree = "<group>"; };
+		AB38BE9C1F9332E0002B5370 /* noticeboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noticeboard@3x.png"; sourceTree = "<group>"; };
 		AB41B8351F7A5EE50073728F /* ThePickledFrog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePickledFrog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB41B8391F7A5EE50073728F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB41B83B1F7A5EE50073728F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -644,9 +647,6 @@
 		AB41B8F81F7A645E0073728F /* nex6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nex6.jpg; path = graphics/nex6.jpg; sourceTree = "<group>"; };
 		AB41B8FA1F7A645E0073728F /* nex7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nex7.jpg; path = graphics/nex7.jpg; sourceTree = "<group>"; };
 		AB41B8FB1F7A645E0073728F /* nex7t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nex7t.jpg; path = graphics/nex7t.jpg; sourceTree = "<group>"; };
-		AB41B8FC1F7A645E0073728F /* noticeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noticeboard.png; path = graphics/noticeboard.png; sourceTree = "<group>"; };
-		AB41B8FD1F7A645E0073728F /* noticeboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticeboard@2x.png"; path = "graphics/noticeboard@2x.png"; sourceTree = "<group>"; };
-		AB41B8FE1F7A645E0073728F /* noticeboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticeboard@3x.png"; path = "graphics/noticeboard@3x.png"; sourceTree = "<group>"; };
 		AB41B8FF1F7A645E0073728F /* par1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = par1.jpg; path = graphics/par1.jpg; sourceTree = "<group>"; };
 		AB41B9001F7A645E0073728F /* par1t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = par1t.jpg; path = graphics/par1t.jpg; sourceTree = "<group>"; };
 		AB41B9011F7A645E0073728F /* par2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = par2.jpg; path = graphics/par2.jpg; sourceTree = "<group>"; };
@@ -1099,6 +1099,9 @@
 		AB41B86C1F7A642E0073728F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AB38BE9A1F9332E0002B5370 /* noticeboard@1x.png */,
+				AB38BE9B1F9332E0002B5370 /* noticeboard@2x.png */,
+				AB38BE9C1F9332E0002B5370 /* noticeboard@3x.png */,
 				AB372B131F90CF9B00FE0438 /* Icon-App-20x20@1x.png */,
 				AB372B141F90CF9B00FE0438 /* Icon-App-20x20@2x.png */,
 				AB372B151F90CF9B00FE0438 /* Icon-App-20x20@3x.png */,
@@ -1285,9 +1288,6 @@
 				AB41B8F81F7A645E0073728F /* nex6.jpg */,
 				AB41B8FA1F7A645E0073728F /* nex7.jpg */,
 				AB41B8FB1F7A645E0073728F /* nex7t.jpg */,
-				AB41B8FC1F7A645E0073728F /* noticeboard.png */,
-				AB41B8FD1F7A645E0073728F /* noticeboard@2x.png */,
-				AB41B8FE1F7A645E0073728F /* noticeboard@3x.png */,
 				AB41B8FF1F7A645E0073728F /* par1.jpg */,
 				AB41B9001F7A645E0073728F /* par1t.jpg */,
 				AB41B9011F7A645E0073728F /* par2.jpg */,
@@ -2131,7 +2131,6 @@
 				AB41B9821F7A645F0073728F /* eat8t.jpg in Resources */,
 				AB41BA061F7A645F0073728F /* tra7t.jpg in Resources */,
 				AB41B9481F7A645F0073728F /* abo2.jpg in Resources */,
-				AB41B9CC1F7A645F0073728F /* noticeboard.png in Resources */,
 				AB372B061F90CDD100FE0438 /* stationmap@2x.png in Resources */,
 				AB41B9E61F7A645F0073728F /* postnotice@3x.png in Resources */,
 				AB372B351F90CF9B00FE0438 /* Icon-App-60x60@2x.png in Resources */,
@@ -2202,6 +2201,7 @@
 				AB41B9A61F7A645F0073728F /* followus.png in Resources */,
 				AB41B9E01F7A645F0073728F /* par9t.jpg in Resources */,
 				AB41B9551F7A645F0073728F /* attractionmap.png in Resources */,
+				AB38BE9F1F9332E0002B5370 /* noticeboard@3x.png in Resources */,
 				AB7AA5771F81EE27001DFF05 /* ChatViewController.xib in Resources */,
 				AB41B9CB1F7A645F0073728F /* nex7t.jpg in Resources */,
 				AB41B9661F7A645F0073728F /* contactus@3x.png in Resources */,
@@ -2219,7 +2219,6 @@
 				AB372B2D1F90CF9B00FE0438 /* Icon-App-29x29@2x.png in Resources */,
 				AB41BA0C1F7A645F0073728F /* websitecontact@3x.png in Resources */,
 				AB41B9BD1F7A645F0073728F /* maptoolbar@3x.png in Resources */,
-				AB41B9CD1F7A645F0073728F /* noticeboard@2x.png in Resources */,
 				AB7AA5B31F81EE27001DFF05 /* send1@2x.png in Resources */,
 				AB372B341F90CF9B00FE0438 /* Icon-App-60x60@1x.png in Resources */,
 				AB7AA6C11F8CC60D001DFF05 /* FeedbackViewController.xib in Resources */,
@@ -2306,9 +2305,11 @@
 				AB7AA5A31F81EE27001DFF05 /* BrowseProfileViewController.xib in Resources */,
 				AB41B9B01F7A645F0073728F /* hostellogo@2x.png in Resources */,
 				AB41B9C01F7A645F0073728F /* nex2.jpg in Resources */,
+				AB38BE9D1F9332E0002B5370 /* noticeboard@1x.png in Resources */,
 				AB7AA6281F84E7C8001DFF05 /* roo11t.jpg in Resources */,
 				AB7AA6221F84E7C8001DFF05 /* roo4t.jpg in Resources */,
 				AB41B9761F7A645F0073728F /* eat2t.jpg in Resources */,
+				AB38BE9E1F9332E0002B5370 /* noticeboard@2x.png in Resources */,
 				AB41B9E91F7A645F0073728F /* profilechat@3x.png in Resources */,
 				AB41B93F1F7A645F0073728F /* abo11.jpg in Resources */,
 				AB41B9631F7A645F0073728F /* callushostel@3x.png in Resources */,
@@ -2352,7 +2353,6 @@
 				AB7AA4DC1F81EE1B001DFF05 /* zoomPopupClose@2x.png in Resources */,
 				AB41B9931F7A645F0073728F /* exp13.jpg in Resources */,
 				AB41B9E11F7A645F0073728F /* phonecontact.png in Resources */,
-				AB41B9CE1F7A645F0073728F /* noticeboard@3x.png in Resources */,
 				AB41B98D1F7A645F0073728F /* exp10.jpg in Resources */,
 				AB41B9831F7A645F0073728F /* eatingmap.png in Resources */,
 				AB7AA59E1F81EE27001DFF05 /* ProfileViewController.xib in Resources */,
