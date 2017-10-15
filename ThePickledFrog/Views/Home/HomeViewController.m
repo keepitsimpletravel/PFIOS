@@ -147,9 +147,7 @@
             [hostelButton addTarget:self
                              action:@selector(loadHostel)
                    forControlEvents:UIControlEventTouchUpInside];
-    hostelButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
-    hostelButton.layer.borderWidth = 3.0f;
-    hostelButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    hostelButton.frame = CGRectMake(buttonWidth+3, yPosition+3, buttonWidth-6, buttonHeight-6);
     
     hostelButton.layer.cornerRadius = 20; // this value vary as per your desire
     hostelButton.clipsToBounds = YES;
@@ -184,9 +182,9 @@
     [seeButton addTarget:self
                      action:@selector(loadAttractions)
            forControlEvents:UIControlEventTouchUpInside];
-    seeButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-    seeButton.layer.borderWidth = 3.0f;
-    seeButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    seeButton.frame = CGRectMake(buttonStartX+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+//    seeButton.layer.borderWidth = 3.0f;
+//    seeButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     seeButton.layer.cornerRadius = 20; // this value vary as per your desire
     seeButton.clipsToBounds = YES;
@@ -213,9 +211,9 @@
     [partyButton addTarget:self
                      action:@selector(loadDrinks)
            forControlEvents:UIControlEventTouchUpInside];
-    partyButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
-    partyButton.layer.borderWidth = 3.0f;
-    partyButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    partyButton.frame = CGRectMake(buttonWidth+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+//    partyButton.layer.borderWidth = 3.0f;
+//    partyButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     partyButton.layer.cornerRadius = 20; // this value vary as per your desire
     partyButton.clipsToBounds = YES;
@@ -244,9 +242,9 @@
     [transportButton addTarget:self
                   action:@selector(loadTransport)
         forControlEvents:UIControlEventTouchUpInside];
-    transportButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-    transportButton.layer.borderWidth = 3.0f;
-    transportButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    transportButton.frame = CGRectMake(buttonStartX+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+//    transportButton.layer.borderWidth = 3.0f;
+//    transportButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     transportButton.layer.cornerRadius = 20; // this value vary as per your desire
     transportButton.clipsToBounds = YES;
@@ -273,9 +271,9 @@
     [eatButton addTarget:self
                     action:@selector(loadEats)
           forControlEvents:UIControlEventTouchUpInside];
-    eatButton.frame = CGRectMake(buttonWidth, yPosition, buttonWidth, buttonHeight);
-    eatButton.layer.borderWidth = 3.0f;
-    eatButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    eatButton.frame = CGRectMake(buttonWidth+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+//    eatButton.layer.borderWidth = 3.0f;
+//    eatButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     eatButton.layer.cornerRadius = 20; // this value vary as per your desire
     eatButton.clipsToBounds = YES;
@@ -304,9 +302,9 @@
     [nextButton addTarget:self
                         action:@selector(loadNext)
               forControlEvents:UIControlEventTouchUpInside];
-    nextButton.frame = CGRectMake(buttonStartX, yPosition, buttonWidth, buttonHeight);
-    nextButton.layer.borderWidth = 3.0f;
-    nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    nextButton.frame = CGRectMake(buttonStartX+3, yPosition+3, buttonWidth-6, buttonHeight-6);
+//    nextButton.layer.borderWidth = 3.0f;
+//    nextButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     nextButton.layer.cornerRadius = 20; // this value vary as per your desire
     nextButton.clipsToBounds = YES;

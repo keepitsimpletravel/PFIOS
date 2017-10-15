@@ -19,15 +19,11 @@
 - (NSString *) getBaseURL
 {
     return @"http://kistchatstorage.com/PickledFrogDB/";
-//    return @"http://kistchatstorage.com/makatiNoticeboard";
-//    return @"http://kistchatstorage.com/makatiNB";
 }
 
 - (NSString *) getNBURL
 {
     return @"http://kistchatstorage.com/PickledFrogDB/";
-//    return @"http://kistchatstorage.com/makatiChat/";
-//    return @"http://kistchatstorage.com/chat/";
 }
 
 -(NSString *)getdbPath
