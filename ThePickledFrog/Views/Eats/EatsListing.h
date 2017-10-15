@@ -13,13 +13,9 @@
 {
     NSInteger viewNumber;
     id<DataSource> dataSource;
-//    NSArray *foodTypes;
     NSArray *eatsThumbnails;
-//    NSArray *drinksThumbnails;
-//    NSArray *attractionsThumbnails;
     UITableView *eatsListingTable1;
     UITableView *eatsListingTable2;
-//    UITableView *eatsListingTable3;
     NSInteger selectedRow;
     
     UIScrollView *ContentScrollView;

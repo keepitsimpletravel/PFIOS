@@ -384,13 +384,7 @@
                 thumbnailToUse = thumbnailLookup;
             }
         }
-        
-        
-        //        ThumbnailLookup *thumbnailLookup = [attractionsThumbnails objectAtIndex:indexPath.row];
         cell.thumbnailImageView.image = [UIImage imageNamed:thumbnailToUse.photoName];
-        
-        //        cell.thumbnailImageView.image = [UIImage imageNamed:[eatsThumbnails objectAtIndex:indexPath.row]];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         
         return cell;
