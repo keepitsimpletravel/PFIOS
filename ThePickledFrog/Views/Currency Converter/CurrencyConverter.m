@@ -56,15 +56,16 @@
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     // Set the font settings
-//    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
+    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     
-//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-//    backgroundView.opaque = YES;
-//    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
-//    backgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-//    backgroundView.opaque = NO;
-//    [self.view addSubview:backgroundView];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"ccbg"] drawInRect:self.view.bounds];
+    UIImage *imageBG = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:imageBG];
+    
     
     NSInteger buttonWidth = 0;
     NSInteger buttonHeight = 0;
@@ -88,7 +89,7 @@
     }
     
     NSString *titleValue = @"CURRENCY";
-    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:18];
+    UIFont* titleFont = [UIFont fontWithName:@"OpenSans-CondensedBold" size:24];
     CGSize requestedTitleSize = [titleValue sizeWithAttributes:@{NSFontAttributeName: titleFont}];
     CGFloat titleWidth = MIN(screenWidth, requestedTitleSize.width);
     
@@ -124,29 +125,6 @@
     ContentScrollView.scrollEnabled = YES;
     ContentScrollView.userInteractionEnabled=YES;
     
-//    // Add Image Scroll View
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, homeImage)];
-//    
-//    NSString *name = @"header.jpg";
-//    
-//    [imageView setImage:[UIImage imageNamed:name]];
-//    [ContentScrollView addSubview:imageView];
-//    
-//    yPosition = yPosition + homeImage;
-//    
-//    // Small Black Line between Image and Table View
-//    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-//    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-//    [ContentScrollView addSubview:imageLine];
-    NSString *value = @"hostellogo.png";
-    UIImage *image = [[UIImage alloc] init];
-    image = [UIImage imageNamed:value];
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
-    logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
-    [ContentScrollView addSubview:logoView];
-    
-    yPosition = yPosition + homeImage;
-    
     // Set the Text RGB from the configuration file
     NSString *textR = [configurationValues objectForKey:@"TextRed"];
     NSInteger textRed = [textR integerValue];
@@ -172,7 +150,8 @@
     self.umAlertView.delegate = self;
     
     // Space - need to determine what this space should be
-    NSInteger space = (screenHeight - 66 - 51 - 220-homeImage-60)/2;
+//    NSInteger space = (screenHeight - 66 - 51 - 220-homeImage-60)/2;
+    NSInteger space = (screenHeight - 427)/2;
     yPosition = yPosition + space;
     
     

@@ -282,6 +282,7 @@
 		AB41BA721F80E9770073728F /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA711F80E9770073728F /* Configuration.plist */; };
 		AB41BA761F81D2FB0073728F /* HostelDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */; };
 		AB41BA771F81D2FB0073728F /* HostelDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */; };
+		AB50F93A1F9E041A00CD240E /* ccbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AB50F9391F9E041A00CD240E /* ccbg.png */; };
 		AB7AA4D41F81EE1B001DFF05 /* Noticeboard2.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4C71F81EE1B001DFF05 /* Noticeboard2.m */; };
 		AB7AA4D51F81EE1B001DFF05 /* Noticeboard2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7AA4C81F81EE1B001DFF05 /* Noticeboard2.xib */; };
 		AB7AA4D61F81EE1B001DFF05 /* NoticeboardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7AA4CA1F81EE1B001DFF05 /* NoticeboardCustomCell.m */; };
@@ -762,6 +763,7 @@
 		AB41BA731F81D2FB0073728F /* HostelDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostelDetailsViewController.m; path = "Views/Hostel Details/HostelDetailsViewController.m"; sourceTree = "<group>"; };
 		AB41BA741F81D2FB0073728F /* HostelDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostelDetailsViewController.h; path = "Views/Hostel Details/HostelDetailsViewController.h"; sourceTree = "<group>"; };
 		AB41BA751F81D2FB0073728F /* HostelDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HostelDetailsViewController.xib; path = "Views/Hostel Details/HostelDetailsViewController.xib"; sourceTree = "<group>"; };
+		AB50F9391F9E041A00CD240E /* ccbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ccbg.png; path = graphics/ccbg.png; sourceTree = "<group>"; };
 		AB7AA4C61F81EE1B001DFF05 /* Noticeboard2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Noticeboard2.h; sourceTree = "<group>"; };
 		AB7AA4C71F81EE1B001DFF05 /* Noticeboard2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Noticeboard2.m; sourceTree = "<group>"; };
 		AB7AA4C81F81EE1B001DFF05 /* Noticeboard2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Noticeboard2.xib; sourceTree = "<group>"; };
@@ -1099,6 +1101,7 @@
 		AB41B86C1F7A642E0073728F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AB50F9391F9E041A00CD240E /* ccbg.png */,
 				AB38BE9A1F9332E0002B5370 /* noticeboard@1x.png */,
 				AB38BE9B1F9332E0002B5370 /* noticeboard@2x.png */,
 				AB38BE9C1F9332E0002B5370 /* noticeboard@3x.png */,
@@ -2389,6 +2392,7 @@
 				AB7AA6881F879DB1001DFF05 /* AttractionsListing.xib in Resources */,
 				AB41B9771F7A645F0073728F /* eat3.jpg in Resources */,
 				AB41B9591F7A645F0073728F /* bookabedhostel@2x.png in Resources */,
+				AB50F93A1F9E041A00CD240E /* ccbg.png in Resources */,
 				AB7AA5701F81EE27001DFF05 /* back-btn_n.png in Resources */,
 				AB41B9A71F7A645F0073728F /* followus@2x.png in Resources */,
 				AB41B9F81F7A645F0073728F /* submitfeedback@3x.png in Resources */,
