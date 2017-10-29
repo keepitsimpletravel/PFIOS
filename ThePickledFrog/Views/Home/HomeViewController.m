@@ -311,7 +311,7 @@
     
     UILabel *nextLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
-    nextLabel.text = @"NEXT STOP";
+    nextLabel.text = @"WHERE NEXT";
     nextLabel.textColor = [UIColor whiteColor];
     [nextLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
