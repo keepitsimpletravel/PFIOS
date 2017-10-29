@@ -104,7 +104,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     NSDictionary *configurationValues = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSString *titleValue = @"SEE";
+    NSString *titleValue = @"EXPLORE";
 //    NSString *headingFont = [configurationValues objectForKey:@"HeadingFont"];
 //    NSString *bodyFont = [configurationValues objectForKey:@"BodyFont"];
     NSInteger fontSize = [[configurationValues objectForKey:@"TextSize"] integerValue];
@@ -149,11 +149,6 @@
     [self.view addSubview:statusBarLine];
     
     yPosition = yPosition + lineSize;
-    
-    // Get the Activity
-//    allActivites = activityArray;
-    
-//    [self setActivity:activityArray[currentIndex]];
     
     // Add scroll view programmatically
     MainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,yPosition, screenWidth, screenHeight-64-49-4)];

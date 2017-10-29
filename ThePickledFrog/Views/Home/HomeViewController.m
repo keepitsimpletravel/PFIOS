@@ -193,7 +193,7 @@
     
     UILabel *seeLabel = [[UILabel alloc] initWithFrame:CGRectMake((centreX-(overlayWidth/2)),(centreY-(overlayHeight/2)),overlayWidth,overlayHeight)];
     
-    seeLabel.text = @"SEE";
+    seeLabel.text = @"EXPLORE";
     seeLabel.textColor = [UIColor whiteColor];
     [seeLabel setFont:[UIFont fontWithName:@"OpenSans-CondensedBold" size:24]];
     
