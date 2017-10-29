@@ -219,6 +219,10 @@
     UIImage *conversionImage = [UIImage imageNamed:@"currencyconvert.png"];
     [converterView setImage:conversionImage];
     
+    // Round the corners
+    converterView.layer.cornerRadius = 10; // this value vary as per your desire
+    converterView.clipsToBounds = YES;
+    
     [ContentScrollView addSubview:converterView];
     
     yPosition = yPosition + converterView.frame.size.height + 15;
