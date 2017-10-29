@@ -120,10 +120,10 @@
     [bookingButton setImage:bookingImage forState:UIControlStateNormal];
     UIBarButtonItem *bookingItem = [[UIBarButtonItem alloc] initWithCustomView:bookingButton];
     
-//    if([fullURL isEqualToString:bookingURL]){
+    if([fullURL isEqualToString:bookingURL]){
         bookingButton.enabled = NO;
         bookingButton.alpha = 0.4;
-//    }
+    }
     
     [bookingButton addTarget:self
                       action:@selector(loadBooking)
