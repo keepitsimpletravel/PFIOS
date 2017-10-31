@@ -395,7 +395,7 @@
     // Assign new frame to your view
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
-    [self.view setFrame:CGRectMake(0,-170,screenWidth,screenHeight)]; //here taken -110 for example i.e. your view will be scrolled to -110. change its value according to your requirement.
+    [self.view setFrame:CGRectMake(0,-110,screenWidth,screenHeight)]; //here taken -110 for example i.e. your view will be scrolled to -110. change its value according to your requirement.
     
     [UIView commitAnimations];
     
