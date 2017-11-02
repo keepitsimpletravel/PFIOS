@@ -132,6 +132,10 @@
     logoView.frame = CGRectMake((screenWidth/2)-(buttonWidth/2), yPosition, buttonWidth, buttonHeight);
     [ContentScrollView addSubview:logoView];
     
+    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, homeImage+66, screenWidth, lineSize)];
+    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+    [ContentScrollView addSubview:imageLine];
+    
     yPosition = yPosition + homeImage + 2;
     
 //    UIView *tabbedSection = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 30)];
@@ -496,29 +500,11 @@
     [nextListing setTitle:@"WHERE NEXT"];
     [nextListing setTitleValue:@"WHERE NEXT"];
     [nextListing setWhereNext:next];
-//    [eatListing setCurrentIndex:selectedRow];
-//    [nextListing setFromMap:0];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     [self.navigationController pushViewController:nextListing animated:YES];
 }
-
-//- (IBAction)segmentSelection:(UISegmentedControl *)sender {
-//    if (sender.selectedSegmentIndex == 0) {
-//        nextListingTable1.hidden = NO;
-//        nextListingTable2.hidden = YES;
-//        nextListingTable3.hidden = YES;
-//    } else if (sender.selectedSegmentIndex == 1){
-//        nextListingTable1.hidden = YES;
-//        nextListingTable2.hidden = NO;
-//        nextListingTable3.hidden = YES;
-//    } else if (sender.selectedSegmentIndex == 2){
-//        nextListingTable1.hidden = YES;
-//        nextListingTable2.hidden = YES;
-//        nextListingTable3.hidden = NO;
-//    }
-//}
 
 - (IBAction)loadMap
 {
