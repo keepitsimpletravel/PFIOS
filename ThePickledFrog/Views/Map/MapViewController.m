@@ -125,13 +125,13 @@
     // Toolbar
     NSMutableArray *items = [[NSMutableArray alloc] init];
     
-    UIBarButtonItem *fixedSpace =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                                  target:nil
-                                                  action:nil];
-    fixedSpace.width = toolbarSpace;
+//    UIBarButtonItem *fixedSpace =
+//    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+//                                                  target:nil
+//                                                  action:nil];
+//    fixedSpace.width = toolbarSpace;
 
-    [items addObject:fixedSpace];
+//    [items addObject:fixedSpace];
 
     // Eats
     NSString *imageValue = @"eatingmap.png";
@@ -139,7 +139,7 @@
     UIImage *eatImage = [UIImage imageNamed:imageValue];
     UIButton *eatButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    eatButton.bounds = CGRectMake(0, 0, 30, 30);
+    eatButton.bounds = CGRectMake(0, 0, screenWidth/6, 49);
     [eatButton setImage:eatImage forState:UIControlStateNormal];
     UIBarButtonItem *eatItem = [[UIBarButtonItem alloc] initWithCustomView:eatButton];
     [eatButton addTarget:self
@@ -147,7 +147,7 @@
              forControlEvents:UIControlEventTouchUpInside];
 
     [items addObject:eatItem];
-    [items addObject:fixedSpace];
+//    [items addObject:fixedSpace];
 
     // Drinks
     imageValue = @"drinkingmap.png";
@@ -155,7 +155,7 @@
     UIImage *drinkImage = [UIImage imageNamed:imageValue];
     UIButton *drinkButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    drinkButton.bounds = CGRectMake(0, 0, 30, 30);
+    drinkButton.bounds = CGRectMake(0, 0, screenWidth/6, 49);
     [drinkButton setImage:drinkImage forState:UIControlStateNormal];
     UIBarButtonItem *drinkItem = [[UIBarButtonItem alloc] initWithCustomView:drinkButton];
     [drinkButton addTarget:self
@@ -163,7 +163,7 @@
             forControlEvents:UIControlEventTouchUpInside];
 
     [items addObject:drinkItem];
-    [items addObject:fixedSpace];
+//    [items addObject:fixedSpace];
 
     // Attractions
     imageValue = @"attractionmap.png";
@@ -171,7 +171,7 @@
     UIImage *attractionImage = [UIImage imageNamed:imageValue];
     UIButton *attractionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    attractionsButton.bounds = CGRectMake(0, 0, 30, 30);
+    attractionsButton.bounds = CGRectMake(0, 0, screenWidth/6, 49);
     [attractionsButton setImage:attractionImage forState:UIControlStateNormal];
     UIBarButtonItem *attractionsItem = [[UIBarButtonItem alloc] initWithCustomView:attractionsButton];
     [attractionsButton addTarget:self
@@ -179,7 +179,7 @@
          forControlEvents:UIControlEventTouchUpInside];
 
     [items addObject:attractionsItem];
-    [items addObject:fixedSpace];
+//    [items addObject:fixedSpace];
     
     // Transports
     imageValue = @"stationmap.png";
@@ -187,7 +187,7 @@
     UIImage *directionsImage = [UIImage imageNamed:imageValue];
     UIButton *directionsButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    directionsButton.bounds = CGRectMake(0, 0, 30, 30);
+    directionsButton.bounds = CGRectMake(0, 0, screenWidth/6, 49);
     [directionsButton setImage:directionsImage forState:UIControlStateNormal];
     UIBarButtonItem *directionsItem = [[UIBarButtonItem alloc] initWithCustomView:directionsButton];
     [directionsButton addTarget:self
@@ -195,7 +195,7 @@
                 forControlEvents:UIControlEventTouchUpInside];
     
     [items addObject:directionsItem];
-    [items addObject:fixedSpace];
+//    [items addObject:fixedSpace];
     
     // Hostel
     imageValue = @"hostelmap.png";
@@ -203,7 +203,7 @@
     UIImage *hostelImage = [UIImage imageNamed:imageValue];
     UIButton *hostelButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    hostelButton.bounds = CGRectMake(0, 0, 30, 30);
+    hostelButton.bounds = CGRectMake(0, 0, screenWidth/6, 49);
     [hostelButton setImage:hostelImage forState:UIControlStateNormal];
     UIBarButtonItem *hostelItem = [[UIBarButtonItem alloc] initWithCustomView:hostelButton];
     [hostelButton addTarget:self
