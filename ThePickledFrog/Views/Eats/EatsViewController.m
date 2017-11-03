@@ -286,7 +286,7 @@
         
     aboutPosition = aboutPosition + 8 + descLabel.frame.size.height;
         
-    aboutPosition = aboutPosition + 15;
+    aboutPosition = aboutPosition + 15 + 15;
     
     // Show Map Button
     UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, mapButtonHeight)];

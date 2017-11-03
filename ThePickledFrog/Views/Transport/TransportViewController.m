@@ -255,7 +255,7 @@
 //    NSLog(@"longitude, %d", test);
     
     if(transport.longitude != nil){
-        UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, mapButtonHeight)];
+        UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition+15, screenWidth-80, mapButtonHeight)];
         UIImage *showmapButtonImage = [UIImage imageNamed:@"showmap.png"];
         [showmapButton setImage:showmapButtonImage forState:UIControlStateNormal];
         [showmapButton addTarget:self

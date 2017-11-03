@@ -284,7 +284,7 @@
     [descLabel sizeToFit];
     [aboutView addSubview:descLabel];
     
-    aboutPosition = aboutPosition + 8 + descLabel.frame.size.height;
+    aboutPosition = aboutPosition + 8 + descLabel.frame.size.height + 15;
     
     // Show Map Button
     UIButton *showmapButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, screenWidth-80, mapButtonHeight)];
