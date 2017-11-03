@@ -657,7 +657,7 @@
     contactView.hidden = YES;
     [ContentScrollView addSubview:contactView];
     
-    yPosition = yPosition + roomsListing.frame.size.height + 20;
+    yPosition = yPosition + roomsListing.frame.size.height + 20 + 15;
     
     // Set Content Size for Scroll View
     ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
