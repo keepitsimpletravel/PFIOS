@@ -212,7 +212,7 @@
     UIView *tabbedSection = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, 30)];
     NSArray *itemArray = [NSArray arrayWithObjects: @"About", @"Contact", nil];
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    segmentedControl.frame = CGRectMake(0, 0, screenWidth, 30);
+    segmentedControl.frame = CGRectMake(20, 0, screenWidth-40, 30);
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
     [segmentedControl addTarget:self action:@selector(tabSelection:) forControlEvents: UIControlEventValueChanged];
     segmentedControl.selectedSegmentIndex = 0;

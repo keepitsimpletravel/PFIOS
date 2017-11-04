@@ -354,7 +354,7 @@
     NSArray *itemArray = [NSArray arrayWithObjects: @"Rooms", @"Facilities", @"Contact", nil];
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    segmentedControl.frame = CGRectMake(10, 0, screenWidth-20, 30);
+    segmentedControl.frame = CGRectMake(20, 0, screenWidth-40, 30);
     segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
     [segmentedControl addTarget:self action:@selector(segmentSelection:) forControlEvents: UIControlEventValueChanged];
     segmentedControl.selectedSegmentIndex = 0;
