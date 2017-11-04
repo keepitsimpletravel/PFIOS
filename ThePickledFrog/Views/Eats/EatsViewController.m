@@ -301,7 +301,7 @@
 
     // Social Media buttons
     UIButton *fbButton = [[UIButton alloc] initWithFrame:CGRectMake(40, aboutPosition, smWidth, smHeight)];
-    UIImage *fbImage = [UIImage imageNamed:@"likeus.png"];
+    UIImage *fbImage = [UIImage imageNamed:@"facebook.png"];
     if ([food.facebookURL length] > 0){
         
     } else {
@@ -318,7 +318,7 @@
     NSInteger xPosition = 40 + smWidth + 15;
        
     UIButton *taButton = [[UIButton alloc] initWithFrame:CGRectMake(xPosition, aboutPosition, smWidth, smHeight)];
-    UIImage *taImage = [UIImage imageNamed:@"rateus.png"];
+    UIImage *taImage = [UIImage imageNamed:@"tripadvisor.png"];
     
     if ([food.taLink length] > 0){
         
@@ -336,7 +336,7 @@
     xPosition = xPosition + smWidth + 15;
         
     UIButton *instaButton = [[UIButton alloc] initWithFrame:CGRectMake(xPosition, aboutPosition, smWidth, smHeight)];
-    UIImage *instaImage = [UIImage imageNamed:@"followus.png"];
+    UIImage *instaImage = [UIImage imageNamed:@"instagram.png"];
     
     if ([food.instaURL length] > 0){
         
