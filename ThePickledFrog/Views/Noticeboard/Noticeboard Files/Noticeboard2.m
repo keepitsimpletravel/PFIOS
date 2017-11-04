@@ -211,7 +211,7 @@ NSInteger photoV=0, rowIn;
     [homeButton setImage:imageHome forState:UIControlStateNormal];
     UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithCustomView:homeButton];
     [homeButton addTarget:self
-                   action:@selector(loadHome)
+                   action:@selector(backToHome)
          forControlEvents:UIControlEventTouchUpInside];
     homeButton.alpha = 0.4;
     
