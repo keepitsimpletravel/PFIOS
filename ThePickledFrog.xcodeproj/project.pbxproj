@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2D368F1FAEC93F009D8300 /* hostellabweb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D36891FAEC93F009D8300 /* hostellabweb@3x.png */; };
+		AB2D36901FAEC93F009D8300 /* hostellabweb@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D368A1FAEC93F009D8300 /* hostellabweb@1x.png */; };
+		AB2D36911FAEC93F009D8300 /* hostellabweb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D368B1FAEC93F009D8300 /* hostellabweb@2x.png */; };
+		AB2D36921FAEC93F009D8300 /* noticeboard.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D368C1FAEC93F009D8300 /* noticeboard.png */; };
+		AB2D36931FAEC93F009D8300 /* noticeboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D368D1FAEC93F009D8300 /* noticeboard@2x.png */; };
+		AB2D36941FAEC93F009D8300 /* noticeboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB2D368E1FAEC93F009D8300 /* noticeboard@3x.png */; };
 		AB372B051F90CDD100FE0438 /* stationmap@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AF81F90CDD100FE0438 /* stationmap@1x.png */; };
 		AB372B061F90CDD100FE0438 /* stationmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AF91F90CDD100FE0438 /* stationmap@2x.png */; };
 		AB372B071F90CDD100FE0438 /* stationmap@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB372AFA1F90CDD100FE0438 /* stationmap@3x.png */; };
@@ -458,6 +464,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB2D36891FAEC93F009D8300 /* hostellabweb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellabweb@3x.png"; path = "graphics/hostellabweb@3x.png"; sourceTree = "<group>"; };
+		AB2D368A1FAEC93F009D8300 /* hostellabweb@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellabweb@1x.png"; path = "graphics/hostellabweb@1x.png"; sourceTree = "<group>"; };
+		AB2D368B1FAEC93F009D8300 /* hostellabweb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hostellabweb@2x.png"; path = "graphics/hostellabweb@2x.png"; sourceTree = "<group>"; };
+		AB2D368C1FAEC93F009D8300 /* noticeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noticeboard.png; path = graphics/noticeboard.png; sourceTree = "<group>"; };
+		AB2D368D1FAEC93F009D8300 /* noticeboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticeboard@2x.png"; path = "graphics/noticeboard@2x.png"; sourceTree = "<group>"; };
+		AB2D368E1FAEC93F009D8300 /* noticeboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "noticeboard@3x.png"; path = "graphics/noticeboard@3x.png"; sourceTree = "<group>"; };
 		AB372AF81F90CDD100FE0438 /* stationmap@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@1x.png"; path = "graphics/stationmap@1x.png"; sourceTree = "<group>"; };
 		AB372AF91F90CDD100FE0438 /* stationmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@2x.png"; path = "graphics/stationmap@2x.png"; sourceTree = "<group>"; };
 		AB372AFA1F90CDD100FE0438 /* stationmap@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stationmap@3x.png"; path = "graphics/stationmap@3x.png"; sourceTree = "<group>"; };
@@ -1101,6 +1113,12 @@
 		AB41B86C1F7A642E0073728F /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AB2D36891FAEC93F009D8300 /* hostellabweb@3x.png */,
+				AB2D368A1FAEC93F009D8300 /* hostellabweb@1x.png */,
+				AB2D368B1FAEC93F009D8300 /* hostellabweb@2x.png */,
+				AB2D368C1FAEC93F009D8300 /* noticeboard.png */,
+				AB2D368D1FAEC93F009D8300 /* noticeboard@2x.png */,
+				AB2D368E1FAEC93F009D8300 /* noticeboard@3x.png */,
 				AB50F9391F9E041A00CD240E /* ccbg.png */,
 				AB38BE9A1F9332E0002B5370 /* noticeboard@1x.png */,
 				AB38BE9B1F9332E0002B5370 /* noticeboard@2x.png */,
@@ -2118,6 +2136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2D36921FAEC93F009D8300 /* noticeboard.png in Resources */,
 				AB41B8481F7A5EE50073728F /* LaunchScreen.storyboard in Resources */,
 				AB372B3D1F90CF9B00FE0438 /* Icon-Small-50x50@1x.png in Resources */,
 				AB41BA051F7A645F0073728F /* tra7.jpg in Resources */,
@@ -2165,6 +2184,7 @@
 				AB41B95E1F7A645F0073728F /* booknow.png in Resources */,
 				AB41B9461F7A645F0073728F /* abo18.jpg in Resources */,
 				AB41B93E1F7A645F0073728F /* abo10.jpg in Resources */,
+				AB2D368F1FAEC93F009D8300 /* hostellabweb@3x.png in Resources */,
 				AB7AA6BC1F8CC24E001DFF05 /* ContactViewController.xib in Resources */,
 				AB41BA2C1F7A68F20073728F /* RightViewController.xib in Resources */,
 				AB41B94B1F7A645F0073728F /* abo3.jpg in Resources */,
@@ -2214,6 +2234,7 @@
 				AB41B96C1F7A645F0073728F /* directionshostel@3x.png in Resources */,
 				AB41B9541F7A645F0073728F /* addresscontact@3x.png in Resources */,
 				AB7AA6261F84E7C8001DFF05 /* currencyconvert@2x.png in Resources */,
+				AB2D36941FAEC93F009D8300 /* noticeboard@3x.png in Resources */,
 				AB7AA5B01F81EE27001DFF05 /* buttonbg@2x.png in Resources */,
 				AB41B98F1F7A645F0073728F /* exp11.jpg in Resources */,
 				AB41B94F1F7A645F0073728F /* abo7.jpg in Resources */,
@@ -2267,6 +2288,7 @@
 				AB41B9BB1F7A645F0073728F /* maptoolbar.png in Resources */,
 				AB7AA5791F81EE27001DFF05 /* PhotoChatCustomCell.xib in Resources */,
 				AB41B9E51F7A645F0073728F /* postnotice@2x.png in Resources */,
+				AB2D36931FAEC93F009D8300 /* noticeboard@2x.png in Resources */,
 				AB41B96D1F7A645F0073728F /* directionsmap.png in Resources */,
 				AB372B421F91F96A00FE0438 /* PickledFrogDatabase06.db in Resources */,
 				AB7AA5751F81EE27001DFF05 /* ChatCustomCell.xib in Resources */,
@@ -2282,6 +2304,7 @@
 				AB41B9871F7A645F0073728F /* emailcontact@2x.png in Resources */,
 				AB41B9AA1F7A645F0073728F /* hamburgermenu@2x.png in Resources */,
 				AB372B2F1F90CF9B00FE0438 /* Icon-App-40x40@1x.png in Resources */,
+				AB2D36911FAEC93F009D8300 /* hostellabweb@2x.png in Resources */,
 				AB41B9EF1F7A645F0073728F /* Redflagchat@3x.png in Resources */,
 				AB41B9751F7A645F0073728F /* eat2.jpg in Resources */,
 				AB41B9D61F7A645F0073728F /* par4t.jpg in Resources */,
@@ -2352,6 +2375,7 @@
 				AB372B321F90CF9B00FE0438 /* Icon-App-57x57@1x.png in Resources */,
 				AB7AA62F1F84E7C8001DFF05 /* roo5t.jpg in Resources */,
 				AB41B98B1F7A645F0073728F /* emailushostel@3x.png in Resources */,
+				AB2D36901FAEC93F009D8300 /* hostellabweb@1x.png in Resources */,
 				AB41B9441F7A645F0073728F /* abo16.jpg in Resources */,
 				AB7AA4DC1F81EE1B001DFF05 /* zoomPopupClose@2x.png in Resources */,
 				AB41B9931F7A645F0073728F /* exp13.jpg in Resources */,

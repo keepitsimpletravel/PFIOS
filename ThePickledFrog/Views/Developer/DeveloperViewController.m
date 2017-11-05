@@ -45,6 +45,8 @@
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     NSInteger homeImage = 0;
+    NSInteger mapButtonHeight = 0;
+    NSInteger mapButtonWidth = 0;
     
     // Get Config Values
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
@@ -58,15 +60,18 @@
     if (screenWidth == 320){
         homeImage = 113.316;
         lineSize = 2;
-        imageSelection = @"@1x";
+        mapButtonHeight = 39.984;
+        mapButtonWidth = 240;
     }
     if (screenWidth == 375){
         homeImage = 133;
         lineSize = 2;
-        imageSelection = @"@1x";
+        mapButtonHeight = 49;
+        mapButtonWidth = 294;
     } else if (screenWidth == 414){
         homeImage = 146.799;
-        imageSelection = @"@2x";
+        mapButtonHeight = 54.08;
+        mapButtonWidth = 324.50;
         lineSize = 2;
     }
 	
@@ -126,10 +131,10 @@
     
     yPosition = yPosition + homeImage;
 
-    // Small Black Line between Image and Table View
-    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
-    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
-    [ContentScrollView addSubview:imageLine];
+//    // Small Black Line between Image and Table View
+//    UIView *imageLine = [[UIView alloc] initWithFrame:CGRectMake(0, yPosition, screenWidth, lineSize)];
+//    imageLine.backgroundColor = Rgb2UIColor(lineRed, lineGreen, lineBlue);
+//    [ContentScrollView addSubview:imageLine];
     
     yPosition = yPosition + lineSize + 15;
     
@@ -154,17 +159,17 @@
     attributesHeading = @{NSParagraphStyleAttributeName: paragraphStylesHeading};
     attributedString = [[NSAttributedString alloc] initWithString:@"HOSTEL LAB" attributes: attributesHeading];
         
-    // Name Label
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 30)];
-    nameLabel.attributedText = attributedString;
-    nameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-    nameLabel.numberOfLines = 1;
-    nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
-    nameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
-        
-    [ContentScrollView addSubview:nameLabel];
-        
-    yPosition = yPosition + nameLabel.frame.size.height + 15;
+//    // Name Label
+//    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 30)];
+//    nameLabel.attributedText = attributedString;
+//    nameLabel.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//    nameLabel.numberOfLines = 1;
+//    nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
+//    nameLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:fontSize];
+//        
+//    [ContentScrollView addSubview:nameLabel];
+//        
+//    yPosition = yPosition + nameLabel.frame.size.height + 15;
     
     // CREATE DESCRIPTION LABEL
     NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
@@ -172,7 +177,7 @@
     paragraphStyles.firstLineHeadIndent = 1.0;                //must have a value to make it work
     NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyles};
        
-	NSString *kistDescription1 = @"Hostel Lab is a company combining the world of budget travel and technology together. Our aim is to create a vast network of budget travel information, then connect this information with people interested in budget travel through innovative technology.";
+    NSString *kistDescription1 = @"Hostel Lab is a mobile app development company. It specialises in building native IOS and Android apps for hostels and budget guesthouses. Development is offered on a subscription basis allowing the hostel to reap the rewards of new and upgraded features at no extra cost. A Hostel Lab APP is a travel guide, a front desk and an advertising tool. It acts as an extra staff member that guests can take with them in their pocket 24 hours a day. For more information visit our website by touching on the link below.";
     
     NSAttributedString *attributedDescription = [[NSAttributedString alloc] initWithString:kistDescription1 attributes: attributes];
         
@@ -185,78 +190,90 @@
     [descLabel sizeToFit];
     [ContentScrollView addSubview:descLabel];
         
-    yPosition = yPosition + 15 + descLabel.frame.size.height;
+    yPosition = yPosition + 30 + descLabel.frame.size.height;
 	
-	// Add in the website code from ContactViewController
-    NSString *description2 = @"Here at Hostel Lab we have developed a streamlined mobile application platform which we call the Hostel Lab App Platform. The platform has been specifically designed by our team to cater for backpacker hostels.";
+//	// Add in the website code from ContactViewController
+//    NSString *description2 = @"Here at Hostel Lab we have developed a streamlined mobile application platform which we call the Hostel Lab App Platform. The platform has been specifically designed by our team to cater for backpacker hostels.";
+//    
+//    attributedDescription = [[NSAttributedString alloc] initWithString:description2 attributes: attributes];
+//    
+//    UILabel *desc2Label = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
+//    desc2Label.numberOfLines = 0;
+//    desc2Label.lineBreakMode = UILineBreakModeWordWrap;
+//    [desc2Label setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//    desc2Label.attributedText = attributedDescription;
+//    desc2Label.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//    [desc2Label sizeToFit];
+//    [ContentScrollView addSubview:desc2Label];
+//    
+//    yPosition = yPosition + 15 + desc2Label.frame.size.height;
+//    
+//    // Add in the Email code from ContactViewController
+//    NSString *description3 = @"The team is a group of long term friends that are passionate about budget travel and technology. This passion is why we choose to specialize in hostel mobile app development.";
+//    
+//    attributedDescription = [[NSAttributedString alloc] initWithString:description3 attributes: attributes];
+//    
+//    UILabel *desc3Label = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
+//    desc3Label.numberOfLines = 0;
+//    desc3Label.lineBreakMode = UILineBreakModeWordWrap;
+//    [desc3Label setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//    desc3Label.attributedText = attributedDescription;
+//    desc3Label.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//    [desc3Label sizeToFit];
+//    [ContentScrollView addSubview:desc3Label];
+//    
+//    yPosition = yPosition + 15 + desc3Label.frame.size.height;
+//    
+//    NSString *description4 = @"For more information or any questions please email us a Info@keepitsimpletravel.com";
+//    
+//    KILabel *descLabel4 = [[KILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
+//    descLabel4.numberOfLines = 0;
+//    descLabel4.lineBreakMode = UILineBreakModeWordWrap;
+//    [descLabel4 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
+//    
+//    descLabel4.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
+//    
+//    descLabel4.textAlignment = NSTextAlignmentJustified;
+//    descLabel4.text = description4;
+//    [descLabel4 sizeToFit];
+//    // Attach a block to be called when the user taps a URL
+//    descLabel4.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
+//        NSLog(@"URL tapped %@", string);
+//        // Load the Email
+//        // Setting up the email to be sent
+//        // Email Subject
+//        NSString *emailTitle = @"";
+//        // Email Content
+//        NSString *content = @"";
+//        NSString *messageBody = content;
+//        // To address
+//        NSArray *toRecipents = [NSArray arrayWithObject:string];
+//        
+//        // Setting up the email to be sent
+//        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+//        mc.mailComposeDelegate = self;
+//        [mc setSubject:emailTitle];
+//        [mc setMessageBody:messageBody isHTML:NO];
+//        [mc setToRecipients:toRecipents];
+//        
+//        // Present mail view controller on screen
+//        [self presentViewController:mc animated:YES completion:NULL];
+//    };
+//    [ContentScrollView addSubview:descLabel4];
+//
+//    yPosition = yPosition + 15 + descLabel4.frame.size.height;
     
-    attributedDescription = [[NSAttributedString alloc] initWithString:description2 attributes: attributes];
+    // HostelLab Button
+    UIButton *hostellabButton = [[UIButton alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, mapButtonHeight)];
+    UIImage *buttonImage = [UIImage imageNamed:@"hostellabweb"];
+    [hostellabButton setImage:buttonImage forState:UIControlStateNormal];
+    [hostellabButton addTarget:self
+                       action:@selector(loadHostelLab)
+             forControlEvents:UIControlEventTouchUpInside];
+    [ContentScrollView addSubview:hostellabButton];
     
-    UILabel *desc2Label = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-    desc2Label.numberOfLines = 0;
-    desc2Label.lineBreakMode = UILineBreakModeWordWrap;
-    [desc2Label setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-    desc2Label.attributedText = attributedDescription;
-    desc2Label.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-    [desc2Label sizeToFit];
-    [ContentScrollView addSubview:desc2Label];
+    yPosition = yPosition + hostellabButton.frame.size.height + 25;
     
-    yPosition = yPosition + 15 + desc2Label.frame.size.height;
-    
-    // Add in the Email code from ContactViewController
-    NSString *description3 = @"The team is a group of long term friends that are passionate about budget travel and technology. This passion is why we choose to specialize in hostel mobile app development.";
-    
-    attributedDescription = [[NSAttributedString alloc] initWithString:description3 attributes: attributes];
-    
-    UILabel *desc3Label = [[UILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-    desc3Label.numberOfLines = 0;
-    desc3Label.lineBreakMode = UILineBreakModeWordWrap;
-    [desc3Label setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-    desc3Label.attributedText = attributedDescription;
-    desc3Label.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-    [desc3Label sizeToFit];
-    [ContentScrollView addSubview:desc3Label];
-    
-    yPosition = yPosition + 15 + desc3Label.frame.size.height;
-    
-    NSString *description4 = @"For more information or any questions please email us a Info@keepitsimpletravel.com";
-    
-    KILabel *descLabel4 = [[KILabel alloc] initWithFrame:CGRectMake(40, yPosition, screenWidth-80, 9999)];
-    descLabel4.numberOfLines = 0;
-    descLabel4.lineBreakMode = UILineBreakModeWordWrap;
-    [descLabel4 setFont:[UIFont fontWithName:bodyFont size:fontSize]];
-    
-    descLabel4.textColor = Rgb2UIColor(textRed, textGreen, textBlue);
-    
-    descLabel4.textAlignment = NSTextAlignmentJustified;
-    descLabel4.text = description4;
-    [descLabel4 sizeToFit];
-    // Attach a block to be called when the user taps a URL
-    descLabel4.urlLinkTapHandler = ^(KILabel *label, NSString *string, NSRange range) {
-        NSLog(@"URL tapped %@", string);
-        // Load the Email
-        // Setting up the email to be sent
-        // Email Subject
-        NSString *emailTitle = @"";
-        // Email Content
-        NSString *content = @"";
-        NSString *messageBody = content;
-        // To address
-        NSArray *toRecipents = [NSArray arrayWithObject:string];
-        
-        // Setting up the email to be sent
-        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-        mc.mailComposeDelegate = self;
-        [mc setSubject:emailTitle];
-        [mc setMessageBody:messageBody isHTML:NO];
-        [mc setToRecipients:toRecipents];
-        
-        // Present mail view controller on screen
-        [self presentViewController:mc animated:YES completion:NULL];
-    };
-    [ContentScrollView addSubview:descLabel4];
-
-    yPosition = yPosition + 15 + descLabel4.frame.size.height;
     
     // Set Content Size for Scroll View
     ContentScrollView.contentSize = CGSizeMake(screenWidth, yPosition);
