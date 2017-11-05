@@ -483,7 +483,7 @@
 - (IBAction)loadHostelLab
 {
     LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
-    [loadWebVC setURL:@"www.hostellab.com"];
+    [loadWebVC setURL:@"http://www.hostellab.com"];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     
