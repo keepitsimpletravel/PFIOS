@@ -480,4 +480,17 @@
     fromMenu = value;
 }
 
+- (IBAction)loadHostelLab
+{
+    LoadWebViewController *loadWebVC = [[LoadWebViewController alloc] initWithNibName:@"LoadWebViewController" bundle:nil];
+    [loadWebVC setURL:@"www.hostellab.com"];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+//    NSString *appTitle = [configurationValues objectForKey:@""];
+    [loadWebVC setTitleValue:@"HOSTEL LAB"];
+    
+    [self.navigationController pushViewController:loadWebVC animated:YES];
+}
+
 @end
