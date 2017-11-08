@@ -166,7 +166,14 @@
                   forControlEvents:UIControlEventTouchUpInside];
     [firstCurrencyButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [firstCurrencyButton setBackgroundColor:[UIColor whiteColor]];
-    [firstCurrencyButton setTitle:@"Select Currency" forState:UIControlStateNormal];
+    if([[NSUserDefaults standardUserDefaults] integerForKey:@"userCurrency"] != nil){
+        // need to set this properly
+        NSString *currency = [arrPicker objectAtIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"userCurrency"]];
+        [firstCurrencyButton setTitle:currency forState:UIControlStateNormal];
+    } else {
+        [firstCurrencyButton setTitle:@"Select Currency" forState:UIControlStateNormal];
+    }
+
     firstCurrencyButton.titleLabel.font = [UIFont fontWithName:@"OpenSans-CondensedBold" size:14];
     [[firstCurrencyButton layer] setBorderWidth:2.0f];
     [[firstCurrencyButton layer] setBorderColor:[UIColor blackColor].CGColor];
@@ -201,7 +208,12 @@
     currencyEntry1.layer.borderColor=[[UIColor blackColor]CGColor];
     currencyEntry1.layer.borderWidth= 1.0f;
     currencyEntry1.textAlignment = UITextAlignmentCenter;
-    currencyEntry1.enabled = NO;
+    if([[NSUserDefaults standardUserDefaults] integerForKey:@"userCurrency"] != nil){
+        // need to set this properly
+        currencyEntry1.enabled = YES;
+    } else {
+        currencyEntry1.enabled = NO;
+    }
     CGFloat newFontSize = 20.0 ;
     UIFont *newFont = [currencyEntry1.font fontWithSize:newFontSize];
     currencyEntry1.font = newFont;
@@ -240,7 +252,12 @@
     currencyEntry2.layer.borderColor=[[UIColor blackColor]CGColor];
     currencyEntry2.layer.borderWidth= 1.0f;
     currencyEntry2.textAlignment = UITextAlignmentCenter;
-    currencyEntry2.enabled = NO;
+    if([[NSUserDefaults standardUserDefaults] integerForKey:@"userCurrency"] != nil){
+        // need to set this properly
+        currencyEntry2.enabled = YES;
+    } else {
+        currencyEntry2.enabled = NO;
+    }
     CGFloat newFontSize2 = 20.0 ;
     UIFont *newFont2 = [currencyEntry2.font fontWithSize:newFontSize2];
     currencyEntry2.font = newFont2;

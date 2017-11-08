@@ -188,6 +188,8 @@ static NSInteger pickerRow = 0;
         self.selectData = [pickerListData objectAtIndex:0];
     } else {
         self.selectData = [pickerListData objectAtIndex:pickerRow];
+        [[NSUserDefaults standardUserDefaults] setInteger:pickerRow forKey:@"userCurrency"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     if ([self.delegate respondsToSelector:@selector(selectUMAlertButton)]) {
