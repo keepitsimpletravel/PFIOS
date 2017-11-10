@@ -101,10 +101,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.visible = YES;
+    [self.revealViewController.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.revealViewController.frontViewController.view setUserInteractionEnabled:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     self.visible = NO;
+    [self.revealViewController.frontViewController.view setUserInteractionEnabled:YES];
+    
     [super viewWillDisappear:animated];
 }
 
